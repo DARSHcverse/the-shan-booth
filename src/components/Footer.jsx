@@ -10,11 +10,11 @@ const Footer = () => (
                 <address className="contact-info-list">
                     <div className="contact-info-item">
                         <MapPin className="w-5 h-5" />
-                        <span>14-15 Loram Street, Melbourne, VIC 3000, Australia</span>
+                        <span>51 Celestial Circuit, Tarneit, VIC 3029</span>
                     </div>
                     <div className="contact-info-item">
                         <Phone className="w-5 h-5" />
-                        <span>+1 800 123 456</span>
+                        <span>+61475116521</span>
                     </div>
                     <div className="contact-info-item">
                         <Mail className="w-5 h-5" />

@@ -1,10 +1,12 @@
 import React from 'react';
 import '../App.css';
+import img from '../images/boothimg2.jpg';
 
 const HomePage = ({ setCurrentPage }) => (
     <main className="main-content">
         <section className="hero-section text-center">
             <div className="container">
+                {/* <img src={img} alt="The Shan Booth img" className="main-img" /> */}
                 <h2 className="hero-title">Welcome to The Shan Booth</h2>
                 <p className="hero-subtitle">
                     Your premier destination for stunning photobooths and event packages.

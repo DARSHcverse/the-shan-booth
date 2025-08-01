@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
 import '../App.css';
+import logo from '../images/logo.png';
 
 const Header = ({ currentPage, setCurrentPage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
         <header className="header">
             <div className="container header-inner">
                 <a href="#" onClick={() => setCurrentPage('homepage')} className="logo-link">
-                    <img src="images/logo.png" alt="The Shan Booth Logo" className="logo-img" />
+                    <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
                     <h1 className="logo-text">The Shan Booth</h1>
                 </a>
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="mobile-menu-button">

@@ -243,41 +243,67 @@ body {
     margin-top: 2rem;
     font-size: 0.875rem;
 }
-
 /* --- Main Page Content Styles --- */
 .main-content {
-    min-height: calc(100vh - 12rem); /* Adjust based on header/footer heights */
+    min-height: calc(100vh - 12rem);
     background-color: var(--color-bg-body);
 }
 
+.hero-overlay {
+    position: relative;
+    text-align: center;
+}
+
+.hero-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* This creates the 50% opacity overlay */
+    z-index: 1; /* Ensures the overlay is on top of the image */
+}
+
 .main-img {
-    width: 80rem;
-    height: 30rem;
-    border-radius: 3%;
-    object-fit:contain;
-    /* border: 4px solid var(--color-primary-dark); */
+    width: 100%; /* Makes the image take up the full width of its container */
+    height: 35rem; /* Sets a fixed height for the banner effect */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border-radius: 0; /* Removes the border radius */
+    
 }
 
 /* --- HomePage Styles --- */
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Ensures the text is on top of the overlay and image */
+    color: var(--color-accent);
+}
+
 .hero-section {
     background-color: var(--color-bg-card);
-    padding: 6rem 0;
+    padding: 0; /* Removes padding to allow the image to be full-width */
 }
 
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--color-accent);
+    color: white; /* Changed color to white for better readability on a dark overlay */
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Optional: Adds a shadow for better visibility */
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--color-text-light);
+    color: white; /* Changed color to white */
     max-width: 42rem;
     margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Optional: Adds a shadow for better visibility */
 }
-
 .card-grid {
     display: grid;
     gap: 2rem;

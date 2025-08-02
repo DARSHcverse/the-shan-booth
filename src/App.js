@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import PhotoboothsPage from './components/PhotoboothsPage';
 import EventsPage from './components/EventsPage';
 import PackagesPage from './components/PackagesPage';
+import QuickQuote from './components/quickquote';
 import './App.css'; 
 
 const App = () => {
@@ -20,6 +21,8 @@ const App = () => {
                 return <EventsPage />;
             case 'packages':
                 return <PackagesPage />;
+            case 'quickquote':
+                return <QuickQuote />;
             default:
                 return <HomePage setCurrentPage={setCurrentPage} />;
         }

@@ -96,6 +96,20 @@ body {
     color: var(--color-primary);
     font-family: serif;
 }
+.call-icon {
+    width: 40px;   /* Adjust the size as needed */
+    height: auto;
+    margin: 2rem auto; /* Centers the icon and adds some space */
+    display: block;    /* Ensures it takes up its own line */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.call-icon:hover {
+    transform: scale(1.1); /* Optional: A nice hover effect */
+}
 
 .mobile-menu-button {
     display: block;
@@ -131,6 +145,7 @@ body {
     text-align: center;
     font-size: 1.25rem;
     font-weight: 500;
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -234,7 +249,7 @@ body {
 }
 
 .submit-button:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-accent);
 }
 
 .copyright-text {
@@ -270,7 +285,7 @@ body {
     height: 35rem; /* Sets a fixed height for the banner effect */
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
     border-radius: 0; /* Removes the border radius */
-    
+    opacity: 60%;
 }
 
 /* --- HomePage Styles --- */
@@ -281,7 +296,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2; /* Ensures the text is on top of the overlay and image */
-    color: var(--color-accent);
+    color: white; /* Changed color to white for better readability on a dark overlay */
 }
 
 .hero-section {
@@ -294,15 +309,14 @@ body {
     font-weight: 700;
     color: white; /* Changed color to white for better readability on a dark overlay */
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Optional: Adds a shadow for better visibility */
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: white; /* Changed color to white */
+    color: var(--color-accent); /* Changed color to var(--color-accent) */
     max-width: 42rem;
     margin: 0 auto;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Optional: Adds a shadow for better visibility */
+    text-shadow: #000000;
 }
 .card-grid {
     display: grid;
@@ -366,7 +380,7 @@ body {
 }
 
 .card-button:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-accent);
 }
 
 /* --- Photobooths Page Styles --- */
@@ -465,5 +479,5 @@ body {
 }
 
 .package-button:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-accent);
 }

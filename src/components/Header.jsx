@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
 import '../App.css';
 import logo from '../images/logo.png';
+import callIcon from '../images/callIcon.png';
 
 const Header = ({ currentPage, setCurrentPage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +30,14 @@ const Header = ({ currentPage, setCurrentPage }) => {
                         </li>
                         <li className={`nav-item ${currentPage === 'packages' ? 'active' : ''}`}>
                             <a href="#" onClick={() => { setCurrentPage('packages'); setIsMenuOpen(false); }} className="nav-link">Packages</a>
+                        </li>
+                        <li className={`nav-item ${currentPage === 'quickquote' ? 'active' : ''}`}>
+                            <a href="#" onClick={() => { setCurrentPage('quickquote'); setIsMenuOpen(false); }} className="nav-link">Quick Quote</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="tel:+61475116521" aria-label="Call us">
+                                <img src={callIcon} alt="Call button" className="call-icon" />
+                            </a>
                         </li>
                     </ul>
                 </nav>

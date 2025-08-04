@@ -1,5 +1,8 @@
 import React from 'react';
 import '../App.css';
+import photobooth from '../images/photobooth.jpg'; // Placeholder for photobooth image
+import glam from '../images/glam.png'; // Placeholder for events image
+import enclosure from '../images/enclosure.jpg'; // Placeholder for packages image
 
 const PhotoboothsPage = () => (
     <main className="main-content section-padding">
@@ -7,19 +10,28 @@ const PhotoboothsPage = () => (
             <h2 className="page-heading">Our Photobooths</h2>
             <div className="photobooth-list">
                 <div className="card">
-                    <img src="https://placehold.co/400x250/E5E7EB/4B5563?text=Classic+Booth" alt="Classic Booth" className="card-img" />
-                    <h3 className="card-title">Classic Photo Booth</h3>
-                    <p className="card-text">The timeless choice for weddings and classic events. Provides high-quality prints and a fun experience.</p>
+                    <img src={photobooth} alt="Open Booth" className="card-img" />
+                    <h3 className="card-title">Open Booth</h3>
+                    <p className="card-text">A sleek and modern setup that fits into any space, 
+                        the Open Booth offers flexibility and fun for events of all sizes. With no walls or enclosures, 
+                        it creates a social, interactive experience that encourages group shots and guest engagement. Perfect 
+                        for weddings, parties, and corporate events, it also allows for customizable backdrops to match your event’s theme.</p>
                 </div>
                 <div className="card">
-                    <img src="https://placehold.co/400x250/E5E7EB/4B5563?text=Open+Air+Booth" alt="Open Air Booth" className="card-img" />
-                    <h3 className="card-title">Open-Air Photo Booth</h3>
-                    <p className="card-text">A modern, sleek booth that's great for large groups and custom backdrops. Perfect for corporate events.</p>
+                    <img src={glam} alt="Glam Booth" className="card-img" />
+                    <h3 className="card-title">Glam Booth</h3>
+                    <p className="card-text">Add a touch of luxury and Hollywood-style flair with the Glam Booth. 
+                        Known for its signature black-and-white, high-contrast, skin-smoothing effect, this booth delivers studio-quality, 
+                        flawless portraits. It's a favorite for upscale events, weddings, and brand activations. 
+                        Think red carpet vibes with a modern twist.</p>
                 </div>
                 <div className="card">
-                    <img src="https://placehold.co/400x250/E5E7EB/4B5563?text=360+Video+Booth" alt="360 Video Booth" className="card-img" />
-                    <h3 className="card-title">360° Video Booth</h3>
-                    <p className="card-text">Capture immersive, slow-motion videos for a truly memorable social media experience.</p>
+                    <img src={enclosure} alt="Enclosed Booth" className="card-img" />
+                    <h3 className="card-title">Enclosed Booth</h3>
+                    <p className="card-text">The Enclosed Booth offers a classic photo booth experience with added privacy and charm. 
+                        Guests step inside for a more intimate and nostalgic vibe, making it perfect for smaller groups or themed events. 
+                        With curtains or sleek walls, it enhances the excitement and surprise of each snapshot—ideal for vintage-style weddings, 
+                        proms, and private parties.</p>
                 </div>
             </div>
         </div>

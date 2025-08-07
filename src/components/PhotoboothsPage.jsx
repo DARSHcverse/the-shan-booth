@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import photobooth from '../images/photobooth.jpg'; // Placeholder for photobooth image
 import glam from '../images/glam.png'; // Placeholder for events image
-import enclosure from '../images/enclosure.jpg'; // Placeholder for packages image
+import enclosure from '../images/enclosed.jpeg'; // Placeholder for packages image
 
 const PhotoboothsPage = () => (
     <main className="main-content section-padding">

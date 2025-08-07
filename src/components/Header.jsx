@@ -10,29 +10,67 @@ const Header = ({ currentPage, setCurrentPage }) => {
     return (
         <header className="header">
             <div className="container header-inner">
-                <a href="#" onClick={() => setCurrentPage('homepage')} className="logo-link">
+                {/* Logo acting as a button */}
+                <button
+                    onClick={() => setCurrentPage('homepage')}
+                    className="logo-link"
+                    aria-label="Go to homepage"
+                    type="button"
+                >
                     <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
                     <h1 className="logo-text">The Shan Booth</h1>
-                </a>
-                <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="mobile-menu-button">
+                </button>
+
+                <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="mobile-menu-button" aria-label="Toggle menu" type="button">
                     <Menu className="w-8 h-8 text-white" />
                 </button>
+
                 <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
                     <ul className="nav-list">
                         <li className={`nav-item ${currentPage === 'homepage' ? 'active' : ''}`}>
-                            <a href="#" onClick={() => { setCurrentPage('homepage'); setIsMenuOpen(false); }} className="nav-link">Homepage</a>
+                            <button
+                                type="button"
+                                onClick={() => { setCurrentPage('homepage'); setIsMenuOpen(false); }}
+                                className="nav-link"
+                            >
+                                Homepage
+                            </button>
                         </li>
                         <li className={`nav-item ${currentPage === 'photobooths' ? 'active' : ''}`}>
-                            <a href="#" onClick={() => { setCurrentPage('photobooths'); setIsMenuOpen(false); }} className="nav-link">Photobooths</a>
+                            <button
+                                type="button"
+                                onClick={() => { setCurrentPage('photobooths'); setIsMenuOpen(false); }}
+                                className="nav-link"
+                            >
+                                Photobooths
+                            </button>
                         </li>
                         <li className={`nav-item ${currentPage === 'events' ? 'active' : ''}`}>
-                            <a href="#" onClick={() => { setCurrentPage('events'); setIsMenuOpen(false); }} className="nav-link">Events</a>
+                            <button
+                                type="button"
+                                onClick={() => { setCurrentPage('events'); setIsMenuOpen(false); }}
+                                className="nav-link"
+                            >
+                                Events
+                            </button>
                         </li>
                         <li className={`nav-item ${currentPage === 'packages' ? 'active' : ''}`}>
-                            <a href="#" onClick={() => { setCurrentPage('packages'); setIsMenuOpen(false); }} className="nav-link">Packages</a>
+                            <button
+                                type="button"
+                                onClick={() => { setCurrentPage('packages'); setIsMenuOpen(false); }}
+                                className="nav-link"
+                            >
+                                Packages
+                            </button>
                         </li>
                         <li className={`nav-item ${currentPage === 'quickquote' ? 'active' : ''}`}>
-                            <a href="#" onClick={() => { setCurrentPage('quickquote'); setIsMenuOpen(false); }} className="nav-link">Quick Quote</a>
+                            <button
+                                type="button"
+                                onClick={() => { setCurrentPage('quickquote'); setIsMenuOpen(false); }}
+                                className="nav-link"
+                            >
+                                Quick Quote
+                            </button>
                         </li>
                         <li className="nav-item">
                             <a href="tel:+61475116521" aria-label="Call us">

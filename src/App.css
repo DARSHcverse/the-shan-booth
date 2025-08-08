@@ -1,3 +1,5 @@
+/* src/App.css */
+
 /* --- CSS Variables for Theme Colors --- */
 :root {
     --color-primary: rgb(241,162,86);      /* Amber-500 */
@@ -458,14 +460,13 @@ body {
 }
 
 .package-card {
-    background-color: var(--color-bg-body);
+    background-color: var(--color-bg-card); /* Changed to white for consistency */
     padding: 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border); /* Consistent border */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-align: center;
     transition: transform 0.3s;
-    color: var(--color-text-dark);
 }
 
 .package-card:hover {
@@ -475,7 +476,7 @@ body {
 .package-price {
     font-size: 2.5rem; /* Larger font for price */
     font-weight: 700;
-    color: var(--color-accent); /* Primary color for price */
+    color: var(--color-primary); /* Primary color for price */
     margin-bottom: 0.5rem;
 }
 
@@ -495,7 +496,7 @@ body {
 .package-features {
     list-style: none; /* Removed default list style */
     line-height: 1.8; /* Increased line height for readability */
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     margin-bottom: 1.5rem;
     padding: 0; /* Ensure no default padding */
 }
@@ -528,7 +529,7 @@ body {
     text-align: center;
     font-size: 2.25rem; /* Larger heading for sections */
     font-weight: 700;
-    color: var(--color-primary); /* Accent color for section headings */
+    color: var(--color-accent); /* Accent color for section headings */
     margin-top: 3rem; /* Space above section heading */
     margin-bottom: 2rem; /* Space below section heading */
 }
@@ -553,7 +554,7 @@ body {
 .page-heading {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--color-primary);
+    color: var(--color-accent);
     margin-bottom: 2rem;
 }
 

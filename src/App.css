@@ -115,22 +115,24 @@ body {
     transform: scale(1.1);
 }
 
-.mobile-menu-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem; /* larger for touch targets */
+/* === Mobile Menu Toggle === */
+
+.mobile-dropdown {
+    position: absolute; /* or fixed if you want it overlaying everything */
+    top: 60px; /* adjust to match your header height */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    width: 90%; /* keep some margin on sides */
+    max-width: 400px; /* optional */
     border-radius: 0.5rem;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    margin-left: 10%;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 /* Hover/Focus styles for accessibility */
-.mobile-menu-button:hover,
-.mobile-menu-button:focus {
+.mobile-dropdown:hover,
+.mobile-dropdown:focus {
     background-color: rgba(0, 0, 0, 0.05);
     outline: none;
 }
@@ -144,8 +146,13 @@ body {
 
 /* Show only on mobile */
 @media (min-width: 768px) {
-    .mobile-menu-button {
-        display: none;
+    .mobile-dropdown {
+        position: absolute;
+        left: auto;
+        right: 0;
+        transform: none;
+        width: auto;
+        max-width: none;
     }
 }
 

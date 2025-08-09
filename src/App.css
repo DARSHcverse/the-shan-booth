@@ -220,6 +220,11 @@ body {
     .mobile-menu-button {
         display: none;
     }
+    .form-input[type="date"] {
+        width: 100%;
+        min-height: 3rem;
+        font-size: 1.1rem;
+    }
 
     .main-nav {
         display: block !important;

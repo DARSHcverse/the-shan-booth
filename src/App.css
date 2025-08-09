@@ -130,20 +130,6 @@ body {
     z-index: 1000;
 }
 
-/* Hover/Focus styles for accessibility */
-.mobile-dropdown:hover,
-.mobile-dropdown:focus {
-    background-color: rgba(0, 0, 0, 0.05);
-    outline: none;
-}
-
-/* Icon inside button */
-.mobile-menu-button svg,
-.mobile-menu-button img {
-    width: 24px;
-    height: 24px;
-}
-
 /* Show only on mobile */
 @media (min-width: 768px) {
     .mobile-dropdown {

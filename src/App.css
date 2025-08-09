@@ -4,7 +4,7 @@
 :root {
     --color-primary: rgb(241,162,86);      /* Amber-500 */
     --color-primary-dark: #b45309; /* Amber-700 */
-    --color-accent: rgb(90, 173, 200);       /* Custom accent color for headings */
+    --color-accent: #5aadc8;       /* Custom accent color for headings */
     --color-text-dark: #1f2937;    /* Gray-800 */
     --color-text-light: #6b7280;   /* Gray-500 */
     --color-bg-body: rgb(245,217,114);  
@@ -124,6 +124,7 @@ body {
     cursor: pointer;
     background: transparent;
     border: none;
+    margin-left: 50%;
 }
 
 /* === Navigation === */

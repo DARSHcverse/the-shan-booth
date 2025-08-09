@@ -116,33 +116,58 @@ body {
 }
 
 /* === Mobile Menu Toggle === */
-
-.mobile-dropdown {
-    position: absolute; /* or fixed if you want it overlaying everything */
-    top: 60px; /* adjust to match your header height */
-    left: 50%;
-    transform: translateX(-50%);
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: white;
-    width: 90%; /* keep some margin on sides */
-    max-width: 400px; /* optional */
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Close button inside overlay */
+.mobile-menu-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #222;
+    cursor: pointer;
+    z-index: 2100;
+}
 
-/* Show only on mobile */
-@media (min-width: 768px) {
-    .mobile-dropdown {
-        position: absolute;
-        left: auto;
-        right: 0;
-        transform: none;
-        width: auto;
-        max-width: none;
+/* Mobile nav in overlay */
+@media (max-width: 767px) {
+    .main-nav {
+        display: none;
+    }
+    .main-nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        font-size: 2rem;
+    }
+    .mobile-menu-overlay .main-nav {
+        display: flex;
+    }
+    .mobile-menu-button {
+        z-index: 2100;
     }
 }
-
 /* === Navigation === */
 
 .main-nav {

@@ -64,22 +64,17 @@ body {
 }
 
 /* --- Header Component Styles --- */
-.header,
+.header {
+    background-color: white;
+    padding: 1rem 0;
+}
+
 .header-inner {
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-@media (max-width: 767px) {
-    .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-    .logo-link {
-        margin-bottom: 0.5rem;
-    }
-}
+
 /* === Logo === */
 
 .logo-link {
@@ -134,6 +129,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+
 
 /* Show only on mobile */
 @media (min-width: 768px) {

@@ -220,11 +220,6 @@ body {
     .mobile-menu-button {
         display: none;
     }
-    .form-input[type="date"] {
-        width: 100%;
-        min-height: 8rem;
-        font-size: 1.1rem;
-    }
 
     .main-nav {
         display: block !important;
@@ -630,6 +625,11 @@ body {
 .form-input::placeholder, .form-textarea::placeholder {
     color: var(--color-text-light);
 }
+.form-input[type="date"] {
+        width: 100%;
+        min-height: 8rem;
+        font-size: 1.1rem;
+    }
 
 .form-select {
     appearance: none;

@@ -222,7 +222,7 @@ body {
     }
     .form-input[type="date"] {
         width: 100%;
-        min-height: 3rem;
+        min-height: 8rem;
         font-size: 1.1rem;
     }
 

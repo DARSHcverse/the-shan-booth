@@ -64,17 +64,22 @@ body {
 }
 
 /* --- Header Component Styles --- */
-.header {
-    background-color: white;
-    padding: 1rem 0;
-}
-
+.header,
 .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
-
+@media (max-width: 767px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .logo-link {
+        margin-bottom: 0.5rem;
+    }
+}
 /* === Logo === */
 
 .logo-link {

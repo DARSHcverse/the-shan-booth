@@ -36,7 +36,7 @@ const Footer = () => (
         <h3 className="footer-heading">Social Media</h3>
         <div className="social-links">
           <a
-            href="https://www.facebook.com/profile.php?id=61579114653516"
+            href="https://www.facebook.photoboothwithshan.com.au"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,7 +56,7 @@ const Footer = () => (
           </button>
 
           <a
-            href="https://www.instagram.com/photobooth_withshan/"
+            href="https://www.instagram.photoboothwithshan.com.au"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"

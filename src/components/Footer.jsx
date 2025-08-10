@@ -70,7 +70,7 @@ const Footer = () => (
       {/* Contact Form */}
       <div>
         <h3 className="footer-heading">Contact Form</h3>
-        <form className="contact-form">
+        <form className="contact-form" netlify>
           <input type="text" placeholder="Your name..." className="form-input" />
           <input type="email" placeholder="Email..." className="form-input" />
           <textarea placeholder="Your message..." rows="4" className="form-textarea"></textarea>

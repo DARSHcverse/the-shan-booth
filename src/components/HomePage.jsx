@@ -32,8 +32,21 @@ const HomePage = () => {
             <h2 className="hero-title">Welcome to The Shan Booth</h2>
             <p className="hero-subtitle">
               Your premier destination for stunning photobooths and event packages.
-            </p>
+            </p><br />
+            <button
+            onClick={() => navigate('/packages')}
+            className="home-button"
+          >
+            PACKAGES
+          </button><br /><br />
+          <button
+            onClick={() => navigate('/quickquote')}
+            className="home-button"
+          >
+            QUICK QUOTE
+          </button>
           </div>
+          
         </div>
       </section>
       <section className="section-padding">

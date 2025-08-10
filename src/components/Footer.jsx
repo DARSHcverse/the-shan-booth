@@ -70,10 +70,44 @@ const Footer = () => (
       {/* Contact Form */}
       <div>
         <h3 className="footer-heading">Contact Form</h3>
-        <form className="contact-form" netlify>
-          <input type="text" placeholder="Your name..." className="form-input" />
-          <input type="email" placeholder="Email..." className="form-input" />
-          <textarea placeholder="Your message..." rows="4" className="form-textarea"></textarea>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          className="contact-form"
+        >
+          {/* Hidden input for Netlify */}
+          <input type="hidden" name="form-name" value="contact" />
+
+          {/* Honeypot field for spam prevention */}
+          <p hidden>
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name..."
+            className="form-input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email..."
+            className="form-input"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your message..."
+            rows="4"
+            className="form-textarea"
+            required
+          ></textarea>
           <div className="text-center">
             <button type="submit" className="submit-button">
               Send message

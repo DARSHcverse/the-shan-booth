@@ -12,6 +12,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
         { name: 'Photobooths', key: 'photobooths' },
         { name: 'Events', key: 'events' },
         { name: 'Packages', key: 'packages' },
+        { name: 'Backdrop', key: 'backdrop' },
         { name: 'Quick Quote', key: 'quickquote' }
     ];
 

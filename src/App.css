@@ -752,3 +752,220 @@ body {
     background-color: #5398b1; /* A slightly darker shade of the accent color */
     transform: translateY(-2px);
 }
+
+/* --- Backdrop Page Styles --- */
+.backdrop-page-main {
+    background-color: var(--color-bg-body); /* Or a specific light background for this page */
+    position: relative; /* Ensure padding for overall section */
+    overflow: hidden; /* Hide anything that floats outside */
+}
+
+.backdrop-container .page-heading {
+    color: var(--color-primary); /* Primary color for consistency */
+}
+
+.backdrop-intro-text {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-text-dark);
+    max-width: 600px;
+    margin: 0 auto 3rem; /* Center and add space below */
+}
+
+.interactive-floating-area {
+    position:center; /* Crucial for positioning floating items */
+    width: 90%; /* Adjusted width for better centering */
+    max-width: 1000px; /* Max width to keep grid manageable on very large screens */
+    margin: 0 auto; /* Center the area */
+    min-height: 650px; /* Increased height to accommodate larger static backdrops */
+    border-radius: 1rem;
+    overflow: hidden; /* Keep floating items within bounds */
+    background-color: var(--color-bg-card); /* White background for the interactive area */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    /* Grid layout for backdrop cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax for card size */
+    gap: 2rem; /* Gap between grid items */
+    padding: 2rem; /* Padding inside the interactive area */
+    align-items: start; /* Align items to the start of their grid area */
+}
+
+/* New: Styles for the backdrop card container */
+.backdrop-card {
+    background-color: var(--color-bg-card);
+    padding: 1.5rem; /* Padding inside the card */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid var(--color-border);
+    text-align: center; /* Center text within the card */
+    transition: transform 0.3s;
+    position: relative; /* Needed for z-index of props to work correctly */
+    z-index: 0; /* Ensures backdrop cards are behind floating props */
+}
+
+.backdrop-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.floating-item {
+    /* Base styles for all floating items - props will primarily use this */
+    position: absolute; /* Props will use this for floating */
+    opacity: 0.8; 
+    will-change: transform, opacity; /* Optimize for animation performance */
+}
+
+.backdrop-item {
+    /* These styles apply to the image *inside* the backdrop card */
+    width: 100%; /* Take full width of its card container */
+    height: 180px; /* Fixed height for the image within the card */
+    object-fit: cover;
+    border-radius: 0.5rem; /* Match card border-radius for image */
+    margin-bottom: 1rem; /* Space between image and title */
+    cursor: pointer; /* Indicate it's clickable */
+    opacity: 1; /* Make backdrop images fully opaque */
+    animation: none; /* Crucial: Stop backdrops from animating */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect for the image */
+}
+
+.backdrop-item:hover {
+    transform: scale(1.02); /* Slightly enlarge image on hover, adjusted scale */
+}
+
+.backdrop-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+
+.prop-item {
+    /* Props still float using absolute positioning within .interactive-floating-area */
+    font-size: 3rem; /* Adjust emoji/SVG icon size */
+    padding: 0.5rem; /* Add some padding around the emoji */
+    background-color: rgba(255, 255, 255, 0.6); /* Slightly transparent white background for clarity */
+    border-radius: 50%; /* Make it round */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex; /* For centering the emoji within its padding */
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Make props non-clickable */
+    
+    /* Props still float */
+    animation: floatUpDown 6s ease-in-out infinite alternate,
+               floatLeftRight 8s ease-in-out infinite alternate;
+    z-index: 1; /* Ensure props float above backdrop cards */
+}
+
+/* Keyframe Animations for Floating Effect (unchanged) */
+@keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); } /* Moves up by 20px */
+    100% { transform: translateY(0); }
+}
+
+@keyframes floatLeftRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); } /* Moves right by 20px */
+    100% { transform: translateX(0); }
+}
+
+/* --- Backdrop Modal Styles (unchanged) --- */
+.backdrop-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.backdrop-modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.backdrop-modal-content {
+    position: relative;
+    background-color: var(--color-bg-card);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.backdrop-modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.backdrop-modal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.backdrop-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s ease-in-out;
+}
+
+.backdrop-modal-close:hover {
+    color: var(--color-primary);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .interactive-floating-area {
+        min-height: 400px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust grid for mobile */
+        gap: 1.5rem;
+    }
+    .backdrop-card {
+        padding: 1rem;
+    }
+    .backdrop-item {
+        height: 120px; /* Adjusted height for smaller screens */
+    }
+    .prop-item {
+        font-size: 2rem;
+    }
+    .backdrop-modal-content {
+        padding: 1rem;
+    }
+    .backdrop-modal-title {
+        font-size: 1.4rem;
+    }
+    .backdrop-modal-close {
+        font-size: 2rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}

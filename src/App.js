@@ -7,6 +7,7 @@ import PhotoboothsPage from './components/PhotoboothsPage';
 import QuickQuote from './components/quickquote';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BackdropPage from './components/backdrop';
 
 function App() {
     const [currentPage, setCurrentPage] = useState('home');
@@ -23,6 +24,8 @@ function App() {
                 return <PackagesPage setCurrentPage={setCurrentPage} />;
             case 'quickquote':
                 return <QuickQuote setCurrentPage={setCurrentPage} />;
+            case 'backdrop':
+                return <BackdropPage setCurrentPage={setCurrentPage} />;
             default:
                 return <HomePage setCurrentPage={setCurrentPage} />;
         }

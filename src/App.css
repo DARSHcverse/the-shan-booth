@@ -257,19 +257,37 @@ body {
     align-items: center;
     gap: 0.5rem;
 }
-
 .social-links {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .social-link {
-    color: var(--color-text-light);
-    transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.social-link:hover {
-    color: var(--color-primary);
+.no-style-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.social-link:hover .social-icon,
+.no-style-button:hover .social-icon {
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 
 .contact-form {

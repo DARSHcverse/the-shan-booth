@@ -1,13 +1,11 @@
 import React from 'react';
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Instagram
-} from 'lucide-react';
 import '../App.css';
+import fb from '../images/3259376_facebook_media_social_icon.png';
+import ig from '../images/3259424_instagram_social media_social_icon.png';
+import tw from '../images/3259404_media_social_twitter_icon.png';
+import phone from '../images/3259417_media_social_viber_icon.png';
+import map from '../images/3259380_dreamstale_media_social_icon.png';
+import gm from '../images/3259428_google_media_plus_social_icon.png';
 
 const Footer = () => (
   <footer className="footer">
@@ -16,16 +14,16 @@ const Footer = () => (
       <div>
         <h3 className="footer-heading">Contact Info</h3>
         <address className="contact-info-list">
-          <div className="contact-info-item">
-            <MapPin className="w-5 h-5" />
+          <div className="social-link no-style-button">
+            <img src={map} alt="Address" className="social-icon" />
             <span>51 Celestial Circuit, Tarneit, VIC 3029</span>
           </div>
-          <div className="contact-info-item">
-            <Phone className="w-5 h-5" />
+          <div className="social-link no-style-button">
+            <img src={phone} alt="Phone" className="social-icon" />
             <span>+61475116521</span>
-          </div>
-          <div className="contact-info-item">
-            <Mail className="w-5 h-5" />
+          </div><br />
+          <div className="social-link no-style-button">
+            <img src={gm} alt="Email" className="social-icon" />
             <span>theshanbooth@gmail.com</span>
           </div>
         </address>
@@ -36,33 +34,32 @@ const Footer = () => (
         <h3 className="footer-heading">Social Media</h3>
         <div className="social-links">
           <a
-            href="https://www.facebook.photoboothwithshan.com.au"
+            href="https://www.facebook.com/profile.php?id=61579072176010"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
           >
-            <Facebook className="w-6 h-6" />
+            <img src={fb} alt="Facebook" className="social-icon" />
           </a>
 
-          {/* Twitter icon using a button since no valid link */}
           <button
             type="button"
             className="social-link no-style-button"
             onClick={() => alert('Twitter link coming soon')}
             aria-label="Twitter (coming soon)"
           >
-            <Twitter className="w-6 h-6" />
+            <img src={tw} alt="Twitter" className="social-icon" />
           </button>
 
           <a
-            href="https://www.instagram.photoboothwithshan.com.au"
+            href="https://www.instagram.com/photobooth_withshan/"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <Instagram className="w-6 h-6" />
+            <img src={ig} alt="Instagram" className="social-icon" />
           </a>
         </div>
       </div>
@@ -70,44 +67,10 @@ const Footer = () => (
       {/* Contact Form */}
       <div>
         <h3 className="footer-heading">Contact Form</h3>
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          className="contact-form"
-        >
-          {/* Hidden input for Netlify */}
-          <input type="hidden" name="form-name" value="contact" />
-
-          {/* Honeypot field for spam prevention */}
-          <p hidden>
-            <label>
-              Don’t fill this out: <input name="bot-field" />
-            </label>
-          </p>
-
-          <input
-            type="text"
-            name="name"
-            placeholder="Your name..."
-            className="form-input"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email..."
-            className="form-input"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your message..."
-            rows="4"
-            className="form-textarea"
-            required
-          ></textarea>
+        <form className="contact-form" netlify>
+          <input type="text" placeholder="Your name..." className="form-input" />
+          <input type="email" placeholder="Email..." className="form-input" />
+          <textarea placeholder="Your message..." rows="4" className="form-textarea"></textarea>
           <div className="text-center">
             <button type="submit" className="submit-button">
               Send message

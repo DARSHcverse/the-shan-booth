@@ -1,11 +1,18 @@
-// QuickQuote.jsx
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
-const QuickQuote = ({ setCurrentPage }) => {
+const QuickQuote = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    fullName: '', email: '', phoneNumber: '', eventDate: '',
-    eventLocation: '', packageDuration: '', service: '', message: ''
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    eventDate: '',
+    eventLocation: '',
+    packageDuration: '',
+    service: '',
+    message: ''
   });
 
   const [status, setStatus] = useState('');
@@ -29,8 +36,14 @@ const QuickQuote = ({ setCurrentPage }) => {
       if (response.ok) {
         setStatus('Thank you! Your quote request has been sent successfully.');
         setFormData({
-          fullName: '', email: '', phoneNumber: '', eventDate: '',
-          eventLocation: '', packageDuration: '', service: '', message: ''
+          fullName: '',
+          email: '',
+          phoneNumber: '',
+          eventDate: '',
+          eventLocation: '',
+          packageDuration: '',
+          service: '',
+          message: ''
         });
       } else {
         setStatus('Failed to send your request. Please try again later.');
@@ -47,16 +60,64 @@ const QuickQuote = ({ setCurrentPage }) => {
         <h2 className="page-heading">Quick Quote</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <input type="text" name="fullName" placeholder="Full Name" className="form-input" value={formData.fullName} onChange={handleChange} required />
-            <input type="email" name="email" placeholder="Email" className="form-input" value={formData.email} onChange={handleChange} required />
-            <input type="text" name="phoneNumber" placeholder="Phone Number" className="form-input" value={formData.phoneNumber} onChange={handleChange} required />
-            <input type="date" name="eventDate" placeholder="Date of Event" className="form-input" value={formData.eventDate} onChange={handleChange} required />
-            <input type="text" name="eventLocation" placeholder="Event Location" className="form-input" value={formData.eventLocation} onChange={handleChange} required />
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              className="form-input"
+              value={formData.fullName}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="form-input"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="phoneNumber"
+              placeholder="Phone Number"
+              className="form-input"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="date"
+              name="eventDate"
+              placeholder="Date of Event"
+              className="form-input"
+              value={formData.eventDate}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="eventLocation"
+              placeholder="Event Location"
+              className="form-input"
+              value={formData.eventLocation}
+              onChange={handleChange}
+              required
+            />
           </div>
 
           <div className="form-group">
-            <select name="packageDuration" className="form-select" value={formData.packageDuration} onChange={handleChange} required>
-              <option value="" disabled>Select Package Duration</option>
+            <select
+              name="packageDuration"
+              className="form-select"
+              value={formData.packageDuration}
+              onChange={handleChange}
+              required
+            >
+              <option value="" disabled>
+                Select Package Duration
+              </option>
               <option value="2hrs">2 hrs</option>
               <option value="3hrs">3 hrs</option>
               <option value="4hrs">4 hrs</option>
@@ -81,19 +142,33 @@ const QuickQuote = ({ setCurrentPage }) => {
                     onChange={handleChange}
                     required
                   />
-                  <label htmlFor={serviceType.toLowerCase().replace(' ', '')}>{serviceType}</label>
+                  <label htmlFor={serviceType.toLowerCase().replace(' ', '')}>
+                    {serviceType}
+                  </label>
                 </div>
               ))}
             </div>
           </div>
 
-          <textarea name="message" placeholder="Your message..." className="form-textarea" value={formData.message} onChange={handleChange} required />
-          <button type="submit" className="submit-button">Get Quote</button>
+          <textarea
+            name="message"
+            placeholder="Your message..."
+            className="form-textarea"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit" className="submit-button">
+            Get Quote
+          </button>
         </form>
         {status && <p className="form-status">{status}</p>}
 
         <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-          <button onClick={() => setCurrentPage('packages')} className="back-button">
+          <button
+            onClick={() => navigate('/packages')}
+            className="back-button"
+          >
             Back to Packages
           </button>
         </div>

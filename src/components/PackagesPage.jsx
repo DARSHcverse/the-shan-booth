@@ -1,4 +1,3 @@
-// PackagesPage.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
@@ -157,7 +156,10 @@ const PackagesPage = () => {
                 ))}
               </ul>
               <div className="text-center">
-                <button className="package-button" onClick={() => navigate('/quickquote')}>
+                <button
+                  className="package-button"
+                  onClick={() => navigate('/quickquote')}
+                >
                   Inquire
                 </button>
               </div>
@@ -177,7 +179,10 @@ const PackagesPage = () => {
                 ))}
               </ul>
               <div className="text-center">
-                <button className="package-button" onClick={() => navigate('/quickquote')}>
+                <button
+                  className="package-button"
+                  onClick={() => navigate('/quickquote')}
+                >
                   Inquire
                 </button>
               </div>

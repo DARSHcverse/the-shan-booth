@@ -1,87 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="utf-8" />
-    <link rel="icon" href="/logo.png" type="image/png" />
-    <!-- <link rel="apple-touch-icon" href="/logo.png" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    
-    <!-- SEO: Primary Meta Tags -->
-    <!-- Title: Make it descriptive, include keywords, and keep it under 60 characters -->
-    <title>The Shan Booth | Premier Photo Booth & Event Packages</title>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17457289983"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'AW-17457289983');
-  </script>
-    
-    <!-- Meta Description: A concise summary of your page, including keywords. Keep it under 160 characters. -->
+    <!-- Favicons -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- SEO: Primary Meta Tags -->
+    <title>The Shan Booth | Premier Photo Booth & Event Packages</title>
     <meta
       name="description"
       content="The Shan Booth offers premier photo booth rentals and event packages for weddings, birthdays, corporate events, and more. Capture unforgettable memories with our modern and fun photo booths in Tarneit, VIC."
     />
-    
-    <!-- Keywords: While less impactful now, still good practice for very specific, niche terms -->
-    <meta name="keywords" content="photo booth, photobooth rental, photobooth for wedding, photobooth for school, photo booth for events, photo booth rental, photo booth for wedding, photo booth for school, photo booth for events,event packages, wedding photo booth, birthday party, corporate event, university open day, photobooth hire, school graduation, Tarneit, VIC, Melbourne photo booth" />
-
-    <!-- Canonical Tag: Helps prevent duplicate content issues. Point to the preferred version of the page. -->
+    <meta
+      name="keywords"
+      content="photo booth, photobooth rental, photobooth for wedding, photobooth for school, photo booth for events, photo booth rental, photo booth for wedding, photo booth for school, photo booth for events, event packages, wedding photo booth, birthday party, corporate event, university open day, photobooth hire, school graduation, Tarneit, VIC, Melbourne photo booth"
+    />
     <link rel="canonical" href="https://www.photoboothwithshan.com.au/" />
-
-    <!-- Robots Meta Tag: Controls search engine crawling and indexing (default is index, follow) -->
     <meta name="robots" content="index, follow" />
 
-    <!-- Social Media / Open Graph Tags (for Facebook, LinkedIn, etc.) -->
+    <!-- Google Analytics / Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17457289983"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17457289983");
+    </script>
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="The Shan Booth | Premier Photo Booth & Event Packages" />
     <meta property="og:description" content="The Shan Booth offers premier photo booth rentals and event packages for weddings, birthdays, corporate events, and more. Capture unforgettable memories with our modern and fun photo booths in Tarneit, VIC." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.photoboothwithshan.com.au/" />
-    <!-- Replace with a high-quality image (at least 1200x630px) that represents your site -->
-    <meta property="og:image" content="https://www.photoboothwithshan.com.au/logo-social-share.jpg" /> 
+    <meta property="og:image" content="https://www.photoboothwithshan.com.au/logo-social-share.jpg" />
     <meta property="og:site_name" content="The Shan Booth" />
 
-    <!-- Twitter Card Tags (for Twitter) -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@yourtwitterhandle" /> <!-- Replace with your Twitter handle if you have one -->
     <meta name="twitter:title" content="The Shan Booth | Premier Photo Booth & Event Packages" />
     <meta name="twitter:description" content="The Shan Booth offers premier photo booth rentals and event packages for weddings, birthdays, corporate events, and more. Capture unforgettable memories with our modern and fun photo booths in Tarneit, VIC." />
-    <!-- Replace with a high-quality image (at least 1200x675px) that represents your site for Twitter -->
-    <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/twitter-card-image.jpg" /> 
-    
-    <link rel="apple-touch-icon" href="/logo.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/twitter-card-image.jpg" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>The Shan Booth</title> <!-- This title tag will be overridden by the one above -->
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

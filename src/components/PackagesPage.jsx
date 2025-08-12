@@ -105,6 +105,7 @@ const PackagesPage = () => {
         'Standard White Backdrop',
       ],
     },
+
     {
       id: 'glam-3',
       price: '$750',

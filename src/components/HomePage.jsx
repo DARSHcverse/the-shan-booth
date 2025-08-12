@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
-import boothimg5 from '../images/boothimg5.jpg';
-import boothimg2 from '../images/boothimg2.jpg';
+// import boothimg5 from '../images/boothimg5.jpg';
+// import boothimg2 from '../images/boothimg2.jpg';
 import photobooth from '../images/photobooth.jpg';
 import events from '../images/boothimg7.jpg';
 import packages from '../images/boothimg4.jpg';
+import boothvideo from '../images/boothvideo.mp4';
+import boothvideo2 from '../images/boothvideo2.mp4';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const images = [boothimg5, boothimg2];
+  const images = [boothvideo, boothvideo2];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -23,10 +25,13 @@ const HomePage = () => {
     <main className="main-content">
       <section className="hero-section">
         <div className="hero-overlay">
-          <img
-            src={images[currentImageIndex]}
-            alt="The Shan Booth slideshow"
+          <video
+            key={currentImageIndex}          // <-- key forces remount on index change
             className="main-img"
+            src={images[currentImageIndex]}  // <-- use src directly here
+            autoPlay
+            loop
+            muted
           />
           <div className="hero-text">
             <h2 className="hero-title">Welcome to The Shan Booth</h2>
@@ -34,19 +39,18 @@ const HomePage = () => {
               Your premier destination for stunning photobooths and event packages.
             </p><br />
             <button
-            onClick={() => navigate('/packages')}
-            className="home-button"
-          >
-            PACKAGES
-          </button><br /><br />
-          <button
-            onClick={() => navigate('/quickquote')}
-            className="home-button"
-          >
-            QUICK QUOTE
-          </button>
+              onClick={() => navigate('/packages')}
+              className="home-button"
+            >
+              PACKAGES
+            </button><br /><br />
+            <button
+              onClick={() => navigate('/quickquote')}
+              className="home-button"
+            >
+              QUICK QUOTE
+            </button>
           </div>
-          
         </div>
       </section>
       <section className="section-padding">

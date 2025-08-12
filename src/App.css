@@ -353,7 +353,7 @@ body {
     z-index: 1; /* Ensures the overlay is on top of the image */
 }
 
-.main-img {
+.main-video {
     width: 100%; /* Makes the image take up the full width of its container */
     height: 35rem; /* Sets a fixed height for the banner effect */
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
@@ -1003,23 +1003,5 @@ body {
         font-size: 2rem;
         top: 0.5rem;
         right: 0.5rem;
-    }
-}
-
-/* Styling for the video within the Quick Quote card */
-.booth-video {
-    width: 100%; /* Make the video take up the full width of its parent (.quick-quote-card) */
-    max-height: 250px; /* Set a maximum height to prevent it from becoming too large */
-    object-fit: cover; /* Ensures the video covers the area without distortion, cropping if necessary */
-    border-radius: 0.5rem; /* Match the border-radius of the card inputs/elements */
-    margin-bottom: 2rem; /* Add some space below the video before the form starts */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .booth-video {
-        max-height: 180px; /* Slightly reduce max-height on smaller screens */
-        margin-bottom: 1.5rem; /* Adjust margin for mobile */
     }
 }

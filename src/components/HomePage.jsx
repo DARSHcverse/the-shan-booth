@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
-// import boothimg5 from '../images/boothimg5.jpg';
-// import boothimg2 from '../images/boothimg2.jpg';
 import photobooth from '../images/photobooth.jpg';
 import events from '../images/boothimg7.jpg';
 import packages from '../images/boothimg4.jpg';
@@ -11,48 +9,93 @@ import boothvideo2 from '../images/boothvideo2.mp4';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const images = [boothvideo, boothvideo2];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const videos = [boothvideo, boothvideo2];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    }, 5000); // 5 seconds
     return () => clearInterval(intervalId);
-  }, [images.length]);
+  }, []);
 
   return (
     <main className="main-content">
-      <section className="hero-section">
-        <div className="hero-overlay">
-          <video
-            key={currentImageIndex}          // <-- key forces remount on index change
-            className="main-img"
-            src={images[currentImageIndex]}  // <-- use src directly here
-            autoPlay
-            loop
-            muted
-          />
-          <div className="hero-text">
-            <h2 className="hero-title">Welcome to The Shan Booth</h2>
-            <p className="hero-subtitle">
-              Your premier destination for stunning photobooths and event packages.
-            </p><br />
-            <button
-              onClick={() => navigate('/packages')}
-              className="home-button"
-            >
-              PACKAGES
-            </button><br /><br />
-            <button
-              onClick={() => navigate('/quickquote')}
-              className="home-button"
-            >
-              QUICK QUOTE
-            </button>
-          </div>
+      <section
+        className="hero-section"
+        style={{
+          position: 'relative',
+          height: '70vh',        // adjust this to your desired hero height
+          minHeight: '400px',    // minimum height to avoid collapse
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div
+          className="video-wrapper"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 1,
+            overflow: 'hidden',
+          }}
+        >
+          {videos.map((videoSrc, index) => (
+            <video
+              key={index}
+              src={videoSrc}
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                opacity: currentIndex === index ? 1 : 0,
+                transition: 'opacity 1s ease-in-out',
+                pointerEvents: 'none',
+              }}
+            />
+          ))}
+        </div>
+
+        <div
+          className="hero-text"
+          style={{
+            position: 'relative',
+            zIndex: 2,
+            color: '#fff',
+            textAlign: 'center',
+            padding: '0 20px',
+            maxWidth: '600px',
+          }}
+        >
+          <h2 className="hero-title">Welcome to The Shan Booth</h2>
+          <p className="hero-subtitle">
+            Your premier destination for stunning photobooths and event packages.
+          </p>
+          <br />
+          <button onClick={() => navigate('/packages')} className="home-button">
+            PACKAGES
+          </button>
+          <br />
+          <br />
+          <button onClick={() => navigate('/quickquote')} className="home-button">
+            QUICK QUOTE
+          </button>
         </div>
       </section>
+
+      {/* Rest of your content unchanged */}
       <section className="section-padding">
         <div className="container">
           <div className="card-grid">
@@ -62,10 +105,7 @@ const HomePage = () => {
               <p className="card-text">
                 Discover our range of modern and fun photobooths perfect for any event.
               </p>
-              <button
-                onClick={() => navigate('/photobooths')}
-                className="card-button"
-              >
+              <button onClick={() => navigate('/photobooths')} className="card-button">
                 Learn More
               </button>
             </div>
@@ -75,10 +115,7 @@ const HomePage = () => {
               <p className="card-text">
                 We cater to all types of events, from weddings to corporate parties.
               </p>
-              <button
-                onClick={() => navigate('/events')}
-                className="card-button"
-              >
+              <button onClick={() => navigate('/events')} className="card-button">
                 Discover Events
               </button>
             </div>
@@ -88,10 +125,7 @@ const HomePage = () => {
               <p className="card-text">
                 Browse our flexible and affordable packages to find the perfect fit for you.
               </p>
-              <button
-                onClick={() => navigate('/packages')}
-                className="card-button"
-              >
+              <button onClick={() => navigate('/packages')} className="card-button">
                 View Packages
               </button>
             </div>

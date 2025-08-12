@@ -1,60 +1,52 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
+import boothimg5 from '../images/boothimg5.jpg';
+import boothimg2 from '../images/boothimg2.jpg';
 import photobooth from '../images/photobooth.jpg';
 import events from '../images/boothimg7.jpg';
 import packages from '../images/boothimg4.jpg';
-import boothvideo from '../images/boothvideo.mp4';
-import boothvideo2 from '../images/boothvideo2.mp4';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const videos = [boothvideo, boothvideo2];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [boothimg5, boothimg2];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % videos.length);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
     return () => clearInterval(intervalId);
-  }, [videos.length]);
+  }, [images.length]);
 
   return (
     <main className="main-content">
       <section className="hero-section">
-        <div className="hero-overlay video-container">
-          {videos.map((videoSrc, index) => (
-            <video
-              key={index}
-              className={`main-video ${
-                index === currentIndex ? 'fade-in' : 'fade-out'
-              }`}
-              src={videoSrc}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-            />
-          ))}
+        <div className="hero-overlay">
+          <img
+            src={images[currentImageIndex]}
+            alt="The Shan Booth slideshow"
+            className="main-img"
+          />
           <div className="hero-text">
             <h2 className="hero-title">Welcome to The Shan Booth</h2>
             <p className="hero-subtitle">
               Your premier destination for stunning photobooths and event packages.
             </p><br />
             <button
-              onClick={() => navigate('/packages')}
-              className="home-button"
-            >
-              PACKAGES
-            </button><br /><br />
-            <button
-              onClick={() => navigate('/quickquote')}
-              className="home-button"
-            >
-              QUICK QUOTE
-            </button>
+            onClick={() => navigate('/packages')}
+            className="home-button"
+          >
+            PACKAGES
+          </button><br /><br />
+          <button
+            onClick={() => navigate('/quickquote')}
+            className="home-button"
+          >
+            QUICK QUOTE
+          </button>
           </div>
+          
         </div>
       </section>
       <section className="section-padding">

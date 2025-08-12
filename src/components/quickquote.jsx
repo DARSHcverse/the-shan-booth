@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
-
+// import boothvideo from '../images/boothvideo.mp4';
 
 const QuickQuote = () => {
   const navigate = useNavigate();
@@ -59,6 +59,9 @@ const QuickQuote = () => {
     <div className="quick-quote-container">
       <div className="quick-quote-card">
         <h2 className="page-heading">Quick Quote</h2>
+        {/* <video className="booth-video" autoPlay loop muted>
+          <source src={boothvideo} type="video/mp4" />
+        </video> */}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input

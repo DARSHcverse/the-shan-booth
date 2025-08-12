@@ -34,6 +34,7 @@ const HomePage = () => {
               loop
               muted
               playsInline
+              preload="auto"
             />
           ))}
           <div className="hero-text">

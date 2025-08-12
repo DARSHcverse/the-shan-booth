@@ -332,45 +332,69 @@ body {
     font-size: 0.875rem;
 }
 /* --- Main Page Content Styles --- */
-.main-content {
-    min-height: calc(100vh - 12rem);
-    background-color: var(--color-bg-body);
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 35rem; /* Match your hero video height */
+  overflow: hidden;
 }
 
+/* Base styles for all videos stacked */
+.main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  opacity: 60%;
+  pointer-events: none; /* Prevent blocking UI interactions */
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+/* Fade-in video visible */
+.main-video.fade-in {
+  opacity: 0.6;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Fade-out video hidden */
+.main-video.fade-out {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Keep hero-overlay text and overlay layering */
 .hero-overlay {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
+  height: 35rem; /* Match the video height */
 }
 
 .hero-overlay::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* This creates the 50% opacity overlay */
-    z-index: 1; /* Ensures the overlay is on top of the image */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Your overlay */
+  z-index: 1;
 }
 
-.main-video {
-    width: 100%; /* Makes the image take up the full width of its container */
-    height: 35rem; /* Sets a fixed height for the banner effect */
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
-    border-radius: 0; /* Removes the border radius */
-    opacity: 60%;
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: white;
 }
 
-/* --- HomePage Styles --- */
-.hero-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2; /* Ensures the text is on top of the overlay and image */
-    color: white; /* Changed color to white for better readability on a dark overlay */
-}
 
 .hero-section {
     background-color: var(--color-bg-card);

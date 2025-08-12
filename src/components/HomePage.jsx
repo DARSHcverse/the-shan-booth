@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
-// import boothimg5 from '../images/boothimg5.jpg';
-// import boothimg2 from '../images/boothimg2.jpg';
 import photobooth from '../images/photobooth.jpg';
 import events from '../images/boothimg7.jpg';
 import packages from '../images/boothimg4.jpg';
@@ -11,28 +9,33 @@ import boothvideo2 from '../images/boothvideo2.mp4';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const images = [boothvideo, boothvideo2];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const videos = [boothvideo, boothvideo2];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex((prev) => (prev + 1) % videos.length);
     }, 5000);
     return () => clearInterval(intervalId);
-  }, [images.length]);
+  }, [videos.length]);
 
   return (
     <main className="main-content">
       <section className="hero-section">
-        <div className="hero-overlay">
-          <video
-            key={currentImageIndex}          // <-- key forces remount on index change
-            className="main-video"
-            src={images[currentImageIndex]}  // <-- use src directly here
-            autoPlay
-            loop
-            muted
-          />
+        <div className="hero-overlay video-container">
+          {videos.map((videoSrc, index) => (
+            <video
+              key={index}
+              className={`main-video ${
+                index === currentIndex ? 'fade-in' : 'fade-out'
+              }`}
+              src={videoSrc}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          ))}
           <div className="hero-text">
             <h2 className="hero-title">Welcome to The Shan Booth</h2>
             <p className="hero-subtitle">

@@ -7,17 +7,20 @@ import packages from '../images/boothimg4.jpg';
 import boothvideo from '../images/boothvideo.mp4';
 import boothvideo2 from '../images/boothvideo2.mp4';
 
+// Move videos outside the component (module scope)
+const videos = [boothvideo, boothvideo2];
+
 const HomePage = () => {
   const navigate = useNavigate();
-  const videos = [boothvideo, boothvideo2];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
     }, 5000); // 5 seconds
+
     return () => clearInterval(intervalId);
-  }, []);
+  }, []); // no ESLint warning now
 
   return (
     <main className="main-content">
@@ -25,8 +28,8 @@ const HomePage = () => {
         className="hero-section"
         style={{
           position: 'relative',
-          height: '70vh',        // adjust this to your desired hero height
-          minHeight: '400px',    // minimum height to avoid collapse
+          height: '70vh',        // adjust height as needed
+          minHeight: '400px',
           overflow: 'hidden',
           display: 'flex',
           alignItems: 'center',
@@ -95,7 +98,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Rest of your content unchanged */}
       <section className="section-padding">
         <div className="container">
           <div className="card-grid">

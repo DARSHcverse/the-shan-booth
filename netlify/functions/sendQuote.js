@@ -11,8 +11,10 @@ exports.handler = async (event) => {
 
   const data = JSON.parse(event.body);
 
+  // Destructure for both forms
   const {
     fullName,
+    name,
     email,
     phoneNumber,
     eventDate,
@@ -22,30 +24,27 @@ exports.handler = async (event) => {
     message,
   } = data;
 
-  if (
-    !fullName ||
-    !email ||
-    !phoneNumber ||
-    !eventDate ||
-    !eventLocation ||
-    !packageDuration ||
-    !service ||
-    !message
-  ) {
+  // Decide if it's QuickQuote or Footer form
+  const isQuickQuote =
+    fullName && phoneNumber && eventDate && eventLocation && packageDuration && service;
+
+  const isContactForm = name && email && message && !isQuickQuote;
+
+  if (!isQuickQuote && !isContactForm) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ error: 'All fields are required.' }),
+      body: JSON.stringify({ error: 'Required fields are missing.' }),
     };
   }
 
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  const msg = {
-    to: 'theshanbooth@gmail.com',
-    from: 'dharshansubramaniyam2@gmail.com',
-    replyTo: email,
-    subject: `New Quick Quote Request from ${fullName}`,
-    html: `
+  let subject;
+  let html;
+
+  if (isQuickQuote) {
+    subject = `New Quick Quote Request from ${fullName}`;
+    html = `
       <h3>New Quick Quote Request Details:</h3>
       <p><strong>Name:</strong> ${fullName}</p>
       <p><strong>Email:</strong> ${email}</p>
@@ -55,7 +54,23 @@ exports.handler = async (event) => {
       <p><strong>Package Duration:</strong> ${packageDuration}</p>
       <p><strong>Service Type:</strong> ${service}</p>
       <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
-    `,
+    `;
+  } else if (isContactForm) {
+    subject = `New Contact Form Message from ${name}`;
+    html = `
+      <h3>New Contact Form Submission:</h3>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
+    `;
+  }
+
+  const msg = {
+    to: 'theshanbooth@gmail.com',
+    from: 'dharshansubramaniyam2@gmail.com',
+    replyTo: email,
+    subject,
+    html,
   };
 
   try {

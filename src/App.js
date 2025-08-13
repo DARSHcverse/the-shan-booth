@@ -10,6 +10,9 @@ import QuickQuote from './components/quickquote';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BackdropPage from './components/backdrop';
+import TermsPage from './components/termspage';
+import PrivacyPage from './components/privacy';
+
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
         <Route path="/packages" element={<PackagesPage />} />
         <Route path="/quickquote" element={<QuickQuote />} />
         <Route path="/backdrop" element={<BackdropPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
         {/* Optionally, add a catch-all 404 page */}
         {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>

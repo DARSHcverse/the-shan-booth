@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import fb from '../images/3259376_facebook_media_social_icon.png';
 import ig from '../images/3259424_instagram_social media_social_icon.png';
@@ -143,10 +144,18 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
-      <p className="copyright-text">
-        Copyright 2024 The Shan Booth. All rights reserved.
-      </p>
+      {/* Copyright + Links */}
+      <div className="copyright-text">
+        © {new Date().getFullYear()} The Shan Booth. All rights reserved. 
+        <span style={{ margin: '0 0.5rem' }}>|</span>
+        <Link to="/terms" style={{ color: 'inherit', textDecoration: 'underline', margin: '0 0.5rem' }}>
+          Terms & Conditions
+        </Link>
+        <span style={{ margin: '0 0.5rem' }}>|</span>
+        <Link to="/privacy" style={{ color: 'inherit', textDecoration: 'underline', margin: '0 0.5rem' }}>
+          Privacy Policy
+        </Link>
+      </div>
     </footer>
   );
 };

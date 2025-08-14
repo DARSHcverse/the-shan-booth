@@ -695,7 +695,7 @@ body {
 
 
 .form-input[type="date"] {
-    width: 90%;
+    width: 97%;
     padding: 0.75rem;     /* match other inputs */
     min-height: auto;     /* remove the giant fixed height */
     height: 3rem;         /* set a reasonable default */

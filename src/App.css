@@ -688,11 +688,6 @@ body {
 .form-input::placeholder, .form-textarea::placeholder {
     color: var(--color-text-light);
 }
-.form-input[type="date"] {
-        width: 100%;
-        min-height: 8rem;
-        font-size: 1.1rem;
-    }
 
 .form-select {
     appearance: none;

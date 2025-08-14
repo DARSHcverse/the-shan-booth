@@ -309,21 +309,7 @@ body {
 .form-input::placeholder, .form-textarea::placeholder {
     color: var(--color-text-light);
 }
-.form-input[type="date"] {
-    width: 100%;
-    padding: 0.75rem;     /* match other inputs */
-    min-height: auto;     /* remove the giant fixed height */
-    height: 3rem;         /* set a reasonable default */
-    font-size: 1rem;      /* consistent font size */
-}
 
-/* Optional: make it a bit larger on desktop */
-@media (min-width: 768px) {
-    .form-input[type="date"] {
-        height: 3.5rem;
-        font-size: 1.05rem;
-    }
-}
 
 .submit-button {
     background-color: var(--color-primary);

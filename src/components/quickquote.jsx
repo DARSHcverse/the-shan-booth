@@ -25,6 +25,14 @@ const QuickQuote = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Custom validation: check if all fields are filled
+    const { fullName, email, phoneNumber, eventDate, eventLocation, packageDuration, service, message } = formData;
+    if (!fullName || !email || !phoneNumber || !eventDate || !eventLocation || !packageDuration || !service || !message) {
+      setStatus('You have to complete all details.');
+      return;
+    }
+
     setStatus('Sending...');
 
     try {
@@ -71,7 +79,6 @@ const QuickQuote = () => {
               className="form-input"
               value={formData.fullName}
               onChange={handleChange}
-              required
             />
             <input
               type="email"
@@ -80,7 +87,6 @@ const QuickQuote = () => {
               className="form-input"
               value={formData.email}
               onChange={handleChange}
-              required
             />
             <input
               type="text"
@@ -89,7 +95,6 @@ const QuickQuote = () => {
               className="form-input"
               value={formData.phoneNumber}
               onChange={handleChange}
-              required
             />
             <input
               type="date"
@@ -98,7 +103,6 @@ const QuickQuote = () => {
               className="form-input"
               value={formData.eventDate}
               onChange={handleChange}
-              required
             />
             <input
               type="text"
@@ -107,7 +111,6 @@ const QuickQuote = () => {
               className="form-input"
               value={formData.eventLocation}
               onChange={handleChange}
-              required
             />
           </div>
 
@@ -117,7 +120,6 @@ const QuickQuote = () => {
               className="form-select"
               value={formData.packageDuration}
               onChange={handleChange}
-              required
             >
               <option value="" disabled>
                 Select Package Duration
@@ -144,7 +146,6 @@ const QuickQuote = () => {
                     className="custom-radio"
                     checked={formData.service === serviceType}
                     onChange={handleChange}
-                    required
                   />
                   <label htmlFor={serviceType.toLowerCase().replace(' ', '')}>
                     {serviceType}
@@ -160,12 +161,12 @@ const QuickQuote = () => {
             className="form-textarea"
             value={formData.message}
             onChange={handleChange}
-            required
           />
           <button type="submit" className="submit-button">
             Get Quote
           </button>
         </form>
+
         {status && <p className="form-status">{status}</p>}
 
         <div style={{ textAlign: 'center', marginTop: '1rem' }}>

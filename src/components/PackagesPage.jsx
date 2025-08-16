@@ -8,7 +8,7 @@ const PackagesPage = () => {
   const standardPackages = [
     {
       id: 'standard-1',
-      price: '$380',
+      price: '$390',
       duration: '2 HOURS',
       features: [
         'Unlimited Photos',
@@ -23,7 +23,7 @@ const PackagesPage = () => {
     },
     {
       id: 'standard-2',
-      price: '$540',
+      price: '$550',
       duration: '3 HOURS',
       features: [
         'Unlimited Photos',
@@ -79,7 +79,7 @@ const PackagesPage = () => {
   const glamPackages = [
     {
       id: 'glam-1',
-      price: '$480',
+      price: '$490',
       duration: '2 HOURS',
       features: [
         'Unlimited Photos',
@@ -93,7 +93,7 @@ const PackagesPage = () => {
     },
     {
       id: 'glam-2',
-      price: '$580',
+      price: '$590',
       duration: '3 HOURS',
       features: [
         'Unlimited Photos',

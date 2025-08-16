@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import '../App.css';
 
 const eventsData = [
@@ -61,10 +62,22 @@ const eventsData = [
 
 const EventsPage = () => (
   <main className="main-content section-padding">
+    {/* SEO Meta Tags */}
+    <Helmet>
+      <title>Photo Booth Hire for Weddings, Parties & Events in Melbourne | The Shan Booth</title>
+      <meta
+        name="description"
+        content="Discover photo booth hire for weddings, birthdays, school graduations, corporate events & more in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."
+      />
+      <link rel="canonical" href="https://www.photoboothwithshan.com.au/events" />
+    </Helmet>
+
     <div className="container">
       <h2 className="page-heading">Events We Cover</h2>
       <p className="events-intro">
-        We are passionate about bringing joy and unforgettable memories to a wide variety of events. No matter the occasion, we have a photobooth solution to match, providing a fun and interactive experience for all your guests.
+        We are passionate about bringing joy and unforgettable memories to a wide variety of events.
+        No matter the occasion, we have a photobooth solution to match, providing a fun and interactive
+        experience for all your guests.
       </p>
 
       <div className="card-grid">

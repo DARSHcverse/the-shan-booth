@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../App.css';
 
 const PackagesPage = () => {
@@ -105,7 +106,6 @@ const PackagesPage = () => {
         'Standard White Backdrop',
       ],
     },
-
     {
       id: 'glam-3',
       price: '$750',
@@ -142,6 +142,16 @@ const PackagesPage = () => {
 
   return (
     <main className="main-content section-padding">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>Photo Booth Hire Packages Melbourne | Affordable Wedding & Party Booths</title>
+        <meta
+          name="description"
+          content="Explore affordable photo booth hire packages in Melbourne. Choose from Standard or Glam Booth options with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
+        />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/packages" />
+      </Helmet>
+
       <div className="container">
         <h2 className="page-heading">Our Packages</h2>
 

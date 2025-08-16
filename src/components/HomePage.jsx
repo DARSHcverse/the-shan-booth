@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import '../App.css';
 import boothimg5 from '../images/boothimg5.jpg';
 import boothimg2 from '../images/boothimg2.jpg';
@@ -21,6 +22,16 @@ const HomePage = () => {
 
   return (
     <main className="main-content">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>Photo Booth Hire Melbourne | The Shan Booth – Weddings, Parties & Events</title>
+        <meta
+          name="description"
+          content="The Shan Booth offers premier photo booth hire in Melbourne. Perfect for weddings, birthdays, corporate events, school graduations & parties. Unlimited prints, props & modern backdrops."
+        />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/" />
+      </Helmet>
+
       <section className="hero-section">
         <div className="hero-overlay">
           <img
@@ -34,21 +45,21 @@ const HomePage = () => {
               Your premier destination for stunning photobooths and event packages.
             </p><br />
             <button
-            onClick={() => navigate('/packages')}
-            className="home-button"
-          >
-            PACKAGES
-          </button><br /><br />
-          <button
-            onClick={() => navigate('/quickquote')}
-            className="home-button"
-          >
-            QUICK QUOTE
-          </button>
+              onClick={() => navigate('/packages')}
+              className="home-button"
+            >
+              PACKAGES
+            </button><br /><br />
+            <button
+              onClick={() => navigate('/quickquote')}
+              className="home-button"
+            >
+              QUICK QUOTE
+            </button>
           </div>
-          
         </div>
       </section>
+
       <section className="section-padding">
         <div className="container">
           <div className="card-grid">

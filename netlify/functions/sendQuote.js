@@ -12,6 +12,7 @@ exports.handler = async (event) => {
 
   const {
     fullName,
+    name,
     email,
     phoneNumber,
     eventDate,
@@ -23,20 +24,49 @@ exports.handler = async (event) => {
     invoiceNumber,
   } = data;
 
-  if (!fullName || !email || !phoneNumber || !eventDate || !eventLocation || !packageDuration || !service || !price || !invoiceNumber) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+  // Determine form type
+  const isQuickQuote =
+    fullName && phoneNumber && eventDate && eventLocation && packageDuration && service && !price;
+
+  const isBooking =
+    fullName && email && phoneNumber && eventDate && eventLocation && packageDuration && service && price && invoiceNumber;
+
+  const isContactForm =
+    name && email && message && !isQuickQuote && !isBooking;
+
+  if (!isQuickQuote && !isBooking && !isContactForm) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Required fields are missing.' }) };
   }
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
   try {
-    // Send email to admin
-    await sgMail.send({
-      to: 'theshanbooth@gmail.com',
-      from: 'dharshansubramaniyam2@gmail.com',
-      replyTo: email,
-      subject: `New Booking Request from ${fullName}`,
-      html: `
+    let subject, html;
+
+    // ----------------------
+    // Quick Quote
+    // ----------------------
+    if (isQuickQuote) {
+      subject = `New Quick Quote Request from ${fullName}`;
+      html = `
+        <h3>New Quick Quote Request Details:</h3>
+        <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+        <p><strong>Event Date:</strong> ${eventDate}</p>
+        <p><strong>Event Location:</strong> ${eventLocation}</p>
+        <p><strong>Package Duration:</strong> ${packageDuration}</p>
+        <p><strong>Service Type:</strong> ${service}</p>
+        <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
+      `;
+    }
+
+    // ----------------------
+    // Booking Form
+    // ----------------------
+    else if (isBooking) {
+      subject = `New Booking Request from ${fullName}`;
+      html = `
         <h3>New Booking Details:</h3>
         <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
         <p><strong>Name:</strong> ${fullName}</p>
@@ -48,61 +78,56 @@ exports.handler = async (event) => {
         <p><strong>Service Type:</strong> ${service}</p>
         <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
         <p><strong>Price:</strong> AUD ${price}</p>
-      `,
-    });
+      `;
 
-    // Create Stripe Customer
-    const customer = await stripe.customers.create({
-      name: fullName,
-      email,
-      phone: phoneNumber,
-    });
+      // 1️⃣ Create Stripe Customer
+      const customer = await stripe.customers.create({
+        name: fullName,
+        email,
+        phone: phoneNumber,
+      });
 
-    // Create Invoice Item
-    await stripe.invoiceItems.create({
-      customer: customer.id,
-      amount: Math.round(price * 100),
-      currency: 'aud',
-      description: `${packageDuration} - ${service} (Invoice: ${invoiceNumber})`,
-    });
+      // 2️⃣ Create Invoice Item (no invoice email to customer)
+      await stripe.invoiceItems.create({
+        customer: customer.id,
+        amount: Math.round(price * 100),
+        currency: 'aud',
+        description: `${packageDuration} - ${service} (Invoice: ${invoiceNumber})`,
+      });
+    }
 
-    // Create Invoice (unpaid)
-    let invoice = await stripe.invoices.create({
-      customer: customer.id,
-      auto_advance: false,
-      metadata: { invoice_number: invoiceNumber },
-    });
+    // ----------------------
+    // Contact Form
+    // ----------------------
+    else if (isContactForm) {
+      subject = `New Contact Form Message from ${name}`;
+      html = `
+        <h3>New Contact Form Submission:</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
+      `;
+    }
 
-    invoice = await stripe.invoices.finalizeInvoice(invoice.id);
+    // ----------------------
+    // Send email to admin
+    // ----------------------
+    const msg = {
+      to: 'theshanbooth@gmail.com',
+      from: 'dharshansubramaniyam2@gmail.com',
+      replyTo: email,
+      subject,
+      html,
+    };
 
-    // Send invoice email to customer
-    await sgMail.send({
-      to: email,
-      from: 'theshanbooth@gmail.com',
-      subject: `Your Booking Confirmation - ${invoiceNumber}`,
-      html: `
-        <h3>Hi ${fullName},</h3>
-        <p>Thank you for booking The Shan Booth! Your booking has been received.</p>
-        <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
-        <p><strong>Event Date:</strong> ${eventDate}</p>
-        <p><strong>Location:</strong> ${eventLocation}</p>
-        <p>You can securely pay your invoice anytime here:</p>
-        <p>
-          <a href="${invoice.hosted_invoice_url}" style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
-            Pay Invoice
-          </a>
-        </p>
-        <p>– The Shan Booth Team</p>
-      `,
-    });
+    await sgMail.send(msg);
 
-    // Return only confirmation (do not redirect)
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Booking confirmed!' }),
+      body: JSON.stringify({ message: isBooking ? 'Booking processed successfully!' : 'Email sent successfully!' }),
     };
   } catch (err) {
     console.error('Error:', err);
-    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to process booking.' }) };
+    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to process request.' }) };
   }
 };

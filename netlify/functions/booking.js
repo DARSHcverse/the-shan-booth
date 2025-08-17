@@ -66,12 +66,15 @@ exports.handler = async (event) => {
     // ----------------------
     // Stripe: Create & Finalize Invoice
     // ----------------------
+    let dueDate = Math.floor(new Date().getTime() / 1000) + (7 * 24 * 60 * 60); // 7 days from now
+
     let invoice = await stripe.invoices.create({
       customer: customer.id,
       auto_advance: false,
       collection_method: 'send_invoice',
       description: `Booking Invoice #${invoiceNumber}`,
       metadata: { invoice_number: invoiceNumber },
+      due_date: dueDate, // Set the due date to 7 days from now
     });
 
     console.log('Invoice created:', invoice.id);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../App.css';
+import "../App.css";
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +35,8 @@ const BookingPage = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     let updatedData = { ...formData, [name]: value };
-    if (name === "packageDuration") updatedData.price = packagePrices[value] || 0;
+    if (name === "packageDuration")
+      updatedData.price = packagePrices[value] || 0;
     setFormData(updatedData);
   };
 
@@ -46,7 +47,8 @@ const BookingPage = () => {
       const invoiceNumber = generateInvoiceNumber();
       const payload = { ...formData, invoiceNumber };
 
-      const response = await fetch("/.netlify/functions/sendQuote", {
+      // ✅ point to booking function instead of sendQuote
+      const response = await fetch("/.netlify/functions/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -55,7 +57,7 @@ const BookingPage = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus("Booking submitted! Check your email for invoice.");
+        setStatus("Booking submitted! Booking confirmation sent.");
         setFormData({
           fullName: "",
           email: "",
@@ -83,21 +85,74 @@ const BookingPage = () => {
       <div className="booking-card">
         <h2 className="booking-title">Book Your Photobooth</h2>
         <form onSubmit={handleSubmit} className="booking-form">
-          <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" required />
-          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
-          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number" required />
-          <input type="date" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
-          <input type="text" name="eventLocation" value={formData.eventLocation} onChange={handleChange} placeholder="Event Location" required />
-          <select name="packageDuration" value={formData.packageDuration} onChange={handleChange} required>
+          <input
+            type="text"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+          <input
+            type="text"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            placeholder="Phone Number"
+            required
+          />
+          <input
+            type="date"
+            name="eventDate"
+            value={formData.eventDate}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="eventLocation"
+            value={formData.eventLocation}
+            onChange={handleChange}
+            placeholder="Event Location"
+            required
+          />
+          <select
+            name="packageDuration"
+            value={formData.packageDuration}
+            onChange={handleChange}
+            required
+          >
             <option value="">Select Package Duration</option>
             <option value="2 Hours">2 Hours</option>
             <option value="3 Hours">3 Hours</option>
             <option value="4 Hours">4 Hours</option>
             <option value="5 Hours">5 Hours</option>
           </select>
-          <input type="number" name="price" value={formData.price} readOnly className="readonly-input" />
-          <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Additional Message (Optional)" rows="3" />
-          <button type="submit" className="submit-button">Confirm Booking</button>
+          <input
+            type="number"
+            name="price"
+            value={formData.price}
+            readOnly
+            className="readonly-input"
+          />
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Additional Message (Optional)"
+            rows="3"
+          />
+          <button type="submit" className="submit-button">
+            Confirm Booking
+          </button>
         </form>
         {status && <p className="booking-status">{status}</p>}
       </div>

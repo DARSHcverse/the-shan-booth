@@ -68,7 +68,7 @@ const HomePage = () => {
               <h3 className="card-title">Our Photobooths</h3>
               <p className="card-text">
                 Discover our range of modern and fun photobooths perfect for any event.
-              </p>
+              </p><br />
               <button
                 onClick={() => navigate('/photobooths')}
                 className="card-button"
@@ -81,7 +81,7 @@ const HomePage = () => {
               <h3 className="card-title">Events</h3>
               <p className="card-text">
                 We cater to all types of events, from weddings to corporate parties.
-              </p>
+              </p><br />
               <button
                 onClick={() => navigate('/events')}
                 className="card-button"
@@ -94,7 +94,7 @@ const HomePage = () => {
               <h3 className="card-title">Our Packages</h3>
               <p className="card-text">
                 Browse our flexible and affordable packages to find the perfect fit for you.
-              </p>
+              </p><br />
               <button
                 onClick={() => navigate('/packages')}
                 className="card-button"

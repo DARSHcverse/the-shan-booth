@@ -437,6 +437,7 @@ body {
     background-color: var(--color-accent);
 }
 
+
 @media (min-width: 768px) {
     .card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -480,21 +481,25 @@ body {
     color: var(--color-text-light);
 }
 
+
 .card-button {
-    display: inline-block;
-    margin-top: 1rem;
     background-color: var(--color-primary);
     color: white;
+    width: 100%;
+    max-width: 200px;
+    font-weight: 700;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s;
+    font-size: large;
 }
 
 .card-button:hover {
     background-color: var(--color-accent);
 }
+
 
 /* --- Photobooths Page Styles --- */
 .page-heading {
@@ -1290,4 +1295,34 @@ body {
         font-size: 1.1rem;
         padding: 0.9rem;
     }
+}
+
+/* Floating Book Now Button */
+.book-now-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(270deg, #f7941d, #5aadc8, #86cbe2, #f7941d);
+  background-size: 800% 800%;
+  animation: gradientWave 8s ease infinite;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+
+.book-now-floating:hover {
+  transform: scale(1.1);
+}
+
+@keyframes gradientWave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

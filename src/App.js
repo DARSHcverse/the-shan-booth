@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 
 import HomePage from './components/HomePage';
 import EventsPage from './components/EventsPage';
@@ -15,11 +15,17 @@ import PrivacyPage from './components/privacy';
 import PayPage from './components/PayPage';
 import BookingPage from './components/Bookingpage';
 
-
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Hide the button on the booking page
+  const showBookNow = location.pathname !== '/booking';
+
   return (
     <div>
       <Header />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/events" element={<EventsPage />} />
@@ -31,9 +37,18 @@ function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/pay" element={<PayPage />} />
         <Route path="/booking" element={<BookingPage />} />
-        {/* Optionally, add a catch-all 404 page */}
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>
+
+      {/* Global Floating Book Now Button */}
+      {showBookNow && (
+        <button
+          className="book-now-floating"
+          onClick={() => navigate('/booking')}
+        >
+          Book Now
+        </button>
+      )}
+
       <Footer />
     </div>
   );

@@ -40,7 +40,7 @@ const HomePage = () => {
             className="main-img"
           />
           <div className="hero-text">
-            <h2 className="hero-title">Welcome to The Shan Booth</h2>
+            <h2 className="hero-title">Photo Booth Hire Melbourne</h2>
             <p className="hero-subtitle">
               Your premier destination for stunning photobooths and event packages.
             </p><br />

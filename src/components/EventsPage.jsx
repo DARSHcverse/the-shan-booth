@@ -61,40 +61,82 @@ const eventsData = [
 ];
 
 const EventsPage = () => (
-  <main className="main-content section-padding">
-    {/* SEO Meta Tags */}
+  <>
     <Helmet>
-      <title>Photo Booth Hire for Weddings, Parties & Events in Melbourne | The Shan Booth</title>
+      <title>Event Photobooth Hire for Weddings, Parties & Corporate Events | The Shan Booth</title>
       <meta
         name="description"
-        content="Discover photo booth hire for weddings, birthdays, school graduations, corporate events & more in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."
+        content="Hire photobooths for weddings, birthdays, school graduations, corporate events & university open days in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."
       />
       <link rel="canonical" href="https://www.photoboothwithshan.com.au/events" />
+
+      {/* Open Graph */}
+      <meta property="og:title" content="Event Photobooth Hire in Melbourne | The Shan Booth" />
+      <meta
+        property="og:description"
+        content="Hire photobooths for weddings, birthdays, corporate events, school graduations & university open days in Melbourne. Custom templates, themed props & instant prints."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.photoboothwithshan.com.au/events" />
+      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/sample-event.jpg" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Event Photobooth Hire in Melbourne | The Shan Booth" />
+      <meta
+        name="twitter:description"
+        content="Hire photobooths for weddings, birthdays, corporate events, school graduations & university open days in Melbourne."
+      />
+      <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/sample-event.jpg" />
+
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Event Photobooth Hire",
+            "description": "Photo booth hire for weddings, birthdays, corporate events, school graduations, and university open days in Melbourne.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The Shan Booth",
+              "url": "https://www.photoboothwithshan.com.au"
+            },
+            "areaServed": {
+              "@type": "Place",
+              "name": "Melbourne, Australia"
+            },
+            "serviceType": "Photobooth Hire"
+          }
+        `}
+      </script>
     </Helmet>
 
-    <div className="container">
-      <h2 className="page-heading">Events We Cover</h2>
-      <p className="events-intro">
-        We are passionate about bringing joy and unforgettable memories to a wide variety of events.
-        No matter the occasion, we have a photobooth solution to match, providing a fun and interactive
-        experience for all your guests.
-      </p>
+    <main className="main-content section-padding">
+      <div className="container">
+        <h1 className="page-heading">Events We Cover</h1>
+        <p className="events-intro">
+          We are passionate about bringing joy and unforgettable memories to a wide variety of events.
+          No matter the occasion, we have a photobooth solution to match, providing a fun and interactive
+          experience for all your guests.
+        </p>
 
-      <div className="card-grid">
-        {eventsData.map((event, index) => (
-          <div key={index} className="card">
-            <h3 className="card-title">{event.title}</h3>
-            <p className="card-text">{event.description}</p>
-            <ul className="package-features">
-              {event.offers.map((offer, idx) => (
-                <li key={idx}>{offer}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="card-grid">
+          {eventsData.map((event, index) => (
+            <div key={index} className="card">
+              <h2 className="card-title">{event.title}</h2>
+              <p className="card-text">{event.description}</p>
+              <ul className="package-features">
+                {event.offers.map((offer, idx) => (
+                  <li key={idx}>{offer}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </>
 );
 
 export default EventsPage;

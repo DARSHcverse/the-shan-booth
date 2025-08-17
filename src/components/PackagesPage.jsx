@@ -141,8 +141,7 @@ const PackagesPage = () => {
   ];
 
   return (
-    <main className="main-content section-padding">
-      {/* SEO Meta Tags */}
+    <>
       <Helmet>
         <title>Photo Booth Hire Packages Melbourne | Affordable Wedding & Party Booths</title>
         <meta
@@ -150,58 +149,92 @@ const PackagesPage = () => {
           content="Explore affordable photo booth hire packages in Melbourne. Choose from Standard or Glam Booth options with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/packages" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Photo Booth Hire Packages in Melbourne | The Shan Booth" />
+        <meta
+          property="og:description"
+          content="Choose from Standard or Glam Booth packages with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/packages" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/sample-package.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Photo Booth Hire Packages in Melbourne | The Shan Booth" />
+        <meta
+          name="twitter:description"
+          content="Choose from Standard or Glam Booth packages with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
+        />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/sample-package.jpg" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Photo Booth Hire Packages",
+              "description": "Standard and Glam photo booth hire packages in Melbourne for weddings, parties, and corporate events.",
+              "provider": {
+                "@type": "Organization",
+                "name": "The Shan Booth",
+                "url": "https://www.photoboothwithshan.com.au"
+              },
+              "areaServed": "Melbourne, Australia",
+              "serviceType": "Photo Booth Hire"
+            }
+          `}
+        </script>
       </Helmet>
 
-      <div className="container">
-        <h2 className="page-heading">Our Packages</h2>
+      <main className="main-content section-padding">
+        <div className="container">
+          <h1 className="page-heading">Photo Booth Hire Packages Melbourne</h1>
 
-        <h3 className="package-section-heading">Standard Booth Packages</h3>
-        <div className="package-list">
-          {standardPackages.map((pkg) => (
-            <div className="package-card" key={pkg.id}>
-              <p className="package-price">{pkg.price}</p>
-              <h3 className="package-title">{pkg.duration}</h3>
-              <ul className="package-features">
-                {pkg.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-              <div className="text-center">
-                <button
-                  className="package-button"
-                  onClick={() => navigate('/quickquote')}
-                >
-                  Inquire
-                </button>
+          <h2 className="package-section-heading">Standard Booth Packages</h2>
+          <div className="package-list">
+            {standardPackages.map((pkg) => (
+              <div className="package-card" key={pkg.id}>
+                <p className="package-price">{pkg.price}</p>
+                <h3 className="package-title">{pkg.duration}</h3>
+                <ul className="package-features">
+                  {pkg.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <button className="package-button" onClick={() => navigate('/quickquote')}>
+                    Inquire
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <h3 className="package-section-heading">Glam Booth Packages</h3>
-        <div className="package-list">
-          {glamPackages.map((pkg) => (
-            <div className="package-card" key={pkg.id}>
-              <p className="package-price">{pkg.price}</p>
-              <h3 className="package-title">{pkg.duration}</h3>
-              <ul className="package-features">
-                {pkg.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-              <div className="text-center">
-                <button
-                  className="package-button"
-                  onClick={() => navigate('/quickquote')}
-                >
-                  Inquire
-                </button>
+          <h2 className="package-section-heading">Glam Booth Packages</h2>
+          <div className="package-list">
+            {glamPackages.map((pkg) => (
+              <div className="package-card" key={pkg.id}>
+                <p className="package-price">{pkg.price}</p>
+                <h3 className="package-title">{pkg.duration}</h3>
+                <ul className="package-features">
+                  {pkg.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <button className="package-button" onClick={() => navigate('/quickquote')}>
+                    Inquire
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

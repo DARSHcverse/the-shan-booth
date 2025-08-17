@@ -87,12 +87,20 @@ exports.handler = async (event) => {
         phone: phoneNumber,
       });
 
-      // 2️⃣ Create Invoice Item (no invoice email to customer)
+      // 2️⃣ Create Invoice Item
       await stripe.invoiceItems.create({
         customer: customer.id,
-        amount: Math.round(price * 100),
+        amount: Math.round(price * 100), // Stripe expects cents
         currency: 'aud',
         description: `${packageDuration} - ${service} (Invoice: ${invoiceNumber})`,
+      });
+
+      // 3️⃣ Create Draft Invoice (not sent to customer automatically)
+      await stripe.invoices.create({
+        customer: customer.id,
+        auto_advance: false, // Keeps it as draft until you manually finalize
+        collection_method: 'send_invoice', // You’ll manually send from Stripe
+        description: `Booking Invoice #${invoiceNumber}`,
       });
     }
 
@@ -124,7 +132,7 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: isBooking ? 'Booking processed successfully!' : 'Email sent successfully!' }),
+      body: JSON.stringify({ message: isBooking ? 'Booking saved to Stripe & email sent!' : 'Email sent successfully!' }),
     };
   } catch (err) {
     console.error('Error:', err);

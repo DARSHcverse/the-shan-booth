@@ -80,6 +80,7 @@ body {
 .logo-link {
     display: flex;
     align-items: center;
+    margin-left: 35%;
     gap: 1rem;
     background: none;
     border: none;
@@ -633,7 +634,7 @@ body {
 }
 
 .quick-quote-card {
-    background-color: var(--color-bg-card);
+    background-color: white;
     padding: 2rem;
     border-radius: 0.75rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -660,7 +661,7 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--color-border);
-    background-color: var(--color-bg-body);
+    background-color:white);
     font-size: 1rem;
     transition: border-color 0.3s;
 }
@@ -823,7 +824,7 @@ body {
 }
 
 .backdrop-container .page-heading {
-    color: var(--color-primary); /* Primary color for consistency */
+    color: var(--color-accent); /* Primary color for consistency */
 }
 
 .backdrop-intro-text {
@@ -1148,3 +1149,96 @@ body {
   font-size: 0.75rem;
 }
 
+
+/* --- Booking Page Style --- */
+.booking-container {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  width: 100%;
+}
+
+.booking-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border, #d1d5db);
+  background-color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent, #f5a623);
+}
+
+.booking-form input::placeholder,
+.booking-form select::placeholder,
+.booking-form textarea::placeholder {
+  color: var(--color-text-light, #6b7280);
+}
+
+.booking-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236B7280'%3e%3cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5em;
+  padding-right: 2.5rem;
+}
+
+.booking-form input[readonly] {
+  background-color: #f3f4f6;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: var(--color-accent, #f5a623);
+  color: white;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.booking-form button:hover {
+  background-color: #5398b1; /* Slightly darker accent */
+  transform: translateY(-2px);
+}
+
+.booking-status {
+  margin-top: 1rem;
+  text-align: center;
+  color: #374151;
+}

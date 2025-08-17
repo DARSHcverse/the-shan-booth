@@ -13,6 +13,7 @@ import BackdropPage from './components/backdrop';
 import TermsPage from './components/termspage';
 import PrivacyPage from './components/privacy';
 import PayPage from './components/PayPage';
+import BookingPage from './components/Bookingpage';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/pay" element={<PayPage />} />
+        <Route path="/booking" element={<BookingPage />} />
         {/* Optionally, add a catch-all 404 page */}
         {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>

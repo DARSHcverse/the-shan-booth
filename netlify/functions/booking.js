@@ -1,4 +1,3 @@
-// netlify/functions/booking.js
 const sgMail = require('@sendgrid/mail');
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -52,6 +51,8 @@ exports.handler = async (event) => {
       phone: phoneNumber,
     });
 
+    console.log('Stripe customer created:', customer.id);
+
     // ----------------------
     // Stripe: Add Invoice Item
     // ----------------------
@@ -73,11 +74,25 @@ exports.handler = async (event) => {
       metadata: { invoice_number: invoiceNumber },
     });
 
+    console.log('Invoice created:', invoice.id);
+
     invoice = await stripe.invoices.finalizeInvoice(invoice.id);
+
+    // Check if invoice is finalized successfully
+    if (invoice.status !== 'open') {
+      console.error('Invoice could not be finalized:', invoice.status);
+      throw new Error('Invoice finalization failed');
+    }
+
+    console.log('Invoice finalized:', invoice.id);
 
     // ----------------------
     // Send Email to Customer (with pay link)
     // ----------------------
+    if (!invoice.hosted_invoice_url) {
+      throw new Error('Hosted invoice URL is missing');
+    }
+
     await sgMail.send({
       to: email,
       from: 'theshanbooth@gmail.com',
@@ -134,7 +149,7 @@ exports.handler = async (event) => {
     console.error('Error in booking:', err);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Failed to process booking.' }),
+      body: JSON.stringify({ error: err.message || 'Failed to process booking.' }),
     };
   }
 };

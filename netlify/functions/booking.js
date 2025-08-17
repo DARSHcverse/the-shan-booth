@@ -12,14 +12,39 @@ exports.handler = async (event) => {
 
   try {
     const data = JSON.parse(event.body);
-    const { fullName, email, phoneNumber, eventDate, eventLocation, packageDuration, service, message, price, invoiceNumber } = data;
+    const {
+      fullName,
+      email,
+      phoneNumber,
+      eventDate,
+      eventLocation,
+      packageDuration,
+      service,
+      message,
+      price,
+      invoiceNumber,
+    } = data;
 
-    if (!fullName || !email || !phoneNumber || !eventDate || !eventLocation || !packageDuration || !service || !price || !invoiceNumber) {
-      return { statusCode: 400, body: JSON.stringify({ error: 'Required fields are missing for booking.' }) };
+    // ✅ Validation
+    if (
+      !fullName ||
+      !email ||
+      !phoneNumber ||
+      !eventDate ||
+      !eventLocation ||
+      !packageDuration ||
+      !service ||
+      !price ||
+      !invoiceNumber
+    ) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: 'Required fields are missing for booking.' }),
+      };
     }
 
     // ----------------------
-    // Create Stripe Customer
+    // Stripe: Create Customer
     // ----------------------
     const customer = await stripe.customers.create({
       name: fullName,
@@ -28,7 +53,7 @@ exports.handler = async (event) => {
     });
 
     // ----------------------
-    // Create Invoice Item
+    // Stripe: Add Invoice Item
     // ----------------------
     await stripe.invoiceItems.create({
       customer: customer.id,
@@ -38,44 +63,78 @@ exports.handler = async (event) => {
     });
 
     // ----------------------
-    // Create Draft Invoice
+    // Stripe: Create & Finalize Invoice
     // ----------------------
-    await stripe.invoices.create({
+    let invoice = await stripe.invoices.create({
       customer: customer.id,
-      auto_advance: false, // Keeps it draft
+      auto_advance: false,
       collection_method: 'send_invoice',
       description: `Booking Invoice #${invoiceNumber}`,
+      metadata: { invoice_number: invoiceNumber },
+    });
+
+    invoice = await stripe.invoices.finalizeInvoice(invoice.id);
+
+    // ----------------------
+    // Send Email to Customer (with pay link)
+    // ----------------------
+    await sgMail.send({
+      to: email,
+      from: 'theshanbooth@gmail.com',
+      subject: `Your Booking Confirmation - ${invoiceNumber}`,
+      html: `
+        <h3>Hi ${fullName},</h3>
+        <p>Thank you for booking <strong>The Shan Booth</strong>! 🎉</p>
+        <p>Your booking has been confirmed.</p>
+        <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
+        <p><strong>Event Date:</strong> ${eventDate}</p>
+        <p><strong>Location:</strong> ${eventLocation}</p>
+        <p><strong>Package:</strong> ${packageDuration} – ${service}</p>
+        <p><strong>Total Price:</strong> AUD ${price}</p>
+        <p>You can securely pay your invoice using the button below:</p>
+        <p>
+          <a href="${invoice.hosted_invoice_url}" 
+             style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
+             Pay Invoice
+          </a>
+        </p>
+        <p>We look forward to making your event unforgettable!</p>
+        <p>– The Shan Booth Team</p>
+      `,
     });
 
     // ----------------------
-    // Email Notification
+    // Send Admin Notification
     // ----------------------
-    const subject = `New Booking Request from ${fullName}`;
-    const html = `
-      <h3>New Booking Details:</h3>
-      <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
-      <p><strong>Name:</strong> ${fullName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-      <p><strong>Event Date:</strong> ${eventDate}</p>
-      <p><strong>Event Location:</strong> ${eventLocation}</p>
-      <p><strong>Package Duration:</strong> ${packageDuration}</p>
-      <p><strong>Service Type:</strong> ${service}</p>
-      <p><strong>Price:</strong> AUD ${price}</p>
-      <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
-    `;
-
     await sgMail.send({
       to: 'theshanbooth@gmail.com',
       from: 'dharshansubramaniyam2@gmail.com',
       replyTo: email,
-      subject,
-      html,
+      subject: `New Booking Request from ${fullName}`,
+      html: `
+        <h3>New Booking Details:</h3>
+        <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
+        <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+        <p><strong>Event Date:</strong> ${eventDate}</p>
+        <p><strong>Event Location:</strong> ${eventLocation}</p>
+        <p><strong>Package Duration:</strong> ${packageDuration}</p>
+        <p><strong>Service Type:</strong> ${service}</p>
+        <p><strong>Price:</strong> AUD ${price}</p>
+        <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
+      `,
     });
 
-    return { statusCode: 200, body: JSON.stringify({ message: 'Booking saved to Stripe & email sent!' }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Booking confirmed & invoice sent!' }),
+    };
   } catch (err) {
     console.error('Error in booking:', err);
-    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to process booking.' }) };
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed to process booking.' }),
+    };
   }
 };

@@ -64,89 +64,95 @@ exports.handler = async (event) => {
     });
 
     // ----------------------
-    // Stripe: Create & Finalize Invoice
+    // Stripe: Create Invoice (do not finalize)
     // ----------------------
     let dueDate = Math.floor(new Date().getTime() / 1000) + (7 * 24 * 60 * 60); // 7 days from now
 
-    let invoice = await stripe.invoices.create({
+    const invoice = await stripe.invoices.create({
       customer: customer.id,
-      auto_advance: false,
+      auto_advance: false, // leave draft
       collection_method: 'send_invoice',
       description: `Booking Invoice #${invoiceNumber}`,
       metadata: { invoice_number: invoiceNumber },
-      due_date: dueDate, // Set the due date to 7 days from now
+      due_date: dueDate,
     });
 
     console.log('Invoice created:', invoice.id);
 
-    invoice = await stripe.invoices.finalizeInvoice(invoice.id);
-
-    // Check if invoice is finalized successfully
-    if (invoice.status !== 'open') {
-      console.error('Invoice could not be finalized:', invoice.status);
-      throw new Error('Invoice finalization failed');
-    }
-
-    console.log('Invoice finalized:', invoice.id);
-
     // ----------------------
-    // Send Email to Customer (with pay link)
+    // Send Email to Customer
     // ----------------------
-    if (!invoice.hosted_invoice_url) {
-      throw new Error('Hosted invoice URL is missing');
+    try {
+      await sgMail.send({
+        to: email,
+        from: {
+          email: 'dharshansubramaniyam2@gmail.com', // ✅ verified sender
+          name: 'The Shan Booth', // ✅ display name
+        },
+        subject: `Your Booking Confirmation - ${invoiceNumber}`,
+        html: `
+          <h3>Hi ${fullName},</h3>
+          <p>Thank you for booking <strong>The Shan Booth</strong>! 🎉</p>
+          <p>Your booking has been confirmed.</p>
+          <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
+          <p><strong>Event Date:</strong> ${eventDate}</p>
+          <p><strong>Location:</strong> ${eventLocation}</p>
+          <p><strong>Package:</strong> ${packageDuration} – ${service}</p>
+          <p><strong>Total Price:</strong> AUD ${price}</p>
+          ${
+            invoice.hosted_invoice_url
+              ? `<p>You can securely pay your invoice using the button below:</p>
+                 <p>
+                   <a href="${invoice.hosted_invoice_url}" 
+                      style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
+                      View Invoice
+                   </a>
+                 </p>`
+              : ''
+          }
+          <p>We look forward to making your event unforgettable!</p>
+          <p>– The Shan Booth Team</p>
+        `,
+      });
+      console.log('Customer email sent');
+    } catch (emailErr) {
+      console.error('Customer email failed:', emailErr);
     }
-
-    await sgMail.send({
-      to: email,
-      from: 'theshanbooth@gmail.com',
-      subject: `Your Booking Confirmation - ${invoiceNumber}`,
-      html: `
-        <h3>Hi ${fullName},</h3>
-        <p>Thank you for booking <strong>The Shan Booth</strong>! 🎉</p>
-        <p>Your booking has been confirmed.</p>
-        <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
-        <p><strong>Event Date:</strong> ${eventDate}</p>
-        <p><strong>Location:</strong> ${eventLocation}</p>
-        <p><strong>Package:</strong> ${packageDuration} – ${service}</p>
-        <p><strong>Total Price:</strong> AUD ${price}</p>
-        <p>You can securely pay your invoice using the button below:</p>
-        <p>
-          <a href="${invoice.hosted_invoice_url}" 
-             style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
-             Pay Invoice
-          </a>
-        </p>
-        <p>We look forward to making your event unforgettable!</p>
-        <p>– The Shan Booth Team</p>
-      `,
-    });
 
     // ----------------------
     // Send Admin Notification
     // ----------------------
-    await sgMail.send({
-      to: 'theshanbooth@gmail.com',
-      from: 'dharshansubramaniyam2@gmail.com',
-      replyTo: email,
-      subject: `New Booking Request from ${fullName}`,
-      html: `
-        <h3>New Booking Details:</h3>
-        <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
-        <p><strong>Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-        <p><strong>Event Date:</strong> ${eventDate}</p>
-        <p><strong>Event Location:</strong> ${eventLocation}</p>
-        <p><strong>Package Duration:</strong> ${packageDuration}</p>
-        <p><strong>Service Type:</strong> ${service}</p>
-        <p><strong>Price:</strong> AUD ${price}</p>
-        <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
-      `,
-    });
+    try {
+      await sgMail.send({
+        to: 'theshanbooth@gmail.com', // 📩 goes to you
+        from: {
+          email: 'dharshansubramaniyam2@gmail.com', // ✅ must be verified
+          name: 'The Shan Booth',
+        },
+        replyTo: email, // 📌 reply goes to the customer
+        subject: `New Booking Request from ${fullName}`,
+        html: `
+          <h3>New Booking Details:</h3>
+          <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
+          <p><strong>Name:</strong> ${fullName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+          <p><strong>Event Date:</strong> ${eventDate}</p>
+          <p><strong>Event Location:</strong> ${eventLocation}</p>
+          <p><strong>Package Duration:</strong> ${packageDuration}</p>
+          <p><strong>Service Type:</strong> ${service}</p>
+          <p><strong>Price:</strong> AUD ${price}</p>
+          <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
+        `,
+      });
+      console.log('Admin email sent');
+    } catch (adminErr) {
+      console.error('Admin email failed:', adminErr);
+    }
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Booking confirmed & invoice sent!' }),
+      body: JSON.stringify({ message: 'Booking created & draft invoice sent!' }),
     };
   } catch (err) {
     console.error('Error in booking:', err);

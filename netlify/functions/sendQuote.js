@@ -23,27 +23,14 @@ exports.handler = async (event) => {
     invoiceNumber,
   } = data;
 
-  // Validate booking form fields
-  if (
-    !fullName ||
-    !email ||
-    !phoneNumber ||
-    !eventDate ||
-    !eventLocation ||
-    !packageDuration ||
-    !service ||
-    !price ||
-    !invoiceNumber
-  ) {
+  if (!fullName || !email || !phoneNumber || !eventDate || !eventLocation || !packageDuration || !service || !price || !invoiceNumber) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Required fields are missing.' }) };
   }
 
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   try {
-    // ----------------------------
-    // 1️⃣ Send email to admin
-    // ----------------------------
+    // Send email to admin
     await sgMail.send({
       to: 'theshanbooth@gmail.com',
       from: 'dharshansubramaniyam2@gmail.com',
@@ -64,45 +51,31 @@ exports.handler = async (event) => {
       `,
     });
 
-    // ----------------------------
-    // 2️⃣ Create Stripe Customer
-    // ----------------------------
+    // Create Stripe Customer
     const customer = await stripe.customers.create({
       name: fullName,
       email,
       phone: phoneNumber,
     });
 
-    // ----------------------------
-    // 3️⃣ Create Invoice Item
-    // ----------------------------
+    // Create Invoice Item
     await stripe.invoiceItems.create({
       customer: customer.id,
-      amount: Math.round(price * 100), // convert AUD to cents
+      amount: Math.round(price * 100),
       currency: 'aud',
       description: `${packageDuration} - ${service} (Invoice: ${invoiceNumber})`,
     });
 
-    // ----------------------------
-    // 4️⃣ Create Invoice (unpaid)
-    // ----------------------------
+    // Create Invoice (unpaid)
     let invoice = await stripe.invoices.create({
       customer: customer.id,
-      auto_advance: false, // DO NOT auto finalize
+      auto_advance: false,
       metadata: { invoice_number: invoiceNumber },
     });
 
-    // Finalize invoice manually to generate hosted_invoice_url
     invoice = await stripe.invoices.finalizeInvoice(invoice.id);
 
-    if (!invoice.hosted_invoice_url) {
-      console.error('Invoice URL not generated:', invoice);
-      return { statusCode: 500, body: JSON.stringify({ error: 'Failed to generate invoice URL.' }) };
-    }
-
-    // ----------------------------
-    // 5️⃣ Send invoice email to customer
-    // ----------------------------
+    // Send invoice email to customer
     await sgMail.send({
       to: email,
       from: 'theshanbooth@gmail.com',
@@ -113,10 +86,9 @@ exports.handler = async (event) => {
         <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
         <p><strong>Event Date:</strong> ${eventDate}</p>
         <p><strong>Location:</strong> ${eventLocation}</p>
-        <p>Click below to securely pay your invoice:</p>
+        <p>You can securely pay your invoice anytime here:</p>
         <p>
-          <a href="${invoice.hosted_invoice_url}" 
-             style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
+          <a href="${invoice.hosted_invoice_url}" style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
             Pay Invoice
           </a>
         </p>
@@ -124,12 +96,13 @@ exports.handler = async (event) => {
       `,
     });
 
+    // Return only confirmation (do not redirect)
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Booking & invoice created!', invoiceUrl: invoice.hosted_invoice_url }),
+      body: JSON.stringify({ message: 'Booking confirmed!' }),
     };
   } catch (err) {
-    console.error('Stripe or SendGrid Error:', err);
-    return { statusCode: 500, body: JSON.stringify({ error: 'Stripe invoice creation failed.' }) };
+    console.error('Error:', err);
+    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to process booking.' }) };
   }
 };

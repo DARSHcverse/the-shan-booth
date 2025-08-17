@@ -40,54 +40,59 @@ exports.handler = async (event) => {
 
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  // Prepare email for admin
-  const adminEmailMsg = {
-    to: 'theshanbooth@gmail.com',
-    from: 'dharshansubramaniyam2@gmail.com',
-    replyTo: email,
-    subject: `New Booking Request from ${fullName}`,
-    html: `
-      <h3>New Booking Details:</h3>
-      <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
-      <p><strong>Name:</strong> ${fullName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-      <p><strong>Event Date:</strong> ${eventDate}</p>
-      <p><strong>Event Location:</strong> ${eventLocation}</p>
-      <p><strong>Package Duration:</strong> ${packageDuration}</p>
-      <p><strong>Service Type:</strong> ${service}</p>
-      <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
-      <p><strong>Price:</strong> AUD ${price}</p>
-    `,
-  };
-
   try {
-    // Send email to admin
-    await sgMail.send(adminEmailMsg);
+    // ----------------------------
+    // 1️⃣ Send email to admin
+    // ----------------------------
+    await sgMail.send({
+      to: 'theshanbooth@gmail.com',
+      from: 'dharshansubramaniyam2@gmail.com',
+      replyTo: email,
+      subject: `New Booking Request from ${fullName}`,
+      html: `
+        <h3>New Booking Details:</h3>
+        <p><strong>Invoice Number:</strong> ${invoiceNumber}</p>
+        <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+        <p><strong>Event Date:</strong> ${eventDate}</p>
+        <p><strong>Event Location:</strong> ${eventLocation}</p>
+        <p><strong>Package Duration:</strong> ${packageDuration}</p>
+        <p><strong>Service Type:</strong> ${service}</p>
+        <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
+        <p><strong>Price:</strong> AUD ${price}</p>
+      `,
+    });
 
-    // 1️⃣ Create Stripe Customer
+    // ----------------------------
+    // 2️⃣ Create Stripe Customer
+    // ----------------------------
     const customer = await stripe.customers.create({
       name: fullName,
       email,
       phone: phoneNumber,
     });
 
-    // 2️⃣ Create Invoice Item
+    // ----------------------------
+    // 3️⃣ Create Invoice Item
+    // ----------------------------
     await stripe.invoiceItems.create({
       customer: customer.id,
-      amount: Math.round(price * 100), // price in cents
+      amount: Math.round(price * 100), // convert AUD to cents
       currency: 'aud',
       description: `${packageDuration} - ${service} (Invoice: ${invoiceNumber})`,
     });
 
-    // 3️⃣ Create Invoice
+    // ----------------------------
+    // 4️⃣ Create Invoice (unpaid)
+    // ----------------------------
     let invoice = await stripe.invoices.create({
       customer: customer.id,
-      auto_advance: true,
+      auto_advance: false, // DO NOT auto finalize
       metadata: { invoice_number: invoiceNumber },
     });
 
-    // 4️⃣ Finalize Invoice to generate hosted_invoice_url
+    // Finalize invoice manually to generate hosted_invoice_url
     invoice = await stripe.invoices.finalizeInvoice(invoice.id);
 
     if (!invoice.hosted_invoice_url) {
@@ -95,8 +100,10 @@ exports.handler = async (event) => {
       return { statusCode: 500, body: JSON.stringify({ error: 'Failed to generate invoice URL.' }) };
     }
 
+    // ----------------------------
     // 5️⃣ Send invoice email to customer
-    const customerEmailMsg = {
+    // ----------------------------
+    await sgMail.send({
       to: email,
       from: 'theshanbooth@gmail.com',
       subject: `Your Booking Confirmation - ${invoiceNumber}`,
@@ -107,12 +114,15 @@ exports.handler = async (event) => {
         <p><strong>Event Date:</strong> ${eventDate}</p>
         <p><strong>Location:</strong> ${eventLocation}</p>
         <p>Click below to securely pay your invoice:</p>
-        <p><a href="${invoice.hosted_invoice_url}" style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">Pay Invoice</a></p>
+        <p>
+          <a href="${invoice.hosted_invoice_url}" 
+             style="background:#f5a623;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
+            Pay Invoice
+          </a>
+        </p>
         <p>– The Shan Booth Team</p>
       `,
-    };
-
-    await sgMail.send(customerEmailMsg);
+    });
 
     return {
       statusCode: 200,

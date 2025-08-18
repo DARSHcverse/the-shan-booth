@@ -1,7 +1,7 @@
 import Stripe from "stripe";
 import sgMail from "@sendgrid/mail";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function handler(event) {
@@ -23,7 +23,7 @@ export async function handler(event) {
       message,
       invoiceNumber,
     } = JSON.parse(event.body);
-    
+
     // ✅ Validation
     if (
       !fullName ||
@@ -38,25 +38,26 @@ export async function handler(event) {
     ) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: 'Required fields are missing for booking.' }),
+        body: JSON.stringify({ error: "Required fields are missing for booking." }),
       };
     }
 
-
-    // ✅ Create Stripe Invoice Item
+    // ✅ Create Stripe Customer
     const customer = await stripe.customers.create({
       name: fullName,
       email: email,
       phone: phoneNumber,
     });
 
-    const invoiceItem = await stripe.invoiceItems.create({
+    // ✅ Add invoice item
+    await stripe.invoiceItems.create({
       customer: customer.id,
       amount: price * 100, // cents
       currency: "aud",
       description: `${boothType.toUpperCase()} Booth - ${packageDuration} | ${service}`,
     });
 
+    // ✅ Create invoice
     const invoice = await stripe.invoices.create({
       customer: customer.id,
       auto_advance: true,
@@ -74,10 +75,10 @@ export async function handler(event) {
 
     const sentInvoice = await stripe.invoices.finalizeInvoice(invoice.id);
 
-    // ✅ Email Customer
+    // ✅ Email to customer
     const customerMsg = {
       to: email,
-      from: "theshanbooth@gmail.com",
+      from: { email: "dharshansubramaniyam2@gmail.com", name: "The Shan Booth" }, // verified sender
       subject: `Booking Confirmation - ${invoiceNumber}`,
       html: `
         <h2>Thank you for booking with The Shan Booth!</h2>
@@ -95,10 +96,11 @@ export async function handler(event) {
       `,
     };
 
-    // ✅ Email Admin
+    // ✅ Email to admin
     const adminMsg = {
       to: "theshanbooth@gmail.com",
-      from: "theshanbooth@gmail.com",
+      from: { email: "dharshansubramaniyam2@gmail.com", name: "The Shan Booth" }, // must also be verified
+      replyTo: email,
       subject: `New Booking Received - ${invoiceNumber}`,
       html: `
         <h2>New Booking Received</h2>
@@ -117,8 +119,13 @@ export async function handler(event) {
       `,
     };
 
-    await sgMail.send(customerMsg);
-    await sgMail.send(adminMsg);
+    try {
+      await sgMail.send(customerMsg);
+      await sgMail.send(adminMsg);
+    } catch (mailError) {
+      console.error("SendGrid error:", mailError);
+      // Don’t block booking if email fails
+    }
 
     return {
       statusCode: 200,

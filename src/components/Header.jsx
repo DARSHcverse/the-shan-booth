@@ -11,14 +11,14 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Homepage', path: '/' },
-    { name: 'Photobooths', path: '/photobooths' },
-    { name: 'Events', path: '/events' },
-    { name: 'Packages', path: '/packages' },
-    { name: 'Backdrop', path: '/backdrop' },
-    { name: 'Booking', path: '/booking' },
-    { name: 'Quick Quote', path: '/quickquote' },
-    { name: 'Pay Here', path: '/pay' },
+    { name: 'HOMEPAGE', path: '/' },
+    { name: 'PHOTOBOOTHS', path: '/photobooths' },
+    { name: 'EVENTS', path: '/events' },
+    { name: 'PACKAGES', path: '/packages' },
+    { name: 'BACKDROP', path: '/backdrop' },
+    { name: 'BOOKING', path: '/booking' },
+    { name: 'QUICK QUOTE', path: '/quickquote' },
+    { name: 'PAY HERE', path: '/pay' },
   ];
 
   const NavLinks = ({ onClick }) => (

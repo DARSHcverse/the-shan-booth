@@ -1,8 +1,49 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 
 const PrivacyPage = () => {
   return (
     <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
+      <Helmet>
+        <title>Privacy Policy | The Shan Booth</title>
+        <meta
+          name="description"
+          content="Read The Shan Booth's Privacy Policy to learn how we collect, use, and protect your personal data when you book our photo booth hire services in Melbourne."
+        />
+        <link
+          rel="canonical"
+          href="https://photoboothwithshan.com.au/privacy"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Privacy Policy | The Shan Booth" />
+        <meta
+          property="og:description"
+          content="Understand how The Shan Booth collects, stores, and protects your data when you book our photobooth services in Melbourne."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://photoboothwithshan.com.au/privacy"
+        />
+        <meta
+          property="og:image"
+          content="https://photoboothwithshan.com.au/images/logo.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy | The Shan Booth" />
+        <meta
+          name="twitter:description"
+          content="Learn how The Shan Booth handles your personal data and privacy for photo booth hire services in Melbourne."
+        />
+        <meta
+          name="twitter:image"
+          content="https://photoboothwithshan.com.au/images/logo.png"
+        />
+      </Helmet>
+
       <h1>Privacy Policy</h1>
       <p><strong>Last Updated:</strong> August 13, 2025</p>
       <p>
@@ -84,8 +125,8 @@ const PrivacyPage = () => {
       <h2>11. Contact Us</h2>
       <ul>
         <li>Email: <a href="mailto:theshanbooth@gmail.com">theshanbooth@gmail.com</a></li>
-        <li>Contact Page: <a href="photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
-        <li>Phone:+61475116521</li>
+        <li>Contact Page: <a href="https://photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
+        <li>Phone: +61 475 116 521</li>
       </ul>
     </div>
   );

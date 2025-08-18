@@ -13,7 +13,7 @@ const PhotoboothsPage = () => (
         name="description"
         content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events. Open, Glam, and Enclosed Booth options available."
       />
-      <link rel="canonical" href="https://yourdomain.com/photobooths" />
+      <link rel="canonical" href="https://photoboothwithshan.com.au/photobooths" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content="Event Photobooths | Unforgettable Event Experiences" />
@@ -22,8 +22,8 @@ const PhotoboothsPage = () => (
         content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://yourdomain.com/photobooths" />
-      <meta property="og:image" content="https://yourdomain.com/images/boothimg6.jpg" />
+      <meta property="og:url" content="https://photoboothwithshan.com.au/photobooths" />
+      <meta property="og:image" content="https://photoboothwithshan.com.au/images/boothimg6.jpg" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -32,7 +32,7 @@ const PhotoboothsPage = () => (
         name="twitter:description"
         content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events."
       />
-      <meta name="twitter:image" content="https://yourdomain.com/images/boothimg6.jpg" />
+      <meta name="twitter:image" content="https://photoboothwithshan.com.au/images/boothimg6.jpg" />
     </Helmet>
 
     <main className="main-content section-padding">

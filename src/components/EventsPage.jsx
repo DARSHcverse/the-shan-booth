@@ -68,7 +68,7 @@ const EventsPage = () => (
         name="description"
         content="Hire photobooths for weddings, birthdays, school graduations, corporate events & university open days in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."
       />
-      <link rel="canonical" href="https://www.photoboothwithshan.com.au/events" />
+      <link rel="canonical" href="https://photoboothwithshan.com.au/events" />
 
       {/* Open Graph */}
       <meta property="og:title" content="Event Photobooth Hire in Melbourne | The Shan Booth" />
@@ -77,8 +77,8 @@ const EventsPage = () => (
         content="Hire photobooths for weddings, birthdays, corporate events, school graduations & university open days in Melbourne. Custom templates, themed props & instant prints."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.photoboothwithshan.com.au/events" />
-      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/sample-event.jpg" />
+      <meta property="og:url" content="https://photoboothwithshan.com.au/events" />
+      <meta property="og:image" content="https://photoboothwithshan.com.au/images/events.png" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -87,7 +87,7 @@ const EventsPage = () => (
         name="twitter:description"
         content="Hire photobooths for weddings, birthdays, corporate events, school graduations & university open days in Melbourne."
       />
-      <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/sample-event.jpg" />
+      <meta name="twitter:image" content="https://photoboothwithshan.com.au/images/glam.png" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
@@ -100,7 +100,7 @@ const EventsPage = () => (
             "provider": {
               "@type": "Organization",
               "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
+              "url": "https://photoboothwithshan.com.au"
             },
             "areaServed": {
               "@type": "Place",

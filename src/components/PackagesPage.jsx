@@ -148,7 +148,7 @@ const PackagesPage = () => {
           name="description"
           content="Explore affordable photo booth hire packages in Melbourne. Choose from Standard or Glam Booth options with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
         />
-        <link rel="canonical" href="https://www.photoboothwithshan.com.au/packages" />
+        <link rel="canonical" href="https://photoboothwithshan.com.au/packages" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Photo Booth Hire Packages in Melbourne | The Shan Booth" />
@@ -157,8 +157,8 @@ const PackagesPage = () => {
           content="Choose from Standard or Glam Booth packages with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.photoboothwithshan.com.au/packages" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/sample-package.jpg" />
+        <meta property="og:url" content="https://photoboothwithshan.com.au/packages" />
+        <meta property="og:image" content="https://photoboothwithshan.com.au/images/photobooth.jpg" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -167,7 +167,7 @@ const PackagesPage = () => {
           name="twitter:description"
           content="Choose from Standard or Glam Booth packages with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/sample-package.jpg" />
+        <meta name="twitter:image" content="https://photoboothwithshan.com.au/images/photobooth.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -180,7 +180,7 @@ const PackagesPage = () => {
               "provider": {
                 "@type": "Organization",
                 "name": "The Shan Booth",
-                "url": "https://www.photoboothwithshan.com.au"
+                "url": "https://photoboothwithshan.com.au"
               },
               "areaServed": "Melbourne, Australia",
               "serviceType": "Photo Booth Hire"

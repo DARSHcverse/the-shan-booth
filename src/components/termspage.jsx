@@ -1,8 +1,49 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 
 const TermsPage = () => {
   return (
     <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
+      <Helmet>
+        <title>Terms & Conditions | The Shan Booth</title>
+        <meta
+          name="description"
+          content="Read the Terms and Conditions for using The Shan Booth photobooth hire services in Melbourne. Learn about bookings, payments, cancellations, and client responsibilities."
+        />
+        <link
+          rel="canonical"
+          href="https://photoboothwithshan.com.au/terms"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Terms & Conditions | The Shan Booth" />
+        <meta
+          property="og:description"
+          content="Review the Terms & Conditions for photobooth hire services from The Shan Booth in Melbourne, including booking, cancellations, and liability policies."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://photoboothwithshan.com.au/terms"
+        />
+        <meta
+          property="og:image"
+          content="https://photoboothwithshan.com.au/images/logo.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Terms & Conditions | The Shan Booth" />
+        <meta
+          name="twitter:description"
+          content="Learn about the Terms & Conditions for hiring The Shan Booth photobooth services in Melbourne."
+        />
+        <meta
+          name="twitter:image"
+          content="https://photoboothwithshan.com.au/images/logo.png"
+        />
+      </Helmet>
+
       <h1>Terms and Conditions</h1>
       <p><strong>Last Updated:</strong> August 13, 2025</p>
       <p>
@@ -94,8 +135,8 @@ const TermsPage = () => {
       <p>If you have any questions about these Terms, please contact us:</p>
       <ul>
         <li>Email: <a href="mailto:theshanbooth@gmail.com">theshanbooth@gmail.com</a></li>
-        <li>Contact Page: <a href="photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
-        <li>Phone:+61475116521</li>
+        <li>Contact Page: <a href="https://photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
+        <li>Phone: +61 475 116 521</li>
       </ul>
     </div>
   );

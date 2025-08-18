@@ -53,20 +53,20 @@ const BackdropPage = () => {
                     name="description"
                     content="Discover whimsical backdrop designs and fun props for photo booths in Melbourne. Perfect for weddings, parties, school graduations, and corporate events."
                 />
-                <link rel="canonical" href="https://www.photoboothwithshan.com.au/backdrops" />
+                <link rel="canonical" href="https://photoboothwithshan.com.au/backdrop" />
 
                 {/* Open Graph */}
                 <meta property="og:title" content="Backdrop Designs & Fun Props | The Shan Booth" />
                 <meta property="og:description" content="Explore whimsical backdrop designs and playful props for photo booths at weddings, parties, school graduations, and corporate events." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.photoboothwithshan.com.au/backdrops" />
-                <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/sample-backdrop.jpg" />
+                <meta property="og:url" content="https://photoboothwithshan.com.au/backdrop" />
+                <meta property="og:image" content="https://photoboothwithshan.com.au/images/whitebackdrop.png" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Backdrop Designs & Fun Props | The Shan Booth" />
                 <meta name="twitter:description" content="Explore whimsical backdrop designs and playful props for photo booths at weddings, parties, school graduations, and corporate events." />
-                <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/sample-backdrop.jpg" />
+                <meta name="twitter:image" content="https://photoboothwithshan.com.au/images/gradbackdrop.png" />
 
                 {/* JSON-LD Structured Data */}
                 <script type="application/ld+json">
@@ -79,7 +79,7 @@ const BackdropPage = () => {
                         "provider": {
                             "@type": "Organization",
                             "name": "The Shan Booth",
-                            "url": "https://www.photoboothwithshan.com.au"
+                            "url": "https://photoboothwithshan.com.au"
                         },
                         "areaServed": "Melbourne, Australia",
                         "serviceType": "Photo Booth Hire"

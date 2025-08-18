@@ -62,7 +62,7 @@ const Header = () => {
           type="button"
         >
           <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
-          <h1 className="logo-text">The Shan Booth</h1>
+          <h1 className="logo-text">THE SHAN BOOTH</h1>
         </button>
 
         {/* Desktop nav */}

@@ -106,7 +106,6 @@ const BackdropPage = () => {
                                     src={backdrop.src}
                                     alt={backdrop.title}  // ✅ Updated alt text
                                     className="backdrop-item"
-                                    loading="lazy"
                                     onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/CCCCCC/222222?text=Image+Not+Found'; }}
                                 />
                                 <h3 className="backdrop-card-title">{backdrop.title}</h3>
@@ -149,7 +148,6 @@ const BackdropPage = () => {
                                 src={selectedBackdrop.src}
                                 alt={selectedBackdrop.title} // ✅ Updated alt text
                                 className="backdrop-modal-image"
-                                loading='lazy'
                                 onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/CCCCCC/222222?text=Image+Not+Found'; }}
                             />
                         </div>

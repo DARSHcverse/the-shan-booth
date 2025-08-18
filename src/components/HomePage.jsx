@@ -38,7 +38,6 @@ const HomePage = () => {
             src={images[currentImageIndex]}
             alt="The Shan Booth slideshow"
             className="main-img"
-            loading='lazy'
           />
           <div className="hero-text">
             <h2 className="hero-title">Photo Booth Hire Melbourne</h2>
@@ -65,7 +64,7 @@ const HomePage = () => {
         <div className="container">
           <div className="card-grid">
             <div className="card">
-              <img src={photobooth} alt="Photobooths" className="card-img" loading='lazy' />
+              <img src={photobooth} alt="Photobooths" className="card-img"  />
               <h3 className="card-title">Our Photobooths</h3>
               <p className="card-text">
                 Discover our range of modern and fun photobooths perfect for any event.
@@ -78,7 +77,7 @@ const HomePage = () => {
               </button>
             </div>
             <div className="card">
-              <img src={events} alt="Events" className="card-img" loading='lazy' />
+              <img src={events} alt="Events" className="card-img" />
               <h3 className="card-title">Events</h3>
               <p className="card-text">
                 We cater to all types of events, from weddings to corporate parties.
@@ -91,7 +90,7 @@ const HomePage = () => {
               </button>
             </div>
             <div className="card">
-              <img src={packages} alt="Packages" className="card-img" loading='lazy'/>
+              <img src={packages} alt="Packages" className="card-img" />
               <h3 className="card-title">Our Packages</h3>
               <p className="card-text">
                 Browse our flexible and affordable packages to find the perfect fit for you.

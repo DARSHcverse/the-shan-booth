@@ -149,6 +149,7 @@ const BackdropPage = () => {
                                 src={selectedBackdrop.src}
                                 alt={selectedBackdrop.title} // ✅ Updated alt text
                                 className="backdrop-modal-image"
+                                loading='lazy'
                                 onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/CCCCCC/222222?text=Image+Not+Found'; }}
                             />
                         </div>

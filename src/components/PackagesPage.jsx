@@ -9,7 +9,7 @@ const PackagesPage = () => {
   const standardPackages = [
     {
       id: 'standard-1',
-      price: '$390',
+      price: '$375',
       duration: '2 HOURS',
       features: [
         'Unlimited Photos',
@@ -24,7 +24,7 @@ const PackagesPage = () => {
     },
     {
       id: 'standard-2',
-      price: '$550',
+      price: '$535',
       duration: '3 HOURS',
       features: [
         'Unlimited Photos',
@@ -41,7 +41,7 @@ const PackagesPage = () => {
     },
     {
       id: 'standard-3',
-      price: '$700',
+      price: '$685',
       duration: '4 HOURS',
       features: [
         'Unlimited Photos',
@@ -80,7 +80,7 @@ const PackagesPage = () => {
   const glamPackages = [
     {
       id: 'glam-1',
-      price: '$490',
+      price: '$480',
       duration: '2 HOURS',
       features: [
         'Unlimited Photos',
@@ -94,7 +94,7 @@ const PackagesPage = () => {
     },
     {
       id: 'glam-2',
-      price: '$590',
+      price: '$580',
       duration: '3 HOURS',
       features: [
         'Unlimited Photos',
@@ -108,7 +108,7 @@ const PackagesPage = () => {
     },
     {
       id: 'glam-3',
-      price: '$750',
+      price: '$740',
       duration: '4 HOURS',
       features: [
         'Unlimited Photos',
@@ -124,7 +124,7 @@ const PackagesPage = () => {
     },
     {
       id: 'glam-4',
-      price: '$870',
+      price: '$860',
       duration: '5 HOURS',
       features: [
         'Unlimited Photos',

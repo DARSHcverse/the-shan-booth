@@ -9,6 +9,7 @@ const BookingPage = () => {
     phoneNumber: "",
     eventDate: "",
     eventLocation: "",
+    boothType: "",
     packageDuration: "",
     service: "Photobooth",
     price: 0,
@@ -17,11 +18,26 @@ const BookingPage = () => {
 
   const [status, setStatus] = useState("");
 
-  const packagePrices = {
-    "2 Hours": 390,
-    "3 Hours": 550,
-    "4 Hours": 700,
-    "5 Hours": 800,
+  // Booth pricing structure
+  const boothPrices = {
+    "Open Booth": {
+      "2 Hours": 375,
+      "3 Hours": 535,
+      "4 Hours": 685,
+      "5 Hours": 800,
+    },
+    "Glam Booth": {
+      "2 Hours": 480,
+      "3 Hours": 580,
+      "4 Hours": 740,
+      "5 Hours": 860,
+    },
+    "Enclosed Booth": {
+      "2 Hours": 375,
+      "3 Hours": 535,
+      "4 Hours": 685,
+      "5 Hours": 800,
+    },
   };
 
   const generateInvoiceNumber = () => {
@@ -36,8 +52,17 @@ const BookingPage = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     let updatedData = { ...formData, [name]: value };
-    if (name === "packageDuration")
-      updatedData.price = packagePrices[value] || 0;
+
+    if (name === "boothType" || name === "packageDuration") {
+      const booth = updatedData.boothType;
+      const duration = updatedData.packageDuration;
+      if (booth && duration) {
+        updatedData.price = boothPrices[booth]?.[duration] || 0;
+      } else {
+        updatedData.price = 0;
+      }
+    }
+
     setFormData(updatedData);
   };
 
@@ -48,7 +73,6 @@ const BookingPage = () => {
       const invoiceNumber = generateInvoiceNumber();
       const payload = { ...formData, invoiceNumber };
 
-      // ✅ point to booking function instead of sendQuote
       const response = await fetch("/.netlify/functions/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -65,6 +89,7 @@ const BookingPage = () => {
           phoneNumber: "",
           eventDate: "",
           eventLocation: "",
+          boothType: "",
           packageDuration: "",
           service: "Photobooth",
           price: 0,
@@ -87,121 +112,43 @@ const BookingPage = () => {
         <title>Book Your Photobooth | The Shan Booth</title>
         <meta
           name="description"
-          content="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your package, confirm booking, and secure your date for weddings, birthdays, school events, and corporate parties."
+          content="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your booth type, package, confirm booking, and secure your date."
         />
         <link rel="canonical" href="https://photoboothwithshan.com.au/booking" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Book Your Photobooth | The Shan Booth" />
-        <meta property="og:description" content="Secure your photobooth booking today in Melbourne. Perfect for weddings, birthdays, school formals, and corporate events with The Shan Booth." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://photoboothwithshan.com.au/booking" />
-        <meta property="og:image" content="https://photoboothwithshan.com.au/images/logo.png" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Book Your Photobooth | The Shan Booth" />
-        <meta name="twitter:description" content="Secure your photobooth booking today in Melbourne. Perfect for weddings, birthdays, school formals, and corporate events with The Shan Booth." />
-        <meta name="twitter:image" content="https://photoboothwithshan.com.au/images/logo.png" />
-
-        {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Reservation",
-            "reservationFor": {
-              "@type": "Event",
-              "name": "Photobooth Hire",
-              "location": {
-                "@type": "Place",
-                "name": "Melbourne, Australia"
-              }
-            },
-            "provider": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://photoboothwithshan.com.au"
-            },
-            "url": "https://photoboothwithshan.com.au/booking",
-            "description": "Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your package, confirm booking, and secure your date for weddings, birthdays, school events, and corporate parties."
-          }
-          `}
-        </script>
       </Helmet>
 
       <div className="booking-container">
         <div className="booking-card">
           <h2 className="booking-title">Book Your Photobooth</h2>
           <form onSubmit={handleSubmit} className="booking-form">
-            <input
-              type="text"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              placeholder="Full Name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email"
-              required
-            />
-            <input
-              type="text"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              placeholder="Phone Number"
-              required
-            />
-            <input
-              type="date"
-              name="eventDate"
-              value={formData.eventDate}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="eventLocation"
-              value={formData.eventLocation}
-              onChange={handleChange}
-              placeholder="Event Location"
-              required
-            />
-            <select
-              name="packageDuration"
-              value={formData.packageDuration}
-              onChange={handleChange}
-              required
-            >
+            <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" required />
+            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
+            <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number" required />
+            <input type="date" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
+            <input type="text" name="eventLocation" value={formData.eventLocation} onChange={handleChange} placeholder="Event Location" required />
+
+            {/* ✅ New Booth Type Select */}
+            <select name="boothType" value={formData.boothType} onChange={handleChange} required>
+              <option value="">Select Booth Type</option>
+              <option value="Open Booth">Open Booth</option>
+              <option value="Glam Booth">Glam Booth</option>
+              <option value="Enclosed Booth">Enclosed Booth</option>
+            </select>
+
+            {/* Package duration */}
+            <select name="packageDuration" value={formData.packageDuration} onChange={handleChange} required>
               <option value="">Select Package Duration</option>
               <option value="2 Hours">2 Hours</option>
               <option value="3 Hours">3 Hours</option>
               <option value="4 Hours">4 Hours</option>
               <option value="5 Hours">5 Hours</option>
             </select>
-            <input
-              type="number"
-              name="price"
-              value={formData.price}
-              readOnly
-              className="readonly-input"
-            />
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Additional Message (Optional)"
-              rows="3"
-            />
-            <button type="submit" className="submit-button">
-              Confirm Booking
-            </button>
+
+            <input type="number" name="price" value={formData.price} readOnly className="readonly-input" />
+
+            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Additional Message (Optional)" rows="3" />
+
+            <button type="submit" className="submit-button">Confirm Booking</button>
           </form>
           {status && <p className="booking-status">{status}</p>}
         </div>

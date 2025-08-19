@@ -124,7 +124,7 @@ const BookingPage = () => {
             <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" required />
             <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
             <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number" required />
-            <input type="date" className="form-input" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
+            <input type="date" className="form-input" name="eventDate" value={formData.eventDate} onChange={handleChange} placeholder="Date" required />
             <input type="text" name="eventLocation" value={formData.eventLocation} onChange={handleChange} placeholder="Event Location" required />
 
             {/* ✅ New Booth Type Select */}

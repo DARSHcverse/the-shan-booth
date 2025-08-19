@@ -140,7 +140,7 @@ const QuickQuote = () => {
               <input
                 type="date"
                 name="eventDate"
-                placeholder="Date of Event"
+                placeholder="Date"
                 className="form-input"
                 value={formData.eventDate}
                 onChange={handleChange}

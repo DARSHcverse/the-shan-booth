@@ -688,7 +688,7 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--color-border);
-    background-color:white);
+    background-color: var(--color-bg-card);
     font-size: 1rem;
     transition: border-color 0.3s;
 }
@@ -1327,4 +1327,252 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+
+/* Christmas Landing */
+
+.christmas-landing {
+  background: linear-gradient(to bottom right, #fff5f5, #ffecec);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Headline with festive glow */
+.christmas-landing h1 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #f87171, 0 0 15px #dc2626;
+  color: #b91c1c; /* Tailwind red-700 */
+}
+
+/* Paragraph text */
+.christmas-landing p {
+  color: #374151; /* Tailwind gray-700 */
+}
+
+/* Call-to-action button */
+.christmas-landing .cta-btn {
+  display: inline-block;
+  background-color: #dc2626; /* Tailwind red-600 */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.christmas-landing .cta-btn:hover {
+  background-color: #b91c1c; /* Tailwind red-700 */
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .christmas-landing h1 {
+    font-size: 2rem;
+  }
+  .christmas-landing p {
+    font-size: 1rem;
+  }
+}
+
+/* Extended sections for Christmas Landing */
+.christmas-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.christmas-section h2 {
+  color: #b91c1c;
+  margin-bottom: 0.75rem;
+}
+
+.christmas-section h3 {
+  color: var(--color-accent);
+  margin: 0.75rem 0 0.25rem;
+}
+
+.feature-list,
+.areas-list,
+.available-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+  color: var(--color-text-dark);
+}
+
+.feature-list li,
+.areas-list li,
+.available-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.feature-list li:last-child,
+.areas-list li:last-child,
+.available-list li:last-child {
+  border-bottom: none;
+}
+
+.package-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .package-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.package-item {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.hint-text {
+  color: var(--color-text-light);
+  margin-top: 0.75rem;
+}
+
+.available-title {
+  margin-top: 0.75rem;
+}
+
+.cta-center {
+  margin: 2rem 0 0.5rem;
+}
+
+.seo-keywords {
+  max-width: 960px;
+  margin: 1rem auto 0;
+  color: var(--color-text-light);
+}
+
+/* Christmas gallery */
+.christmas-gallery {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.christmas-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .christmas-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Graduation Landing */
+.graduation-landing {
+  background: linear-gradient(to bottom right, #f7fafc, #eef2ff);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Headline with subtle academic glow */
+.graduation-landing h1 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #93c5fd, 0 0 15px #1e3a8a;
+  color: #1e3a8a; /* blue-800 */
+}
+
+/* Paragraph text */
+.graduation-landing p {
+  color: #374151; /* gray-700 */
+}
+
+/* Call-to-action button */
+.graduation-landing .cta-btn {
+  display: inline-block;
+  background-color: #1e3a8a; /* blue-800 */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.graduation-landing .cta-btn:hover {
+  background-color: #172554; /* blue-950 */
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .graduation-landing h1 {
+    font-size: 2rem;
+  }
+  .graduation-landing p {
+    font-size: 1rem;
+  }
+}
+
+/* Sections for Graduation Landing */
+.graduation-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.graduation-section h2 {
+  color: #1e3a8a; /* blue-800 */
+  margin-bottom: 0.75rem;
+}
+
+.graduation-section h3 {
+  color: var(--color-accent);
+  margin: 0.75rem 0 0.25rem;
+}
+
+/* Graduation gallery */
+.graduation-gallery {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.graduation-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .graduation-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

@@ -14,6 +14,8 @@ import TermsPage from './components/termspage';
 import PrivacyPage from './components/privacy';
 import PayPage from './components/PayPage';
 import BookingPage from './components/Bookingpage';
+import ChristmasLanding from "./components/ChristmasLanding";
+import GraduationLanding from './components/GraduationLanding';
 
 function App() {
   const navigate = useNavigate();
@@ -37,6 +39,8 @@ function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/pay" element={<PayPage />} />
         <Route path="/booking" element={<BookingPage />} />
+        <Route path="/christmas" element={<ChristmasLanding />} />
+        <Route path="/graduation" element={<GraduationLanding />} />
       </Routes>
 
       {/* Global Floating Book Now Button */}

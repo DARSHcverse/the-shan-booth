@@ -10,7 +10,7 @@ const PhotoboothsPage = () => (
     <Helmet>
       <title>Event Photobooths | Unforgettable Event Experiences</title>
       <meta name="description" content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events. Open, Glam, and Enclosed Booth options available."/>
-      <link rel="canonical" href="https://photoboothwithshan.com.au/photobooths"/>
+      <link rel="canonical" href="https://photoboothwithshan.com.au/"/>
 
       {/* Open Graph / Facebook */}
       <meta property="og:title" content="Event Photobooths | Unforgettable Event Experiences"/>

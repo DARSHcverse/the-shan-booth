@@ -70,20 +70,20 @@ const QuickQuote = () => {
           name="description"
           content="Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."
         />
-        <link rel="canonical" href="https://photoboothwithshan.com.au/quickquote" />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/quickquote" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Get a Quick Quote | The Shan Booth" />
         <meta property="og:description" content="Instant photobooth hire quotes in Melbourne. Select your package, provide event details, and get your custom price from The Shan Booth." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://photoboothwithshan.com.au/quickquote" />
-        <meta property="og:image" content="https://photoboothwithshan.com.au/images/logo.png" />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/quickquote" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Get a Quick Quote | The Shan Booth" />
         <meta name="twitter:description" content="Request an instant photobooth hire quote for your Melbourne event. Weddings, birthdays, school functions, and corporate events covered." />
-        <meta name="twitter:image" content="https://photoboothwithshan.com.au/images/logo.png" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/logo.png" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -95,13 +95,13 @@ const QuickQuote = () => {
             "provider": {
               "@type": "Organization",
               "name": "The Shan Booth",
-              "url": "https://photoboothwithshan.com.au"
+              "url": "https://www.photoboothwithshan.com.au"
             },
             "areaServed": {
               "@type": "Place",
               "name": "Melbourne, Australia"
             },
-            "url": "https://photoboothwithshan.com.au/quickquote",
+            "url": "https://www.photoboothwithshan.com.au/quickquote",
             "description": "Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."
           }
           `}

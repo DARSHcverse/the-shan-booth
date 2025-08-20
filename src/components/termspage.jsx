@@ -12,7 +12,7 @@ const TermsPage = () => {
         />
         <link
           rel="canonical"
-          href="https://photoboothwithshan.com.au/terms"
+          href="https://www.photoboothwithshan.com.au/terms"
         />
 
         {/* Open Graph / Facebook */}
@@ -24,11 +24,11 @@ const TermsPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://photoboothwithshan.com.au/terms"
+          content="https://www.photoboothwithshan.com.au/terms"
         />
         <meta
           property="og:image"
-          content="https://photoboothwithshan.com.au/images/logo.png"
+          content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
 
         {/* Twitter */}
@@ -40,7 +40,7 @@ const TermsPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://photoboothwithshan.com.au/images/logo.png"
+          content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
       </Helmet>
 
@@ -48,7 +48,7 @@ const TermsPage = () => {
       <p><strong>Last Updated:</strong> August 13, 2025</p>
       <p>
         Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the 
-        <a href="https://photoboothwithshan.com.au/" target="_blank" rel="noopener noreferrer"> www.photoboothwithshan.com.au</a> website 
+        <a href="https://www.photoboothwithshan.com.au/" target="_blank" rel="noopener noreferrer"> www.photoboothwithshan.com.au</a> website 
         and the photo booth rental services (the "Service") operated by The Shan Booth ("us", "we", or "our").
       </p>
       <p>
@@ -135,7 +135,7 @@ const TermsPage = () => {
       <p>If you have any questions about these Terms, please contact us:</p>
       <ul>
         <li>Email: <a href="mailto:theshanbooth@gmail.com">theshanbooth@gmail.com</a></li>
-        <li>Contact Page: <a href="https://photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
+        <li>Contact Page: <a href="https://www.photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
         <li>Phone: +61 475 116 521</li>
       </ul>
     </div>

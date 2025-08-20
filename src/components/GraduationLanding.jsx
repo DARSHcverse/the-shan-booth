@@ -17,7 +17,7 @@ const GraduationLanding = () => {
           name="keywords"
           content="graduation photo booth hire Melbourne, school formal photobooth Melbourne, university ball photo booth, end of year school event photo booth, graduation party photo booth Geelong, Grovedale graduation photobooth"
         />
-        <link rel="canonical" href="https://photoboothwithshan.com.au/graduation" />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/graduation" />
 
         <meta property="og:title" content="Graduation & School Formal Photo Booth 🎓 | The Shan Booth" />
         <meta
@@ -25,8 +25,8 @@ const GraduationLanding = () => {
           content="Make your graduation unforgettable! Classy backdrops, caps & gowns props, instant prints and digital sharing across Melbourne & Geelong."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://photoboothwithshan.com.au/graduation" />
-        <meta property="og:image" content="https://photoboothwithshan.com.au/gradbooth.jpg" />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/graduation" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/gradbooth.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Graduation Photo Booth Hire Melbourne 🎓 | The Shan Booth" />
@@ -34,7 +34,7 @@ const GraduationLanding = () => {
           name="twitter:description"
           content="Book your graduation photobooth today! Serving Melbourne, Geelong & Grovedale with stylish backdrops and instant prints."
         />
-        <meta name="twitter:image" content="https://photoboothwithshan.com.au/gradbooth.jpg" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/gradbooth.jpg" />
 
         <script type="application/ld+json">
           {`
@@ -59,9 +59,9 @@ const GraduationLanding = () => {
             "organizer": {
               "@type": "Organization",
               "name": "The Shan Booth",
-              "url": "https://photoboothwithshan.com.au"
+              "url": "https://www.photoboothwithshan.com.au"
             },
-            "image": "https://photoboothwithshan.com.au/gradbooth.jpg",
+            "image": "https://www.photoboothwithshan.com.au/gradbooth.jpg",
             "description": "Photobooth hire for graduations, school formals, and uni balls across Melbourne, Geelong & Grovedale."
           }
           `}

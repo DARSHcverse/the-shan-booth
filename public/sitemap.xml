@@ -59,14 +59,14 @@
 
   <!-- 🎄 Christmas Landing Page -->
   <url>
-    <loc>https://photoboothwithshan.com.au/christmas</loc>
+    <loc>https://www.photoboothwithshan.com.au/christmas</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- 🎓 Graduation Landing Page -->
   <url>
-    <loc>https://photoboothwithshan.com.au/graduation</loc>
+    <loc>https://www.photoboothwithshan.com.au/graduation</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

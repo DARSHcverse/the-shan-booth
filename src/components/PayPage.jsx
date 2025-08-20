@@ -23,7 +23,7 @@ const PayPage = () => {
           name="description"
           content="Complete your booking securely with The Shan Booth using Stripe. 100% safe and encrypted payment system for your photo booth experience."
         />
-        <link rel="canonical" href="https://photoboothwithshan.com.au/pay" />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/pay" />
 
         {/* Open Graph for Social Sharing */}
         <meta property="og:title" content="Secure Payment | The Shan Booth" />
@@ -33,9 +33,9 @@ const PayPage = () => {
         />
         <meta
           property="og:image"
-          content="https://photoboothwithshan.com.au/images/logo.png"
+          content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
-        <meta property="og:url" content="https://photoboothwithshan.com.au/pay" />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/pay" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}

@@ -12,7 +12,7 @@ const PrivacyPage = () => {
         />
         <link
           rel="canonical"
-          href="https://photoboothwithshan.com.au/privacy"
+          href="https://www.photoboothwithshan.com.au/privacy"
         />
 
         {/* Open Graph / Facebook */}
@@ -24,11 +24,11 @@ const PrivacyPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://photoboothwithshan.com.au/privacy"
+          content="https://www.photoboothwithshan.com.au/privacy"
         />
         <meta
           property="og:image"
-          content="https://photoboothwithshan.com.au/images/logo.png"
+          content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
 
         {/* Twitter */}
@@ -40,7 +40,7 @@ const PrivacyPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://photoboothwithshan.com.au/images/logo.png"
+          content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
       </Helmet>
 
@@ -48,7 +48,7 @@ const PrivacyPage = () => {
       <p><strong>Last Updated:</strong> August 13, 2025</p>
       <p>
         This Privacy Policy describes how The Shan Booth ("we", "us", or "our") collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from 
-        <a href="https://photoboothwithshan.com.au/" target="_blank" rel="noopener noreferrer"> www.photoboothwithshan.com.au</a> (the "Site") or engage with our photo booth services at an event.
+        <a href="https://www.photoboothwithshan.com.au/" target="_blank" rel="noopener noreferrer"> www.photoboothwithshan.com.au</a> (the "Site") or engage with our photo booth services at an event.
       </p>
       <p>
         We are committed to protecting your privacy and handling your personal information responsibly and in accordance with applicable privacy laws, including the Australian Privacy Principles (APPs) under the Privacy Act 1988 (Cth).
@@ -125,7 +125,7 @@ const PrivacyPage = () => {
       <h2>11. Contact Us</h2>
       <ul>
         <li>Email: <a href="mailto:theshanbooth@gmail.com">theshanbooth@gmail.com</a></li>
-        <li>Contact Page: <a href="https://photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
+        <li>Contact Page: <a href="https://www.photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
         <li>Phone: +61 475 116 521</li>
       </ul>
     </div>

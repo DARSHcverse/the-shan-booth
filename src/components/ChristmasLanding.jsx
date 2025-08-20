@@ -20,7 +20,7 @@ const ChristmasLanding = () => {
         />
         <link
           rel="canonical"
-          href="https://photoboothwithshan.com.au/christmas"
+          href="https://www.photoboothwithshan.com.au/christmas"
         />
 
         {/* Open Graph */}
@@ -35,11 +35,11 @@ const ChristmasLanding = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://photoboothwithshan.com.au/christmas"
+          content="https://www.photoboothwithshan.com.au/christmas"
         />
         <meta
           property="og:image"
-          content="https://photoboothwithshan.com.au/christmas.webp"
+          content="https://www.photoboothwithshan.com.au/christmas.webp"
         />
 
         {/* Twitter */}
@@ -54,7 +54,7 @@ const ChristmasLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://photoboothwithshan.com.au/christmas2.webp"
+          content="https://www.photoboothwithshan.com.au/christmas2.webp"
         />
 
         {/* Schema.org JSON-LD for seasonal landing page */}
@@ -81,9 +81,9 @@ const ChristmasLanding = () => {
             "organizer": {
               "@type": "Organization",
               "name": "The Shan Booth",
-              "url": "https://photoboothwithshan.com.au"
+              "url": "https://www.photoboothwithshan.com.au"
             },
-            "image": "https://photoboothwithshan.com.au/christmas.webp",
+            "image": "https://www.photoboothwithshan.com.au/christmas.webp",
             "description": "Book a festive photo booth for your Christmas parties, corporate events & end-of-year celebrations across Melbourne, Tarneit & Geelong."
           }
           `}

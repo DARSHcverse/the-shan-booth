@@ -71,4 +71,25 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- 📸 Photobooth Landing Page -->
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/photobooth-hire-melbourne</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 🏢 Corporate Events Landing Page -->
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/corporate-events</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 📅 Booking Page -->
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/booking</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

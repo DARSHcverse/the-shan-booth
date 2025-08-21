@@ -1576,3 +1576,199 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Photobooth Landing */
+.photobooth-landing {
+  background: linear-gradient(to bottom right, #fef7ed, #ffedd5);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Headline with warm photobooth glow */
+.photobooth-landing h1 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fbbf24, 0 0 15px #d97706;
+  color: #d97706; /* amber-600 */
+}
+
+/* Paragraph text */
+.photobooth-landing p {
+  color: #374151; /* gray-700 */
+}
+
+/* Call-to-action button */
+.photobooth-landing .cta-btn {
+  display: inline-block;
+  background-color: #d97706; /* amber-600 */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.photobooth-landing .cta-btn:hover {
+  background-color: #b45309; /* amber-700 */
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .photobooth-landing h1 {
+    font-size: 2rem;
+  }
+  .photobooth-landing p {
+    font-size: 1rem;
+  }
+  .photobooth-landing .cta-btn {
+    display: block;
+    margin: 0.5rem auto;
+    max-width: 250px;
+  }
+}
+
+/* Sections for Photobooth Landing */
+.photobooth-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.photobooth-section h2 {
+  color: #d97706; /* amber-600 */
+  margin-bottom: 0.75rem;
+}
+
+.photobooth-section h3 {
+  color: var(--color-accent);
+  margin: 0.75rem 0 0.25rem;
+}
+
+/* Photobooth gallery */
+.photobooth-gallery {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.photobooth-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .photobooth-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Corporate Events Landing */
+.corporate-landing {
+  background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Headline with professional blue glow */
+.corporate-landing h1 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #60a5fa, 0 0 15px #2563eb;
+  color: #2563eb; /* blue-600 */
+}
+
+/* Paragraph text */
+.corporate-landing p {
+  color: #374151; /* gray-700 */
+}
+
+/* Call-to-action button */
+.corporate-landing .cta-btn {
+  display: inline-block;
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.corporate-landing .cta-btn:hover {
+  background-color: #1d4ed8; /* blue-700 */
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .corporate-landing h1 {
+    font-size: 2rem;
+  }
+  .corporate-landing p {
+    font-size: 1rem;
+  }
+  .corporate-landing .cta-btn {
+    display: block;
+    margin: 0.5rem auto;
+    max-width: 250px;
+  }
+}
+
+/* Sections for Corporate Landing */
+.corporate-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.corporate-section h2 {
+  color: #2563eb; /* blue-600 */
+  margin-bottom: 0.75rem;
+}
+
+.corporate-section h3 {
+  color: var(--color-accent);
+  margin: 0.75rem 0 0.25rem;
+}
+
+/* Corporate gallery */
+.corporate-gallery {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.corporate-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .corporate-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

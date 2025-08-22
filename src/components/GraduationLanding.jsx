@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import "../App.css";
 import gradBackdrop from "../images/gradbooth.jpg";
+import gradStrip from "../images/GradStrip.png";
 
 const GraduationLanding = () => {
   return (
@@ -70,6 +71,11 @@ const GraduationLanding = () => {
 
       {/* Landing Content */}
       <div className="graduation-landing">
+        {/* Floating Graduation Strip */}
+        <div className="floating-strip left-strip">
+          <img src={gradStrip} alt="Graduation photobooth strip" />
+        </div>
+        
         <h1>Graduation & School Formal Photobooth Hire in Melbourne & Geelong</h1>
         <p>
           Celebrate your <strong>graduation</strong>, <strong>school formal</strong>, or <strong>uni ball</strong> with
@@ -138,6 +144,11 @@ const GraduationLanding = () => {
 
         <div className="seo-keywords" aria-hidden="false">
           <strong>Popular searches:</strong> graduation photo booth hire Melbourne • school formal photobooth Melbourne • university ball photo booth Geelong • graduation event photobooth packages
+        </div>
+        
+        {/* Floating Graduation Strip */}
+        <div className="floating-strip right-strip">
+          <img src={gradStrip} alt="Graduation photobooth strip" />
         </div>
       </div>
     </>

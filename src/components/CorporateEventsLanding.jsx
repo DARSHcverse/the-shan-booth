@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import "../App.css";
 import corporateImg1 from "../images/coperateimg.webp";
 import corporateImg2 from "../images/photobooth.webp";
+import corporateStrip from "../images/coporatestrip.png";
 
 const CorporateEventsLanding = () => {
   return (
@@ -82,6 +83,11 @@ const CorporateEventsLanding = () => {
 
       {/* ✅ Landing Page Content */}
       <div className="corporate-landing">
+        {/* Floating Corporate Strip */}
+        <div className="floating-strip left-strip">
+          <img src={corporateStrip} alt="Corporate photobooth strip" />
+        </div>
+        
         <h1>Corporate Event Photobooth Hire in Melbourne & Geelong</h1>
         <p>
           Whether it’s an <strong>office party</strong>, <strong>product launch</strong>, or a{" "}
@@ -139,6 +145,11 @@ const CorporateEventsLanding = () => {
 
         <div className="seo-keywords" aria-hidden="false">
           <strong>Popular searches:</strong> corporate photobooth hire Melbourne • office party photobooth • warehouse event photo booth hire • branded photo booth Melbourne • product launch photobooth
+        </div>
+        
+        {/* Floating Corporate Strip */}
+        <div className="floating-strip right-strip">
+          <img src={corporateStrip} alt="Corporate photobooth strip" />
         </div>
       </div>
     </>

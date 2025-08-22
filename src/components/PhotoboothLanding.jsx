@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import "../App.css";
 import boothImg from "../images/boothimg4.webp";
 import boothImg2 from "../images/boothimg5.webp";
+import birthdayStrip from "../images/birthdaystrip.png";
 
 const PhotoboothLanding = () => {
   return (
@@ -64,6 +65,11 @@ const PhotoboothLanding = () => {
 
       {/* ✅ Landing Page Content */}
       <div className="photobooth-landing">
+        {/* Floating Birthday Strip */}
+        <div className="floating-strip left-strip">
+          <img src={birthdayStrip} alt="Birthday photobooth strip" />
+        </div>
+        
         <h1>Photobooth Hire Melbourne | Weddings, Parties & Events</h1>
         <p>
           Looking for the <strong>best photobooth hire in Melbourne</strong>? The Shan Booth offers premium booths with
@@ -121,6 +127,11 @@ const PhotoboothLanding = () => {
         <div className="seo-keywords" aria-hidden="false">
           <strong>Popular searches:</strong> photobooth hire Melbourne • wedding photo booth Melbourne • corporate event
           photo booth hire • Geelong photobooth • Tarneit photo booth
+        </div>
+        
+        {/* Floating Birthday Strip */}
+        <div className="floating-strip right-strip">
+          <img src={birthdayStrip} alt="Birthday photobooth strip" />
         </div>
       </div>
     </>

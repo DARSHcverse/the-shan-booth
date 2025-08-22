@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import "../App.css";
+import gradStrip from "../images/GradStrip.png";
+import corporateStrip from "../images/coporatestrip.png";
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -118,6 +120,10 @@ const BookingPage = () => {
       </Helmet>
 
       <div className="booking-container">
+        {/* Floating Graduation Strip */}
+        <div className="floating-strip left-strip">
+          <img src={corporateStrip} alt="Graduation photobooth strip" />
+        </div>
         <div className="booking-card">
           <h2 className="booking-title">Book Your Photobooth</h2>
           <form onSubmit={handleSubmit} className="booking-form">
@@ -151,6 +157,10 @@ const BookingPage = () => {
             <button type="submit" className="submit-button">Confirm Booking</button>
           </form>
           {status && <p className="booking-status">{status}</p>}
+        </div>
+        {/* Floating Graduation Strip */}
+        <div className="floating-strip right-strip">
+          <img src={gradStrip} alt="Graduation photobooth strip" />
         </div>
       </div>
     </>

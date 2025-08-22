@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import '../App.css';
+import birthdayStrip from "../images/birthdaystrip.png";
+import corporateStrip from "../images/coporatestrip.png";
 
 const QuickQuote = () => {
   const navigate = useNavigate();
@@ -109,6 +111,10 @@ const QuickQuote = () => {
       </Helmet>
 
       <div className="quick-quote-container">
+        {/* Floating Graduation Strip */}
+        <div className="floating-strip left-strip">
+          <img src={birthdayStrip} alt="Birthday photobooth strip" />
+        </div>
         <div className="quick-quote-card">
           <h2 className="page-heading">Quick Quote</h2>
           <form onSubmit={handleSubmit}>
@@ -218,6 +224,10 @@ const QuickQuote = () => {
               Back to Packages
             </button>
           </div>
+        </div>
+        {/* Floating Graduation Strip */}
+        <div className="floating-strip right-strip">
+          <img src={corporateStrip} alt="Corporate photobooth strip" />
         </div>
       </div>
     </>

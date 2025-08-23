@@ -85,6 +85,13 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- 🏢 Wedding Events Landing Page -->
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/weddings</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
   <!-- 📅 Booking Page -->
   <url>
     <loc>https://www.photoboothwithshan.com.au/booking</loc>

@@ -18,6 +18,7 @@ import ChristmasLanding from "./components/ChristmasLanding";
 import GraduationLanding from './components/GraduationLanding';
 import PhotoboothLanding from './components/PhotoboothLanding';
 import CorporateEventsLanding from './components/CorporateEventsLanding';
+import WeddingLanding from './components/WeddingLanding';
 
 function App() {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ function App() {
         <Route path="/graduation" element={<GraduationLanding />} />
         <Route path="/photobooth-hire-melbourne" element={<PhotoboothLanding />} />
         <Route path="/corporate-events" element={<CorporateEventsLanding />} />
+        <Route path="/weddings" element={<WeddingLanding />} />
       </Routes>
 
       {/* Global Floating Book Now Button */}

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import "../App.css";
 import gradStrip from "../images/GradStrip.png";
 import corporateStrip from "../images/coporatestrip.png";
-import SEO from "../components/SEO"; // ✅ Import your SEO component
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -110,12 +110,14 @@ const BookingPage = () => {
 
   return (
     <>
-      {/* ✅ Use SEO component instead of Helmet directly */}
-      <SEO
-        title="Book Your Photobooth | The Shan Booth"
-        description="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your booth type, package, confirm booking, and secure your date."
-        canonical="https://www.photoboothwithshan.com.au/booking"
-      />
+      <Helmet>
+        <title>Book Your Photobooth | The Shan Booth</title>
+        <meta
+          name="description"
+          content="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your booth type, package, confirm booking, and secure your date."
+        />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/booking" />
+      </Helmet>
 
       <div className="booking-container">
         {/* Floating Graduation Strip */}
@@ -131,7 +133,7 @@ const BookingPage = () => {
             <input type="date" className="form-input" name="eventDate" value={formData.eventDate} onChange={handleChange} placeholder="Date" required />
             <input type="text" name="eventLocation" value={formData.eventLocation} onChange={handleChange} placeholder="Event Location" required />
 
-            {/* ✅ Booth Type Select */}
+            {/* ✅ New Booth Type Select */}
             <select name="boothType" value={formData.boothType} onChange={handleChange} required>
               <option value="">Select Booth Type</option>
               <option value="Open Booth">Open Booth</option>
@@ -150,13 +152,7 @@ const BookingPage = () => {
 
             <input type="number" name="price" value={formData.price} readOnly className="readonly-input" />
 
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Start Time: __ | End Time: __ | Parking: __ | Notes: __"
-              rows="3"
-            />
+            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Start Time: __ | End Time: __ | Parking: __ | Notes: __" rows="3" />
 
             <button type="submit" className="submit-button">Confirm Booking</button>
           </form>

@@ -1842,3 +1842,157 @@ body {
     display: none; /* Hide completely on mobile */
   }
 }
+/* Wedding Landing */
+
+.wedding-landing {
+  background: linear-gradient(to bottom right, #fff5f8, #ffeef3); /* blush pink gradient */
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Headline with romantic glow */
+.wedding-landing h1 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #f9a8d4, 0 0 15px #db2777;
+  color: #9d174d; /* Tailwind rose-900 */
+}
+
+/* Paragraph text */
+.wedding-landing p {
+  color: #374151; /* Tailwind gray-700 */
+}
+
+/* Call-to-action button */
+.wedding-landing .cta-btn {
+  display: inline-block;
+  background-color: #db2777; /* Tailwind pink-600 */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.wedding-landing .cta-btn:hover {
+  background-color: #9d174d; /* Tailwind rose-900 */
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wedding-landing h1 {
+    font-size: 2rem;
+  }
+  .wedding-landing p {
+    font-size: 1rem;
+  }
+}
+
+/* Extended sections for Wedding Landing */
+.wedding-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.wedding-section h2 {
+  color: #db2777; /* pink-600 */
+  margin-bottom: 0.75rem;
+}
+
+.wedding-section h3 {
+  color: var(--color-accent);
+  margin: 0.75rem 0 0.25rem;
+}
+
+.feature-list,
+.areas-list,
+.available-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+  color: var(--color-text-dark);
+}
+
+.feature-list li,
+.areas-list li,
+.available-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.feature-list li:last-child,
+.areas-list li:last-child,
+.available-list li:last-child {
+  border-bottom: none;
+}
+
+.package-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .package-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.package-item {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.hint-text {
+  color: var(--color-text-light);
+  margin-top: 0.75rem;
+}
+
+.available-title {
+  margin-top: 0.75rem;
+}
+
+.cta-center {
+  margin: 2rem 0 0.5rem;
+}
+
+.seo-keywords {
+  max-width: 960px;
+  margin: 1rem auto 0;
+  color: var(--color-text-light);
+}
+
+/* Wedding gallery */
+.wedding-gallery {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.wedding-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .wedding-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

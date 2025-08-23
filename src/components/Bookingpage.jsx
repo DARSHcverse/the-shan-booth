@@ -152,7 +152,7 @@ const BookingPage = () => {
 
             <input type="number" name="price" value={formData.price} readOnly className="readonly-input" />
 
-            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Additional Message (Optional)" rows="3" />
+            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Start Time: __ | End Time: __ | Parking: __ | Notes: __" rows="3" />
 
             <button type="submit" className="submit-button">Confirm Booking</button>
           </form>

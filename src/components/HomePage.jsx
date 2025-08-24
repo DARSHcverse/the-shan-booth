@@ -64,6 +64,10 @@ const HomePage = () => {
               <p className="card-text">Browse our flexible and affordable packages to find the perfect fit for you.</p><br/>
               <button onClick={() => navigate('/packages')} className="card-button">View Packages</button>
             </div>
+
+          </div>
+          <div className="seo-keywords" aria-hidden="false">
+            <strong>Popular searches:</strong> photo booth hire Melbourne • wedding photo booth hire Melbourne • party photo booth hire Melbourne • corporate events photo booth hire Melbourne • engagement party photo booth hire • birthdays photo booth hire • graduations photo booth hire • cheap photo booth hire • affordable photo booth hire
           </div>
         </div>
       </section>

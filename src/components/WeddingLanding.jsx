@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import "../App.css"; // make sure this imports your CSS
 import weddingImg from "../images/wedding.webp";
 import weddingImg2 from "../images/wedding2.webp";
+import WeddingStrip from "../images/weddingstrip.webp";
 
 const WeddingLanding = () => {
   return (
@@ -16,7 +17,7 @@ const WeddingLanding = () => {
         />
         <meta
           name="keywords"
-          content="wedding photo booth hire Melbourne, elegant wedding photobooth Tarneit, Geelong wedding photo booth rental, wedding reception photo booth, bridal shower photo booth Melbourne, fun wedding photo booth hire, wedding party photo booth Geelong, romantic wedding photo booth packages"
+          content="wedding photo booth hire Melbourne, elegant wedding photobooth, Geelong wedding photo booth rental, wedding reception photo booth, bridal shower photo booth Melbourne, fun wedding photo booth hire, wedding party photo booth Geelong, romantic wedding photo booth packages"
         />
         <link
           rel="canonical"
@@ -90,6 +91,11 @@ const WeddingLanding = () => {
 
       {/* ✅ Landing Page Content */}
       <div className="wedding-landing">
+        {/* Floating Corporate Strip */}
+        <div className="floating-strip left-strip">
+          <img src={WeddingStrip} alt="Wedding photobooth strip" />
+        </div>
+
         <h1>Wedding Photobooth Hire in Melbourne & Geelong</h1>
         <p>
           Your wedding day deserves to be unforgettable.{" "}
@@ -188,6 +194,10 @@ const WeddingLanding = () => {
 
         <div className="seo-keywords" aria-hidden="false">
           <strong>Popular searches:</strong> wedding photo booth hire Melbourne • elegant wedding photobooth Tarneit • Geelong wedding photo booth • bridal shower photo booth Melbourne • engagement party photo booth hire
+        </div>
+        {/* Floating Corporate Strip */}
+        <div className="floating-strip right-strip">
+          <img src={WeddingStrip} alt="Wedding photobooth strip" />
         </div>
       </div>
     </>

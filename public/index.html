@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicons -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -9,7 +12,6 @@
     <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/favicon-192x192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
     <meta name="theme-color" content="#000000" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO: Primary Meta Tags -->
     <title>Photo Booth Hire Melbourne | The Shan Booth – Weddings, Parties & Events</title>
@@ -23,15 +25,18 @@
     />
 
     <link rel="canonical" href="https://www.photoboothwithshan.com.au/" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+
+    <!-- Performance: DNS Prefetch -->
+    <link rel='dns-prefetch' href='//www.googletagmanager.com'/>
+    <link rel='dns-prefetch' href='//www.instagram.com'/>
+    <link rel='dns-prefetch' href='//www.facebook.com'/>
 
     <!-- Google Analytics / Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17457289983"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
       gtag("config", "AW-17457289983");
     </script>
@@ -43,6 +48,7 @@
     <meta property="og:url" content="https://www.photoboothwithshan.com.au/" />
     <meta property="og:image" content="https://www.photoboothwithshan.com.au/logo-social-share.jpg" />
     <meta property="og:site_name" content="The Shan Booth" />
+    <meta property="article:modified_time" content="2025-08-19T17:00:00+10:00"/>
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -78,13 +84,7 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
+            "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
           ],
           "opens": "09:00",
           "closes": "23:00"

@@ -92,6 +92,13 @@
     <priority>1.0</priority>
   </url>
 
+    <!-- 🏢 Birthday Events Landing Page -->
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/birthday</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
   <!-- 📅 Booking Page -->
   <url>
     <loc>https://www.photoboothwithshan.com.au/booking</loc>

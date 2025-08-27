@@ -4,17 +4,29 @@ import '../App.css';
 import photobooth from '../images/boothimg6.webp';
 import glam from '../images/glam.png';
 import enclosure from '../images/enclosed.jpeg';
-import SEO from './SEO.jsx';
+
 
 
 const PhotoboothsPage = () => (
   <>
-    <SEO>
-      title= "Event Photobooths | Unforgettable Event Experiences"
-      description= "Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events. Open, Glam, and Enclosed Booth options available."
-      pathname= "/photobooths"
-      image= "/photobooth.jpg"
-    </SEO>
+    <Helmet>
+      <title>Event Photobooths | Unforgettable Event Experiences</title>
+      <meta name="description" content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events. Open, Glam, and Enclosed Booth options available."/>
+      <link rel="canonical" href="https://www.photoboothwithshan.com.au/photobooths"/>
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:title" content="Event Photobooths | Unforgettable Event Experiences"/>
+      <meta property="og:description" content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events."/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="https://www.photoboothwithshan.com.au/photobooths"/>
+      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.jpg"/>
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:title" content="Event Photobooths | Unforgettable Event Experiences"/>
+      <meta name="twitter:description" content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events."/>
+      <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.jpg"/>
+    </Helmet>
 
     <main className="main-content section-padding">
       <div className="container">

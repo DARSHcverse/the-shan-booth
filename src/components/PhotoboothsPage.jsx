@@ -12,7 +12,7 @@ const PhotoboothsPage = () => (
     <SEO>
       title= "Event Photobooths | Unforgettable Event Experiences"
       description= "Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events. Open, Glam, and Enclosed Booth options available."
-      canonical= "https://www.photoboothwithshan.com.au/photobooths"
+      pathname= "/photobooths"
     </SEO>
 
     <main className="main-content section-padding">

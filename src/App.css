@@ -1996,3 +1996,94 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+/* Birthday Landing */
+.birthday-landing {
+  background: linear-gradient(to bottom right, #fff5f7, #fef3c7);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Headline with festive glow */
+.birthday-landing h1 {
+  text-shadow: 0 0 6px #fff, 0 0 12px #fbbf24, 0 0 18px #f59e0b;
+  color: #d97706; /* amber-700 */
+}
+
+/* Paragraph text */
+.birthday-landing p {
+  color: #4b5563; /* gray-600 */
+}
+
+/* Call-to-action button */
+.birthday-landing .cta-btn {
+  display: inline-block;
+  background-color: #f59e0b; /* amber-500 */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.birthday-landing .cta-btn:hover {
+  background-color: #b45309; /* amber-800 */
+  transform: scale(1.08) rotate(-1deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .birthday-landing h1 {
+    font-size: 2rem;
+  }
+  .birthday-landing p {
+    font-size: 1rem;
+  }
+}
+
+/* Sections for Birthday Landing */
+.birthday-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: 1px solid #fcd34d; /* light amber border */
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.birthday-section h2 {
+  color: #d97706; /* amber-700 */
+  margin-bottom: 0.75rem;
+}
+
+.birthday-section h3 {
+  color: #ec4899; /* pink-500 accent */
+  margin: 0.75rem 0 0.25rem;
+}
+
+/* Birthday gallery */
+.birthday-gallery {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.birthday-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border: 2px solid #fde68a; /* yellow-300 */
+}
+
+@media (min-width: 768px) {
+  .birthday-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

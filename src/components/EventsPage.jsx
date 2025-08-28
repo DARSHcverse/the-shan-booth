@@ -1,9 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
 const eventsData = [
   {
+    id: 'weddings',
     title: 'Weddings',
     description: 'A photobooth is the perfect way to capture the magic of your special day. Our booths provide endless entertainment, allowing guests to take fun photos with props and create lasting memories. Complement your wedding’s theme with a digital gallery and a physical guestbook filled with cherished moments.',
     offers: [
@@ -14,6 +16,7 @@ const eventsData = [
     ],
   },
   {
+    id: 'birthday',
     title: 'Birthday Parties',
     description: 'From milestone birthdays to casual celebrations, our photobooths are the ultimate party starter. We customize the experience for any age group, with vibrant backdrops and fun props that match your theme. Guests leave with memorable keepsakes to treasure long after the party ends.',
     offers: [
@@ -24,6 +27,7 @@ const eventsData = [
     ],
   },
   {
+    id: 'corporate-events',
     title: 'Corporate Events',
     description: 'Impress clients and energize your team with a professional and engaging photobooth experience. Whether it’s a product launch, holiday party, or team-building event, our booths offer branding opportunities and high-quality, shareable content that boosts engagement.',
     offers: [
@@ -34,6 +38,7 @@ const eventsData = [
     ],
   },
   {
+    id: 'graduation',
     title: 'University Open Days',
     description: 'Attract prospective students and create buzz with an interactive photobooth. Students can take fun photos with friends, building community spirit while sharing moments online to boost your university’s presence.',
     offers: [
@@ -44,6 +49,7 @@ const eventsData = [
     ],
   },
   {
+    id: 'graduation',
     title: 'School Graduations',
     description: 'Celebrate graduates’ achievements with a photobooth that captures their excitement and pride. Our themed setups with caps, gowns, and school-colored backdrops create professional yet fun keepsakes for students and families.',
     offers: [
@@ -55,12 +61,14 @@ const eventsData = [
   },
 ];
 
-const EventsPage = () => (
-  <>
-    <Helmet>
-      <title>Event Photobooth Hire for Weddings, Parties & Corporate Events | The Shan Booth</title>
-      <meta name="description" content="Hire photobooths for weddings, birthdays, school graduations, corporate events & university open days in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."/>
-      <link rel="canonical" href="https://www.photoboothwithshan.com.au/events"/>
+const EventsPage = () => {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Helmet>
+        <title>Event Photobooth Hire for Weddings, Parties & Corporate Events | The Shan Booth</title>
+        <meta name="description" content="Hire photobooths for weddings, birthdays, school graduations, corporate events & university open days in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."/>
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/events"/>
 
       {/* Open Graph */}
       <meta property="og:title" content="Event Photobooth Hire in Melbourne | The Shan Booth"/>
@@ -97,6 +105,7 @@ const EventsPage = () => (
         `}
       </script>
     </Helmet>
+    
 
     <main className="main-content section-padding">
       <div className="container">
@@ -104,7 +113,7 @@ const EventsPage = () => (
         <p className="events-intro">We are passionate about bringing joy and unforgettable memories to a wide variety of events. No matter the occasion, we have a photobooth solution to match, providing a fun and interactive experience for all your guests.</p>
         <div className="card-grid">
           {eventsData.map((event, index) => (
-            <div key={index} className="card">
+            <div key={index} className="card" onClick={() => navigate(`/${event.id}`)}>
               <h2 className="card-title">{event.title}</h2>
               <p className="card-text">{event.description}</p>
               <ul className="package-features">
@@ -119,5 +128,5 @@ const EventsPage = () => (
     </main>
   </>
 );
-
+}
 export default EventsPage;

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import "../App.css";
 import blackdrop from "../images/blackbackdrop.png";
 import graddrop from "../images/gradbackdrop.png";
 import whitedrop from "../images/whitebackdrop.png";
 import flowerkdrop from "../images/flowerbackdrop.png";
-import SEO from "../components/SEO";
 
 const propIcons = [
   "🎩", "👑", "👓", "🎀", "🥳", "🌟", "🎈", "🎉", "🎤", "✨", "💖",
@@ -68,65 +68,47 @@ const BackdropPage = () => {
 
   return (
     <>
-      {/* ✅ Use SEO component */}
-      <SEO
-        title="Backdrop Designs & Fun Props for Photo Booths | The Shan Booth"
-        description="Discover whimsical backdrop designs and fun props for photo booths in Melbourne. Perfect for weddings, parties, school graduations, and corporate events."
-        canonical="https://www.photoboothwithshan.com.au/backdrop"
-        image="https://www.photoboothwithshan.com.au/images/whitebackdrop.png"
-        type="website"
-        structuredData={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://www.photoboothwithshan.com.au#backdrop-service",
-            name: "Photo Booth Backdrops & Props",
-            description:
-              "Interactive backdrop designs and fun props for photo booths at weddings, parties, school graduations, and corporate events in Melbourne.",
-            serviceType: [
-              "Photo Booth Hire",
-              "Backdrop Hire",
-              "Props for Events",
-            ],
-            provider: {
-              "@type": "Organization",
-              "@id": "https://www.photoboothwithshan.com.au#organization",
-              name: "The Shan Booth",
-              url: "https://www.photoboothwithshan.com.au",
-              logo: "https://www.photoboothwithshan.com.au/images/logo.png",
-            },
-            areaServed: {
-              "@type": "Place",
-              name: "Melbourne, Australia",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Melbourne",
-                addressRegion: "VIC",
-                addressCountry: "Australia",
+      {/* ✅ Helmet SEO for Backdrops Page */}
+      <Helmet>
+        <title>Backdrop Designs & Fun Props for Photo Booths | The Shan Booth</title>
+        <meta
+          name="description"
+          content="Discover whimsical backdrop designs and fun props for photo booths in Melbourne. Perfect for weddings, parties, school graduations, and corporate events."
+        />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/backdrops" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Backdrop Designs & Fun Props | The Shan Booth" />
+        <meta property="og:description" content="Explore whimsical backdrop designs and playful props for photo booths at weddings, parties, school graduations, and corporate events." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/backdrops" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/flowerbackdrop.png" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Backdrop Designs & Fun Props | The Shan Booth" />
+        <meta name="twitter:description" content="Explore whimsical backdrop designs and playful props for photo booths at weddings, parties, school graduations, and corporate events." />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/gradbackdrop.png" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Photo Booth Backdrops & Props",
+              "description": "Interactive backdrop designs and fun props for photo booths at weddings, parties, school graduations, and corporate events in Melbourne.",
+              "provider": {
+                "@type": "Organization",
+                "name": "The Shan Booth",
+                "url": "https://www.photoboothwithshan.com.au"
               },
-            },
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://www.photoboothwithshan.com.au#organization",
-            name: "The Shan Booth",
-            url: "https://www.photoboothwithshan.com.au",
-            logo: "https://www.photoboothwithshan.com.au/images/logo.png",
-            sameAs: [
-              "https://www.facebook.com/photoboothwithshan",
-              "https://www.instagram.com/photoboothwithshan",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+61-400-000-000",
-              contactType: "customer service",
-              areaServed: "AU",
-              availableLanguage: "English",
-            },
-          },
-        ]}
-      />
+              "areaServed": "Melbourne, Australia",
+              "serviceType": "Photo Booth Hire"
+            }
+          `}
+        </script>
+      </Helmet>
 
       <main className="backdrop-page-main section-padding">
         <div className="container backdrop-container">

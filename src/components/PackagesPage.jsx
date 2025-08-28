@@ -191,9 +191,9 @@ const PackagesPage = () => {
 
       <main className="main-content section-padding">
         <div className="container">
-          <h1 className="page-heading">Photo Booth Hire Packages Melbourne</h1>
+          <h1 className="page-heading">PHOTOBOOTH HIRE PACKAGE MELBOURNE</h1>
 
-          <h2 className="package-section-heading">Standard Booth Packages</h2>
+          <h2 className="package-section-heading">OPEN & ENCLOSED BOOTH PACKAGES</h2>
           <div className="package-list">
             {standardPackages.map((pkg) => (
               <div className="package-card" key={pkg.id}>

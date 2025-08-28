@@ -1195,10 +1195,27 @@ body {
 
 /* Booking page title */
 .booking-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--color-accent);
-    margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+}
+
+.red-text {
+  background: linear-gradient(90deg, red, orange, yellow, red);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s infinite linear;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Form adjustments */

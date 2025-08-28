@@ -125,7 +125,7 @@ const BookingPage = () => {
           <img src={corporateStrip} alt="Graduation photobooth strip" />
         </div>
         <div className="booking-card">
-          <h2 className="booking-title">Book Your Photobooth</h2>
+          <h2 className="booking-title"><span className="red-text">BOOK</span> YOUR PHOTBOOTH</h2>
           <form onSubmit={handleSubmit} className="booking-form">
             <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" required />
             <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />

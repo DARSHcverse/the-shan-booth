@@ -112,7 +112,7 @@ const BackdropPage = () => {
 
       <main className="backdrop-page-main section-padding">
         <div className="container backdrop-container">
-          <h1 className="page-heading">Our Backdrop Designs & Fun Props</h1>
+          <h1 className="page-heading">OUR BACKDROP DESIGNS & FUN PROPS</h1>
           <p className="backdrop-intro-text">
             Explore a whimsical collection of our popular backdrops and playful
             props, floating to inspire your next event! Click a backdrop to view

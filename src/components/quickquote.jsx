@@ -116,7 +116,7 @@ const QuickQuote = () => {
           <img src={birthdayStrip} alt="Birthday photobooth strip" />
         </div>
         <div className="quick-quote-card">
-          <h2 className="page-heading">Quick Quote</h2>
+          <h2 className="page-heading">QUICK <span className="red-text">QUOTE</span></h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <input

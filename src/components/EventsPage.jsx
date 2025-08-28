@@ -109,7 +109,7 @@ const EventsPage = () => {
 
     <main className="main-content section-padding">
       <div className="container">
-        <h1 className="page-heading">Events We Cover</h1>
+        <h1 className="page-heading">PHOTOBOOTH HIRE <br /> EVENTS WE COVER</h1>
         <p className="events-intro">We are passionate about bringing joy and unforgettable memories to a wide variety of events. No matter the occasion, we have a photobooth solution to match, providing a fun and interactive experience for all your guests.</p>
         <div className="card-grid">
           {eventsData.map((event, index) => (

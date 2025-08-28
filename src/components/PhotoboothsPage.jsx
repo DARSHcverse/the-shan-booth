@@ -30,7 +30,7 @@ const PhotoboothsPage = () => (
 
     <main className="main-content section-padding">
       <div className="container">
-        <h1 className="page-heading">Event Photobooths</h1>
+        <h1 className="page-heading">PHOTOBOOTH HIRE <br /> VARIOUS EVENT EXPERIENCES</h1>
         <div className="photobooth-list">
           <div className="card">
             <img src={photobooth} alt="Open Booth" className="card-img"/>

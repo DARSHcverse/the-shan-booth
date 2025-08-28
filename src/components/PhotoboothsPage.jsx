@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import '../App.css';
 import photobooth from '../images/boothimg6.webp';
 import glam from '../images/glam.png';

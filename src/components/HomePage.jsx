@@ -67,7 +67,7 @@ const HomePage = () => {
 
           </div>
           <div className="seo-keywords" aria-hidden="false">
-            <strong>Popular searches:</strong> photo booth hire Melbourne • wedding photo booth hire Melbourne • party photo booth hire Melbourne • corporate events photo booth hire Melbourne • engagement party photo booth hire • birthdays photo booth hire • graduations photo booth hire • cheap photo booth hire • affordable photo booth hire
+            <strong>Popular searches:</strong> photobooth hire Melbourne • photo booth hire Melbourne • wedding photo booth hire Melbourne • party photo booth hire Melbourne • corporate events photo booth hire Melbourne • engagement party photo booth hire • birthdays photo booth hire • graduations photo booth hire • cheap photo booth hire • affordable photo booth hire
           </div>
         </div>
       </section>

@@ -355,15 +355,49 @@ body {
     margin-top: 2rem;
     font-size: 0.875rem;
 }
-/* --- Main Page Content Styles --- */
+/* --- Assume your CSS variables (--color-primary, etc.) are already defined --- */
+
+/* --- General & Utility --- */
 .main-content {
-    min-height: calc(100vh - 12rem);
     background-color: var(--color-bg-body);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-padding {
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-text-dark); /* Using a dark text color for titles */
+}
+
+.bg-light {
+    background-color: var(--color-bg-card); /* A light off-white or grey for section contrast */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    color: white;
+    text-align: center;
 }
 
 .hero-overlay {
     position: relative;
-    text-align: center;
+    height: 90vh; /* Taller hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-overlay::before {
@@ -373,52 +407,45 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* This creates the 50% opacity overlay */
-    z-index: 1; /* Ensures the overlay is on top of the image */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 1;
 }
 
 .main-img {
-    width: 100%; /* Makes the image take up the full width of its container */
-    height: 35rem; /* Sets a fixed height for the banner effect */
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
-    border-radius: 0; /* Removes the border radius */
-    opacity: 60%;
-}
-
-/* --- HomePage Styles --- */
-.hero-text{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2; /* Ensures the text is on top of the overlay and image */
-    color: white; /* Changed color to white for better readability on a dark overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
-.hero-section {
-    background-color: var(--color-bg-card);
-    padding: 0; /* Removes padding to allow the image to be full-width */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
 }
 
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
-    color: white; /* Changed color to white for better readability on a dark overlay */
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--color-accent); /* Changed color to var(--color-accent) */
-    max-width: 42rem;
-    margin: 0 auto;
-    text-shadow: #000000;
+    color: #f0f0f0; /* Slightly off-white for subtitle */
+    max-width: 600px;
+    margin: 0 auto 2rem;
 }
-.card-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .home-button {
@@ -426,82 +453,315 @@ body {
     color: white;
     width: 100%;
     max-width: 300px;
-    font-weight: 1000;
+    font-weight: 700;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
-    border: none;
+    border: 2px solid var(--color-primary);
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: large;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .home-button:hover {
     background-color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
-
-@media (min-width: 768px) {
-    .card-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.home-button.secondary {
+    background-color: transparent;
+    border: 2px solid white;
 }
 
-@media (min-width: 1024px) {
-    .card-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+.home-button.secondary:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+/* --- Features Section --- */
+.features-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* --- Info Cards Section --- */
+.card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .card {
     background-color: var(--color-bg-card);
-    padding: 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border: 1px solid var(--color-border);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures image corners are rounded */
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .card-img {
     width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-accent);
-    margin-bottom: 0.5rem;
+    margin: 1.5rem 1.5rem 0.5rem;
 }
 
 .card-text {
     color: var(--color-text-light);
+    padding: 0 1.5rem 1.5rem;
+    flex-grow: 1; /* Pushes button to the bottom */
 }
-
 
 .card-button {
     background-color: var(--color-primary);
     color: white;
-    width: 100%;
-    max-width: 200px;
     font-weight: 700;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: large;
+    font-size: 1rem;
+    margin: 0 1.5rem 1.5rem; /* Give button margin */
+    align-self: flex-start; /* Button doesn't stretch */
 }
 
 .card-button:hover {
     background-color: var(--color-accent);
 }
 
+/* --- Testimonials Section --- */
+.testimonial-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.testimonial-card {
+    background: white; /* Clean white for testimonials */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 4px solid var(--color-primary);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+    position: relative;
+}
+
+.testimonial-quote::before {
+    content: '“';
+    font-size: 4rem;
+    color: var(--color-primary);
+    opacity: 0.1;
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* --- FAQ Section --- */
+.faq-container {
+    max-width: 800px;
+}
+.faq-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.faq-item h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* --- CTA Banner --- */
+.cta-banner {
+    background: var(--color-accent);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.cta-banner h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+.cta-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cta-banner .home-button {
+    background-color: white;
+    color: var(--color-accent);
+    border-color: white;
+}
+.cta-banner .home-button:hover {
+    background-color: #f0f0f0;
+    color: var(--color-accent);
+}
+
+/* --- SEO Footer --- */
+.seo-footer {
+    padding: 2rem 1rem;
+    background-color: #f8f9fa; /* A very light grey */
+    text-align: center;
+    color: #6c757d; /* Muted text color */
+    font-size: 0.9rem;
+}
+.seo-footer p {
+    margin: 0;
+}
+
+/* --- Seasonal Banner Section --- */
+.seasonal-banner {
+    background-color: var(--color-accent); /* Use your accent color for pop */
+    color: white;
+    text-align: center;
+}
+.seasonal-title {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.seasonal-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.seasonal-text strong {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+/*
+CORRECTION: ADDED THE MISSING SNOW ANIMATION STYLES BELOW
+*/
+
+/* --- Snowfall Animation --- */
+.snow-effect {
+    position: relative;
+    overflow: hidden; /* Ensures snowflakes don't appear outside the section */
+}
+.snow-effect::before,
+.snow-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows you to click on content underneath */
+    z-index: 3; /* Places snow above the background but below main text */
+}
+.snow-effect::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.8"/></svg>');
+    background-size: 15px 15px; /* Adjust for more or less snow */
+    animation: snowfall 15s linear infinite;
+}
+.snow-effect::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="3" fill="white" opacity="0.6"/></svg>');
+    background-size: 25px 25px; /* Adjust for more or less snow */
+    animation: snowfall 20s linear infinite reverse; /* Different speed and direction */
+}
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+.snow-effect .hero-text,
+.snow-effect .seasonal-title,
+.snow-effect .seasonal-text {
+    position: relative;
+    z-index: 4; /* This ensures your text appears on top of the snow */
+}
+
+
+/* --- Responsive Media Queries --- */
+@media (min-width: 640px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-title {
+        font-size: 4rem;
+    }
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 /* --- Photobooths Page Styles --- */
 .page-heading {

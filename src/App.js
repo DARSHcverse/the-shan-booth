@@ -45,7 +45,7 @@ function App() {
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/christmas" element={<ChristmasLanding />} />
         <Route path="/graduation" element={<GraduationLanding />} />
-        <Route path="/photobooth-hire-melbourne" element={<PhotoboothLanding />} />
+        <Route path="/photoboothhiremelbourne" element={<PhotoboothLanding />} />
         <Route path="/corporate-events" element={<CorporateEventsLanding />} />
         <Route path="/weddings" element={<WeddingLanding />} />
         <Route path="/birthday" element={<BirthdayLanding />} />

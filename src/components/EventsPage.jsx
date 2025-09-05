@@ -116,7 +116,7 @@ const EventsPage = () => {
             <div key={index} className="card" onClick={() => navigate(`/${event.id}`)}>
               <h2 className="card-title">{event.title}</h2>
               <p className="card-text">{event.description}</p>
-              <ul className="package-features">
+              <ul className="card-text">
                 {event.offers.map((offer, idx) => (
                   <li key={idx}>{offer}</li>
                 ))}

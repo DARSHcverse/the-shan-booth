@@ -58,15 +58,19 @@ const WeddingLanding = () => {
           content="https://www.photoboothwithshan.com.au/wedding2.webp"
         />
 
-        {/* Schema.org JSON-LD */}
+        {/* ✅ Schema.org JSON-LD (Fixed Event Schema) */}
         <script type="application/ld+json">
           {`
           {
             "@context": "https://schema.org",
             "@type": "Event",
             "name": "Wedding Photo Booth Hire Melbourne",
+            "description": "Book a stylish photo booth for your wedding receptions, bridal showers & engagement parties across Melbourne, Tarneit & Geelong.",
+            "image": "https://www.photoboothwithshan.com.au/wedding.webp",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
+            "startDate": "2025-09-06T18:00:00+10:00",
+            "endDate": "2025-12-30T00:00:00+10:00",
             "location": {
               "@type": "Place",
               "name": "Melbourne & Geelong",
@@ -82,8 +86,14 @@ const WeddingLanding = () => {
               "name": "The Shan Booth",
               "url": "https://www.photoboothwithshan.com.au"
             },
-            "image": "https://www.photoboothwithshan.com.au/wedding.webp",
-            "description": "Book a stylish photo booth for your wedding receptions, bridal showers & engagement parties across Melbourne, Tarneit & Geelong."
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.photoboothwithshan.com.au/packages",
+              "price": "500",
+              "priceCurrency": "AUD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2025-08-19T00:00:00+10:00"
+            }
           }
           `}
         </script>
@@ -91,7 +101,7 @@ const WeddingLanding = () => {
 
       {/* ✅ Landing Page Content */}
       <div className="wedding-landing">
-        {/* Floating Corporate Strip */}
+        {/* Floating Wedding Strip */}
         <div className="floating-strip left-strip">
           <img src={WeddingStrip} alt="Wedding photobooth strip" />
         </div>
@@ -195,7 +205,8 @@ const WeddingLanding = () => {
         <div className="seo-keywords" aria-hidden="false">
           <strong>Popular searches:</strong> wedding photo booth hire Melbourne • elegant wedding photobooth Tarneit • Geelong wedding photo booth • bridal shower photo booth Melbourne • engagement party photo booth hire
         </div>
-        {/* Floating Corporate Strip */}
+
+        {/* Floating Wedding Strip */}
         <div className="floating-strip right-strip">
           <img src={WeddingStrip} alt="Wedding photobooth strip" />
         </div>

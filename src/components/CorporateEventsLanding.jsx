@@ -64,6 +64,10 @@ const CorporateEventsLanding = () => {
           {
             "@context": "https://schema.org",
             "@type": "Service",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "startDate": "2025-09-06T18:00:00+10:00",
+            "endDate": "2025-12-30T00:00:00+10:00",
             "serviceType": "Corporate Event Photobooth Hire",
             "provider": {
               "@type": "Organization",

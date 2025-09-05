@@ -23,8 +23,6 @@
       name="keywords"
       content="photo booth, photobooth rental, photobooth for wedding, photobooth for school, photo booth for events, photo booth rental, wedding photo booth, birthday party photo booth, corporate event photo booth, university open day, photobooth hire Melbourne, school graduation photo booth, melbourne photo booth hire, Geelong photo booth hire, Grovedale photo booth hire, Christmas party photo booth hire Melbourne, corporate photo booth hire Melbourne, New Year’s Eve photo booth Melbourne, festive photo booth Melbourne"
     />
-
-
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
 
     <!-- Performance: DNS Prefetch -->
@@ -32,21 +30,27 @@
     <link rel='dns-prefetch' href='//www.instagram.com'/>
     <link rel='dns-prefetch' href='//www.facebook.com'/>
 
-    <!-- Google Analytics / Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17457289983"></script>
+    <!-- Google Analytics / Ads (restricted to live domain) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "AW-17457289983");
+      if (window.location.hostname.includes("photoboothwithshan.com.au")) {
+        var gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=AW-17457289983";
+        document.head.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "AW-17457289983");
+      }
     </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="The Shan Booth | Premier Photo Booth & Event Packages" />
-    <meta property="og:description" content="The Shan Booth offers premier photo booth rentals and event packages for weddings, birthdays, corporate events, Christmas parties, and more. Capture unforgettable memories with our modern and fun photo booths in Melbourne, Tarneit & Geelong." />
+    <meta property="og:description" content="The Shan Booth offers premier photo booth rentals and event packages for weddings, birthdays, corporate events, Christmas parties, and more. Capture unforgettable memories with our modern and fun photo booths in Melbourne." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.photoboothwithshan.com.au/" />
-    <meta property="og:image" content="https://www.photoboothwithshan.com.au/logo-social-share.jpg" />
+    <meta property="og:image" content="https://www.photoboothwithshan.com.au/logo.png" />
     <meta property="og:site_name" content="The Shan Booth" />
     <meta property="article:modified_time" content="2025-08-19T17:00:00+10:00"/>
 
@@ -62,7 +66,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Photobooth with Shan",
-      "image": "https://www.photoboothwithshan.com.au/logo-social-share.jpg",
+      "image": "https://www.photoboothwithshan.com.au/logo.png",
       "@id": "https://www.photoboothwithshan.com.au",
       "url": "https://www.photoboothwithshan.com.au",
       "telephone": "+61 475116521",

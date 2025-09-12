@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import { Helmet } from "react-helmet";
 
 const PBSeoPage = () => {
   const navigate = useNavigate();
@@ -8,82 +8,104 @@ const PBSeoPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/");
-    }, 1);
-
+    }, 1000); // 1 second delay before redirect
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
-    <div>
-      <head>
-        <title>Photobooth Hire Melbourne | The Shan Booth</title>
+    <>
+      {/* SEO + Meta Tags */}
+      <Helmet>
+        <title>Photobooth Hire Melbourne | Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
-          content="The Shan Booth offers affordable photobooth hire Melbourne with unlimited prints, custom backdrops, fun props, instant pendrive copies and friendly attendants. Perfect for weddings, graduations, corporate events & more."
+          content="Affordable photobooth hire Melbourne with unlimited prints, custom backdrops, fun props, instant pendrive copies & friendly attendants. Weddings, graduations, corporate events & more."
         />
-      </head>
-      
-      <h1>Photobooth Hire Melbourne</h1>
-      
-      <p>
-        Welcome to <strong>The Shan Booth</strong> – your go-to destination for 
-        <strong>photobooth hire Melbourne</strong>. We bring energy, fun, and unforgettable 
-        memories to every event, whether it’s a wedding, graduation, corporate party, 
-        or end-of-year celebration. 
-      </p>
+        <meta
+          name="keywords"
+          content="photobooth hire Melbourne, photo booth hire Melbourne, wedding photobooth Melbourne, corporate event photo booth Melbourne, graduation photo booth hire, photobooth hire Clayton, photobooth hire Tarneit"
+        />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/pbseopage" />
 
-      <h2>Why Choose The Shan Booth?</h2>
-      <ul>
-        <li>Affordable packages for every budget</li>
-        <li>Unlimited high-quality prints</li>
-        <li>Fun props and custom backdrops</li>
-        <li>Instant digital pendrive copies of your photos</li>
-        <li>Friendly on-site attendants to guide your guests</li>
-      </ul>
+        {/* Open Graph */}
+        <meta property="og:title" content="Photobooth Hire Melbourne | The Shan Booth" />
+        <meta
+          property="og:description"
+          content="Fun, affordable & stylish photobooth hire in Melbourne. Unlimited prints, props & digital sharing for weddings, graduations, corporate events & more."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/pbseopage" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth-melbourne.jpg" />
 
-      <h2>Our Photobooth Services in Melbourne</h2>
-      <p>
-        At The Shan Booth, we provide <strong>photo booth hire in Melbourne</strong> 
-        and surrounding areas including Clayton and Tarneit. Our services are ideal for:
-      </p>
-      <ul>
-        <li>Weddings and Engagements</li>
-        <li>Graduations & School Events</li>
-        <li>Corporate Events & Launches</li>
-        <li>End-of-Year Parties</li>
-      </ul>
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Photobooth Hire Melbourne | The Shan Booth" />
+        <meta
+          name="twitter:description"
+          content="Hire the best photo booth in Melbourne – unlimited prints, props, custom backdrops & instant pendrive. Weddings, corporate & graduations."
+        />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth-melbourne.jpg" />
 
-      <h2>FAQs about Photobooth Hire Melbourne</h2>
-      
-      <h3>How much does photobooth hire cost in Melbourne?</h3>
-      <p>
-        The Shan Booth offers affordable packages tailored to your event. 
-        Whether small or large, our <strong>Melbourne photobooth hire</strong> 
-        ensures amazing value with unlimited prints and digital copies.
-      </p>
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "The Shan Booth",
+            "image": "https://www.photoboothwithshan.com.au/images/photobooth-melbourne.jpg",
+            "url": "https://www.photoboothwithshan.com.au",
+            "telephone": "",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Melbourne",
+              "addressRegion": "VIC",
+              "addressCountry": "AU"
+            },
+            "description": "Affordable photobooth hire Melbourne with unlimited prints, props, custom backdrops and instant pendrive copies. Serving Clayton, Tarneit & Melbourne metro.",
+            "sameAs": [
+              "https://www.facebook.com/",
+              "https://www.instagram.com/"
+            ]
+          }
+          `}
+        </script>
+      </Helmet>
 
-      <h3>Do you provide services outside Melbourne?</h3>
-      <p>
-        Yes! While we are based in <strong>Melbourne</strong>, we also serve nearby 
-        areas including Clayton, Tarneit, and surrounding suburbs. 
-      </p>
+      {/* Visible SEO Content (before redirect) */}
+      <div className="seo-content">
+        <h1>Photobooth Hire Melbourne</h1>
+        <p>
+          Welcome to <strong>The Shan Booth</strong> – the trusted choice for 
+          <strong> photobooth hire Melbourne </strong>. We provide affordable, 
+          fun and professional photo booth services for weddings, graduations, 
+          corporate events, end-of-year parties, and more.
+        </p>
 
-      <h3>What makes The Shan Booth different?</h3>
-      <p>
-        Unlike ordinary booths, we provide <strong>unlimited prints</strong>, 
-        <strong>custom backdrops</strong>, <strong>fun props</strong>, and 
-        <strong>instant pendrive copies</strong> so you can relive your event anytime.
-      </p>
+        <h2>Why Choose Our Melbourne Photobooths?</h2>
+        <ul>
+          <li>Affordable packages for all event sizes</li>
+          <li>Unlimited high-quality prints for your guests</li>
+          <li>Props and custom backdrops to match your theme</li>
+          <li>Instant digital pendrive copies of all photos</li>
+          <li>Friendly attendants to keep things smooth & fun</li>
+        </ul>
 
-      <h2>Book Your Photobooth Today</h2>
-      <p>
-        Ready to make your event unforgettable? Contact 
-        <strong> The Shan Booth </strong> today for the best 
-        <strong> photobooth hire Melbourne </strong> has to offer.
-      </p>
+        <h2>Areas We Service</h2>
+        <p>
+          We proudly offer <strong>photo booth hire</strong> across Melbourne, 
+          including <strong>Clayton</strong>, <strong>Tarneit</strong>, and surrounding suburbs.
+        </p>
 
-      <a href="https://www.photoboothwithshan.com.au">Contact Us</a>
-    </div>
+        <h2>Book Your Photobooth Today</h2>
+        <p>
+          Make your special day unforgettable with <strong>The Shan Booth</strong>. 
+          Click below to return to our homepage and secure your booking now.
+        </p>
+
+        <a href="https://www.photoboothwithshan.com.au">Go to Homepage</a>
+      </div>
+    </>
   );
 };
 

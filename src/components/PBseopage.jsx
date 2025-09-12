@@ -1,4 +1,18 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import React from "react";
+
 const PBSeoPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 1);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
     <div>
       <head>

@@ -3,12 +3,19 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import '../App.css'; 
 
-// Image Imports
+// Main Image Imports
 import boothimg5 from '../images/boothimg5.webp';
 import boothimg2 from '../images/boothimg2.webp';
 import photobooth from '../images/photobooth.webp';
 import events from '../images/boothimg7.webp';
 import packages from '../images/boothimg4.webp';
+
+// --- Import your 5 floating icons ---
+import iconCamera from '../images/prop2.png';
+import iconChristmasTree from '../images/prop3.png';
+import iconPartyPopper from '../images/prop4.png';
+import iconPhotoStrip from '../images/prop5.png';
+
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -62,8 +69,17 @@ const HomePage = () => {
         </script>
       </Helmet>
 
-      {/* --- ADDED 'snow-effect' CLASS --- */}
-      <section className="hero-section snow-effect">
+      {/* --- MODIFIED: Added inline style for positioning context --- */}
+      <section className="hero-section snow-effect" style={{ position: 'relative', overflow: 'hidden' }}>
+        
+        {/* --- Floating Items Container --- */}
+        <div className="floating-items-container">
+          <div className="floating-item item-2"><img src={iconCamera} alt="Floating camera icon" /></div>
+          <div className="floating-item item-3"><img src={iconChristmasTree} alt="Floating Christmas tree icon" /></div>
+          <div className="floating-item item-4"><img src={iconPartyPopper} alt="Floating party popper icon" /></div>
+          <div className="floating-item item-5"><img src={iconPhotoStrip} alt="Floating strip icon" /></div>
+        </div>
+
         <div className="hero-overlay">
           <img
             src={images[currentImageIndex]}
@@ -87,7 +103,6 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* --- ADDED 'snow-effect' CLASS --- */}
       <section className="section-padding seasonal-banner snow-effect">
           <div className="container">
               <h2 className="seasonal-title">🎓 Celebrate a Year of Achievements! 🎉</h2>

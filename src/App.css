@@ -2482,13 +2482,13 @@ body {
 /* Different positions and animation delays for a random effect */
 .ghost-1 {
   top: 10%;
-  left: 5%;
+  left: 15%;
   animation-duration: 10s;
 }
 
 .ghost-2 {
   top: 50%;
-  right: 10%;
+  right: 13%;
   animation-duration: 7s;
   animation-delay: 2s;
 }

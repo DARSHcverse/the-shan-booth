@@ -2364,3 +2364,156 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+/* Halloween Landing Page */
+.halloween-landing {
+  background: linear-gradient(to bottom right, #2d0b33, #1a051d); /* Dark purple gradient */
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+  position: relative; /* Needed for positioning the ghosts */
+  overflow: hidden; /* Prevent ghosts from appearing outside the container */
+}
+
+/* Headline with a spooky glow */
+.halloween-landing h1 {
+  text-shadow: 0 0 5px #ff7518, 0 0 10px #ff7518, 0 0 15px #e65100;
+  color: #ff8c00; /* DarkOrange */
+  font-family: 'Creepster', cursive; /* Spooky font */
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+/* Paragraph text */
+.halloween-landing p {
+  color: #e5e7eb; /* gray-200 for readability on dark background */
+}
+
+/* Call-to-action button */
+.halloween-landing .cta-btn {
+  display: inline-block;
+  background-color: #ff7518; /* A bright orange */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 117, 24, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid #e65100;
+}
+
+.halloween-landing .cta-btn:hover {
+  background-color: #e65100; /* Darker orange */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 117, 24, 0.4);
+}
+
+.package-list .package-item {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border: 1px solid #ff7518;
+  color: #f3f4f6; /* light gray text */
+}
+
+/* Sections for Halloween Landing */
+.halloween-section {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
+  border: 1px solid #ff7518;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+}
+
+.halloween-section h2 {
+  color: #ff8c00;
+  margin-bottom: 0.75rem;
+}
+
+.halloween-section h3 {
+  color: #ffa500; /* Orange */
+  margin: 0.75rem 0 0.25rem;
+}
+
+.halloween-section ul li, .halloween-section p {
+    color: #f3f4f6; /* light gray */
+}
+
+/* Halloween gallery */
+.halloween-gallery {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.halloween-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  border: 2px solid #ff7518;
+}
+
+@media (min-width: 768px) {
+  .halloween-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .halloween-landing h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Floating Ghost Animation */
+.floating-ghost {
+  position: absolute;
+  opacity: 0.5;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none; /* So they don't interfere with clicks */
+}
+
+.floating-ghost img {
+  width: 80px;
+}
+
+/* Different positions and animation delays for a random effect */
+.ghost-1 {
+  top: 10%;
+  left: 5%;
+  animation-duration: 10s;
+}
+
+.ghost-2 {
+  top: 50%;
+  right: 10%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.ghost-3 {
+  bottom: 15%;
+  left: 15%;
+  animation-duration: 9s;
+  animation-delay: 4s;
+}
+
+/* Keyframes for the floating effect */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) translateX(15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+}
+
+/* General list styles can be reused */
+.feature-list li::before {
+  content: '🎃'; /* Using emoji as bullet points */
+}

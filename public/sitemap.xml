@@ -112,5 +112,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- 🎃 Halloween Landing Page -->
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/halloween</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
 </urlset>

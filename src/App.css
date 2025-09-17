@@ -660,6 +660,57 @@ body {
 .seo-footer p {
     margin: 0;
 }
+/* --- SEO Content Section --- */
+.seo-section {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 4rem 1rem;
+}
+
+.seo-section h2, 
+.seo-section h3 {
+  text-align: left;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.seo-section p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+.seo-section ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.seo-section li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+/* Optional emoji icons alignment */
+.seo-section li::marker {
+  font-size: 1.2rem;
+}
+
+/* --- SEO Footer --- */
+.seo-footer {
+  background: var(--color-bg-card);
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.seo-footer strong {
+  color: var(--color-primary);
+}
+
 
 /* --- Seasonal Banner Section --- */
 .seasonal-banner {

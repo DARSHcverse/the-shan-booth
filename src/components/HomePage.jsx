@@ -168,7 +168,7 @@ const HomePage = () => {
             className="main-img"
           />
           <div className="hero-text">
-            <h1 className="hero-title">EOY Parties, Graduations & Christmas Events</h1>
+            <h1 className="hero-title">PHOTO BOOTH HIRE MELBOURNE</h1>
             <p className="hero-subtitle">Melbourne's favourite photo booth for unforgettable end-of-year celebrations.</p>
             <div className="hero-buttons">
               <button onClick={() => navigate('/packages')} className="home-button">VIEW PACKAGES</button>

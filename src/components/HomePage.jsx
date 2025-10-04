@@ -115,7 +115,7 @@ const HomePage = () => {
         />
         <meta
           name="keywords"
-          content="photo booth hire Melbourne, wedding photo booth Melbourne, corporate event photo booth Melbourne, school graduation photo booth, Christmas party photo booth Melbourne, glam booth hire, magic mirror photo booth Melbourne, 360 booth hire Melbourne, open photo booth hire, enclosed photo booth hire"
+          content="photobooth hire melbourne, photo booth hire Melbourne, wedding photo booth Melbourne, corporate event photo booth Melbourne, school graduation photo booth, Christmas party photo booth Melbourne, glam booth hire, magic mirror photo booth Melbourne, 360 booth hire Melbourne, open photo booth hire, enclosed photo booth hire"
         />
         <meta name="author" content="The Shan Booth" />
         <meta name="robots" content="index, follow" />
@@ -273,19 +273,19 @@ const HomePage = () => {
           <div className="faq-grid">
             <div className="faq-item">
               <h3>Are your attendants suitable for school events?</h3>
-              <p>Yes. All our attendants have a valid Working with Children Check (WWCC) and are experienced in creating a fun, safe, and appropriate environment for students of all ages.</p>
+              <p>Yes. All our attendants have a valid Working with Children Check (WWCC) and are experienced in creating a fun, safe, and appropriate environment for students of all ages. <strong>Photo booth hire Melbourne</strong></p>
             </div>
             <div className="faq-item">
               <h3>Can you provide themed props for our event?</h3>
-              <p>Absolutely! We have a fantastic collection of festive, graduation, and formal props to perfectly match your celebration. Let us know your theme when you book!</p>
+              <p>Absolutely! We have a fantastic collection of festive, graduation, and formal props to perfectly match your celebration. Let us know your theme when you book!<strong>photo booth hire Melbourne</strong></p>
             </div>
             <div className="faq-item">
               <h3>How much space do you need?</h3>
-              <p>For the best experience, we recommend a clear, flat area of at least 4m x 4m. This allows enough room for the booth, backdrop, prop table, and your guests.</p>
+              <p>For the best experience, we recommend a clear, flat area of at least 4m x 4m. This allows enough room for the booth, backdrop, prop table, and your guests.<strong>photo booth hire Melbourne</strong></p>
             </div>
             <div className="faq-item">
               <h3>Do we get digital copies of the photos?</h3>
-              <p>Yes! After your event, you'll receive a pendrive with all the high-resolution images and GIFs, ready for you to keep and share.</p>
+              <p>Yes! After your event, you'll receive a pendrive with all the high-resolution images and GIFs, ready for you to keep and share.<strong>photo booth hire Melbourne</strong></p>
             </div>
           </div>
         </div>
@@ -304,7 +304,7 @@ const HomePage = () => {
       <div className="seo-footer">
         <div className="container">
           <p>
-            <strong>Our event services:</strong> school graduation ideas • grade 6 graduation photo booth • corporate Christmas party hire • EOY party entertainment Melbourne • festive photo booth • open booth hire Melbourne • glam booth hire Melbourne • enclosed booth hire Melbourne • magic mirror photo booth hire Melbourne • 360 spinner booth Melbourne • audio guest book hire Melbourne
+            <strong>Our event services:</strong> photo booth hire Melbourne • school graduation ideas • grade 6 graduation photo booth • corporate Christmas party hire • EOY party entertainment Melbourne • festive photo booth • open booth hire Melbourne • glam booth hire Melbourne • enclosed booth hire Melbourne • magic mirror photo booth hire Melbourne • 360 spinner booth Melbourne • audio guest book hire Melbourne
           </p>
         </div>
       </div>

@@ -239,7 +239,7 @@ const HomePage = () => {
             <li>🎭 A wide selection of <strong>fun props</strong> to match your event theme</li>
             <li>🎨 Custom-designed <strong>photo strips</strong> and backdrops to suit weddings, graduations & parties</li>
             <li>👩‍💼 A professional <strong>photo booth attendant</strong> with every booking</li>
-            <li>🚚 Free delivery within 40km of Melbourne CBD</li>
+            <li>🚚 Free delivery within 40km </li>
             <li>🎉 Options include <strong>open booths</strong>, <strong>glam booths</strong> and <strong>Enclosed booths</strong></li>
           </ul>
         </div>

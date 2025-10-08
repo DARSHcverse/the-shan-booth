@@ -2658,3 +2658,32 @@ body {
     position: relative;
     z-index: 3;
 }
+
+.floating-items-container-offer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through to elements behind */
+  z-index: 2; /* Ensures icons float above the background image but below text */
+}
+
+.floating-item-offer {
+  position: absolute;
+  animation: float-icons 12s ease-in-out infinite;
+}
+
+.floating-item-offer img {
+  display: block;
+  width: 200%;
+}
+
+/* --- Individual Item Positions, Sizes & Delays --- */
+
+.item-2-offer {
+  width: 110px; /* Different sizes for variety */
+  top: 43%;
+  left: 33.5%;
+  animation-duration: 12s; /* Different speeds */
+}

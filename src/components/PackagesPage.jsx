@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import '../App.css';
 
+import offer from '../images/offer.webp';
+
 const PackagesPage = () => {
   const navigate = useNavigate();
 
@@ -192,8 +194,10 @@ const PackagesPage = () => {
       <main className="main-content section-padding">
         <div className="container">
           <h1 className="page-heading">PHOTOBOOTH HIRE PACKAGE MELBOURNE</h1>
-
           <h2 className="package-section-heading">OPEN & ENCLOSED BOOTH PACKAGES</h2>
+          <div className="floating-items-container-offer">
+            <div className="floating-item-offer item-2-offer"><img src={offer} alt="Floating camera icon" /></div>
+          </div>
           <div className="package-list">
             {standardPackages.map((pkg) => (
               <div className="package-card" key={pkg.id}>

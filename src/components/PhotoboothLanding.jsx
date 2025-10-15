@@ -10,49 +10,45 @@ const PhotoboothLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Helmet>
-        <title>Photobooth Hire Melbourne | Weddings, Birthdays & Corporate Events | The Shan Booth</title>
+        <title>Photo Booth Hire Melbourne 📸 | Weddings, Birthdays & Corporate Events | The Shan Booth</title>
         <meta
           name="description"
-          content="Premium photobooth hire in Melbourne, Tarneit & Geelong. Perfect for weddings, birthdays, corporate functions & parties. Unlimited prints, props & instant sharing."
+          content="Looking for premium photo booth hire in Melbourne? The Shan Booth provides modern, affordable photo booth rentals for weddings, birthdays, and corporate events. Unlimited prints, fun props, and instant digital sharing!"
         />
         <meta
           name="keywords"
-          content="photobooth hire Melbourne, wedding photobooth hire Melbourne, birthday party photobooth Melbourne, corporate event photobooth Melbourne, Geelong photobooth hire, Tarneit photo booth hire"
+          content="photo booth hire Melbourne, photobooth hire Melbourne, wedding photo booth hire Melbourne, birthday party photo booth Melbourne, corporate photo booth Melbourne, 360 photo booth hire Melbourne, mirror photo booth hire Melbourne"
         />
-        <link rel="canonical" href="https://www.photoboothwithshan.com.au/photobooth-hire-melbourne" />
+        <link rel="canonical" href="https://www.photoboothwithshan.com.au/photoboothhiremelbourne" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Photobooth Hire Melbourne 📸 | Weddings, Parties & Corporate Events" />
+        <meta property="og:title" content="Photo Booth Hire Melbourne 📸 | Weddings, Parties & Corporate Events" />
         <meta
           property="og:description"
-          content="Make your event unforgettable with The Shan Booth. Weddings, birthdays & corporate photobooth hire across Melbourne, Tarneit & Geelong."
+          content="Make your event unforgettable with The Shan Booth. Photo booth hire for weddings, birthdays & corporate events across Melbourne, Tarneit & Geelong."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.photoboothwithshan.com.au/photobooth-hire-melbourne" />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/photoboothhiremelbourne" />
         <meta property="og:image" content="https://www.photoboothwithshan.com.au/boothimg5.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Photobooth Hire Melbourne 📸 | Weddings, Parties & Corporate Events" />
+        <meta name="twitter:title" content="Photo Booth Hire Melbourne 📸 | Weddings, Parties & Corporate Events" />
         <meta
           name="twitter:description"
-          content="Book your Melbourne photobooth today! Unlimited prints, props & instant digital sharing."
+          content="Book your Melbourne photo booth today! Unlimited prints, props & instant digital sharing."
         />
         <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/boothimg4.webp" />
 
-        {/* ✅ LocalBusiness Schema JSON-LD */}
+        {/* ✅ Schema Markup */}
         <script type="application/ld+json">
           {`
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "The Shan Booth",
-            "description": "Book a stylish photo booth for your wedding receptions, bridal showers & engagement parties across Melbourne.",
+            "description": "Photo booth hire for weddings, birthdays, and corporate events across Melbourne, Tarneit & Geelong.",
             "image": "https://www.photoboothwithshan.com.au/boothimg5.webp",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "startDate": "2025-09-06T18:00:00+10:00",
-            "endDate": "2025-12-30T00:00:00+10:00",
             "url": "https://www.photoboothwithshan.com.au",
             "telephone": "+61 475 116 521",
             "address": {
@@ -61,8 +57,7 @@ const PhotoboothLanding = () => {
               "addressRegion": "VIC",
               "addressCountry": "AU"
             },
-            "priceRange": "$$",
-            "description": "Premium photobooth hire services for weddings, birthdays, corporate events, and parties across Melbourne, Tarneit & Geelong."
+            "priceRange": "$$"
           }
           `}
         </script>
@@ -76,18 +71,26 @@ const PhotoboothLanding = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How much does a photobooth cost to hire in Melbourne?",
+                "name": "How much does a photo booth cost to hire in Melbourne?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our Melbourne photobooth hire packages start with a 2-hour option and go up to full event coverage. Prices vary depending on duration, add-ons, and custom branding."
+                  "text": "Photo booth hire in Melbourne starts with 2-hour packages and extends to full-event coverage. Pricing depends on booth type, duration, and add-ons."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Do you provide wedding photobooths in Melbourne?",
+                "name": "Do you provide wedding photo booths in Melbourne?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes! We specialize in wedding photobooth hire across Melbourne, with elegant backdrops, wedding-themed props, and unlimited prints for guests."
+                  "text": "Yes, The Shan Booth offers elegant and fun photo booth setups for weddings, complete with themed props, custom templates, and unlimited prints."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer 360 or mirror photo booth hire in Melbourne?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! Choose from modern open-air, 360, or mirror photo booths to suit your event’s style."
                 }
               },
               {
@@ -95,7 +98,7 @@ const PhotoboothLanding = () => {
                 "name": "Which areas do you service?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We service Melbourne CBD & suburbs, Geelong, Grovedale, Tarneit, and surrounding western suburbs."
+                  "text": "We service Melbourne CBD & suburbs, Geelong, Grovedale, Tarneit, Point Cook, and surrounding western suburbs."
                 }
               }
             ]
@@ -106,105 +109,133 @@ const PhotoboothLanding = () => {
 
       {/* ✅ Landing Page Content */}
       <div className="photobooth-landing">
-        {/* Floating Birthday Strip */}
         <div className="floating-strip left-strip">
           <img src={birthdayStrip} alt="Birthday photobooth strip" />
         </div>
 
-        <h1>Photobooth Hire Melbourne | Weddings, Birthdays & Events</h1>
+        <h1>Photo Booth Hire Melbourne – Weddings, Parties & Events</h1>
         <p>
-          Looking for the <strong>best photobooth hire in Melbourne</strong>? The Shan Booth offers premium booths with
-          <strong> unlimited prints, fun props, and instant digital sharing</strong>. Perfect for weddings, birthdays,
-          school functions, and corporate events across Melbourne, Tarneit & Geelong.
+          Looking for the <strong>best photo booth hire in Melbourne</strong>? The Shan Booth offers <strong>modern, affordable, and stylish photobooth rentals</strong> for every occasion — from <strong>weddings</strong> and <strong>birthday parties</strong> to <strong>corporate events</strong> and <strong>school functions</strong>. Enjoy <strong>unlimited prints</strong>, <strong>fun props</strong>, and <strong>instant digital sharing</strong> for your guests.
         </p>
 
         <div className="photobooth-gallery">
-          <img src={boothImg} alt="Photobooth hire setup in Melbourne event" loading="lazy" />
-          <img src={boothImg2} alt="Guests enjoying photobooth props and prints in Melbourne" loading="lazy" />
+          <img src={boothImg} alt="Photobooth setup at Melbourne event" loading="lazy" />
+          <img src={boothImg2} alt="Guests using props at Melbourne photobooth" loading="lazy" />
         </div>
 
+        {/* ✅ Why Choose Section */}
         <div className="photobooth-section">
-          <h2>✨ Why Choose The Shan Booth for Your Melbourne Photobooth?</h2>
+          <h2>✨ Why Choose The Shan Booth?</h2>
           <ul className="feature-list">
-            <li>📸 <strong>Unlimited Prints & Digital Sharing</strong> – Take home instant memories & share online.</li>
-            <li>🎉 <strong>Props & Backdrops</strong> – From elegant wedding styles to party vibes.</li>
-            <li>💍 <strong>Perfect for Any Occasion</strong> – Weddings, birthdays, school events & corporate parties.</li>
-            <li>🚗 <strong>We Come to You</strong> – Servicing Melbourne, Geelong & Tarneit.</li>
+            <li>📸 <strong>Unlimited Prints & Digital Sharing</strong> – Instant photos and online galleries.</li>
+            <li>🎉 <strong>Fun Props & Stylish Backdrops</strong> – From elegant weddings to fun parties.</li>
+            <li>💍 <strong>Perfect for All Events</strong> – Weddings, birthdays, school formals & corporate events.</li>
+            <li>🚗 <strong>Servicing Melbourne, Tarneit & Geelong</strong> – We come to your venue and set up everything.</li>
           </ul>
         </div>
 
-        {/* ✅ Extra keyword-rich sections */}
+        {/* ✅ Types of Photo Booths */}
         <div className="photobooth-section">
-          <h2>💍 Wedding Photobooth Hire Melbourne</h2>
+          <h2>📸 Types of Photo Booths You Can Hire in Melbourne</h2>
+          <p>Choose from a variety of <strong>photo booth hire options in Melbourne</strong> to suit your event:</p>
+          <ul>
+            <li><strong>Open-Air Photo Booths</strong> – Spacious and great for large groups.</li>
+            <li><strong>Mirror Photo Booths</strong> – Sleek, interactive, and perfect for modern events.</li>
+            <li><strong>360 Photo Booths</strong> – Capture full-motion videos for social media sharing.</li>
+            <li><strong>Enclosed Photo Booths</strong> – Fun and private setup ideal for birthdays.</li>
+          </ul>
+        </div>
+
+        {/* ✅ Event-Specific Sections */}
+        <div className="photobooth-section">
+          <h2>💍 Wedding Photo Booth Hire Melbourne</h2>
           <p>
-            Make your special day unforgettable with our <strong>wedding photobooth hire Melbourne</strong> packages. 
-            We provide elegant backdrops, custom templates, and fun props so your guests can take home lasting memories.
+            Make your big day unforgettable with our <strong>wedding photo booth hire Melbourne</strong> packages. 
+            Elegant backdrops, custom designs, and fun props create lasting memories for your guests. 
+            <a href="/weddings"> Learn more about our wedding packages.</a>
           </p>
         </div>
 
         <div className="photobooth-section">
-          <h2>🎂 Birthday Party Photobooth Hire Melbourne</h2>
+          <h2>🎂 Birthday Party Photo Booth Hire Melbourne</h2>
           <p>
-            Celebrate in style with our <strong>birthday photobooth hire Melbourne</strong> service. Whether it’s an 
-            18th, 21st, or milestone birthday, our photobooths bring instant fun with unlimited prints and digital sharing.
+            Celebrate in style with our <strong>birthday photo booth hire Melbourne</strong> service. From 18ths and 21sts to milestone birthdays, our booths bring instant fun and unlimited prints. 
+            <a href="/birthday"> Explore birthday photo booth options.</a>
           </p>
         </div>
 
         <div className="photobooth-section">
-          <h2>🏢 Corporate Photobooth Hire Melbourne</h2>
+          <h2>🏢 Corporate Photo Booth Hire Melbourne</h2>
           <p>
-            Hosting a work function, end-of-year party, or brand launch? Our <strong>corporate photobooth hire Melbourne</strong> 
-            packages include branded templates, professional setups, and seamless guest experiences.
+            Hosting a corporate event or end-of-year celebration? Our <strong>corporate photo booth hire Melbourne</strong> packages include branded templates, professional setups, and seamless guest experiences. 
+            <a href="/corporate-events"> See corporate booth packages.</a>
           </p>
         </div>
 
+        {/* ✅ Packages */}
         <div className="photobooth-section">
           <h2>📦 Our Packages</h2>
           <div className="package-list">
             <div className="package-item">
               <h3>2-Hour Package</h3>
-              <p>Perfect for small parties or casual gatherings.</p>
+              <p>Perfect for smaller gatherings or short events. Includes unlimited prints & a friendly booth attendant.</p>
             </div>
             <div className="package-item">
               <h3>3–4 Hour Premium Package</h3>
-              <p>Our most popular package – ideal for weddings, birthdays, and office events.</p>
+              <p>Our most popular option — ideal for weddings, birthdays, and corporate parties.</p>
             </div>
             <div className="package-item">
-              <h3>All Night Package</h3>
-              <p>Unlimited fun & memories for your biggest events and galas.</p>
+              <h3>All-Night Package</h3>
+              <p>Unlimited fun for gala events, weddings, and large functions. <a href="/packages">View all package details.</a></p>
             </div>
           </div>
         </div>
 
+        {/* ✅ How It Works */}
+        <div className="photobooth-section">
+          <h2>🎬 How Our Photobooth Hire Works</h2>
+          <ol>
+            <li>Choose your package and confirm your event date.</li>
+            <li>We deliver, set up, and manage the booth on-site.</li>
+            <li>Guests take unlimited photos, GIFs, and boomerangs.</li>
+            <li>Instant prints and digital copies are shared right away.</li>
+          </ol>
+        </div>
+
+        {/* ✅ Areas Covered */}
         <div className="photobooth-section">
           <h2>📍 Areas We Cover</h2>
           <ul className="areas-list">
             <li>Melbourne (CBD & suburbs)</li>
+            <li>Tarneit & Point Cook</li>
+            <li>Werribee & Hoppers Crossing</li>
             <li>Geelong & Grovedale</li>
-            <li>Tarneit & Western Suburbs</li>
+            <li>Footscray & Sunshine</li>
           </ul>
         </div>
 
-        {/* ✅ FAQ Section for SEO */}
+        {/* ✅ FAQ Section */}
         <div className="photobooth-section faq-section">
           <h2>❓ Frequently Asked Questions</h2>
-          <h3>How much does a photobooth cost in Melbourne?</h3>
-          <p>Packages start from short 2-hour hires and go up to full-event coverage. Get in touch for a custom quote.</p>
-          <h3>Do you offer wedding photobooth hire?</h3>
-          <p>Yes! Our wedding packages include stylish templates, elegant props, and unlimited prints for guests.</p>
-          <h3>Do you cover suburbs outside Melbourne?</h3>
-          <p>We service Geelong, Tarneit, Grovedale, and surrounding areas in addition to Melbourne CBD & suburbs.</p>
+          <h3>Do you offer 360 or mirror photo booth hire?</h3>
+          <p>Yes! We offer 360, mirror, and open-air photo booths depending on your event needs and style.</p>
+
+          <h3>Can the photo booth be branded for corporate events?</h3>
+          <p>Absolutely. We can customize photo templates, backdrops, and digital overlays to include your logo or event branding.</p>
+
+          <h3>Do you travel outside Melbourne?</h3>
+          <p>Yes, we service Tarneit, Geelong, Grovedale, and nearby suburbs in addition to Melbourne CBD.</p>
         </div>
 
-        {/* ✅ Local SEO Block */}
+        {/* ✅ Local Info */}
         <div className="photobooth-section local-info">
           <h2>📌 Contact & Location</h2>
           <p>
-            <strong>The Shan Booth</strong> – Photobooth Hire Melbourne  
+            <strong>The Shan Booth</strong> – Photo Booth Hire Melbourne  
             <br />
-            📞 +61 475 116 521
+            📞 +61 475 116 521  
             <br />
-            📍 Melbourne, VIC, Australia  
+            📍 Melbourne, VIC, Australia
           </p>
           <iframe
             title="The Shan Booth Location"
@@ -217,17 +248,17 @@ const PhotoboothLanding = () => {
           ></iframe>
         </div>
 
+        {/* ✅ Calls to Action */}
         <div className="cta-center">
           <a href="/quickquote" className="cta-btn">📩 Get a Quick Quote</a>
           <a href="/booking" className="cta-btn">📅 Book Now</a>
         </div>
 
+        {/* ✅ Keyword Footer */}
         <div className="seo-keywords" aria-hidden="false">
-          <strong>Popular searches:</strong> photobooth hire Melbourne • wedding photo booth Melbourne • corporate event
-          photo booth hire • birthday photobooth Melbourne • Geelong photobooth • Tarneit photo booth
+          <strong>Popular searches:</strong> photo booth hire Melbourne • wedding photo booth Melbourne • 360 photo booth hire • mirror photo booth Melbourne • corporate photo booth hire • birthday photobooth Melbourne • Geelong photo booth • Tarneit photo booth
         </div>
 
-        {/* Floating Birthday Strip */}
         <div className="floating-strip right-strip">
           <img src={birthdayStrip} alt="Birthday photobooth strip" />
         </div>

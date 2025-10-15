@@ -140,7 +140,7 @@ const PhotoboothLanding = () => {
           <p>Choose from a variety of <strong>photo booth hire options in Melbourne</strong> to suit your event:</p>
           <ul>
             <li><strong>Open-Air Photo Booths</strong> – Spacious and great for large groups.</li>
-            <li><strong>Mirror Photo Booths</strong> – Sleek, interactive, and perfect for modern events.</li>
+            <li><strong>Glam Photo Booths</strong> – Sleek, interactive, and perfect for Black and White events.</li>
             <li><strong>360 Photo Booths</strong> – Capture full-motion videos for social media sharing.</li>
             <li><strong>Enclosed Photo Booths</strong> – Fun and private setup ideal for birthdays.</li>
           </ul>
@@ -211,6 +211,16 @@ const PhotoboothLanding = () => {
             <li>Werribee & Hoppers Crossing</li>
             <li>Geelong & Grovedale</li>
             <li>Footscray & Sunshine</li>
+            <li>St Kilda & South Yarra</li>
+            <li>Brighton & Elwood</li>
+            <li>Richmond & Hawthorn</li>
+            <li>Collingwood & Fitzroy</li>
+            <li>Northcote & Thornbury</li>
+            <li>Glen Waverley & Mount Waverley</li>
+            <li>Box Hill & Blackburn</li>
+            <li>Mordialloc & Mentone</li>
+            <li>Frankston & Mornington Peninsula</li>
+            <li>Clayton & Dandenong</li>
           </ul>
         </div>
 

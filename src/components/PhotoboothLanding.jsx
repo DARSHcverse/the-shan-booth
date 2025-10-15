@@ -10,7 +10,7 @@ const PhotoboothLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Helmet>
-        <title>Photobooth Hire Melbourne 📸 | Weddings, Birthdays & Corporate Events | The Shan Booth</title>
+        <title>Photobooth Hire Melbourne | Weddings, Birthdays & Corporate Events | The Shan Booth</title>
         <meta
           name="description"
           content="Premium photobooth hire in Melbourne, Tarneit & Geelong. Perfect for weddings, birthdays, corporate functions & parties. Unlimited prints, props & instant sharing."

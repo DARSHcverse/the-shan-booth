@@ -172,7 +172,7 @@ const HomePage = () => {
             <p className="hero-subtitle">Melbourne's favourite photo booth for unforgettable end-of-year celebrations.</p>
             <div className="hero-buttons">
               <button onClick={() => navigate('/packages')} className="home-button">VIEW PACKAGES</button>
-              <button onClick={() => navigate('/quickquote')} className="home-button secondary">CHECK 2025 DATES</button>
+              <button onClick={() => navigate('/quickquote')} className="home-button secondary">Quick Quote</button>
             </div>
           </div>
         </div>

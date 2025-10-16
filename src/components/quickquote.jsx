@@ -44,6 +44,7 @@ const QuickQuote = () => {
       });
 
       if (response.ok) {
+        navigate('/thankyou');
         setStatus('Thank you! Your quote request has been sent successfully.');
         setFormData({
           fullName: '',

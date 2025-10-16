@@ -2687,3 +2687,56 @@ body {
   left: 33.5%;
   animation-duration: 12s; /* Different speeds */
 }
+
+
+/* --- Thank You Page --- */
+.thankyou-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #f9f9f9, #ffe6e6);
+  padding: 2rem;
+}
+
+.thankyou-card {
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.thankyou-card:hover {
+  transform: translateY(-5px);
+}
+
+.thankyou-card h1 {
+  color: #f54242;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.thankyou-card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.thankyou-button {
+  background-color: #f54242;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.thankyou-button:hover {
+  background-color: #e03131;
+}

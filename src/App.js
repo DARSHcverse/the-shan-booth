@@ -22,6 +22,7 @@ import WeddingLanding from './components/WeddingLanding';
 import BirthdayLanding from './components/BirthdayLanding';
 import PBSeoPage from './components/PBseopage';
 import HalloweenLanding from './components/HalloweenLanding';
+import ThankYou from './components/ThankYou';
 
 function App() {
   const navigate = useNavigate();
@@ -53,6 +54,7 @@ function App() {
         <Route path="/birthday" element={<BirthdayLanding />} />
         <Route path="/pbseopage" element={<PBSeoPage />} />
         <Route path="/halloween" element={<HalloweenLanding />} />
+        <Route path="/thankyou" element={<ThankYou />} />
       </Routes>
 
       {/* Global Floating Book Now Button */}

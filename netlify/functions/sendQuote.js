@@ -1,70 +1,44 @@
-// netlify/functions/sendQuote.js
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import nodemailer from "nodemailer";
 
-exports.handler = async (event) => {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
-  }
-
+export async function handler(event, context) {
   try {
     const data = JSON.parse(event.body);
-    const { fullName, name, email, phoneNumber, eventDate, eventLocation, packageDuration, service, message } = data;
 
-    let subject, html;
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,     // your Gmail
+        pass: process.env.EMAIL_PASS,     // your App Password
+      },
+    });
 
-    // ----------------------
-    // Quick Quote
-    // ----------------------
-    if (fullName && phoneNumber && eventDate && eventLocation && packageDuration && service) {
-      subject = `New Quick Quote Request from ${fullName}`;
-      html = `
-        <h3>New Quick Quote Request Details:</h3>
-        <p><strong>Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-        <p><strong>Event Date:</strong> ${eventDate}</p>
-        <p><strong>Event Location:</strong> ${eventLocation}</p>
-        <p><strong>Package Duration:</strong> ${packageDuration}</p>
-        <p><strong>Service Type:</strong> ${service}</p>
-        <p><strong>Message:</strong><br>${message ? message.replace(/\n/g, '<br>') : 'N/A'}</p>
-      `;
-    }
-
-    // ----------------------
-    // Contact Form
-    // ----------------------
-    else if (name && email && message) {
-      subject = `New Contact Form Message from ${name}`;
-      html = `
-        <h3>New Contact Form Submission:</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
-      `;
-    }
-
-    // Validation check
-    else {
-      return { statusCode: 400, body: JSON.stringify({ error: 'Required fields are missing.' }) };
-    }
-
-    // ----------------------
-    // Send email
-    // ----------------------
-    const msg = {
-      to: 'theshanbooth@gmail.com',
-      from: 'dharshansubramaniyam2@gmail.com',
-      replyTo: email,
-      subject,
-      html,
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // send to yourself
+      subject: `New Quote Request from ${data.fullName}`,
+      text: `
+Name: ${data.fullName}
+Email: ${data.email}
+Phone: ${data.phoneNumber}
+Event Date: ${data.eventDate}
+Location: ${data.eventLocation}
+Package Duration: ${data.packageDuration}
+Service: ${data.service}
+Message: ${data.message}
+      `,
     };
 
-    await sgMail.send(msg);
+    await transporter.sendMail(mailOptions);
 
-    return { statusCode: 200, body: JSON.stringify({ message: 'Email sent successfully!' }) };
-  } catch (err) {
-    console.error('Error in sendQuote:', err);
-    return { statusCode: 500, body: JSON.stringify({ error: 'Failed to process request.' }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Email sent successfully" }),
+    };
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Failed to send email" }),
+    };
   }
-};
+}

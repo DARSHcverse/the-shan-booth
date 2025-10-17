@@ -13,7 +13,7 @@ export async function handler(event, context) {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from:  data.email,
       to: process.env.EMAIL_USER, // send to yourself
       subject: `New Quote Request from ${data.fullName}`,
       text: `

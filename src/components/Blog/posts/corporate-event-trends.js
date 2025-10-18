@@ -7,6 +7,7 @@ export const post = {
     "Corporate events in Melbourne are evolving fast. See the top photo booth trends that will boost engagement, brand awareness, and fun at your next function.",
   keywords: [
     "corporate event photo booth",
+    "photo booth hire melbourne",
     "photo booth hire corporate melbourne",
     "corporate entertainment ideas"
   ],

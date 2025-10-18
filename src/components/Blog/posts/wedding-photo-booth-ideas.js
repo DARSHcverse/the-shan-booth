@@ -7,6 +7,7 @@ export const post = {
     "Planning a wedding in Melbourne? Discover creative and trending photo booth ideas that will make your big day unforgettable in 2025.",
   keywords: [
     "wedding photo booth melbourne",
+    "photo booth hire melbourne",
     "photo booth hire wedding ideas",
     "melbourne wedding entertainment"
   ],

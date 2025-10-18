@@ -8,6 +8,7 @@ export const post = {
   keywords: [
     "photo booth hire cost",
     "photo booth price melbourne",
+    "photo booth hire melbourne",
     "event photo booth cost australia"
   ],
   content: `

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import fb from '../images/3259376_facebook_media_social_icon.png';
@@ -9,6 +10,7 @@ import map from '../images/3259380_dreamstale_media_social_icon.png';
 import gm from '../images/3259428_google_media_plus_social_icon.png';
 
 const Footer = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',

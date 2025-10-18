@@ -7,6 +7,7 @@ export const post = {
     "Thinking about hiring a photo booth in Melbourne? Here are 5 powerful reasons why a photo booth makes every event unforgettable — from weddings to corporate parties.",
   keywords: [
     "photo booth hire melbourne",
+    "photo booth hire melbourne",
     "wedding photo booth ideas",
     "event entertainment melbourne"
   ],

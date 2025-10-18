@@ -3,8 +3,10 @@ import { Helmet } from "react-helmet";
 import "../App.css";
 import gradStrip from "../images/GradStrip.png";
 import corporateStrip from "../images/coporatestrip.png";
+import { useNavigate } from "react-router-dom";
 
 const BookingPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",

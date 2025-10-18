@@ -33,7 +33,7 @@ const Footer = () => {
       });
 
       if (response.ok) {
-        setStatus('✅ Thank you! Your message has been sent.');
+        navigate('/thankyou');
         setFormData({ name: '', email: '', message: '' });
       } else {
         setStatus('❌ Failed to send. Please try again later.');

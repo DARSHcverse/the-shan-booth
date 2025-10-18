@@ -85,6 +85,7 @@ const BookingPage = () => {
 
       if (response.ok) {
         setStatus("Booking submitted! Booking confirmation sent.");
+        navigate('/thankyou');
         setFormData({
           fullName: "",
           email: "",

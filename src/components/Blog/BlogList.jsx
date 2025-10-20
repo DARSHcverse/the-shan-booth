@@ -5,9 +5,10 @@ import { post as post2 } from "./posts/wedding-photo-booth-ideas";
 import { post as post3 } from "./posts/corporate-event-trends";
 import { post as post4 } from "./posts/photobooth-cost-australia";
 import {post as post5} from "./posts/why-choose-photo-booth-with-shan.js";
+import {post as post6} from "./posts/photo-booth-trends-melbourne-2025.js";
 import "../../App.css";
 
-const posts = [post1, post2, post3, post4, post5];
+const posts = [post1, post2, post3, post4, post5, post6];
 
 const BlogList = () => {
   return (

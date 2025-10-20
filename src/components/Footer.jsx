@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../App.css';
 import fb from '../images/3259376_facebook_media_social_icon.png';
 import ig from '../images/3259424_instagram_social media_social_icon.png';
@@ -11,16 +10,12 @@ import gm from '../images/3259428_google_media_plus_social_icon.png';
 
 const Footer = () => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -31,12 +26,13 @@ const Footer = () => {
       const response = await fetch('/.netlify/functions/sendQuote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         navigate('/thankyou');
         setFormData({ name: '', email: '', message: '' });
+        setStatus('');
       } else {
         setStatus('❌ Failed to send. Please try again later.');
       }
@@ -46,11 +42,13 @@ const Footer = () => {
     }
   };
 
+
+  const googleMapsApiKey = process.env.VITE_GOOGLE_MAPS_KEY;
+
   return (
     <footer className="footer">
       <div className="container grid-cols-3">
-        
-        {/* Contact Info */}
+        {/* --- Contact Info --- */}
         <div>
           <h3 className="footer-heading">Contact Info</h3>
           <address className="contact-info-list">
@@ -60,7 +58,7 @@ const Footer = () => {
             </div>
             <div className="social-link no-style-button">
               <img src={phone} alt="Phone" className="social-icon" />
-              <span>+61475116521</span>
+              <span>+61 475 116 521</span>
             </div>
             <br />
             <div className="social-link no-style-button">
@@ -70,7 +68,7 @@ const Footer = () => {
           </address>
         </div>
 
-        {/* Social Media */}
+        {/* --- Social Media + Map --- */}
         <div>
           <h3 className="footer-heading">Social Media</h3>
           <div className="social-links">
@@ -103,9 +101,23 @@ const Footer = () => {
               <img src={ig} alt="Instagram" className="social-icon" />
             </a>
           </div>
+
+          {/* --- Google Map --- */}
+          <div className="footer-map">
+          <iframe
+            title="Photo Booth With Shan Location"
+            width="100%"
+            height="220"
+            style={{ border: 0, borderRadius: '10px' }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/place?q=51+Celestial+Circuit,+Tarneit,+VIC+3029,+Australia&key=${googleMapsApiKey}`}
+          ></iframe>
+          </div>
         </div>
 
-        {/* Contact Form */}
+        {/* --- Contact Form --- */}
         <div>
           <h3 className="footer-heading">Contact Form</h3>
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -146,17 +158,13 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright + Links */}
+      {/* --- Copyright --- */}
       <div className="copyright-text">
-        © {new Date().getFullYear()} The Shan Booth. All rights reserved. 
+        © {new Date().getFullYear()} The Shan Booth. All rights reserved.
         <span style={{ margin: '0 0.5rem' }}>|</span>
-        <Link to="/terms" style={{ color: 'inherit', textDecoration: 'underline', margin: '0 0.5rem' }}>
-          Terms & Conditions
-        </Link>
+        <Link to="/terms" className="footer-link">Terms & Conditions</Link>
         <span style={{ margin: '0 0.5rem' }}>|</span>
-        <Link to="/privacy" style={{ color: 'inherit', textDecoration: 'underline', margin: '0 0.5rem' }}>
-          Privacy Policy
-        </Link>
+        <Link to="/privacy" className="footer-link">Privacy Policy</Link>
       </div>
     </footer>
   );

@@ -9,7 +9,8 @@ import map from '../images/3259380_dreamstale_media_social_icon.png';
 import gm from '../images/3259428_google_media_plus_social_icon.png';
 
 const Footer = () => {
-  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_KEY;
+  const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_KEY;
+  console.log("Google Maps API Key:", googleMapsApiKey);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');

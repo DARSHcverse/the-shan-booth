@@ -1,122 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home Page -->
+  <!-- 🏠 Home Page -->
   <url>
     <loc>https://www.photoboothwithshan.com.au/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Events Page -->
+  <!-- 📸 Main Pages -->
   <url>
-    <loc>https://www.photoboothwithshan.com.au/events</loc>
+    <loc>https://www.photoboothwithshan.com.au/photoboothhiremelbourne</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- Photobooths Page -->
   <url>
     <loc>https://www.photoboothwithshan.com.au/photobooths</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Packages Page -->
   <url>
     <loc>https://www.photoboothwithshan.com.au/packages</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Quick Quote Page -->
   <url>
     <loc>https://www.photoboothwithshan.com.au/quickquote</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-
-  <!-- Backdrop Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/backdrop</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Terms & Conditions Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/terms</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Privacy Policy Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/privacy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- 🎄 Christmas Landing Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/christmas</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 🎓 Graduation Landing Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/graduation</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 📸 Photobooth Landing Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/photoboothhiremelbourne</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 🏢 Corporate Events Landing Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/corporate-events</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 🏢 Wedding Events Landing Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/weddings</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-    <!-- 🏢 Birthday Events Landing Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/birthday</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 📅 Booking Page -->
   <url>
     <loc>https://www.photoboothwithshan.com.au/booking</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/events</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-    <!-- 📅 Seo Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/pbseopage</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <!-- 🎃 Halloween Landing Page -->
-  <url>
-    <loc>https://www.photoboothwithshan.com.au/halloween</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- 🎉 Landing Pages -->
+  <url><loc>https://www.photoboothwithshan.com.au/birthday</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/christmas</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/corporate-events</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/graduation</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/halloween</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/weddings</loc></url>
+
+  <!-- 🖼️ Extra Pages -->
+  <url><loc>https://www.photoboothwithshan.com.au/backdrop</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/pbseopage</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/privacy</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/terms</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/thankyou</loc></url>
+
+  <!-- 📰 Blog Section -->
+  <url><loc>https://www.photoboothwithshan.com.au/blog</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/blog/why-choose-photo-booth-with-shan</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/blog/photo-booth-trends-melbourne-2025</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/blog/corporate-event-trends</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/blog/wedding-photo-booth-ideas</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/blog/photobooth-benefits</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/blog/photobooth-cost-australia</loc></url>
+  <url><loc>https://www.photoboothwithshan.com.au/blog/open-vs-enclosed-photo-booth</loc></url>
 
 </urlset>

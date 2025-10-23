@@ -25,6 +25,9 @@ import HalloweenLanding from './components/HalloweenLanding';
 import ThankYou from './components/ThankYou';
 import BlogList from './components/Blog/BlogList';
 import BlogPost from './components/Blog/BlogPost';
+import OpenBoothPage from './components/OpenBoothPage';
+import GlamBoothPage from './components/GlamBoothPage';
+import EnclosedBoothPage from './components/EnclosedBoothPage';
 
 function App() {
   const navigate = useNavigate();
@@ -59,6 +62,9 @@ function App() {
         <Route path="/thankyou" element={<ThankYou />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/open-booth" element={<OpenBoothPage />} />
+        <Route path="/glam-booth" element={<GlamBoothPage />} />
+        <Route path="/enclosed-booth" element={<EnclosedBoothPage />} />
       </Routes>
 
       {/* Global Floating Book Now Button */}

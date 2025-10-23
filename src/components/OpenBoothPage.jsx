@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../App.css';
-import openbooth from '../images/boothimg6.webp';
+import openBoothVideo from '../images/openboothvideo.mp4';
 
 const OpenBoothPage = () => (
   <>
@@ -30,9 +30,16 @@ const OpenBoothPage = () => (
 
         <div className="booth-media">
           <div className="video-frame">
-            <p>🎥 Your Open Booth video will go here</p>
+            <video
+              src={openBoothVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="booth-video"
+            ></video>
           </div>
-          <img src={openbooth} alt="Open PhotoBooth Melbourne" className="booth-img" />
         </div>
 
         <div className="booth-details">

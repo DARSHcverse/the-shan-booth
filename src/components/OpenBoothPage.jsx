@@ -27,7 +27,7 @@ const OpenBoothPage = () => (
           Our <strong>Open Booth</strong> is the life of the party — sleek, social, and built to make your event unforgettable!
           Perfect for <strong>weddings</strong>, <strong>birthdays</strong>, <strong>corporate events</strong>, and <strong>brand activations</strong>.
         </p>
-
+        <div className='booth-wrapper'>
         <div className="booth-media">
           <div className="video-frame">
             <video
@@ -53,6 +53,7 @@ const OpenBoothPage = () => (
           </ul>
         </div>
 
+        </div>
         <p className="seo-text">
           Looking for <strong>photo booth hire in Melbourne</strong>? Our <strong>Open Booth</strong> delivers unmatched
           energy, fun, and professional results for every occasion. Whether it’s a <strong>wedding photo booth</strong>,

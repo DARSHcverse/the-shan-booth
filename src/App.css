@@ -3043,3 +3043,41 @@ body {
   color: #fff;
   transform: scale(1.05);
 }
+
+/* --- Booth Wrapper --- */
+.booth-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem; /* adds side spacing on mobile */
+  box-sizing: border-box;
+}
+
+/* --- Make images responsive --- */
+.booth-img {
+  max-width: 100%; /* fills wrapper width */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 1.5rem;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Video frame already responsive, just center it --- */
+.video-frame {
+  margin: 0 auto 1.5rem;
+}
+
+/* --- Optional: adjust details padding on mobile --- */
+@media (max-width: 768px) {
+  .booth-details {
+    padding: 1.5rem;
+  }
+  .page-heading {
+    font-size: 1.8rem;
+  }
+  .intro-text, .seo-text {
+    font-size: 1rem;
+  }
+}

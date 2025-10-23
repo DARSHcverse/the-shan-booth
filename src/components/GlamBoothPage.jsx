@@ -22,22 +22,24 @@ const GlamBoothPage = () => (
 
     <main className="booth-page section-padding">
       <div className="container">
-        <h1 className="page-heading">GLAM PHOTO BOOTH HIRE MELBOURNE</h1>
-        <img src={glam} alt="Glam PhotoBooth Melbourne" className="booth-img" />
-        <p className="intro-text">
-          Step into the spotlight with our <strong>Glam Booth</strong> — where luxury meets technology!
-          Known for its signature <strong>black-and-white glam filter</strong> and <strong>AI-powered beauty effects</strong>,
-          it’s perfect for <strong>weddings</strong>, <strong>engagements</strong>, and <strong>corporate brand events</strong>.
-        </p>
+        <div className="booth-wrapper">
+          <h1 className="page-heading">GLAM PHOTO BOOTH HIRE MELBOURNE</h1>
+          <img src={glam} alt="Glam PhotoBooth Melbourne" className="booth-img" />
+          <p className="intro-text">
+            Step into the spotlight with our <strong>Glam Booth</strong> — where luxury meets technology!
+            Known for its signature <strong>black-and-white glam filter</strong> and <strong>AI-powered beauty effects</strong>,
+            it’s perfect for <strong>weddings</strong>, <strong>engagements</strong>, and <strong>corporate brand events</strong>.
+          </p>
 
-        <div className="booth-details">
-          <h2>The Glam Experience</h2>
-          <ul>
-            <li>💻 Powered by <strong>Microsoft Surface Pro</strong> for seamless touch interaction.</li>
-            <li>📷 Captured through a <strong>Canon R100 Mirrorless Camera</strong> for stunning clarity.</li>
-            <li>✨ Features an exclusive <strong>AI Glam Filter</strong> that smooths skin and enhances every photo.</li>
-            <li>🌟 Studio lighting and soft flash for flawless portraits worthy of a magazine cover.</li>
-          </ul>
+          <div className="booth-details">
+            <h2>The Glam Experience</h2>
+            <ul>
+              <li>💻 Powered by <strong>Microsoft Surface Pro</strong> for seamless touch interaction.</li>
+              <li>📷 Captured through a <strong>Canon R100 Mirrorless Camera</strong> for stunning clarity.</li>
+              <li>✨ Features an exclusive <strong>AI Glam Filter</strong> that smooths skin and enhances every photo.</li>
+              <li>🌟 Studio lighting and soft flash for flawless portraits worthy of a magazine cover.</li>
+            </ul>
+          </div>
         </div>
 
         <p className="seo-text">

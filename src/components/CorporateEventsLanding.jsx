@@ -89,7 +89,7 @@ const CorporateEventsLanding = () => {
       <div className="corporate-landing">
         {/* Floating Corporate Strip */}
         <div className="floating-strip left-strip">
-          <img src={corporateStrip} alt="Corporate event photo strip" />
+          <img src={corporateStrip} alt="Corporate event photostrip" />
         </div>
 
         <h1>Corporate Photo Booth Hire for Melbourne Businesses</h1>
@@ -101,8 +101,8 @@ const CorporateEventsLanding = () => {
         </p>
 
         <div className="corporate-gallery">
-          <img src={corporateImg1} alt="Corporate photo booth at business event" loading="lazy" />
-          <img src={corporateImg2} alt="Staff enjoying photo booth at Melbourne event" loading="lazy" />
+          <img src={corporateImg1} alt="Corporate photobooth at business event" loading="lazy" />
+          <img src={corporateImg2} alt="Staff enjoying photobooth at Melbourne event" loading="lazy" />
         </div>
 
         <div className="corporate-section">

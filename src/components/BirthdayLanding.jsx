@@ -8,37 +8,42 @@ import birthdayStrip from "../images/birthdaystrip.png";
 const BirthdayLanding = () => {
   return (
     <>
-      {/* SEO + Meta Tags */}
       <Helmet>
-        <title>Birthday Photo Booth Hire Melbourne 🎉 | The Shan Booth</title>
+        <title>Birthday Photo Booth Hire Melbourne 🎉 | Fun Party Booths | The Shan Booth</title>
         <meta
           name="description"
-          content="Make your birthday unforgettable with The Shan Booth! Fun props, stylish backdrops & unlimited prints. Perfect for 18ths, 21sts, kids’ parties & milestone birthdays in Melbourne & Geelong."
+          content="Celebrate in style with The Shan Booth’s birthday photo booths! Unlimited prints, fun props & party energy for 18ths, 21sts, kids’ birthdays & milestone celebrations in Melbourne & Geelong."
         />
         <meta
           name="keywords"
-          content="birthday photo booth hire Melbourne, 18th birthday photobooth, 21st birthday photo booth, kids party photobooth hire, milestone birthday booth Geelong, birthday event photo booth Grovedale"
+          content="birthday photo booth hire Melbourne, 18th birthday photobooth, 21st party photo booth, kids party booth Melbourne, milestone birthday photobooth Geelong, birthday party photo booth Grovedale"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/birthday" />
 
-        <meta property="og:title" content="Birthday Party Photo Booth 🎉 | The Shan Booth" />
+        <meta property="og:title" content="Birthday Photo Booth Hire Melbourne 🎉 | The Shan Booth" />
         <meta
           property="og:description"
-          content="Celebrate your birthday in style! Unlimited prints, fun props, and instant sharing. Available across Melbourne, Geelong & Grovedale."
+          content="Fun, laughter & unlimited prints! Book your birthday photobooth in Melbourne or Geelong today."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/birthday" />
         <meta property="og:image" content="https://www.photoboothwithshan.com.au/birthdaybooth.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Birthday Photo Booth Hire Melbourne 🎉 | The Shan Booth" />
+        <meta
+          name="twitter:title"
+          content="Birthday Party Photo Booth Hire Melbourne 🎈 | The Shan Booth"
+        />
         <meta
           name="twitter:description"
-          content="Book a birthday photobooth today! Fun props, unlimited prints & stylish backdrops across Melbourne & Geelong."
+          content="Make your birthday unforgettable with props, lights & laughter from The Shan Booth."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/birthdaybooth.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://www.photoboothwithshan.com.au/birthdaybooth.jpg"
+        />
 
-        {/* ✅ Schema for Birthday Events */}
+        {/* Schema */}
         <script type="application/ld+json">
           {`
           {
@@ -47,113 +52,89 @@ const BirthdayLanding = () => {
             "name": "Birthday Photo Booth Hire Melbourne",
             "startDate": "2025-01-01",
             "endDate": "2025-12-31",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "location": {
               "@type": "Place",
-              "name": "Melbourne & Geelong",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Melbourne",
-                "addressRegion": "VIC",
-                "addressCountry": "AU"
-              }
-            },
-            "organizer": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
+              "name": "Melbourne & Geelong"
             },
             "image": "https://www.photoboothwithshan.com.au/birthdaybooth.jpg",
-            "description": "Photo booth hire for birthday parties across Melbourne, Geelong & Grovedale. Unlimited prints, fun props & stylish backdrops."
+            "description": "Photo booth hire for birthday parties in Melbourne, Geelong & Grovedale. Fun props, unlimited prints, and vibrant backdrops for every age."
           }
           `}
         </script>
       </Helmet>
 
-      {/* Landing Content */}
       <div className="birthday-landing">
-        {/* Floating Birthday Strip */}
         <div className="floating-strip left-strip">
-          <img src={birthdayStrip} alt="Birthday photobooth strip" />
+          <img src={birthdayStrip} alt="Birthday photostrip design" />
         </div>
-        
-        <h1>Birthday Party Photobooth Hire in Melbourne & Geelong</h1>
+
+        <h1>Birthday Photo Booths That Make Memories 🎂</h1>
         <p>
-          Celebrate your <strong>birthday</strong> with <strong>The Shan Booth</strong>! Whether it’s an
-          <strong> 18th</strong>, <strong>21st</strong>, <strong>kids’ party</strong>, or a
-          <strong> milestone birthday</strong>, we bring the fun with stylish backdrops, awesome props, and unlimited prints.
+          Birthdays deserve more than cake — they deserve memories! 
+          The Shan Booth brings the <strong>fun, laughter, and photo magic</strong> to every celebration, 
+          whether it’s an <strong>18th</strong>, <strong>21st</strong>, or <strong>family birthday bash</strong>.
         </p>
 
         <div className="birthday-gallery">
-          <img src={birthdayBackdrop} alt="Birthday photobooth backdrop" loading="lazy" />
-          <img src={birthdayBackdrop2} alt="Birthday photobooths backdrops" loading="lazy" />
+          <img src={birthdayBackdrop} alt="Party guests enjoying photobooth" loading="lazy" />
+          <img src={birthdayBackdrop2} alt="Birthday photobooth backdrop setup" loading="lazy" />
         </div>
 
         <div className="birthday-section">
-          <h2>🎂 Why Choose Our Birthday Photobooths?</h2>
+          <h2>🎈 What Makes Our Booths Party-Perfect</h2>
           <ul className="feature-list">
-            <li>✨ <strong>Fun Props & Party Vibes</strong> – Balloons, hats, glasses & themed props.</li>
-            <li>✨ <strong>Unlimited Prints & Digital Sharing</strong> – Guests take home memories instantly.</li>
-            <li>✨ <strong>Perfect for Any Age</strong> – Kids’ parties, 18ths, 21sts & milestone birthdays.</li>
-            <li>✨ <strong>We Come to You</strong> – Servicing Melbourne, Geelong & Grovedale venues.</li>
+            <li>✨ <strong>Party Props & Themes</strong> – Hats, glasses & fun filters to match your vibe.</li>
+            <li>✨ <strong>Unlimited Prints</strong> – Everyone leaves with a photo memory in hand.</li>
+            <li>✨ <strong>Instant Digital Sharing</strong> – Send snaps directly to phones or socials.</li>
+            <li>✨ <strong>Fits Any Venue</strong> – Homes, halls, rooftops or event spaces.</li>
           </ul>
         </div>
 
         <div className="birthday-section">
-          <h2>🎁 Birthday Packages</h2>
+          <h2>🎉 Birthday Packages</h2>
           <div className="package-list">
             <div className="package-item">
-              <h3>2-Hour Package</h3>
-              <p>Great for kids’ parties and small gatherings.</p>
+              <h3>2-Hour Mini Party</h3>
+              <p>Great for kids’ birthdays or intimate gatherings.</p>
             </div>
             <div className="package-item">
-              <h3>3–4 Hour Premium Package</h3>
-              <p>Perfect for 18ths, 21sts & milestone celebrations.</p>
+              <h3>3–4 Hour Celebration</h3>
+              <p>Our most popular for 18ths & 21sts. Non-stop photos and laughter!</p>
             </div>
             <div className="package-item">
-              <h3>Full Event Package</h3>
-              <p>Unlimited fun for the full night – ideal for big birthday parties & venues.</p>
+              <h3>All-Night Bash</h3>
+              <p>Perfect for milestone birthdays with guests who love a good photo moment.</p>
             </div>
           </div>
-          <p className="hint-text">💡 Custom themed templates available to match your birthday party style.</p>
         </div>
 
         <div className="birthday-section">
-          <h2>📍 Areas We Cover</h2>
+          <h2>📍 Service Areas</h2>
           <ul className="areas-list">
-            <li>Melbourne (CBD & suburbs)</li>
-            <li>Geelong</li>
-            <li>Grovedale</li>
-            <li>Nearby areas</li>
+            <li>Melbourne Metro & Suburbs</li>
+            <li>Geelong & Grovedale</li>
+            <li>Werribee & Tarneit</li>
           </ul>
         </div>
 
         <div className="birthday-section">
-          <h2>🎉 Book Early for Your Birthday Party</h2>
-          <p>
-            Our photobooths are in high demand on weekends – secure yours now to avoid missing out.
-          </p>
-          <h3 className="available-title">📅 Popular for:</h3>
-          <ul className="available-list">
-            <li>18th birthdays</li>
-            <li>21st birthdays</li>
-            <li>Kids’ parties</li>
-            <li>30th, 40th & 50th milestones</li>
-          </ul>
+          <h2>📅 Book Early to Party Right!</h2>
+          <p>Our birthday booths book out fast on weekends. Secure your spot and let us bring the joy and creativity to your celebration.</p>
         </div>
 
         <div className="cta-center">
-          <a href="/booking" className="cta-btn">Book Your Birthday Photobooth Today</a>
+          <a href="/booking" className="cta-btn">Book Birthday Booth</a>
+          <a href="/quickquote" className="cta-btn">Get a Party Quote</a>
         </div>
 
-        <div className="seo-keywords" aria-hidden="false">
-          <strong>Popular searches:</strong> birthday photo booth hire Melbourne • 18th birthday photobooth • 21st birthday photo booth Geelong • kids’ party photobooth Grovedale
+        <div className="seo-keywords" aria-hidden="true">
+          birthday photo booth hire Melbourne • 18th birthday photo booth • 21st birthday booth Geelong • kids party photo booth Grovedale
         </div>
-        
-        {/* Floating Birthday Strip */}
+
         <div className="floating-strip right-strip">
-          <img src={birthdayStrip} alt="Birthday photobooth strip" />
+          <img src={birthdayStrip} alt="Birthday photostrip graphic" />
         </div>
       </div>
     </>

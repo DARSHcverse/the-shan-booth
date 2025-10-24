@@ -8,16 +8,15 @@ import corporateStrip from "../images/coporatestrip.png";
 const CorporateEventsLanding = () => {
   return (
     <>
-      {/* ✅ SEO + Meta Tags */}
       <Helmet>
-        <title>Corporate Event Photobooth Hire Melbourne | The Shan Booth</title>
+        <title>Corporate Photo Booth Hire Melbourne | Brand Activations & Events | The Shan Booth</title>
         <meta
           name="description"
-          content="Professional corporate photobooth hire in Melbourne & Geelong. Perfect for office parties, warehouse events, product launches & company galas. Unlimited prints, branding & digital sharing."
+          content="Elevate your corporate events with The Shan Booth. Branded photo booths for business functions, product activations, conferences & award nights in Melbourne & Geelong."
         />
         <meta
           name="keywords"
-          content="corporate event photobooth hire Melbourne, office party photobooth, warehouse event photo booth, product launch photobooth Melbourne, corporate gala photo booth hire, branded photo booth Melbourne, company party photobooth Geelong"
+          content="corporate photo booth hire Melbourne, business event photo booth, product launch photobooth, staff party photo booth, brand activation booth Melbourne, corporate gala photo booth hire, company event photo booth Geelong"
         />
         <link
           rel="canonical"
@@ -27,11 +26,11 @@ const CorporateEventsLanding = () => {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Corporate Event Photobooth Hire Melbourne | The Shan Booth"
+          content="Corporate Photo Booth Hire Melbourne | The Shan Booth"
         />
         <meta
           property="og:description"
-          content="Hire premium photobooths for office parties, product launches, and company events in Melbourne, Tarneit & Geelong. Unlimited prints & branded experiences."
+          content="Premium branded photobooths for conferences, launches & business events. Boost brand visibility and engagement with The Shan Booth Melbourne."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -47,113 +46,124 @@ const CorporateEventsLanding = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Corporate Event Photobooth Hire Melbourne | The Shan Booth"
+          content="Corporate Photo Booth Hire Melbourne | The Shan Booth"
         />
         <meta
           name="twitter:description"
-          content="Professional photobooth hire for office & corporate events in Melbourne & Geelong. Fun, modern & branded experiences for staff & clients."
+          content="Corporate photo booth hire for business launches, office celebrations & brand activations in Melbourne and Geelong."
         />
         <meta
           name="twitter:image"
           content="https://www.photoboothwithshan.com.au/photobooth.webp"
         />
 
-        {/* Schema.org JSON-LD for corporate services */}
+        {/* Schema.org JSON-LD */}
         <script type="application/ld+json">
           {`
           {
             "@context": "https://schema.org",
             "@type": "Service",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "startDate": "2025-09-06T18:00:00+10:00",
-            "endDate": "2025-12-30T00:00:00+10:00",
-            "serviceType": "Corporate Event Photobooth Hire",
+            "serviceType": "Corporate Photo Booth Hire",
             "provider": {
               "@type": "Organization",
               "name": "The Shan Booth",
               "url": "https://www.photoboothwithshan.com.au"
             },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Melbourne, Tarneit & Geelong"
-            },
-            "description": "Premium photobooth hire for corporate events, office parties, and product launches across Melbourne & Geelong. Includes unlimited prints, branding & instant sharing.",
+            "areaServed": [
+              {
+                "@type": "Place",
+                "name": "Melbourne"
+              },
+              {
+                "@type": "Place",
+                "name": "Geelong"
+              }
+            ],
+            "description": "Corporate photo booth hire for product launches, trade shows, and office celebrations in Melbourne & Geelong. Includes branding, instant prints, and digital sharing.",
             "image": "https://www.photoboothwithshan.com.au/coperateimg.webp"
           }
           `}
         </script>
       </Helmet>
 
-      {/* ✅ Landing Page Content */}
       <div className="corporate-landing">
         {/* Floating Corporate Strip */}
         <div className="floating-strip left-strip">
-          <img src={corporateStrip} alt="Corporate photobooth strip" />
+          <img src={corporateStrip} alt="Corporate event photo strip" />
         </div>
-        
-        <h1>Corporate Event Photobooth Hire in Melbourne & Geelong</h1>
+
+        <h1>Corporate Photo Booth Hire for Melbourne Businesses</h1>
         <p>
-          Whether it’s an <strong>office party</strong>, <strong>product launch</strong>, or a{" "}
-          <strong>large corporate gala</strong>, The Shan Booth delivers premium
-          photobooths that add excitement, create memories, and boost engagement.
-          Perfect for staff, clients, and guests alike.
+          Create a professional yet fun atmosphere at your next{" "}
+          <strong>corporate gathering</strong>, <strong>product launch</strong>,
+          or <strong>brand activation</strong> with <strong>The Shan Booth</strong>.
+          Our modern photo booths make every event engaging while showcasing your company’s brand and culture.
         </p>
 
         <div className="corporate-gallery">
-          <img src={corporateImg1} alt="Corporate event photobooth setup in Melbourne" loading="lazy" />
-          <img src={corporateImg2} alt="Office party photobooth setup in Geelong" loading="lazy" />
+          <img src={corporateImg1} alt="Corporate photo booth at business event" loading="lazy" />
+          <img src={corporateImg2} alt="Staff enjoying photo booth at Melbourne event" loading="lazy" />
         </div>
 
         <div className="corporate-section">
-          <h2>📸 Why Businesses Choose Us</h2>
+          <h2>🚀 Make Your Brand Stand Out</h2>
           <ul className="feature-list">
-            <li>✨ <strong>Branded Experiences</strong> – Add your company logo & colours to prints and screens.</li>
-            <li>✨ <strong>Instant Sharing</strong> – Guests can share directly to social media.</li>
-            <li>✨ <strong>Team Building Fun</strong> – Great for morale and making events memorable.</li>
-            <li>✨ <strong>Scalable Packages</strong> – Perfect for small offices or large warehouse parties.</li>
+            <li>✨ <strong>Branded Templates</strong> – Add your logo, theme, and brand colours to every print and screen.</li>
+            <li>✨ <strong>Professional Setup</strong> – Clean, modern booth design to suit business aesthetics.</li>
+            <li>✨ <strong>Data Capture Options</strong> – Collect emails and insights from attendees.</li>
+            <li>✨ <strong>Social Sharing</strong> – Amplify reach instantly on social media platforms.</li>
           </ul>
         </div>
 
         <div className="corporate-section">
-          <h2>🎉 Corporate Packages</h2>
+          <h2>💼 Event Types We Cover</h2>
+          <ul className="areas-list">
+            <li>Corporate parties & award nights</li>
+            <li>Brand activations & trade shows</li>
+            <li>Networking events</li>
+            <li>Staff celebrations & end-of-year functions</li>
+          </ul>
+        </div>
+
+        <div className="corporate-section">
+          <h2>🎁 Tailored Corporate Packages</h2>
           <div className="package-list">
             <div className="package-item">
-              <h3>2-Hour Office Package</h3>
-              <p>Ideal for small teams and quick celebrations.</p>
+              <h3>Business Socials Package</h3>
+              <p>2-hour setup ideal for small team or client celebrations.</p>
             </div>
             <div className="package-item">
-              <h3>Half-Day Package</h3>
-              <p>Perfect for warehouse events, launches & medium-size functions.</p>
+              <h3>Launch & Activation Package</h3>
+              <p>Half-day hire with full branding, overlays & digital delivery.</p>
             </div>
             <div className="package-item">
-              <h3>Full Corporate Event Package</h3>
-              <p>Unlimited prints & branding for company galas & major activations.</p>
+              <h3>Conference & Gala Package</h3>
+              <p>Full-day setup with unlimited prints, analytics & brand integration.</p>
             </div>
           </div>
         </div>
 
         <div className="corporate-section">
-          <h2>📍 Areas We Cover</h2>
+          <h2>📍 Service Locations</h2>
           <ul className="areas-list">
-            <li>Melbourne (CBD & suburbs)</li>
+            <li>Melbourne CBD & inner suburbs</li>
             <li>Tarneit</li>
-            <li>Geelong & Grovedale</li>
+            <li>Geelong & Bellarine Peninsula</li>
           </ul>
         </div>
 
         <div className="cta-center">
-          <a href="/quickquote" className="cta-btn">Get a Quick Quote</a>
-          <a href="/booking" className="cta-btn">Book Your Corporate Photobooth</a>
+          <a href="/quickquote" className="cta-btn">Get a Business Quote</a>
+          <a href="/booking" className="cta-btn">Book a Corporate Booth</a>
         </div>
 
-        <div className="seo-keywords" aria-hidden="false">
-          <strong>Popular searches:</strong> corporate photobooth hire Melbourne • office party photobooth • warehouse event photo booth hire • branded photo booth Melbourne • product launch photobooth
+        <div className="seo-keywords" aria-hidden="true">
+          corporate event photo booth Melbourne • brand activation photobooth • product launch booth • business photo booth hire Geelong
         </div>
-        
+
         {/* Floating Corporate Strip */}
         <div className="floating-strip right-strip">
-          <img src={corporateStrip} alt="Corporate photobooth strip" />
+          <img src={corporateStrip} alt="Corporate photobooth design" />
         </div>
       </div>
     </>

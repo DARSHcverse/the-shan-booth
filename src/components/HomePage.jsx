@@ -245,6 +245,39 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* --- Why Hire Us Section --- */}
+      <section className="section-padding why-hire-us">
+        <div className="container">
+          <h2 className="section-title">Why Hire The Shan Booth</h2>
+          <p>
+            Choosing <strong>The Shan Booth</strong> means choosing quality, reliability, and fun. 
+            We’re not just about taking photos — we’re about creating memories that last. 
+            With premium Canon cameras, sleek setups, and a team that truly cares about your event, 
+            we deliver a photo booth experience that guests talk about long after the night ends.
+          </p>
+          <div className="why-grid">
+            <div className="why-item">
+              <h3>🎉 Affordable Packages</h3>
+              <p>Flexible pricing to suit any event — from weddings to school graduations. Every package includes unlimited prints and a professional attendant.</p>
+            </div>
+            <div className="why-item">
+              <h3>💡 Custom Designs</h3>
+              <p>Personalised templates, themed props, and backdrops tailored to your celebration. Your booth, your style.</p>
+            </div>
+            <div className="why-item">
+              <h3>🏆 Trusted Melbourne Experts</h3>
+              <p>Hundreds of happy clients across Melbourne and Geelong — known for reliable service, setup, and 5-star photo quality.</p>
+            </div>
+          </div>
+          <div className="why-cta">
+            <button onClick={() => navigate('/why-choose-photo-booth-with-shan')} className="home-button secondary">
+              Read Full Story
+            </button>
+          </div>
+        </div>
+      </section>
+
+
       {/* Testimonials */}
       <section className="section-padding bg-light">
         <div className="container">

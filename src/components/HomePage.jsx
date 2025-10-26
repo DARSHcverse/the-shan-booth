@@ -250,29 +250,42 @@ const HomePage = () => {
         <div className="container">
           <h2 className="section-title">Why Hire The Shan Booth</h2>
           <p>
-            Choosing <strong>The Shan Booth</strong> means choosing quality, reliability, and fun. 
-            We’re not just about taking photos — we’re about creating memories that last. 
-            With premium Canon cameras, sleek setups, and a team that truly cares about your event, 
-            we deliver a photo booth experience that guests talk about long after the night ends.
+            Choosing <strong>The Shan Booth</strong> means choosing the best <strong>photo booth hire in Melbourne</strong>. 
+            We combine <strong>high-quality photo booths</strong>, professional service, and creative design to make every 
+            event unforgettable. From <strong>weddings</strong> and <strong>corporate events</strong> to <strong>birthday parties</strong>, 
+            our booths bring fun, interaction, and picture-perfect memories.
           </p>
+
           <div className="why-grid">
             <div className="why-item">
-              <h3>🎉 Affordable Packages</h3>
-              <p>Flexible pricing to suit any event — from weddings to school graduations. Every package includes unlimited prints and a professional attendant.</p>
+              <h3>🎉 Affordable Photo Booth Packages</h3>
+              <p>
+                We make <strong>photo booth hire</strong> affordable for everyone. Enjoy unlimited prints, digital sharing, 
+                and a friendly booth attendant — all tailored for your event size and style.
+              </p>
             </div>
+
             <div className="why-item">
-              <h3>💡 Custom Designs</h3>
-              <p>Personalised templates, themed props, and backdrops tailored to your celebration. Your booth, your style.</p>
+              <h3>💡 Custom Booth Designs</h3>
+              <p>
+                Personalised templates, themed props, and stylish backdrops make your <strong>photo booth hire</strong> 
+                experience unique. Whether it’s a wedding, graduation, or Christmas party, we match your theme perfectly.
+              </p>
             </div>
+
             <div className="why-item">
-              <h3>🏆 Trusted Melbourne Experts</h3>
-              <p>Hundreds of happy clients across Melbourne and Geelong — known for reliable service, setup, and 5-star photo quality.</p>
+              <h3>🏆 Trusted Melbourne Photo Booth Experts</h3>
+              <p>
+                Hundreds of Melbourne clients trust <strong>The Shan Booth</strong> for professional <strong>photo booth hire </strong> 
+                services. With Canon cameras, studio lighting, and seamless tech, every moment looks magazine-ready.
+              </p>
             </div>
           </div>
+
           <div className="why-cta">
-            <button onClick={() => navigate('/why-choose-photo-booth-with-shan')} className="home-button secondary">
-              Read Full Story
-            </button>
+            <a href="/why-choose-photo-booth-with-shan" className="why-button secondary">
+              Read Full Blog: Why Choose The Shan Booth →
+            </a>
           </div>
         </div>
       </section>

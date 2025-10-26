@@ -639,6 +639,15 @@ body {
 .why-cta {
   margin-top: 2rem;
 }
+.why-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+}
+
+.why-button.secondary:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
 
 /* --- Testimonials Section --- */
 .testimonial-grid {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../App.css';
-import enclosed from '../images/enclosed.jpeg';
+import openBoothVideo from '../images/enclosedVID.mp4';
 
 const EnclosedBoothPage = () => (
   <>
@@ -24,7 +24,19 @@ const EnclosedBoothPage = () => (
       <div className="container">
         <div className="booth-wrapper">
           <h1 className="page-heading">ENCLOSED PHOTO BOOTH HIRE MELBOURNE</h1>
-          <img src={enclosed} alt="Enclosed PhotoBooth Melbourne" className="booth-img" />
+          <div className="booth-media">
+          <div className="video-frame">
+            <video
+              src={openBoothVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="booth-video"
+            ></video>
+          </div>
+        </div>
           <p className="intro-text">
             Step inside our <strong>Enclosed Booth</strong> — where the excitement happens in private!
             Designed to feel like a fun <strong>bouncy castle</strong>, this booth gives guests an awesome space

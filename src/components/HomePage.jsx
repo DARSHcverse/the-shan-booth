@@ -283,7 +283,7 @@ const HomePage = () => {
           </div>
 
           <div className="why-cta">
-            <a href="/why-choose-photo-booth-with-shan" className="why-button secondary">
+            <a href="/blog" className="why-button secondary">
               Read Full Blog: Why Choose The Shan Booth →
             </a>
           </div>

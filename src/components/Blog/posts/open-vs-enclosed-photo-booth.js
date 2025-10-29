@@ -55,7 +55,9 @@ export const post = {
   <p>At <strong>Photo Booth With Shan</strong>, we provide both open-air and enclosed booth options — each professionally set up with premium lighting and props. Whether you prefer a modern setup or classic enclosure, we’ll help you find the perfect match for your venue and style.</p>
 
   <p>Ready to plan your photo booth experience? <a href="/booking">Book your booth today</a> or get a <a href="/quickquote">free instant quote</a> for your next Melbourne event.</p>
-
+  
+  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+  
   <p>✨ <strong>Serving Melbourne, Geelong, and regional Victoria.</strong></p>
   `,
 };

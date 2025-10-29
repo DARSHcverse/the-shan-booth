@@ -29,6 +29,8 @@ export const post = {
   <h2>5. Sleek and Professional Design</h2>
   <p>Modern booths blend in beautifully at corporate venues, offering a clean, premium aesthetic.</p>
 
+  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+
   <p>🎉 Want to enhance your next event? Explore our <a href="/corporate-events">Corporate Photo Booth Packages</a> or <a href="/quickquote">request a quote</a> today.</p>
   `,
 };

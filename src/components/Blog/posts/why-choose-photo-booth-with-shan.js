@@ -52,6 +52,8 @@ export const post = {
   <h2>💥 Final Thoughts</h2>
   <p>When you choose <strong>Photo Booth With Shan</strong>, you’re choosing <strong>affordable prices, premium service, and unforgettable experiences</strong>. Let us make your next event shine with our <a href="/packages">photo booth hire packages</a> and <a href="/quickquote">instant quotes</a>.</p>
 
+  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+
   <p>📍 Serving all of <strong>Melbourne, Geelong, and regional Victoria</strong>.</p>
   `,
 };

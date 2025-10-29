@@ -29,6 +29,8 @@ export const post = {
   <h2>5. Go Digital</h2>
   <p>Our booths allow instant sharing on Instagram or email — so your guests can share their memories right away.</p>
 
+  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+
   <p>💍 Ready to add a photo booth to your big day? Visit our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page or <a href="/quickquote">get a quick quote</a> now.</p>
   `,
 };

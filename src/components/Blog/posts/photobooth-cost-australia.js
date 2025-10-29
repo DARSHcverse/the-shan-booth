@@ -35,6 +35,8 @@ export const post = {
 
   <p>We also offer discounts for multi-hour bookings and packages. See our <a href="/packages">Photo Booth Packages</a> or <a href="/quickquote">get an instant quote</a>.</p>
 
+  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+
   <p>💡 Tip: Always ask if your quote includes delivery, setup, and an attendant — some companies charge extra.</p>
   `,
 };

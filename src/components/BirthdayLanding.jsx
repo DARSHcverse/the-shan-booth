@@ -43,7 +43,7 @@ const BirthdayLanding = () => {
           content="https://www.photoboothwithshan.com.au/birthdaybooth.jpg"
         />
 
-        {/* Schema */}
+        {/* Improved Event Schema */}
         <script type="application/ld+json">
           {`
           {
@@ -56,10 +56,25 @@ const BirthdayLanding = () => {
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "location": {
               "@type": "Place",
-              "name": "Melbourne & Geelong"
+              "name": "Melbourne & Geelong",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Add street here",
+                "addressLocality": "Melbourne",
+                "addressRegion": "VIC",
+                "postalCode": "3000",
+                "addressCountry": "AU"
+              }
             },
-            "image": "https://www.photoboothwithshan.com.au/birthdaybooth.jpg",
-            "description": "Photo booth hire for birthday parties in Melbourne, Geelong & Grovedale. Fun props, unlimited prints, and vibrant backdrops for every age."
+            "image": [
+              "https://www.photoboothwithshan.com.au/birthdaybooth.jpg"
+            ],
+            "description": "Photo booth hire for birthday parties in Melbourne, Geelong & Grovedale. Fun props, unlimited prints, and vibrant backdrops for every age.",
+            "organizer": {
+              "@type": "Organization",
+              "name": "The Shan Booth",
+              "url": "https://www.photoboothwithshan.com.au"
+            }
           }
           `}
         </script>

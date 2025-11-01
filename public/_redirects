@@ -1,16 +1,1 @@
-# Blog post canonical redirects (301)
-# Format: /source-path  /target-path  301
-
-/blog/christmas-photo-booth-ideas-melbourne-2025    /blog/christmas-photo-booth-ideas-melbourne-2025/    301
-/blog/photo-booth-trends-melbourne-2025             /blog/photo-booth-trends-melbourne-2025/             301
-/blog/photo-booth-cost-australia-2025               /blog/photo-booth-cost-australia-2025/               301
-/blog/wedding-photo-booth-ideas-melbourne          /blog/wedding-photo-booth-ideas-melbourne/          301
-/blog/photobooth-benefits                           /blog/photobooth-benefits/                           301
-/blog/corporate-event-trends                        /blog/corporate-event-trends/                        301
-/blog/why-choose-photo-booth-with-shan             /blog/why-choose-photo-booth-with-shan/             301
-/blog/open-vs-enclosed-photo-booth                 /blog/open-vs-enclosed-photo-booth/                 301
-/blog/top-10-props                                  /blog/top-10-props/                                  301
-
-# Catch-all for React SPA routing (must be last)
-# This ensures your React Router handles all other routes
 /*    /index.html   200

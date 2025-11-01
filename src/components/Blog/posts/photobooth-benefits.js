@@ -7,9 +7,9 @@ export const post = {
     "Thinking about hiring a photo booth in Melbourne? Here are 5 powerful reasons why a photo booth makes every event unforgettable — from weddings to corporate parties.",
   keywords: [
     "photo booth hire melbourne",
-    "photo booth hire melbourne",
     "wedding photo booth ideas",
-    "event entertainment melbourne"
+    "event entertainment melbourne",
+    "melbourne party photo booth"
   ],
   content: `
   <p>Photo booths have become one of the most popular entertainment features for events in Melbourne — and for good reason! They add fun, capture memories, and instantly boost your guests' experience.</p>

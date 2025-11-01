@@ -21,7 +21,6 @@ export const post = {
     <li><strong>Glam Booth:</strong> $500–$600 for 3 hours</li>
   </ul>
 
-
   <h2>📸 What Affects the Price?</h2>
   <ul>
     <li>Event location and travel distance</li>

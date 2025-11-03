@@ -2,7 +2,7 @@ export const post = {
   title: "Top 10 Fun Props and Photo Booth Ideas for Melbourne Christmas Parties (2025)",
   date: "2025-10-29",
   author: "Photo Booth With Shan",
-  slug: "christmas-photo-booth-ideas-melbourne-2025",
+  slug: "blog-post-christmasprops",
   excerpt:
     "Make your Melbourne Christmas party unforgettable! Discover the top 10 props, setups, and photo booth ideas that bring fun, laughter, and creativity to your festive events.",
   keywords: [

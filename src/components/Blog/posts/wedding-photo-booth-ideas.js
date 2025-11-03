@@ -2,7 +2,7 @@ export const post = {
   title: "Wedding Photo Booth Ideas in Melbourne 2025",
   date: "2025-10-14",
   author: "Photo Booth With Shan",
-  slug: "wedding-photo-booth-ideas-melbourne",
+  slug: "blog-post-weddingphotobooth",
   excerpt:
     "Planning a wedding in Melbourne? Discover creative and trending photo booth ideas that will make your big day unforgettable in 2025.",
   keywords: [

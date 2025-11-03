@@ -8,7 +8,7 @@ export const post = {
   title: "Top Photo Booth Trends in Melbourne 2025",
   date: "2025-10-20",
   author: "Photo Booth With Shan",
-  slug: "photo-booth-trends-melbourne-2025",
+  slug: "blog-post-photoboothtrends",
   excerpt:
     "Stay ahead of the curve with Melbourne's hottest photo booth trends in 2025 — from 360 booths to AI-enhanced photos and eco-friendly printing options.",
   keywords: [

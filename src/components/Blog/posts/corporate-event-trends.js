@@ -2,7 +2,7 @@ export const post = {
   title: "Corporate Event Photo Booth Trends in Melbourne (2025)",
   date: "2025-10-16",
   author: "Photo Booth With Shan",
-  slug: "corporate-event-photo-booth-trends-melbourne",
+  slug: "blog-post-corporate",
   excerpt:
     "Discover the top corporate photo booth hire trends in Melbourne for 2025 — from 360° experiences to branded overlays that boost engagement and brand presence.",
   keywords: [

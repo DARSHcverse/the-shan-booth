@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import "../App.css";
 import birthdayBackdrop from "../images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp";

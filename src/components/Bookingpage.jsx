@@ -114,7 +114,7 @@ const BookingPage = () => {
   return (
     <>
       <Helmet>
-        <title>Book Your Photobooth | The Shan Booth</title>
+        <title>Book Your Best Photobooth Hire Melbourne  | The Shan Booth</title>
         <meta
           name="description"
           content="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your booth type, package, confirm booking, and secure your date."

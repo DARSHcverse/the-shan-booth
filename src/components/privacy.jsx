@@ -5,7 +5,7 @@ const PrivacyPage = () => {
   return (
     <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
       <Helmet>
-        <title>Privacy Policy | The Shan Booth</title>
+        <title>Privacy Policy For Photobooth Hire Melbourne  | The Shan Booth</title>
         <meta
           name="description"
           content="Read The Shan Booth's Privacy Policy to learn how we collect, use, and protect your personal data when you book our photo booth hire services in Melbourne."

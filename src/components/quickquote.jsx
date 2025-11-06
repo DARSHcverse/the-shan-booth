@@ -68,7 +68,7 @@ const QuickQuote = () => {
   return (
     <>
       <Helmet>
-        <title>Get a Quick Quote | The Shan Booth</title>
+        <title>Get a Quick Quote for Photobooth Hire  | The Shan Booth</title>
         <meta
           name="description"
           content="Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."

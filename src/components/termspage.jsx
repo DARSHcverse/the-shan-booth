@@ -5,7 +5,7 @@ const TermsPage = () => {
   return (
     <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
       <Helmet>
-        <title>Terms & Conditions | The Shan Booth</title>
+        <title>Terms & Conditions for Photobooth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
           content="Read the Terms and Conditions for using The Shan Booth photobooth hire services in Melbourne. Learn about bookings, payments, cancellations, and client responsibilities."

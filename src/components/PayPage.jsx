@@ -18,7 +18,7 @@ const PayPage = () => {
     <>
       {/* SEO + Open Graph Meta Tags */}
       <Helmet>
-        <title>Secure Payment | The Shan Booth</title>
+        <title>Secure Payment For Photobooth Hire Melbourne  | The Shan Booth</title>
         <meta
           name="description"
           content="Complete your booking securely with The Shan Booth using Stripe. 100% safe and encrypted payment system for your photo booth experience."

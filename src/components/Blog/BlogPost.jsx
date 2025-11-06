@@ -27,7 +27,7 @@ const BlogPost = () => {
   }
 
   // Normalize canonical URL to avoid duplicates (trailing slash)
-  const canonicalUrl = `https://www.photoboothwithshan.com.au/blog/${post.slug.replace(/\/+$/, "")}/`;
+  const canonicalUrl = `https://www.photoboothwithshan.com.au/blog/${post.slug.replace(/\/+$/, "")}`;
 
   return (
     <>

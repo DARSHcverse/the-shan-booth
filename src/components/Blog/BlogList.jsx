@@ -16,7 +16,7 @@ const BlogList = () => {
   return (
     <>
       <Helmet>
-        <title>Blog | Photo Booth With Shan</title>
+        <title>Blog For Photobooth Hire Melbourne | Photo Booth With Shan</title>
         <meta
           name="description"
           content="Read the latest tips, ideas, and guides on photo booth hire in Melbourne — weddings, corporate events, birthdays, and more."

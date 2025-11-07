@@ -3,6 +3,14 @@
   publish = "build"
   functions = "netlify/functions"
 
+# Redirect non-www to www (force canonical domain)
+[[redirects]]
+  from = "https://photoboothwithshan.com.au/*"
+  to = "https://www.photoboothwithshan.com.au/:splat"
+  status = 301
+  force = true
+
+# Handle React SPA routes
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -108,7 +108,7 @@ const HomePage = () => {
   return (
     <main className="main-content">
       <Helmet>
-        <title>Photo Booth Hire Melbourne | Weddings, Graduations & Events</title>
+        <title>Photo Booth Hire Melbourne | Weddings, Graduations & Events | The Shan Booth</title>
         <meta
           name="description"
           content="Affordable photo booth hire Melbourne for weddings, school graduations, corporate events & Christmas parties. Book our open, glam, magic mirror & 360 booths today!"

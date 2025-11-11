@@ -155,10 +155,10 @@ const HomePage = () => {
       {/* --- Hero Section --- */}
       <section className="hero-section snow-effect" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="floating-items-container">
-          <div className="floating-item item-2"><img src={iconCamera} alt="Floating camera icon" loading="lazy" decoding="async" /></div>
-          <div className="floating-item item-3"><img src={iconChristmasTree} alt="Floating Christmas tree icon" loading="lazy" decoding="async" /></div>
-          <div className="floating-item item-4"><img src={iconPartyPopper} alt="Floating party popper icon" loading="lazy" decoding="async" /></div>
-          <div className="floating-item item-5"><img src={iconPhotoStrip} alt="Floating strip icon" loading="lazy" decoding="async" /></div>
+          <div className="floating-item item-2"><img src={iconCamera} alt="Floating camera icon" decoding="async" /></div>
+          <div className="floating-item item-3"><img src={iconChristmasTree} alt="Floating Christmas tree icon" decoding="async" /></div>
+          <div className="floating-item item-4"><img src={iconPartyPopper} alt="Floating party popper icon" decoding="async" /></div>
+          <div className="floating-item item-5"><img src={iconPhotoStrip} alt="Floating strip icon" decoding="async" /></div>
         </div>
 
         <div className="hero-overlay">

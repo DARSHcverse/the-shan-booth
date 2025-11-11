@@ -155,10 +155,10 @@ const HomePage = () => {
       {/* --- Hero Section --- */}
       <section className="hero-section snow-effect" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="floating-items-container">
-          <div className="floating-item item-2"><img src={iconCamera} alt="Floating camera icon" /></div>
-          <div className="floating-item item-3"><img src={iconChristmasTree} alt="Floating Christmas tree icon" /></div>
-          <div className="floating-item item-4"><img src={iconPartyPopper} alt="Floating party popper icon" /></div>
-          <div className="floating-item item-5"><img src={iconPhotoStrip} alt="Floating strip icon" /></div>
+          <div className="floating-item item-2"><img src={iconCamera} alt="Floating camera icon" loading="lazy" decoding="async" /></div>
+          <div className="floating-item item-3"><img src={iconChristmasTree} alt="Floating Christmas tree icon" loading="lazy" decoding="async" /></div>
+          <div className="floating-item item-4"><img src={iconPartyPopper} alt="Floating party popper icon" loading="lazy" decoding="async" /></div>
+          <div className="floating-item item-5"><img src={iconPhotoStrip} alt="Floating strip icon" loading="lazy" decoding="async" /></div>
         </div>
 
         <div className="hero-overlay">
@@ -166,6 +166,8 @@ const HomePage = () => {
             src={images[currentImageIndex]}
             alt="Students celebrating their graduation with a fun photobooth"
             className="main-img"
+            fetchpriority="high"
+            decoding="async"
           />
           <div className="hero-text">
             <h1 className="hero-title">PHOTO BOOTH HIRE MELBOURNE</h1>
@@ -195,19 +197,19 @@ const HomePage = () => {
           <h2 className="section-title">Fun for Every End-of-Year Celebration</h2>
           <div className="card-grid">
             <div className="card">
-              <img src={events} alt="Colleagues laughing at a corporate Christmas party in Melbourne" className="card-img" />
+              <img src={events} alt="Colleagues laughing at a corporate Christmas party in Melbourne" className="card-img" loading="lazy" decoding="async" />
               <h3 className="card-title">Corporate & Christmas Parties</h3>
               <p className="card-text">Reward your team and impress your clients. Our booths are a brilliant addition to EOY functions and festive celebrations.</p>
               <button onClick={() => navigate('/events')} className="card-button">Corporate Events</button>
             </div>
             <div className="card">
-              <img src={packages} alt="Happy students with their photostrips at a school graduation" className="card-img" />
+              <img src={packages} alt="Happy students with their photostrips at a school graduation" className="card-img" loading="lazy" decoding="async" />
               <h3 className="card-title">School Graduations & Formals</h3>
               <p className="card-text">The perfect, age-appropriate entertainment for Grade 6, Year 10, and Year 12 graduations. Safe, fun, and unforgettable!</p>
               <button onClick={() => navigate('/events')} className="card-button">School Events</button>
             </div>
             <div className="card">
-              <img src={photobooth} alt="Sleek, modern photobooth with custom branding options" className="card-img" />
+              <img src={photobooth} alt="Sleek, modern photobooth with custom branding options" className="card-img" loading="lazy" decoding="async" />
               <h3 className="card-title">All-Inclusive Packages</h3>
               <p className="card-text">Every package includes unlimited prints, custom designs, fun props, and a professional attendant to run the show.</p>
               <button onClick={() => navigate('/packages')} className="card-button">Explore Packages</button>

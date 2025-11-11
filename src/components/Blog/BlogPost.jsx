@@ -16,18 +16,24 @@ const posts = [post1, post2, post3, post4, post5, post6, post7, post8];
 const BlogPost = () => {
   const { slug } = useParams();
 
-  const post = posts.find((p) => p.slug === slug);
+  const normalizedSlug = decodeURIComponent(String(slug || "")).toLowerCase().replace(/\/+$/, "");
+  const post = posts.find((p) => (p.slug || "").toLowerCase() === normalizedSlug);
 
   if (!post) {
     return (
-      <div className="blog-post-wrapper">
-        <p className="not-found">Post not found.</p>
-      </div>
+      <>
+        <Helmet>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+        <div className="blog-post-wrapper">
+          <p className="not-found">Post not found.</p>
+        </div>
+      </>
     );
   }
 
-  // Normalize canonical URL to avoid duplicates (trailing slash)
-  const canonicalUrl = `https://www.photoboothwithshan.com.au/blog/${post.slug.replace(/\/+$/, "")}`;
+  // Normalize canonical URL to avoid duplicates (trailing slash, case)
+  const canonicalUrl = `https://www.photoboothwithshan.com.au/blog/${(post.slug || "").toLowerCase().replace(/\/+$/, "")}`;
 
   return (
     <>
@@ -36,6 +42,60 @@ const BlogPost = () => {
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.keywords.join(", ")} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+
+        {/* Article structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.excerpt,
+            "datePublished": post.date,
+            "author": {
+              "@type": "Organization",
+              "name": post.author || "Photo Booth With Shan"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": canonicalUrl
+            }
+          })}
+        </script>
+
+        {/* Breadcrumbs structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.photoboothwithshan.com.au/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.photoboothwithshan.com.au/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": post.title,
+                "item": canonicalUrl
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <section className="blog-post-wrapper">

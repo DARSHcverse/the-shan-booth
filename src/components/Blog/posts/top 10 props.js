@@ -44,8 +44,8 @@ export const post = {
   <h2>🤶 10. Team & Group Photos</h2>
   <p>Encourage team bonding and laughter with a prop table full of Christmas-themed accessories.</p>
 
-  <p>🎁 Planning your end-of-year event? Visit our <a href="/">Home Page</a> or explore our <a href="/corporate-events">Corporate Photo Booth Packages</a> to find the right <strong>photo booth hire Melbourne</strong> setup for your celebration.</p>
+  <p>Make your Christmas celebration unforgettable with festive props and creative photo booth setups. Our <strong>photo booth hire Melbourne</strong> service includes a wide selection of seasonal props, themed backdrops, and custom design options perfect for holiday parties.</p>
 
-  <p>📖 Continue reading more festive and event ideas on our <a href="/blog">Photo Booth Blog</a>.</p>
+  <p>Start planning your festive event today. Visit our <a href="/">homepage</a> to explore all available packages, check out our <a href="/corporate-events">Corporate Photo Booth Packages</a> for business celebrations, or <a href="/quickquote">request a quote</a> for your Christmas party. For more inspiration, browse our <a href="/blog">Photo Booth Blog</a> for additional event ideas and tips.</p>
   `,
 };

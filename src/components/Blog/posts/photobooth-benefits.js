@@ -29,8 +29,8 @@ export const post = {
   <h2>5. Supports Local Melbourne Businesses</h2>
   <p>Hiring a booth from a local provider like <strong>Photo Booth With Shan</strong> helps support the Melbourne event community.</p>
 
-  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+  <p>Ready to add excitement to your next event? Explore our <a href="/">photo booth hire Melbourne</a> services and discover packages designed for every celebration. From intimate gatherings to large corporate functions, we bring the perfect booth setup to your venue.</p>
 
-  <p>👉 Ready to book? Check out our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page or <a href="/quickquote">get a quick quote</a> today.</p>
+  <p>Get started today by visiting our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page or <a href="/quickquote">requesting a personalized quote</a> for your event date.</p>
   `,
 };

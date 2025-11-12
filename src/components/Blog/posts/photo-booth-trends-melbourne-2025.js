@@ -37,8 +37,8 @@ export const post = {
   <h2>5. Eco-Friendly Printing Options</h2>
   <p>More Melbourne event hosts are choosing sustainable print materials and digital sharing options to reduce waste. See our <a href="/photoboothhiremelbourne">eco-friendly booth options</a>.</p>
 
-  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+  <p>Stay ahead of the curve with Melbourne's most innovative <a href="/">photo booth hire Melbourne</a> solutions. Our team continuously updates our equipment and services to incorporate the latest trends, ensuring your event features cutting-edge technology and unforgettable experiences.</p>
 
-  <p>At Shan Booth, we stay ahead of every photo booth trend to make sure your event stands out. <strong>Book your photo booth hire in Melbourne today via <a href="/booking">our booking page</a> or get a <a href="/quickquote">quick quote</a>!</strong></p>
+  <p>Ready to bring these exciting trends to your next event? <a href="/booking">Book your photo booth hire in Melbourne</a> today or <a href="/quickquote">request a quick quote</a> to see how we can make your celebration stand out with the latest photo booth innovations.</p>
   `,
 };

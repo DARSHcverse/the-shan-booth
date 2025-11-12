@@ -15,7 +15,7 @@ export const post = {
   <p>Looking to make your <strong>Melbourne wedding</strong> even more memorable? A photo booth is the perfect way to entertain guests and capture candid moments that last a lifetime.</p>
 
   <h2>1. Choose a Themed Backdrop</h2>
-  <p>Match your wedding theme — rustic, elegant, or modern — with a customized backdrop. Our team at <a href="/wedding">Photo Booth With Shan</a> offers premium backdrop options that elevate any wedding venue.</p>
+  <p>Match your wedding theme — rustic, elegant, or modern — with a customized backdrop. Our team at <a href="/weddings">Photo Booth With Shan</a> offers premium backdrop options that elevate any wedding venue.</p>
 
   <h2>2. Include Personalised Photo Templates</h2>
   <p>Add your names, wedding date, or a unique hashtag on every printout. It’s a personal touch your guests will love taking home.</p>
@@ -29,8 +29,8 @@ export const post = {
   <h2>5. Go Digital</h2>
   <p>Our booths allow instant sharing on Instagram or email — so your guests can share their memories right away.</p>
 
-  <p>🎉 Looking for the best <a href="/">photo booth hire Melbourne</a> for weddings, graduations, or corporate events? Check out our homepage for full details and packages!</p>
+  <p>Transform your wedding celebration with a professional <a href="/">photo booth hire Melbourne</a> experience. Our team specializes in creating magical moments that your guests will treasure long after the celebration ends.</p>
 
-  <p>💍 Ready to add a photo booth to your big day? Visit our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page or <a href="/quickquote">get a quick quote</a> now.</p>
+  <p>Start planning your perfect wedding photo booth today. Browse our <a href="/weddings">wedding-specific packages</a>, visit our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page, or <a href="/quickquote">request a custom quote</a> tailored to your special day.</p>
   `,
 };

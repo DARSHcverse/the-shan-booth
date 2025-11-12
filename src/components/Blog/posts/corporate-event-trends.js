@@ -30,8 +30,8 @@ export const post = {
   <h2>5. Integrating Fun with Brand Engagement</h2>
   <p>Corporate photo booths today go beyond taking pictures — they create a branded experience that reinforces company values and teamwork. By adding props, hashtags, and themed templates, businesses can build stronger emotional connections with guests.</p>
 
-  <p>✨ Want to explore packages for <strong>photo booth hire Melbourne</strong>? Visit our <a href="/">Home Page</a> for full details, or head to our <a href="/corporate-events">Corporate Photo Booth Packages</a> to see what suits your event best.</p>
+  <p>Elevate your next corporate function with cutting-edge <strong>photo booth hire Melbourne</strong> solutions. Our corporate packages are designed to enhance brand visibility while creating memorable experiences for your team and clients.</p>
 
-  <p>📸 Read more about creative booth ideas and event trends in our <a href="/blog">blog</a> — updated weekly with tips to help you make your event unforgettable.</p>
+  <p>Explore our <a href="/corporate-events">Corporate Photo Booth Packages</a> or visit our <a href="/">homepage</a> to see all available options. For personalized recommendations, <a href="/quickquote">request a quote</a> and let us tailor a solution that matches your event goals.</p>
   `,
 };

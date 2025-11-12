@@ -54,16 +54,16 @@ const Footer = () => {
           <h3 className="footer-heading">Contact Info</h3>
           <address className="contact-info-list">
             <div className="social-link no-style-button">
-              <img src={map} alt="Address" className="social-icon" loading="lazy" decoding="async" />
+              <img src={map} alt="Address" className="social-icon" />
               <span>51 Celestial Circuit, Tarneit, VIC 3029</span>
             </div>
             <div className="social-link no-style-button">
-              <img src={phone} alt="Phone" className="social-icon" loading="lazy" decoding="async" />
+              <img src={phone} alt="Phone" className="social-icon" />
               <span>+61 475 116 521</span>
             </div>
             <br />
             <div className="social-link no-style-button">
-              <img src={gm} alt="Email" className="social-icon" loading="lazy" decoding="async" />
+              <img src={gm} alt="Email" className="social-icon" />
               <span>theshanbooth@gmail.com</span>
             </div>
           </address>
@@ -80,7 +80,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <img src={fb} alt="Facebook" className="social-icon" loading="lazy" decoding="async" />
+              <img src={fb} alt="Facebook" className="social-icon" />
             </a>
 
             <button
@@ -89,7 +89,7 @@ const Footer = () => {
               onClick={() => alert('Twitter link coming soon')}
               aria-label="Twitter (coming soon)"
             >
-              <img src={tw} alt="Twitter" className="social-icon" loading="lazy" decoding="async" />
+              <img src={tw} alt="Twitter" className="social-icon" />
             </button>
 
             <a
@@ -99,7 +99,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <img src={ig} alt="Instagram" className="social-icon" loading="lazy" decoding="async" />
+              <img src={ig} alt="Instagram" className="social-icon" />
             </a>
           </div>
 

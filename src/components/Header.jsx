@@ -45,7 +45,7 @@ const Header = () => {
       })}
       <li className="nav-item">
         <a href="tel:+61475116521" aria-label="Call us">
-          <img src={callIcon} alt="Call button" className="call-icon" loading="lazy" decoding="async" />
+          <img src={callIcon} alt="Call button" className="call-icon" />
         </a>
       </li>
     </ul>
@@ -54,7 +54,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="floating-items-container">
-        <div className="floating-item item-1"><img src={iconGradCap} alt="Floating graduation cap icon" loading="lazy" decoding="async" /></div>
+        <div className="floating-item item-1"><img src={iconGradCap} alt="Floating graduation cap icon" /></div>
       </div>
       <div className="container header-inner">
         {/* Logo */}
@@ -64,7 +64,7 @@ const Header = () => {
           aria-label="Go to homepage"
           type="button"
         >
-          <img src={logo} alt="The Shan Booth Logo" className="logo-img" fetchpriority="high" decoding="async" />
+          <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
           <h1 className="logo-text">THE SHAN BOOTH</h1>
         </button>
 

@@ -196,7 +196,7 @@ const PackagesPage = () => {
           <h1 className="page-heading">PHOTOBOOTH HIRE PACKAGE MELBOURNE</h1>
           <h2 className="package-section-heading">OPEN & ENCLOSED BOOTH PACKAGES</h2>
           <div className="floating-items-container-offer">
-            <div className="floating-item-offer item-2-offer"><img src={offer} alt="Floating camera icon" loading="lazy" decoding="async" /></div>
+            <div className="floating-item-offer item-2-offer"><img src={offer} alt="Floating camera icon" /></div>
           </div>
           <div className="package-list">
             {standardPackages.map((pkg) => (

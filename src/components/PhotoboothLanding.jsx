@@ -114,15 +114,20 @@ const PhotoboothLanding = () => {
         </div>
 
         <h1>Photo Booth Hire Melbourne – Weddings, Parties & Events</h1>
+        
+
+        <div className="photobooth-section">
+          <h2>Looking for the <strong>best photo booth hire in Melbourne</strong>?</h2>
         <p>
-          Looking for the <strong>best photo booth hire in Melbourne</strong>? The Shan Booth offers <strong>modern, affordable, and stylish photobooth rentals</strong> for every occasion — from <strong>weddings</strong> and <strong>birthday parties</strong> to <strong>corporate events</strong> and <strong>school functions</strong>. Enjoy <strong>unlimited prints</strong>, <strong>fun props</strong>, and <strong>instant digital sharing</strong> for your guests.
-        </p>
+          The Shan Booth offers <strong>modern, affordable, and stylish photobooth rentals</strong> for every occasion — from <strong>weddings</strong> and <strong>birthday parties</strong> to <strong>corporate events</strong> and <strong>school functions</strong>. Enjoy <strong>unlimited prints</strong>, <strong>fun props</strong>, and <strong>instant digital sharing</strong> for your guests.
+        </p><br />
         <p>
           When you search for <a href="/">photo booth hire Melbourne</a>, you'll find The Shan Booth stands out as a premier provider committed to excellence. Our comprehensive service covers all aspects of your event, from initial planning through to post-event delivery of digital memories. We understand that every event is unique, which is why we offer flexible packages that can be tailored to your specific requirements and budget.
-        </p>
+        </p><br />
         <p>
           Our <a href="/">photo booth hire Melbourne</a> service is built on years of experience serving clients across Melbourne, Geelong, and regional Victoria. We've perfected our approach to ensure seamless operation, professional results, and unforgettable guest experiences. Whether you're hosting an intimate gathering or a large-scale celebration, our team brings the same level of dedication and expertise to every booking.
         </p>
+        </div>
 
         <div className="photobooth-gallery">
           <img src={boothImg} alt="Photobooth setup at Melbourne event" loading="lazy" />

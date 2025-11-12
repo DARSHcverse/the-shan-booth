@@ -111,6 +111,12 @@ const EventsPage = () => {
       <div className="container">
         <h1 className="page-heading">PHOTOBOOTH HIRE <br /> EVENTS WE COVER</h1>
         <p className="events-intro">We are passionate about bringing joy and unforgettable memories to a wide variety of events. No matter the occasion, we have a photobooth solution to match, providing a fun and interactive experience for all your guests.</p>
+        <p className="events-intro" style={{ marginTop: '1rem' }}>
+          Our <a href="/">photo booth hire Melbourne</a> service is versatile enough to enhance any type of celebration. From intimate gatherings to large-scale corporate functions, we adapt our approach to match the unique atmosphere and requirements of each event. Our experienced team understands that different occasions call for different styles, which is why we offer customizable packages that can be tailored to weddings, birthdays, corporate events, graduations, and more.
+        </p>
+        <p className="events-intro" style={{ marginTop: '1rem' }}>
+          When you choose our <a href="/">photo booth hire Melbourne</a> for your event, you're selecting a service that has been refined through years of experience across diverse celebrations. We've learned what works best for each event type, from elegant wedding receptions to energetic corporate team-building functions. This knowledge allows us to provide recommendations and customizations that ensure your photo booth experience perfectly complements your event's theme and goals.
+        </p>
         <div className="card-grid">
           {eventsData.map((event, index) => (
             <div key={index} className="card" onClick={() => navigate(`/${event.id}`)}>
@@ -126,6 +132,22 @@ const EventsPage = () => {
         </div>
       </div>
     </main>
+
+    {/* Additional Content Section */}
+    <section className="seo-section">
+      <div className="container">
+        <h2 className="section-title">Comprehensive Photo Booth Hire Melbourne for Every Event Type</h2>
+        <p>
+          Our <a href="/">photo booth hire Melbourne</a> service extends beyond just providing equipment – we create experiences that enhance the atmosphere of your event and leave lasting impressions on your guests. Whether you're planning a formal corporate gala, a casual birthday celebration, or an elegant wedding reception, we have the expertise and resources to deliver a photo booth experience that perfectly matches your vision.
+        </p>
+        <p>
+          The versatility of our <a href="/">photo booth hire Melbourne</a> service stems from our dedication to adaptability and personalization. We collaborate extensively with event organizers, hosts, and planning teams to grasp the unique requirements and objectives of each occasion. Through this partnership model, we guarantee that all elements of the photo booth setup – including backdrop designs, prop collections, and template styles – integrate seamlessly with your event's aesthetic and elevate the overall attendee experience.
+        </p>
+        <p>
+          Partnering with The Shan Booth for your <a href="/">photo booth hire Melbourne</a> means working with a company that prioritizes your event's success. We combine extensive industry experience, state-of-the-art equipment, and genuine passion for creating memorable moments at every celebration. Get in touch with us to learn more about how we can transform your upcoming event into an extraordinary experience.
+        </p>
+      </div>
+    </section>
   </>
 );
 }

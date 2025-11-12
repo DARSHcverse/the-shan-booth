@@ -117,6 +117,12 @@ const PhotoboothLanding = () => {
         <p>
           Looking for the <strong>best photo booth hire in Melbourne</strong>? The Shan Booth offers <strong>modern, affordable, and stylish photobooth rentals</strong> for every occasion — from <strong>weddings</strong> and <strong>birthday parties</strong> to <strong>corporate events</strong> and <strong>school functions</strong>. Enjoy <strong>unlimited prints</strong>, <strong>fun props</strong>, and <strong>instant digital sharing</strong> for your guests.
         </p>
+        <p>
+          When you search for <a href="/">photo booth hire Melbourne</a>, you'll find The Shan Booth stands out as a premier provider committed to excellence. Our comprehensive service covers all aspects of your event, from initial planning through to post-event delivery of digital memories. We understand that every event is unique, which is why we offer flexible packages that can be tailored to your specific requirements and budget.
+        </p>
+        <p>
+          Our <a href="/">photo booth hire Melbourne</a> service is built on years of experience serving clients across Melbourne, Geelong, and regional Victoria. We've perfected our approach to ensure seamless operation, professional results, and unforgettable guest experiences. Whether you're hosting an intimate gathering or a large-scale celebration, our team brings the same level of dedication and expertise to every booking.
+        </p>
 
         <div className="photobooth-gallery">
           <img src={boothImg} alt="Photobooth setup at Melbourne event" loading="lazy" />
@@ -237,6 +243,20 @@ const PhotoboothLanding = () => {
           <p>Yes, we service Tarneit, Geelong, Grovedale, and nearby suburbs in addition to Melbourne CBD.</p>
         </div>
 
+        {/* Additional Content Section */}
+        <div className="photobooth-section">
+          <h2>🌟 What Makes Our Photo Booth Hire Melbourne Service Special</h2>
+          <p>
+            Choosing the right <a href="/">photo booth hire Melbourne</a> provider can make all the difference in your event's success. At The Shan Booth, we combine professional-grade equipment with personalized service to create experiences that guests remember long after the celebration ends. Our commitment to quality is evident in every aspect of our service, from the Canon R100 cameras we use to the friendly, professional attendants who manage each event.
+          </p>
+          <p>
+            Our <a href="/">photo booth hire Melbourne</a> packages are designed with flexibility in mind. We understand that events vary in size, duration, and style, which is why we offer customizable options that can be adjusted to match your specific needs. Whether you require additional hours, extra props, custom branding, or specialized backdrops, we work with you to create the perfect package for your celebration.
+          </p>
+          <p>
+            When you book <a href="/">photo booth hire Melbourne</a> with The Shan Booth, you're investing in more than just equipment – you're choosing a partner dedicated to making your event extraordinary. Our team handles every detail, from delivery and setup to breakdown, allowing you to focus on enjoying your celebration while we ensure everything runs smoothly behind the scenes.
+          </p>
+        </div>
+
         {/* ✅ Local Info */}
         <div className="photobooth-section local-info">
           <h2>📌 Contact & Location</h2>
@@ -246,6 +266,9 @@ const PhotoboothLanding = () => {
             📞 +61 475 116 521  
             <br />
             📍 Melbourne, VIC, Australia
+          </p>
+          <p>
+            Ready to experience the best <a href="/">photo booth hire Melbourne</a> has to offer? Contact us today to discuss your event requirements and discover how we can make your celebration unforgettable. Our friendly team is always ready to answer questions, provide recommendations, and help you choose the perfect package for your special occasion.
           </p>
           <iframe
             title="The Shan Booth Location"

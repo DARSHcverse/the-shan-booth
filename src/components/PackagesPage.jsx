@@ -194,6 +194,12 @@ const PackagesPage = () => {
       <main className="main-content section-padding">
         <div className="container">
           <h1 className="page-heading">PHOTOBOOTH HIRE PACKAGE MELBOURNE</h1>
+          <p className="events-intro">
+            Discover comprehensive <a href="/">photo booth hire Melbourne</a> packages designed to suit every event type and budget. Our flexible pricing structure ensures you get exceptional value whether you're planning a small intimate gathering or a large-scale corporate function. Each package includes professional equipment, experienced attendants, and all the features you need to create unforgettable memories.
+          </p>
+          <p className="events-intro" style={{ marginTop: '1rem' }}>
+            When you choose our <a href="/">photo booth hire Melbourne</a> service, you're selecting packages that have been carefully crafted based on years of experience serving Melbourne events. We understand what makes a successful photo booth experience, which is why every package includes unlimited photos, instant prints, fun props, and professional support. Our transparent pricing means no hidden fees – what you see is what you pay.
+          </p>
           <h2 className="package-section-heading">OPEN & ENCLOSED BOOTH PACKAGES</h2>
           <div className="floating-items-container-offer">
             <div className="floating-item-offer item-2-offer"><img src={offer} alt="Floating camera icon" /></div>
@@ -238,6 +244,22 @@ const PackagesPage = () => {
           </div>
         </div>
       </main>
+
+      {/* Additional Content Section */}
+      <section className="seo-section">
+        <div className="container">
+          <h2 className="section-title">Why Choose Our Photo Booth Hire Melbourne Packages</h2>
+          <p>
+            Our <a href="/">photo booth hire Melbourne</a> packages are designed to provide exceptional value while maintaining the highest standards of quality and service. We've structured our pricing to be competitive and transparent, ensuring you know exactly what's included in each package. Whether you select a standard 2-hour package or opt for our premium all-night option, you'll receive the same level of professional service and attention to detail.
+          </p>
+          <p>
+            Each <a href="/">photo booth hire Melbourne</a> package from The Shan Booth comes complete with expert setup and teardown, skilled booth operators, unlimited photo opportunities, instant printouts, and full digital image access. Our all-inclusive approach means everything you need is included upfront, eliminating concerns about extra charges or overlooked services. From your first inquiry until after your event concludes, we maintain clear communication and support throughout the entire process.
+          </p>
+          <p>
+            Selecting your <a href="/">photo booth hire Melbourne</a> package from The Shan Booth means partnering with a team that understands the importance of your special occasion. We're dedicated to providing outstanding service that makes your event memorable, whether it's a wedding celebration, corporate gathering, birthday party, or school function. Reach out to our friendly team to explore package options tailored specifically to your needs.
+          </p>
+        </div>
+      </section>
     </>
   );
 };

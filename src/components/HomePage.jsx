@@ -186,6 +186,9 @@ const HomePage = () => {
             From Grade 6 graduations to corporate Christmas parties, our photo booths are the perfect way to capture the fun of a successful year.
             <br /><strong>Key dates in November and December are filling up. Don't miss out!</strong>
           </p>
+          <p className="seasonal-text">
+            When you choose photo booth hire Melbourne from The Shan Booth, you're selecting a trusted provider that has served hundreds of events across Melbourne, Geelong, and regional Victoria. Our commitment to excellence ensures every celebration becomes unforgettable.
+          </p>
         </div>
       </section>
 
@@ -219,9 +222,9 @@ const HomePage = () => {
       {/* --- SEO Section --- */}
       <section className="seo-section">
         <div className="container">
-          <h2>Melbourne’s Favourite Photo Booth Hire</h2>
+          <h2>Melbourne's Favourite Photo Booth Hire</h2>
           <p>
-            When it comes to <strong>photo booth hire Melbourne</strong>, quality matters. That’s why 
+            When it comes to <strong>photo booth hire Melbourne</strong>, quality matters. That's why 
             The Shan Booth invests in the latest <strong>Canon R100 mirrorless cameras</strong> to deliver 
             crystal-clear, professional-grade photos at every event. Unlike basic webcam booths, our 
             <strong> photo booths</strong> capture vibrant colours, sharp details, and stunning lighting so 
@@ -230,8 +233,14 @@ const HomePage = () => {
             backdrops, and a friendly attendant to make sure everything runs smoothly. Whether you choose our 
             <strong> open photo booth</strong>, elegant <strong>glam booth</strong>, interactive 
             <strong> Enclosed photo booth</strong>, 
-            you’ll enjoy premium service that keeps guests smiling all night. For weddings, graduations, 
+            you'll enjoy premium service that keeps guests smiling all night. For weddings, graduations, 
             birthdays, and corporate functions, trust The Shan Booth for the best <strong>photo booth hire Melbourne</strong> experience.
+          </p>
+          <p>
+            Our photo booth hire Melbourne service extends throughout the greater Melbourne area, including Tarneit, Geelong, Point Cook, and surrounding suburbs. We understand that every event is unique, which is why we offer flexible packages that can be customized to match your specific needs. From intimate gatherings to large-scale corporate functions, our professional team ensures seamless setup and operation throughout your entire event.
+          </p>
+          <p>
+            What sets our photo booth hire Melbourne apart is our dedication to using cutting-edge technology combined with exceptional customer service. Every booking includes a professional attendant who manages the booth, assists guests, and ensures everything runs smoothly. This hands-on approach means you can relax and enjoy your event while we handle all the technical details, from setup to breakdown.
           </p>
           <ul className="feature-list">
             <li>📸 Equipped with <strong>Canon R100 mirrorless cameras</strong> for the highest photo quality</li>
@@ -337,11 +346,27 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Additional Content Section */}
+      <section className="section-padding">
+        <div className="container">
+          <h2 className="section-title">Why Melbourne Chooses The Shan Booth</h2>
+          <p>
+            Melbourne event planners and hosts consistently choose The Shan Booth for their photo booth hire Melbourne needs because we deliver more than just equipment – we create experiences. Our comprehensive service includes everything from initial consultation to post-event digital delivery, ensuring a stress-free experience from start to finish.
+          </p>
+          <p>
+            Whether you're planning a wedding reception, corporate gala, school formal, or birthday celebration, our photo booth hire Melbourne packages are designed to exceed expectations. We work closely with you to understand your vision and bring it to life with custom templates, themed props, and professional-grade photography that captures every special moment.
+          </p>
+          <p>
+            Booking your photo booth hire Melbourne with The Shan Booth means choosing reliability, quality, and exceptional value. Our transparent pricing includes all essential services, so you won't encounter any hidden fees or surprise charges. We believe in making professional photo booth experiences accessible to everyone, which is why we offer competitive rates without compromising on quality or service.
+          </p>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="cta-banner">
         <div className="container">
           <h2>Ready to Lock in the Fun for Your End-of-Year Event?</h2>
-          <p>Don't leave your party entertainment to the last minute. Secure The Shan Booth today!</p>
+          <p>Don't leave your party entertainment to the last minute. Secure The Shan Booth today! Explore our photo booth hire Melbourne options and discover why we're Melbourne's trusted choice for unforgettable event experiences.</p>
           <button onClick={() => navigate('/quickquote')} className="home-button">Secure Your 2025 Date</button>
         </div>
       </section>

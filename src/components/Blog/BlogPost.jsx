@@ -9,9 +9,10 @@ import { post as post5 } from "./posts/why-choose-photo-booth-with-shan.js";
 import { post as post6 } from "./posts/photo-booth-trends-melbourne-2025.js";
 import { post as post7 } from "./posts/open-vs-enclosed-photo-booth.js";
 import { post as post8 } from "./posts/top 10 props.js";
+import { post as post9 } from "./posts/christmas-hire.js";
 import "../../App.css";
 
-const posts = [post1, post2, post3, post4, post5, post6, post7, post8];
+const posts = [post1, post2, post3, post4, post5, post6, post7, post8, post9];
 
 const BlogPost = () => {
   const { slug } = useParams();

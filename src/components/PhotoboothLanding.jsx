@@ -10,7 +10,7 @@ const PhotoboothLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Helmet>
-        <title>Photobooth Hire Melbourne 📸 | Weddings, Birthdays & Corporate Events | The Shan Booth</title>
+        <title>Photobooth Hire Melbourne 📸 | Christmas, Weddings, Birthdays & Corporate Events | The Shan Booth</title>
 
         <meta
           name="description"
@@ -117,7 +117,7 @@ const PhotoboothLanding = () => {
         </div>
 
         {/* MAIN TITLE */}
-        <h1>Photobooth Hire Melbourne – Weddings, Parties & Events</h1>
+        <h1>Photobooth Hire Melbourne – Christmas, Weddings, Parties & Events</h1>
 
         <div className="photobooth-section">
           <h2>Looking for the <strong>best photobooth hire Melbourne</strong>?</h2>

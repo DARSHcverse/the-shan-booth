@@ -25,21 +25,21 @@ const BookingPage = () => {
   // Booth pricing structure
   const boothPrices = {
     "Open Booth": {
-      "2 Hours": 375,
-      "3 Hours": 535,
-      "4 Hours": 685,
+      "2 Hours": 390,
+      "3 Hours": 550,
+      "4 Hours": 700,
       "5 Hours": 800,
     },
     "Glam Booth": {
-      "2 Hours": 480,
-      "3 Hours": 580,
-      "4 Hours": 740,
+      "2 Hours": 490,
+      "3 Hours": 590,
+      "4 Hours": 750,
       "5 Hours": 860,
     },
     "Enclosed Booth": {
-      "2 Hours": 375,
-      "3 Hours": 535,
-      "4 Hours": 685,
+      "2 Hours": 390,
+      "3 Hours": 550,
+      "4 Hours": 700,
       "5 Hours": 800,
     },
   };

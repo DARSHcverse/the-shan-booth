@@ -1,9 +1,3 @@
-export const meta = {
-  title: "Top Photo Booth Trends in Melbourne 2025 | Shan Booth",
-  description: "Discover the hottest photo booth trends in Melbourne for 2025 — from 360 booths and mirror booths to AI-powered instant sharing setups.",
-  keywords: "photo booth hire melbourne, 360 photo booth melbourne, mirror photo booth hire, modern photo booth trends",
-};
-
 export const post = {
   title: "Top Photo Booth Trends in Melbourne 2025",
   date: "2025-10-20",

@@ -60,60 +60,55 @@
   <url><loc>https://www.photoboothwithshan.com.au/pay</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 
   <!-- 📰 Blog Section -->
-  <url><loc>https://www.photoboothwithshan.com.au/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://www.photoboothwithshan.com.au/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/top-5-reasons-to-hire-photo-booth-melbourne</loc>
-    <lastmod>2025-10-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/blog-post-weddingphotobooth</loc>
-    <lastmod>2025-10-14</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/blog-post-corporate</loc>
-    <lastmod>2025-10-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/blog-post-photobooth-cost</loc>
-    <lastmod>2025-10-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/why-choose-photo-booth-with-shan</loc>
-    <lastmod>2025-10-19</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/blog-post-photoboothtrends</loc>
-    <lastmod>2025-10-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/open-vs-enclosed-photo-booth</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/blog-post-christmasprops</loc>
-    <lastmod>2025-10-29</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.photoboothwithshan.com.au/blog/book-us-for-christmas-2025</loc>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 

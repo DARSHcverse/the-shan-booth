@@ -1,11 +1,3 @@
-export const meta = {
-  title: "Open-Air vs Enclosed Photo Booths — Which One Fits Your Event? | Shan Booth Melbourne",
-  description:
-    "Choosing between open-air and enclosed photo booths? Discover which style suits your Melbourne event best — compare space, privacy, and guest experience.",
-  keywords:
-    "open air photo booth melbourne, enclosed photo booth hire, photo booth comparison, photo booth hire melbourne",
-};
-
 export const post = {
   title: "Open-Air vs Enclosed Photo Booths — Which One Fits Your Event?",
   date: "2025-10-22",

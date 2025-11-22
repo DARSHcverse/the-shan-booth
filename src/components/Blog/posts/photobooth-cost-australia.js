@@ -2,7 +2,7 @@ export const post = {
   title: "How Much Does a Photo Booth Cost in Australia (2025 Update)",
   date: "2025-10-17",
   author: "Photo Booth With Shan",
-  slug: "blog-post-photobooth-cost",
+  slug: "photobooth-cost-australia",
   excerpt:
     "Wondering how much it costs to hire a photo booth in Melbourne or across Australia? Here’s a detailed 2025 breakdown by booth type, duration, and event size.",
   keywords: [

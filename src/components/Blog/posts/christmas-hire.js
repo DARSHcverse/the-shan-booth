@@ -2,7 +2,7 @@ export const post = {
   title: "Why You Should Book a Photo Booth for Your Melbourne Christmas Party (2025)",
   date: "2025-11-17",
   author: "Photo Booth With Shan",
-  slug: "book-us-for-christmas-2025",
+  slug: "christmas-hire",
   excerpt:
     "Planning a Christmas party in Melbourne? Discover why a festive photo booth is the ultimate way to add fun, energy, and unforgettable memories to your event.",
   keywords: [

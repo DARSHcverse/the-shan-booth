@@ -2,7 +2,7 @@ export const post = {
   title: "Top 5 Reasons to Hire a Photo Booth in Melbourne (2025 Guide)",
   date: "2025-10-10",
   author: "Photo Booth With Shan",
-  slug: "top-5-reasons-to-hire-photo-booth-melbourne",
+  slug: "photobooth-benefits",
   excerpt:
     "Thinking about hiring a photo booth in Melbourne? Here are 5 powerful reasons why a photo booth makes every event unforgettable — from weddings to corporate parties.",
   keywords: [

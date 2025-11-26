@@ -110,28 +110,48 @@ const EventsPage = () => {
     <main className="main-content section-padding">
       <div className="container">
         <h1 className="page-heading">PHOTOBOOTH HIRE <br /> EVENTS WE COVER</h1>
-        <p className="events-intro">We are passionate about bringing joy and unforgettable memories to a wide variety of events. No matter the occasion, we have a photobooth solution to match, providing a fun and interactive experience for all your guests.</p>
-        <p className="events-intro" style={{ marginTop: '1rem' }}>
-          Our <a href="/">photo booth hire Melbourne</a> service is versatile enough to enhance any type of celebration. From intimate gatherings to large-scale corporate functions, we adapt our approach to match the unique atmosphere and requirements of each event. Our experienced team understands that different occasions call for different styles, which is why we offer customizable packages that can be tailored to weddings, birthdays, corporate events, graduations, and more.
+
+        <p className="events-intro">
+          We are passionate about bringing joy and unforgettable memories to a wide variety of events.
+          No matter the occasion, we have a photobooth solution to match, providing a fun and interactive
+          experience for all your guests.
         </p>
+
         <p className="events-intro" style={{ marginTop: '1rem' }}>
-          When you choose our <a href="/">photo booth hire Melbourne</a> for your event, you're selecting a service that has been refined through years of experience across diverse celebrations. We've learned what works best for each event type, from elegant wedding receptions to energetic corporate team-building functions. This knowledge allows us to provide recommendations and customizations that ensure your photo booth experience perfectly complements your event's theme and goals.
+          Our <a href="/">photo booth hire Melbourne</a> service is versatile enough to enhance any type
+          of celebration. From intimate gatherings to large-scale corporate functions, we adapt our
+          approach to match the unique atmosphere and requirements of each event.
         </p>
-        <div className="card-grid">
+
+        <p className="events-intro" style={{ marginTop: '1rem' }}>
+          When you choose our <a href="/">photo booth hire Melbourne</a> for your event, you're selecting
+          a service refined through years of experience across diverse celebrations.
+        </p>
+
+        {/* NEW Modern Cards */}
+        <div className="event-type-grid">
           {eventsData.map((event, index) => (
-            <div key={index} className="card" onClick={() => navigate(`/${event.id}`)}>
-              <h2 className="card-title">{event.title}</h2>
-              <p className="card-text">{event.description}</p>
-              <ul className="card-text">
-                {event.offers.map((offer, idx) => (
-                  <li key={idx}>{offer}</li>
-                ))}
-              </ul>
-            </div>
+            <article
+              key={index}
+              className="event-type-card"
+              onClick={() => navigate(`/${event.id}`)}
+            >
+              <div className="event-type-body">
+                <h2 className="event-type-title">{event.title}</h2>
+                <p className="event-type-text">{event.description}</p>
+
+                <ul className="event-type-list">
+                  {event.offers.map((offer, idx) => (
+                    <li key={idx}>{offer}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
           ))}
         </div>
       </div>
     </main>
+
 
     {/* Additional Content Section */}
     <section className="seo-section">

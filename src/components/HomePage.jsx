@@ -32,34 +32,77 @@ const HomePage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.photoboothwithshan.com.au/#localbusiness",
     "name": "The Shan Booth",
-    "description": "Melbourne's premier photo booth hire for weddings, school graduations, Christmas parties, and corporate events. Based in Tarneit.",
+    "url": "https://www.photoboothwithshan.com.au/",
+    "logo": "https://www.photoboothwithshan.com.au/logo.png",
     "image": "https://www.photoboothwithshan.com.au/static/media/photobooth.7f8b9c0d.webp",
-    "telephone": "+61475116521",
+    "description": "The Shan Booth provides premium photo booth hire in Melbourne with open booths, glam booths, enclosed booths, 360 video booths, and audio guest books. Perfect for weddings, graduations, corporate events, and Christmas parties.",
+    "telephone": "+61 475 116 521",
+    "email": "mailto:theshanbooth@gmail.com",
     "priceRange": "$$",
+
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "51 Celestial Circuit",
       "addressLocality": "Tarneit",
       "addressRegion": "VIC",
       "postalCode": "3029",
       "addressCountry": "AU"
     },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": -37.8108,
-        "longitude": 144.6932
-      },
-      "geoRadius": "50000"
+
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -37.852,
+      "longitude": 144.692
     },
+
+    "areaServed": [
+      "Melbourne",
+      "Geelong",
+      "Tarneit",
+      "Point Cook",
+      "Werribee",
+      "Victoria"
+    ],
+
+    "sameAs": [
+      "https://www.facebook.com/theshanbooth",
+      "https://www.instagram.com/the_shan_booth/",
+      "https://twitter.com/theshanbooth"
+    ],
+
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "22:00"
+      }
+    ],
+
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+61 475 116 521",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+
     "makesOffer": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
           "name": "Open Photo Booth Hire Melbourne",
-          "description": "Spacious, modern open photo booth hire in Melbourne for weddings, graduations, birthdays, and corporate events."
+          "description": "Modern open photo booth hire for weddings, graduations, parties and corporate events with unlimited prints."
         }
       },
       {
@@ -67,7 +110,7 @@ const HomePage = () => {
         "itemOffered": {
           "@type": "Service",
           "name": "Enclosed Photo Booth Hire Melbourne",
-          "description": "Classic enclosed photo booth for private, fun photo sessions at weddings, birthdays, and Christmas parties."
+          "description": "Classic enclosed booth providing privacy and fun photo sessions for weddings and parties."
         }
       },
       {
@@ -75,7 +118,7 @@ const HomePage = () => {
         "itemOffered": {
           "@type": "Service",
           "name": "Glam Photo Booth Hire Melbourne",
-          "description": "High-end glam photo booth with elegant black & white photography, perfect for weddings and premium events."
+          "description": "High-end black & white glam booth ideal for weddings, galas, and premium events."
         }
       },
       {
@@ -83,15 +126,15 @@ const HomePage = () => {
         "itemOffered": {
           "@type": "Service",
           "name": "Magic Mirror Photo Booth Melbourne",
-          "description": "Interactive magic mirror photo booth with animations, touch screen, and instant prints. A crowd favourite for all events."
+          "description": "Interactive magic mirror booth with animations, touch screen and instant prints."
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "360 Spinner Booth Hire Melbourne",
-          "description": "Immersive 360-degree video booth for parties, corporate launches, and weddings. Shareable on TikTok & Instagram."
+          "name": "360 Spinner Booth Melbourne",
+          "description": "Immersive 360-degree slow-motion video booth perfect for weddings and corporate launches."
         }
       },
       {
@@ -99,11 +142,12 @@ const HomePage = () => {
         "itemOffered": {
           "@type": "Service",
           "name": "Audio Guest Book Melbourne",
-          "description": "Capture heartfelt voice messages from your guests with our modern audio guest book service for weddings & parties."
+          "description": "Capture heartfelt voice messages from guests with our audio guest book service."
         }
       }
     ]
   };
+
 
   return (
     <main className="main-content">
@@ -192,32 +236,171 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Info Cards */}
-      <section className="section-padding">
+      {/* Info Cards (Updated to Modern Style) */}
+      <section className="section-padding info-cards">
         <div className="container">
-          <h2 className="section-title">Fun for Every End-of-Year Celebration</h2>
-          <div className="card-grid">
-            <div className="card">
-              <img src={events} alt="Colleagues laughing at a corporate Christmas party in Melbourne" className="card-img" />
-              <h3 className="card-title">Corporate & Christmas Parties</h3>
-              <p className="card-text">Reward your team and impress your clients. Our booths are a brilliant addition to EOY functions and festive celebrations.</p>
-              <button onClick={() => navigate('/events')} className="card-button">Corporate Events</button>
-            </div>
-            <div className="card">
-              <img src={packages} alt="Happy students with their photostrips at a school graduation" className="card-img" />
-              <h3 className="card-title">School Graduations & Formals</h3>
-              <p className="card-text">The perfect, age-appropriate entertainment for Grade 6, Year 10, and Year 12 graduations. Safe, fun, and unforgettable!</p>
-              <button onClick={() => navigate('/events')} className="card-button">School Events</button>
-            </div>
-            <div className="card">
-              <img src={photobooth} alt="Sleek, modern photobooth with custom branding options" className="card-img" />
-              <h3 className="card-title">All-Inclusive Packages</h3>
-              <p className="card-text">Every package includes unlimited prints, custom designs, fun props, and a professional attendant to run the show.</p>
-              <button onClick={() => navigate('/packages')} className="card-button">Explore Packages</button>
-            </div>
+          <h2 className="section-title info-cards-title">
+            Fun for Every End-of-Year Celebration
+          </h2>
+
+          <div className="info-card-grid">
+            <article className="info-card info-card--corporate">
+              <img
+                src={events}
+                alt="Colleagues laughing at a corporate Christmas party in Melbourne"
+                className="info-card-img"
+              />
+              <div className="info-card-body">
+                <h3>Corporate & Christmas Parties</h3>
+                <p>
+                  Reward your team and impress your clients. Our booths are a brilliant
+                  addition to EOY functions and festive celebrations.
+                </p>
+                <button
+                  onClick={() => navigate('/events')}
+                  className="info-card-button"
+                >
+                  Corporate Events
+                </button>
+              </div>
+            </article>
+
+            <article className="info-card info-card--schools">
+              <img
+                src={packages}
+                alt="Happy students with their photostrips at a school graduation"
+                className="info-card-img"
+              />
+              <div className="info-card-body">
+                <h3>School Graduations & Formals</h3>
+                <p>
+                  The perfect, age-appropriate entertainment for Grade 6, Year 10, and
+                  Year 12 graduations. Safe, fun, and unforgettable!
+                </p>
+                <button
+                  onClick={() => navigate('/events')}
+                  className="info-card-button"
+                >
+                  School Events
+                </button>
+              </div>
+            </article>
+
+            <article className="info-card info-card--packages">
+              <img
+                src={photobooth}
+                alt="Sleek, modern photobooth with custom branding options"
+                className="info-card-img"
+              />
+              <div className="info-card-body">
+                <h3>All-Inclusive Packages</h3>
+                <p>
+                  Every package includes unlimited prints, custom designs, fun props, and
+                  a professional attendant to run the show.
+                </p>
+                <button
+                  onClick={() => navigate('/packages')}
+                  className="info-card-button"
+                >
+                  Explore Packages
+                </button>
+              </div>
+            </article>
           </div>
         </div>
       </section>
+
+
+      {/* --- Events SEO Section --- */}
+      <section className="section-padding event-links">
+        <div className="container">
+          <h2 className="section-title event-links-title">
+            Plan Your Next Event With The Shan Booth
+          </h2>
+          <p className="event-links-intro">
+            From intimate weddings to massive school graduations and corporate Christmas parties,
+            we’ve got a tailored photo booth experience for every celebration across Melbourne.
+          </p>
+
+          <div className="event-links-grid">
+            <article className="event-link-card event-link-card--wedding">
+              <div className="event-link-pill">Weddings</div>
+              <h3>Wedding Photo Booths</h3>
+              <p>
+                Elegant, fun and unforgettable. Perfect backdrops, glam filters and keepsake prints
+                for your big day.
+              </p>
+              <button
+                className="event-link-button"
+                onClick={() => navigate('/weddings')}
+              >
+                Explore Wedding Packages
+              </button>
+            </article>
+
+            <article className="event-link-card event-link-card--birthday">
+              <div className="event-link-pill">Birthdays</div>
+              <h3>Birthday & Milestone Parties</h3>
+              <p>
+                From 18ths and 21sts to milestone birthdays, keep the party energy high with
+                props, prints and instant sharing.
+              </p>
+              <button
+                className="event-link-button"
+                onClick={() => navigate('/birthday')}
+              >
+                See Birthday Booths
+              </button>
+            </article>
+
+            <article className="event-link-card event-link-card--corporate">
+              <div className="event-link-pill">Corporate & EOY</div>
+              <h3>Corporate & Christmas Events</h3>
+              <p>
+                Branded templates, team-building fun and end-of-year memories for staff and clients
+                across Melbourne.
+              </p>
+              <button
+                className="event-link-button"
+                onClick={() => navigate('/corporate-events')}
+              >
+                Corporate Event Options
+              </button>
+            </article>
+
+            <article className="event-link-card event-link-card--graduation">
+              <div className="event-link-pill">Schools</div>
+              <h3>Graduations & Formals</h3>
+              <p>
+                Grade 6, Year 10 & Year 12 celebrations with WWCC-cleared attendants and
+                age-appropriate fun.
+              </p>
+              <button
+                className="event-link-button"
+                onClick={() => navigate('/graduation')}
+              >
+                View School Packages
+              </button>
+            </article>
+
+            <article className="event-link-card event-link-card--christmas">
+              <div className="event-link-pill">Seasonal</div>
+              <h3>Christmas Party Booths</h3>
+              <p>
+                Festive props, Christmas templates and end-of-year vibes for families, schools
+                and workplaces.
+              </p>
+              <button
+                className="event-link-button"
+                onClick={() => navigate('/christmas')}
+              >
+                Christmas Photo Booths
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
 
       {/* --- SEO Section --- */}
       <section className="seo-section">
@@ -328,11 +511,11 @@ const HomePage = () => {
           <div className="faq-grid">
             <div className="faq-item">
               <h3>Are your attendants suitable for school events?</h3>
-              <p>Yes. All our attendants have a valid Working with Children Check (WWCC) and are experienced in creating a fun, safe, and appropriate environment for students of all ages. <strong>Photo booth hire Melbourne</strong></p>
+              <p>Yes. All our attendants have a valid Working with Children Check (WWCC) and are experienced in creating a fun, safe, and age-appropriate environment for students at graduations and formals.</p>
             </div>
             <div className="faq-item">
               <h3>Can you provide themed props for our event?</h3>
-              <p>Absolutely! We have a fantastic collection of festive, graduation, and formal props to perfectly match your celebration. Let us know your theme when you book!<strong>photo booth hire Melbourne</strong></p>
+              <p>Absolutely! We provide a wide range of themed props for graduations, Christmas parties, school events, weddings, and corporate celebrations. Just tell us your theme when booking.</p>
             </div>
             <div className="faq-item">
               <h3>How much space do you need?</h3>
@@ -340,7 +523,7 @@ const HomePage = () => {
             </div>
             <div className="faq-item">
               <h3>Do we get digital copies of the photos?</h3>
-              <p>Yes! After your event, you'll receive a pendrive with all the high-resolution images and GIFs, ready for you to keep and share.<strong>photo booth hire Melbourne</strong></p>
+              <p>Yes! You’ll receive all high-resolution photos and GIFs after the event, provided on a USB or secure online gallery for easy sharing.</p>
             </div>
           </div>
         </div>
@@ -352,10 +535,10 @@ const HomePage = () => {
           <h2 className="section-title">Why Melbourne Chooses The Shan Booth</h2>
           <p>
             Melbourne event planners and hosts consistently choose The Shan Booth for their photo booth hire Melbourne needs because we deliver more than just equipment – we create experiences. Our comprehensive service includes everything from initial consultation to post-event digital delivery, ensuring a stress-free experience from start to finish.
-          </p>
+          </p><br />
           <p>
             Whether you're planning a wedding reception, corporate gala, school formal, or birthday celebration, our photo booth hire Melbourne packages are designed to exceed expectations. We work closely with you to understand your vision and bring it to life with custom templates, themed props, and professional-grade photography that captures every special moment.
-          </p>
+          </p><br />
           <p>
             Booking your photo booth hire Melbourne with The Shan Booth means choosing reliability, quality, and exceptional value. Our transparent pricing includes all essential services, so you won't encounter any hidden fees or surprise charges. We believe in making professional photo booth experiences accessible to everyone, which is why we offer competitive rates without compromising on quality or service.
           </p>

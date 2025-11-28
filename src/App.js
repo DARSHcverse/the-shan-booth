@@ -28,6 +28,8 @@ import BlogPost from './components/Blog/BlogPost';
 import OpenBoothPage from './components/OpenBoothPage';
 import GlamBoothPage from './components/GlamBoothPage';
 import EnclosedBoothPage from './components/EnclosedBoothPage';
+import SchoolHolidayLanding from './components/SchoolHolidayLanding';
+import NewYearPartyLanding from './components/NewYearPartyLanding';
 
 function App() {
   const navigate = useNavigate();
@@ -65,6 +67,8 @@ function App() {
         <Route path="/open-booth" element={<OpenBoothPage />} />
         <Route path="/glam-booth" element={<GlamBoothPage />} />
         <Route path="/enclosed-booth" element={<EnclosedBoothPage />} />
+        <Route path="/school-holiday" element={<SchoolHolidayLanding />} />
+        <Route path="/new-year-party" element={<NewYearPartyLanding />} />
       </Routes>
 
       {/* Global Floating Book Now Button */}

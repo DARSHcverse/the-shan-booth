@@ -50,6 +50,8 @@
   <url><loc>https://www.photoboothwithshan.com.au/open-booth</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.photoboothwithshan.com.au/enclosed-booth</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.photoboothwithshan.com.au/glam-booth</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.photoboothwithshan.com.au/new-year-party</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.photoboothwithshan.com.au/school-holiday</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- 🖼️ Extra Pages -->
   <url><loc>https://www.photoboothwithshan.com.au/backdrop</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import "../App.css"; // make sure this imports your CSS
+import "../App.css";
 import weddingImg from "../images/wedding.webp";
 import weddingImg2 from "../images/wedding2.webp";
 import WeddingStrip from "../images/weddingstrip.webp";
@@ -10,34 +10,31 @@ const WeddingLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Helmet>
-        <title>Wedding Photo Booth Hire Melbourne 💍 | The Shan Booth</title>
+        <title>Wedding Photo Booth Hire Melbourne 💍 | Elegant Wedding Photobooths</title>
+
         <meta
           name="description"
-          content="Make your wedding unforgettable with The Shan Booth! Elegant wedding photo booths with unlimited prints, props & instant sharing. Serving Melbourne, Tarneit & Geelong."
+          content="Looking for wedding photo booth hire in Melbourne? The Shan Booth offers elegant photobooths with unlimited prints, classy props & instant sharing. Servicing Melbourne, Geelong & Tarneit."
         />
+
         <meta
           name="keywords"
-          content="wedding photo booth hire Melbourne, elegant wedding photobooth, Geelong wedding photo booth rental, wedding reception photo booth, bridal shower photo booth Melbourne, fun wedding photo booth hire, wedding party photo booth Geelong, romantic wedding photo booth packages"
+          content="wedding photo booth hire Melbourne, elegant wedding photo booth Melbourne, wedding reception photo booth hire, Geelong wedding photo booth, Tarneit wedding photobooth, bridal shower photo booth Melbourne, engagement party photo booth hire"
         />
+
         <link
           rel="canonical"
           href="https://www.photoboothwithshan.com.au/weddings"
         />
 
         {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Wedding Photo Booth Hire Melbourne 💍 | The Shan Booth"
-        />
+        <meta property="og:title" content="Wedding Photo Booth Hire Melbourne 💍 | The Shan Booth" />
         <meta
           property="og:description"
-          content="Create lasting memories on your big day! Elegant wedding photo booths with unlimited prints, fun props & instant sharing across Melbourne & Geelong."
+          content="Elegant wedding photo booth hire across Melbourne & Geelong. Unlimited prints, premium props & instant sharing."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.photoboothwithshan.com.au/weddings"
-        />
+        <meta property="og:url" content="https://www.photoboothwithshan.com.au/weddings" />
         <meta
           property="og:image"
           content="https://www.photoboothwithshan.com.au/wedding.webp"
@@ -45,54 +42,44 @@ const WeddingLanding = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Wedding Photo Booth Hire Melbourne 💍 | The Shan Booth"
-        />
+        <meta name="twitter:title" content="Wedding Photo Booth Hire Melbourne 💍" />
         <meta
           name="twitter:description"
-          content="Book your wedding photo booth today! Elegant backdrops, fun props & unlimited prints – serving Melbourne, Tarneit & Geelong."
+          content="Book an elegant wedding photo booth with unlimited prints & instant sharing. Servicing Melbourne, Geelong & Tarneit."
         />
         <meta
           name="twitter:image"
           content="https://www.photoboothwithshan.com.au/wedding2.webp"
         />
 
-        {/* ✅ Schema.org JSON-LD (Fixed Event Schema) */}
+        {/* ✅ CORRECT Schema for Wedding Page (Service + LocalBusiness) */}
         <script type="application/ld+json">
           {`
           {
             "@context": "https://schema.org",
-            "@type": "Event",
+            "@type": "Service",
             "name": "Wedding Photo Booth Hire Melbourne",
-            "description": "Book a stylish photo booth for your wedding receptions, bridal showers & engagement parties across Melbourne, Tarneit & Geelong.",
-            "image": "https://www.photoboothwithshan.com.au/wedding.webp",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "startDate": "2025-09-06T18:00:00+10:00",
-            "endDate": "2025-12-30T00:00:00+10:00",
-            "location": {
-              "@type": "Place",
-              "name": "Melbourne & Geelong",
+            "description": "Elegant wedding photo booth hire across Melbourne, Geelong and Tarneit with unlimited prints, premium props and instant digital sharing.",
+            "serviceType": "Wedding Photo Booth Hire",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "The Shan Booth",
+              "url": "https://www.photoboothwithshan.com.au",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Melbourne",
                 "addressRegion": "VIC",
                 "addressCountry": "AU"
               }
             },
-            "organizer": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
-            },
+            "areaServed": [
+              "Melbourne",
+              "Geelong",
+              "Tarneit"
+            ],
             "offers": {
               "@type": "Offer",
-              "url": "https://www.photoboothwithshan.com.au/packages",
-              "price": "500",
               "priceCurrency": "AUD",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2025-08-19T00:00:00+10:00"
+              "availability": "https://schema.org/InStock"
             }
           }
           `}
@@ -101,17 +88,18 @@ const WeddingLanding = () => {
 
       {/* ✅ Landing Page Content */}
       <div className="wedding-landing">
-        {/* Floating Wedding Strip */}
+        {/* Floating Wedding Strips */}
         <div className="floating-strip left-strip">
-          <img src={WeddingStrip} alt="Wedding photobooth strip" />
+          <img src={WeddingStrip} alt="Wedding photobooth strip Melbourne" />
         </div>
 
-        <h1>Wedding Photobooth Hire in Melbourne & Geelong</h1>
+        <h1>Wedding Photo Booth Hire Melbourne – Elegant & Fun Wedding Photobooths</h1>
+
         <p>
-          Your wedding day deserves to be unforgettable.{" "}
-          <strong>The Shan Booth</strong> brings elegant
-          <strong> wedding photo booths</strong> that let guests capture
-          memories, share instantly, and take home keepsakes they’ll treasure
+          Your wedding day deserves unforgettable memories.{" "}
+          <strong>The Shan Booth</strong> provides elegant{" "}
+          <strong>wedding photo booth hire in Melbourne</strong>, giving your
+          guests instant prints, digital sharing, and keepsakes you’ll cherish
           forever.
         </p>
 
@@ -119,96 +107,98 @@ const WeddingLanding = () => {
         <div className="wedding-gallery">
           <img
             src={weddingImg}
-            alt="Couple enjoying the wedding booth"
+            alt="Wedding photobooth hire Melbourne reception"
             loading="lazy"
           />
           <img
             src={weddingImg2}
-            alt="Guests posing with wedding props"
+            alt="Guests enjoying elegant wedding photobooth"
             loading="lazy"
           />
         </div>
 
         {/* Why Choose Us */}
         <div className="wedding-section">
-          <h2>💍 Why Choose Our Wedding Photo Booths?</h2>
+          <h2>💍 Why Choose Our Wedding Photo Booth?</h2>
           <ul className="feature-list">
-            <li>
-              ✨ <strong>Elegant Backdrops & Props</strong> – Floral walls,
-              wedding signs & classy props.
-            </li>
-            <li>
-              ✨ <strong>Unlimited Prints & Digital Sharing</strong> – Guests
-              keep a memory, couples get a copy of every photo.
-            </li>
-            <li>
-              ✨ <strong>Perfect for Any Wedding Event</strong> – Receptions,
-              engagement parties & bridal showers.
-            </li>
-            <li>
-              ✨ <strong>Servicing Melbourne, Geelong & Tarneit</strong> – We
-              deliver and set up at your venue.
-            </li>
+            <li>✨ <strong>Elegant Backdrops & Classy Props</strong> – Designed to match your wedding theme.</li>
+            <li>✨ <strong>Unlimited Prints & Digital Copies</strong> – Guests take one home, couples get them all.</li>
+            <li>✨ <strong>Perfect for Weddings & Bridal Events</strong> – Receptions, engagements & bridal showers.</li>
+            <li>✨ <strong>Servicing Melbourne, Geelong & Tarneit</strong> – Full delivery, setup & pack-down included.</li>
           </ul>
         </div>
 
         {/* Packages */}
         <div className="wedding-section">
-          <h2>📸 Wedding Packages</h2>
+          <h2>📸 Wedding Photo Booth Packages</h2>
           <div className="package-list">
             <div className="package-item">
-              <h3>2-Hour Package</h3>
-              <p>Perfect for intimate weddings or small receptions.</p>
+              <h3>2-Hour Wedding Package</h3>
+              <p>Ideal for intimate weddings and smaller receptions.</p>
             </div>
             <div className="package-item">
               <h3>3–4 Hour Premium Package</h3>
-              <p>
-                Ideal for most weddings – plenty of time for all guests to join
-                the fun.
-              </p>
+              <p>Our most popular option for Melbourne weddings.</p>
             </div>
             <div className="package-item">
               <h3>Full Event Package</h3>
-              <p>From start to finish – unlimited photos, unlimited fun.</p>
+              <p>From start to finish – unlimited photos and fun all night.</p>
             </div>
           </div>
           <p className="hint-text">
-            💡 Customise your booth with personalised templates & guestbooks!
+            💡 Custom photo templates, guestbooks & personalised prints available.
           </p>
         </div>
 
         {/* Areas */}
         <div className="wedding-section">
-          <h2>📍 Areas We Cover</h2>
+          <h2>📍 Areas We Service</h2>
           <ul className="areas-list">
-            <li>Melbourne (CBD & suburbs)</li>
+            <li>Melbourne & surrounding suburbs</li>
             <li>Geelong</li>
-            <li>Tarneit & surrounding areas</li>
+            <li>Tarneit & Western suburbs</li>
           </ul>
         </div>
 
-        {/* Closing CTA */}
+        {/* FAQ Section (SEO BOOST) */}
         <div className="wedding-section">
-          <h2>🎉 Make Your Wedding Unforgettable</h2>
+          <h2>❓ Wedding Photo Booth Hire FAQs</h2>
+
+          <h3>How long should I book a wedding photo booth for?</h3>
           <p>
-            Guests love capturing moments, and you’ll love looking back at the
-            memories. Book now to make your wedding extra special.
+            Most Melbourne weddings book a 3–4 hour package to capture peak guest
+            activity after dinner and speeches.
+          </p>
+
+          <h3>Do wedding photo booths suit formal weddings?</h3>
+          <p>
+            Absolutely. Our elegant backdrops and classy props are designed to
+            blend seamlessly with formal wedding receptions.
+          </p>
+
+          <h3>Do we receive digital copies of the photos?</h3>
+          <p>
+            Yes! You receive all photos digitally after the event, plus guests
+            get instant prints on the night.
           </p>
         </div>
 
+        {/* CTA */}
         <div className="cta-center">
           <a href="/booking" className="cta-btn">
-            Book Your Wedding Photobooth Today
+            Book Your Wedding Photo Booth Today
           </a>
         </div>
 
+        {/* SEO Keywords */}
         <div className="seo-keywords" aria-hidden="false">
-          <strong>Popular searches:</strong> wedding photo booth hire Melbourne • elegant wedding photobooth Tarneit • Geelong wedding photo booth • bridal shower photo booth Melbourne • engagement party photo booth hire
+          <strong>Popular searches:</strong> wedding photo booth hire Melbourne •
+          elegant wedding photo booth Geelong • Tarneit wedding photobooth •
+          bridal shower photo booth Melbourne • engagement party photo booth hire
         </div>
 
-        {/* Floating Wedding Strip */}
         <div className="floating-strip right-strip">
-          <img src={WeddingStrip} alt="Wedding photobooth strip" />
+          <img src={WeddingStrip} alt="Wedding photobooth strip hire Melbourne" />
         </div>
       </div>
     </>

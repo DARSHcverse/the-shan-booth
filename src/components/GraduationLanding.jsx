@@ -43,8 +43,10 @@ const GraduationLanding = () => {
             "@context": "https://schema.org",
             "@type": "Event",
             "name": "Graduation Photo Booth Hire Melbourne",
-            "startDate": "2025-09-01",
-            "endDate": "2025-12-20",
+            "description": "Professional photobooth hire for graduations, school formals and university balls across Melbourne & Geelong.",
+            "image": "https://www.photoboothwithshan.com.au/gradbooth.jpg",
+            "startDate": "2025-12-20T09:00:00+10:00",
+            "endDate": "2026-01-20T23:00:00+11:00",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "location": {
@@ -52,7 +54,6 @@ const GraduationLanding = () => {
               "name": "Melbourne & Geelong",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Melbourne",
                 "addressRegion": "VIC",
                 "addressCountry": "AU"
               }
@@ -62,8 +63,19 @@ const GraduationLanding = () => {
               "name": "The Shan Booth",
               "url": "https://www.photoboothwithshan.com.au"
             },
-            "image": "https://www.photoboothwithshan.com.au/gradbooth.jpg",
-            "description": "Photobooth hire for graduations, school formals, and uni balls across Melbourne, Geelong & Grovedale."
+            "performer": {
+            "@type": "Organization",
+            "name": "The Shan Booth",
+            "url": "https://www.photoboothwithshan.com.au"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.photoboothwithshan.com.au/booking",
+              "priceCurrency": "AUD",
+              "price": "390",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2025-07-01T00:00:00+10:00"
+            }
           }
           `}
         </script>

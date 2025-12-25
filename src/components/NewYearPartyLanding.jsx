@@ -35,21 +35,46 @@ const NewYearPartyLanding = () => {
 
         {/* Schema */}
         <script type="application/ld+json">
-          {`
+        {`
           {
             "@context": "https://schema.org",
             "@type": "Event",
-            "name": "New Year Party Photobooth Hire Melbourne",
-            "startDate": "2025-12-31",
-            "endDate": "2026-01-02",
+            "name": "New Year Party Photo Booth Hire Melbourne",
+            "description": "Celebrate New Year’s Eve and New Year parties with premium photobooth hire in Melbourne, Tarneit & Geelong.",
+            "image": "https://www.photoboothwithshan.com.au/newyear1.webp",
+            "startDate": "2025-12-31T18:00:00+11:00",
+            "endDate": "2026-02-01T02:00:00+11:00",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
             "location": {
               "@type": "Place",
-              "name": "Melbourne & Geelong"
+              "name": "Melbourne & Geelong",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "VIC",
+                "addressCountry": "AU"
+              }
             },
-            "image": "https://www.photoboothwithshan.com.au/newyear1.webp",
-            "description": "Celebrate New Year's Eve and New Year parties with premium photobooth hire in Melbourne, Tarneit & Geelong."
+            "organizer": {
+              "@type": "Organization",
+              "name": "The Shan Booth",
+              "url": "https://www.photoboothwithshan.com.au"
+            },
+            "performer": {
+            "@type": "Organization",
+            "name": "The Shan Booth",
+            "url": "https://www.photoboothwithshan.com.au"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.photoboothwithshan.com.au/booking",
+              "priceCurrency": "AUD",
+              "price": "390",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2025-10-01T00:00:00+11:00"
+            }
           }
-          `}
+        `}
         </script>
       </Helmet>
 

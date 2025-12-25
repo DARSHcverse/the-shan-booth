@@ -64,8 +64,10 @@ const ChristmasLanding = () => {
             "@context": "https://schema.org",
             "@type": "Event",
             "name": "Christmas Photo Booth Hire Melbourne",
-            "startDate": "2025-12-01",
-            "endDate": "2026-01-05",
+            "description": "Festive photobooth hire for Christmas parties, corporate end-of-year events and holiday celebrations across Melbourne & Geelong.",
+            "image": "https://www.photoboothwithshan.com.au/christmas.webp",
+            "startDate": "2025-12-01T09:00:00+11:00",
+            "endDate": "2026-01-05T23:00:00+11:00",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "location": {
@@ -73,7 +75,6 @@ const ChristmasLanding = () => {
               "name": "Melbourne & Geelong",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Melbourne",
                 "addressRegion": "VIC",
                 "addressCountry": "AU"
               }
@@ -83,8 +84,19 @@ const ChristmasLanding = () => {
               "name": "The Shan Booth",
               "url": "https://www.photoboothwithshan.com.au"
             },
-            "image": "https://www.photoboothwithshan.com.au/christmas.webp",
-            "description": "Book a festive photo booth for your Christmas parties, corporate events & end-of-year celebrations across Melbourne, Tarneit & Geelong."
+            "performer": {
+            "@type": "Organization",
+            "name": "The Shan Booth",
+            "url": "https://www.photoboothwithshan.com.au"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.photoboothwithshan.com.au/booking",
+              "priceCurrency": "AUD",
+              "price": "390",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2025-09-01T00:00:00+10:00"
+            }
           }
           `}
         </script>

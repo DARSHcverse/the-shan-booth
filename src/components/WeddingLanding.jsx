@@ -93,7 +93,7 @@ const WeddingLanding = () => {
           <img src={WeddingStrip} alt="Wedding photobooth strip Melbourne" />
         </div>
 
-        <h1>Wedding Photo Booth Hire Melbourne – Elegant & Fun Wedding Photobooths</h1>
+        <h1>Wedding Photo Booth Hire Melbourne – The Shan Booth</h1>
 
         <p>
           Your wedding day deserves unforgettable memories.{" "}

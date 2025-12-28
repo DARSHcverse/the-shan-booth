@@ -10,7 +10,7 @@ const WeddingLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Helmet>
-        <title>Wedding Photo Booth Hire Melbourne 💍 | Elegant Wedding Photobooths</title>
+        <title>Wedding Photo Booth Hire Melbourne 💍 | The Shan Booth</title>
 
         <meta
           name="description"
@@ -19,7 +19,7 @@ const WeddingLanding = () => {
 
         <meta
           name="keywords"
-          content="wedding photo booth hire Melbourne, elegant wedding photo booth Melbourne, wedding reception photo booth hire, Geelong wedding photo booth, Tarneit wedding photobooth, bridal shower photo booth Melbourne, engagement party photo booth hire"
+          content="wedding photo booth hire Melbourne, wedding photobooth Melbourne, wedding reception photo booth hire, Geelong wedding photo booth, Tarneit wedding photobooth, bridal shower photo booth Melbourne, engagement party photo booth hire"
         />
 
         <link
@@ -31,7 +31,7 @@ const WeddingLanding = () => {
         <meta property="og:title" content="Wedding Photo Booth Hire Melbourne 💍 | The Shan Booth" />
         <meta
           property="og:description"
-          content="Elegant wedding photo booth hire across Melbourne & Geelong. Unlimited prints, premium props & instant sharing."
+          content="Wedding photo booth hire across Melbourne & Geelong. Unlimited prints, premium props & instant sharing."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/weddings" />
@@ -59,7 +59,7 @@ const WeddingLanding = () => {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Wedding Photo Booth Hire Melbourne",
-            "description": "Elegant wedding photo booth hire across Melbourne, Geelong and Tarneit with unlimited prints, premium props and instant digital sharing.",
+            "description": "Wedding photo booth hire across Melbourne, Geelong and Tarneit with unlimited prints, premium props and instant digital sharing.",
             "serviceType": "Wedding Photo Booth Hire",
             "provider": {
               "@type": "LocalBusiness",

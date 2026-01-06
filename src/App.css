@@ -7,7 +7,7 @@
     --color-accent: #5aadc8;       /* Custom accent color for headings */
     --color-text-dark: #1f2937;    /* Gray-800 */
     --color-text-light: #6b7280;   /* Gray-500 */
-    --color-bg-body: rgb(245,217,114);  
+    --color-bg-body: rgb(245,217,114);
     --color-bg-card: #ffffff;      /* White */
     --color-bg-dark: #1f2937;      /* Dark gray for footer/header */
     --color-bg-footer: white;    /* Darker gray for footer */
@@ -1884,6 +1884,7 @@ body {
   color: #9ca3af; /* gray-400 */
   font-size: 0.75rem;
 }
+
 
 /* === Booking Page Style === */
 .booking-container {

@@ -18,7 +18,7 @@ const PayPage = () => {
     <>
       {/* SEO + Open Graph Meta Tags */}
       <Helmet>
-        <title>Secure Payment For Photobooth Hire Melbourne  | The Shan Booth</title>
+        <title>Secure Your Melbourne Photo Booth Experience  | The Shan Booth</title>
         <meta
           name="description"
           content="Complete your booking securely with The Shan Booth using Stripe. 100% safe and encrypted payment system for your photo booth experience."
@@ -65,6 +65,32 @@ const PayPage = () => {
             Powered by <span className="font-semibold">Stripe</span> · Your payment is 100% secure
           </p>
         </div>
+
+        <section className="section-padding seasonal-banner snow-effect">
+          <div className="container">
+            <h2 className="seasonal-title">🎓 Secure Pay 🎉</h2>
+            <p className="seasonal-text">
+              Thank you for choosing <strong>The Shan Booth</strong> for your upcoming event! 
+              We are committed to providing a seamless and professional booking process, 
+              starting with your secure online payment. Whether you are booking our signature 
+              <strong> Glam Booth</strong>, a classic setup, or a custom brand activation, 
+              this portal allows you to finalize your reservation instantly.
+            </p>
+            <p className="seasonal-text">
+              <strong>Safe & Encrypted Transactions:</strong> Your security is our priority. 
+              We utilize <strong>Stripe</strong>, a global leader in payment processing, 
+              to ensure your transaction is 100% encrypted and secure. We accept all major 
+              credit cards, including Visa, Mastercard, and American Express.
+            </p>
+            <p className="seasonal-text">
+              <strong>Finalizing Your Event:</strong> By completing your payment today, 
+              you are officially locking in your date in our calendar. Once processed, 
+              you will receive an automated receipt and a confirmation email from our team. 
+              We look forward to making your Melbourne event unforgettable!
+            </p>
+          </div>
+        </section>
+
       </div>
     </>
   );

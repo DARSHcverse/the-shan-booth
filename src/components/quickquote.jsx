@@ -230,7 +230,32 @@ const QuickQuote = () => {
         <div className="floating-strip right-strip">
           <img src={corporateStrip} alt="Corporate photobooth strip" />
         </div>
+        
       </div>
+      <section className="section-padding seasonal-banner snow-effect">
+          <div className="container">
+            <h2 className="seasonal-title">How Our Melbourne Photo Booth Pricing Works 🎉</h2>
+            <p className="seasonal-text">
+              Getting an accurate price for your Melbourne photobooth hire shouldn't be complicated. 
+              We designed our Quick Quote system to provide you with a tailored estimate based on your specific event logistics. 
+              Whether you are hosting an intimate garden wedding in the Yarra Valley or a large-scale corporate brand activation 
+              in the Melbourne CBD, our team uses your details to calculate travel, setup time, and equipment requirements to ensure 
+              a seamless experience.
+            </p>
+            <p className="seasonal-text">
+              <strong>Choosing Your Experience:</strong> Our service selection allows you to match the booth to your event's specific vibe. 
+              Our Open Booths are perfect for maximizing guest interaction and fitting large groups into a single frame, 
+              while our Glam Booth is a favorite for those seeking high-end, skin-smoothing studio lighting and a "Kardashian-style" finish. 
+              For a more nostalgic feel, our Enclosed Booths offer that classic, private photo experience that guests have loved for decades.
+            </p>
+            <p className="seasonal-text">
+              <strong>Instant Response & Transparency:</strong> Once you submit this form, we cross-reference your date with our current availability. 
+              We don't believe in hidden fees or "event taxes"—the price we quote is the price you pay. Every hire includes 
+              professional-grade DSLR cameras, studio lighting, and a friendly booth attendant to ensure your Melbourne event runs 
+              smoothly from start to finish. Submit your details today, and let's start planning how to capture your best memories!
+            </p>
+          </div>
+        </section>
     </>
   );
 };

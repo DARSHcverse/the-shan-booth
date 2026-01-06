@@ -45,7 +45,23 @@ const GlamBoothPage = () => (
         <p className="seo-text">
           Searching for the best <strong>Glam Photo Booth Hire Melbourne</strong> has to offer? You’ve found it.
           Perfect for <strong>luxury weddings</strong>, <strong>fashion nights</strong>, and <strong>corporate galas</strong> —
-          this booth transforms every snapshot into a red-carpet moment.
+          this booth transforms every snapshot into a red-carpet moment.<br />
+
+          <br /><strong>Why Choose a Glam Booth for Your Melbourne Event?</strong>
+          
+          <br />While standard photo booths are great for props and high-energy fun, the Glam Booth is designed for sophistication. 
+          This specific setup is highly sought after for Melbourne weddings and black-tie events because it prioritizes portrait 
+          quality above all else. By utilizing the Canon R100 Mirrorless system combined with studio-grade softbox lighting, 
+          we create a light wrap that eliminates harsh shadows and highlights your guests' best features. 
+          This isn't just a photo booth; it's a mobile professional portrait studio that brings a refined, editorial feel to your venue.
+
+          <br />The secret to the "Hollywood Look" lies in our specialized AI post-processing. 
+          As soon as the shutter clicks, our software applies a custom-tuned skin-smoothing filter. 
+          This digital retouching works instantly to provide a flawless, high-fashion finish that guests are excited to share on social media. 
+          Whether you prefer the timeless elegance of high-contrast black and white or the vibrant clarity of full color, our Glam Booth 
+          setup ensures every person who steps in front of the lens feels like a celebrity. From the inner suburbs of Melbourne to the wineries 
+          of the Mornington Peninsula, we bring this luxury experience directly to your doorstep, providing a memorable activity that doubles as 
+          a high-end party favor.
         </p>
 
         <div className="cta-section">

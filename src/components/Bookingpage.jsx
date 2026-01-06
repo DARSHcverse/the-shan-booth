@@ -161,6 +161,28 @@ const BookingPage = () => {
           </form>
           {status && <p className="booking-status">{status}</p>}
         </div>
+        <section className="section-padding seasonal-banner snow-effect">
+          <div className="container">
+            <h2 className="seasonal-title">How to Book Your Melbourne Photo Booth Experience 🎉</h2>
+            <p className="seasonal-text">
+              Booking your event with The Shan Booth is designed to be simple and transparent. 
+              To secure your date in our 2026 calendar, we require a few key details to ensure our team is fully prepared 
+              for your celebration. When filling out the form, please provide an accurate Event Location and your preferred Booth Type. 
+              Whether you choose the high-fashion Glam Booth or the versatile Open Booth, selecting your package duration will instantly 
+              provide you with clear, upfront pricing.
+            </p>
+            <p className="seasonal-text">
+              <strong>What We Need From You</strong> For a flawless setup, please use the message section to include your Start and End times, 
+              along with any specific Venue Access or Parking instructions. If your venue has stairs, loading dock requirements, 
+              or specific delivery windows in the Melbourne CBD, knowing these details early allows us to coordinate our arrival perfectly.
+            </p>
+            <p className="seasonal-text">
+              <strong>Confirmation and Next Steps</strong> Once you click "Confirm Booking," you will receive an automated confirmation and 
+              a unique invoice. This locks in your equipment and professional attendant for your specific date. Our team will then 
+              reach out to finalize your custom print designs and backdrop selection.
+            </p>
+          </div>
+        </section>
         {/* Floating Graduation Strip */}
         <div className="floating-strip right-strip">
           <img src={gradStrip} alt="Graduation photobooth strip" />

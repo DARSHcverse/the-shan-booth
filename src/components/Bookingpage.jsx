@@ -161,7 +161,13 @@ const BookingPage = () => {
           </form>
           {status && <p className="booking-status">{status}</p>}
         </div>
-        <section className="section-padding seasonal-banner snow-effect">
+        
+        {/* Floating Graduation Strip */}
+        <div className="floating-strip right-strip">
+          <img src={gradStrip} alt="Graduation photobooth strip" />
+        </div>
+      </div>
+      <section className="section-padding seasonal-banner snow-effect">
           <div className="container">
             <h2 className="seasonal-title">How to Book Your Melbourne Photo Booth Experience 🎉</h2>
             <p className="seasonal-text">
@@ -183,11 +189,6 @@ const BookingPage = () => {
             </p>
           </div>
         </section>
-        {/* Floating Graduation Strip */}
-        <div className="floating-strip right-strip">
-          <img src={gradStrip} alt="Graduation photobooth strip" />
-        </div>
-      </div>
     </>
   );
 };

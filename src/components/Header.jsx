@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import '../App.css';
 import logo from '../images/logo.png';
 import callIcon from '../images/callIcon.png';
-import iconGradCap from '../images/prop.png';
+// import iconGradCap from '../images/prop.png'; // Floating icon (currently not in use)
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -53,9 +53,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="floating-items-container">
+      {/* <div className="floating-items-container"> // Floating icon (currently not in use, can be enabled if needed later for christmas theme)
         <div className="floating-item item-1"><img src={iconGradCap} alt="Floating graduation cap icon" /></div>
-      </div>
+      </div> */}
       <div className="container header-inner">
         {/* Logo */}
         <button

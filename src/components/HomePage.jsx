@@ -4,21 +4,26 @@ import { Helmet } from 'react-helmet';
 import '../App.css';
 
 // Main Image Imports
-import boothimg5 from '../images/boothimg5.webp';
-import boothimg2 from '../images/boothimg2.webp';
+import boothimg5 from '../images/hero-banner.webp';
+import boothimg2 from '../images/hero-banner-2.webp';
+import boothimg3 from '../images/hero-banner-3.webp';
+import boothimg4 from '../images/hero-banner-4.webp';
 import photobooth from '../images/photobooth.webp';
 import events from '../images/boothimg7.webp';
 import packages from '../images/boothimg4.webp';
+import gifvideo from '../images/fun-vdo.webm';
+import gifvideo2 from '../images/fun-vdo-2.webm';
+import gifvideo3 from '../images/fun-vdo-3.webm';
 
-// Floating Icons
-import iconCamera from '../images/prop2.png';
-import iconChristmasTree from '../images/prop3.png';
-import iconPartyPopper from '../images/prop4.png';
-import iconPhotoStrip from '../images/prop5.png';
+// Floating Icons (currently not in use, can be enabled if needed later for christmas theme)
+// import iconCamera from '../images/prop2.png';
+// import iconChristmasTree from '../images/prop3.png';
+// import iconPartyPopper from '../images/prop4.png';
+// import iconPhotoStrip from '../images/prop5.png';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const images = [boothimg5, boothimg2];
+  const images = [boothimg5, boothimg2, boothimg3, boothimg4];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -198,12 +203,12 @@ const HomePage = () => {
 
       {/* --- Hero Section --- */}
       <section className="hero-section snow-effect" style={{ position: 'relative', overflow: 'hidden' }}>
-        <div className="floating-items-container">
+        {/* <div className="floating-items-container">  // Floating icons (currently not in use, can be enabled if needed later for christmas theme)
           <div className="floating-item item-2"><img src={iconCamera} alt="Floating camera icon" /></div>
           <div className="floating-item item-3"><img src={iconChristmasTree} alt="Floating Christmas tree icon" /></div>
           <div className="floating-item item-4"><img src={iconPartyPopper} alt="Floating party popper icon" /></div>
           <div className="floating-item item-5"><img src={iconPhotoStrip} alt="Floating strip icon" /></div>
-        </div>
+        </div> */}
 
         <div className="hero-overlay">
           <img
@@ -487,14 +492,42 @@ const HomePage = () => {
       <section className="section-padding bg-light">
         <div className="container">
           <h2 className="section-title">What Our Clients Are Saying</h2>
+          <div className="testimonial-card">
+            <video
+              src={gifvideo3}
+              autoPlay
+              loop
+              muted
+              laysInline
+              preload="metadata"
+              className="testimonial-webm"
+            >
+            </video>
+            <video
+              src={gifvideo2}
+              autoPlay
+              loop
+              muted
+              className="testimonial-webm"
+            >
+            </video>
+            <video
+              src={gifvideo}
+              autoPlay
+              loop
+              muted
+              className="testimonial-webm"
+            >
+            </video>
+          </div>
           <div className="testimonial-grid">
+            <div className="testimonial-card">
+              <p className="testimonial-quote">"It was absolutely fun everyone seemed to enjoyed it thanks for the amazing service you provided for the Sync Christmas Lunch 😊"</p>
+              <span className="testimonial-author">- ARGI LONTOS. (Corporate Christmas Party)</span>
+            </div>
             <div className="testimonial-card">
               <p className="testimonial-quote">"The photo booth was the absolute highlight of our Grade 6 Graduation! The kids had a safe, amazing time, and parents loved the photos. The Shan Booth team was so professional. Highly recommended!"</p>
               <span className="testimonial-author">- Sarah J. (Tarneit Primary School)</span>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-quote">"We hired The Shan Booth for our company EOY party and it was a massive hit. It really brought the team together for a laugh. Professional, seamless, and so much fun. We're booking again for next year!"</p>
-              <span className="testimonial-author">- Mark R. (Corporate EOY Party)</span>
             </div>
             <div className="testimonial-card">
               <p className="testimonial-quote">"The Shan Booth was the best part of our wedding! Our guests are still talking about how much fun they had. The attendant was amazing and the photo quality is fantastic. 10/10 recommend!"</p>

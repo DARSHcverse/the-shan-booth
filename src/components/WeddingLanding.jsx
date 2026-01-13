@@ -98,7 +98,7 @@ const WeddingLanding = () => {
         <p>
           Your wedding day deserves unforgettable memories.{" "}
           <strong>The Shan Booth</strong> provides elegant{" "}
-          <strong>wedding photo booth hire in Melbourne</strong>, giving your
+          <strong>wedding photo booth hire in Melbourne</strong>,<br /> giving your
           guests instant prints, digital sharing, and keepsakes you’ll cherish
           forever.
         </p>
@@ -157,6 +157,21 @@ const WeddingLanding = () => {
             <li>Melbourne & surrounding suburbs</li>
             <li>Geelong</li>
             <li>Tarneit & Western suburbs</li>
+          </ul>
+        </div>
+
+        <div className="wedding-section">
+          <h2>💍 Book Early for Weddings & Celebrations</h2>
+          <p>
+            Wedding seasons fill up quickly! Secure your photo booth early to make sure your special day is perfectly captured.
+          </p>
+          <h3 className="available-title">📅 Perfect for:</h3>
+          <ul className="available-list">
+            <li>Weddings</li>
+            <li>Engagement parties</li>
+            <li>Bridal showers</li>
+            <li>Hen’s & Buck’s parties</li>
+            <li>Anniversary celebrations</li>
           </ul>
         </div>
 

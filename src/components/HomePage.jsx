@@ -583,7 +583,7 @@ const HomePage = () => {
         <div className="container">
           <h2>Ready to Lock in the Fun for Your End-of-Year Event?</h2>
           <p>Don't leave your party entertainment to the last minute. Secure The Shan Booth today! Explore our photo booth hire Melbourne options and discover why we're Melbourne's trusted choice for unforgettable event experiences.</p>
-          <button onClick={() => navigate('/quickquote')} className="home-button">Secure Your 2025 Date</button>
+          <button onClick={() => navigate('/quickquote')} className="home-button">Secure Your 2026 Date</button>
         </div>
       </section>
 

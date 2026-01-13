@@ -155,7 +155,7 @@ const ChristmasLanding = () => {
         </div>
 
         <div className="christmas-section">
-          <h2>🎅 Book Early for Christmas 2025</h2>
+          <h2>🎅 Book Early for Christmas 2026</h2>
           <p>
             The holiday season is one of our busiest times of the year! Secure your booth today to avoid missing out.
           </p>

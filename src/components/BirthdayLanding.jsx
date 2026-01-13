@@ -134,9 +134,20 @@ const BirthdayLanding = () => {
         </div>
 
         <div className="birthday-section">
-          <h2>📅 Book Early to Party Right!</h2>
-          <p>Our birthday booths book out fast on weekends. Secure your spot and let us bring the joy and creativity to your celebration.</p>
+          <h2>🎉 Book Early for Birthday Celebrations</h2>
+          <p>
+            Birthday dates book out fast! Secure your photo booth early to capture fun memories from your special celebration.
+          </p>
+          <h3 className="available-title">📅 Perfect for:</h3>
+          <ul className="available-list">
+            <li>Sweet 16 parties</li>
+            <li>18th & 21st birthdays</li>
+            <li>Kids’ birthday parties</li>
+            <li>Adult milestone birthdays</li>
+            <li>Surprise birthday celebrations</li>
+          </ul>
         </div>
+
 
         <div className="cta-center">
           <a href="/booking" className="cta-btn">Book Birthday Booth</a>

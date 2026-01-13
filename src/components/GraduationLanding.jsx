@@ -137,7 +137,7 @@ const GraduationLanding = () => {
         </div>
 
         <div className="graduation-section">
-          <h2>✅ Book Early for the 2025 Graduation Season</h2>
+          <h2>✅ Book Early for the 2026 Graduation Season</h2>
           <p>
             Peak graduation dates fill fast. Secure your photobooth today to avoid missing out.
           </p>

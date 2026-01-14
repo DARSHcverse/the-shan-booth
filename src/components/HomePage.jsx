@@ -10,7 +10,7 @@ import boothimg3 from '../images/hero-banner-3.webp';
 import boothimg4 from '../images/hero-banner-4.webp';
 import photobooth from '../images/photobooth.webp';
 import events from '../images/boothimg7.webp';
-import packages from '../images/boothimg4.webp';
+import packages from '../images/inclusivepack.webp';
 import gifvideo from '../images/fun-vdo.webm';
 import gifvideo2 from '../images/fun-vdo-2.webm';
 import gifvideo3 from '../images/fun-vdo-3.webm';
@@ -241,7 +241,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Info Cards (Updated to Modern Style) */}
+      {/* Info Cards */}
       <section className="section-padding info-cards">
         <div className="container">
           <h2 className="section-title info-cards-title">
@@ -272,7 +272,7 @@ const HomePage = () => {
 
             <article className="info-card info-card--schools">
               <img
-                src={packages}
+                src={photobooth}
                 alt="Happy students with their photostrips at a school graduation"
                 className="info-card-img"
               />
@@ -293,7 +293,7 @@ const HomePage = () => {
 
             <article className="info-card info-card--packages">
               <img
-                src={photobooth}
+                src={packages}
                 alt="Sleek, modern photobooth with custom branding options"
                 className="info-card-img"
               />
@@ -498,8 +498,8 @@ const HomePage = () => {
               autoPlay
               loop
               muted
-              laysInline
-              preload="metadata"
+              playsinline
+              preload="auto"
               className="testimonial-webm"
             >
             </video>
@@ -508,6 +508,8 @@ const HomePage = () => {
               autoPlay
               loop
               muted
+              playsinline
+              preload="auto"
               className="testimonial-webm"
             >
             </video>
@@ -516,6 +518,8 @@ const HomePage = () => {
               autoPlay
               loop
               muted
+              playsinline
+              preload="auto"
               className="testimonial-webm"
             >
             </video>

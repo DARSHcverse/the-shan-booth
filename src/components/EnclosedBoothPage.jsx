@@ -6,19 +6,33 @@ import openBoothVideo from '../images/enclosedVID.mp4';
 const EnclosedBoothPage = () => (
   <>
     <Helmet>
-      <title>Enclosed Photo Booth Hire Melbourne | Private & Fun Event Booth</title>
+      <title>Enclosed Photo Booth Hire Melbourne | Private & Fun Event Booth | The Shan Booth</title>
       <meta
         name="description"
         content="Enclosed Photo Booth Hire in Melbourne with Canon R100 mirrorless camera and Surface Pro setup. Step into an enclosed, bouncy-castle-style booth and enjoy private fun shots."
       />
       <link rel="canonical" href="https://www.photoboothwithshan.com.au/enclosed-booth" />
+
+      {/* Open Graph */}
       <meta property="og:title" content="Enclosed Photo Booth Hire Melbourne | Private Event Fun" />
       <meta
         property="og:description"
         content="Enjoy private, exciting photos with our Enclosed Booth setup — feels like a bouncy castle but with pro camera gear and vibrant lighting!"
       />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.photoboothwithshan.com.au/enclosed-booth" />
       <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/enclosed.jpeg" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Enclosed Photo Booth Hire Melbourne | Private Event Fun" />
+      <meta
+        name="twitter:description"
+        content="Step inside our Enclosed Booth in Melbourne — private, cozy, and full of fun energy for weddings, parties, and corporate events."
+      />
+      <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/enclosed.jpeg" />
     </Helmet>
+
 
     <main className="booth-page section-padding">
       <div className="container">

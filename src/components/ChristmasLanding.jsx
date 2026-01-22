@@ -62,14 +62,10 @@ const ChristmasLanding = () => {
           {`
           {
             "@context": "https://schema.org",
-            "@type": "Event",
+            "@type": "Service",
             "name": "Christmas Photo Booth Hire Melbourne",
             "description": "Festive photobooth hire for Christmas parties, corporate end-of-year events and holiday celebrations across Melbourne & Geelong.",
             "image": "https://www.photoboothwithshan.com.au/christmas.webp",
-            "startDate": "2025-12-01T09:00:00+11:00",
-            "endDate": "2026-01-05T23:00:00+11:00",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
             "location": {
               "@type": "Place",
               "name": "Melbourne & Geelong",
@@ -104,11 +100,12 @@ const ChristmasLanding = () => {
 
       {/* ✅ Landing Page Content */}
       <div className="christmas-landing">
-        <h1>Christmas & End-of-Year Party Photobooth Hire in Melbourne & Geelong</h1>
+        <h1>Christmas Party Photo Booths for End-of-Year Events in Melbourne</h1>
         <p>
-          Make your <strong>Christmas party</strong>, <strong>corporate event</strong>, or
-          <strong> end-of-year celebration</strong> unforgettable with <strong>The Shan Booth</strong>!
-          Our premium photobooths bring the fun, capture memories, and create instant keepsakes your guests will love.
+          Planning a Christmas or end-of-year party in Melbourne or Geelong? 
+          Our festive photo booth experiences are designed exclusively for the holiday season, 
+          featuring Christmas-themed props, seasonal backdrops, and party-ready booth setups 
+          that bring teams, families, and guests together.
         </p>
 
         <div className="christmas-gallery">

@@ -5,43 +5,19 @@ const TermsPage = () => {
   return (
     <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
       <Helmet>
-        <title>Terms & Conditions for Photobooth Hire Melbourne | The Shan Booth</title>
+        <title>Terms & Conditions | The Shan Booth</title>
+
         <meta
           name="description"
-          content="Read the Terms and Conditions for using The Shan Booth photobooth hire services in Melbourne. Learn about bookings, payments, cancellations, and client responsibilities."
+          content="Terms and Conditions for The Shan Booth photobooth hire services in Melbourne, including bookings, payments, cancellations, and responsibilities."
         />
+
         <link
           rel="canonical"
           href="https://www.photoboothwithshan.com.au/terms"
         />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Terms & Conditions | The Shan Booth" />
-        <meta
-          property="og:description"
-          content="Review the Terms & Conditions for photobooth hire services from The Shan Booth in Melbourne, including booking, cancellations, and liability policies."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.photoboothwithshan.com.au/terms"
-        />
-        <meta
-          property="og:image"
-          content="https://www.photoboothwithshan.com.au/images/logo.png"
-        />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms & Conditions | The Shan Booth" />
-        <meta
-          name="twitter:description"
-          content="Learn about the Terms & Conditions for hiring The Shan Booth photobooth services in Melbourne."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/images/logo.png"
-        />
+        <meta name="robots" content="index, follow, noimageindex" />
       </Helmet>
 
       <h1>Terms and Conditions</h1>

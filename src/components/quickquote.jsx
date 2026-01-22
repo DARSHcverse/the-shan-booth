@@ -68,7 +68,7 @@ const QuickQuote = () => {
   return (
     <>
       <Helmet>
-        <title>Get a Quick Quote for Photobooth Hire  | The Shan Booth</title>
+        <title>Get a Quick Quote for Photobooth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
           content="Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."
@@ -76,39 +76,43 @@ const QuickQuote = () => {
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/quickquote" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Get a Quick Quote | The Shan Booth" />
-        <meta property="og:description" content="Instant photobooth hire quotes in Melbourne. Select your package, provide event details, and get your custom price from The Shan Booth." />
+        <meta property="og:title" content="Get a Quick Quote for Photobooth Hire | The Shan Booth" />
+        <meta
+          property="og:description"
+          content="Instant photobooth hire quotes in Melbourne. Select your package, provide event details, and get your custom price from The Shan Booth."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/quickquote" />
         <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Get a Quick Quote | The Shan Booth" />
-        <meta name="twitter:description" content="Request an instant photobooth hire quote for your Melbourne event. Weddings, birthdays, school functions, and corporate events covered." />
+        <meta name="twitter:title" content="Get a Quick Quote for Photobooth Hire | The Shan Booth" />
+        <meta
+          name="twitter:description"
+          content="Request an instant photobooth hire quote for your Melbourne event. Weddings, birthdays, school functions, and corporate events covered."
+        />
         <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/logo.png" />
 
-        {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Photobooth Hire Quote",
-            "provider": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "name": "Melbourne, Australia"
-            },
-            "url": "https://www.photoboothwithshan.com.au/quickquote",
-            "description": "Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."
-          }
-          `}
-        </script>
+        {/* JSON-LD */}
+        <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Photobooth Hire Quote",
+          "provider": {
+            "@type": "Organization",
+            "name": "The Shan Booth",
+            "url": "https://www.photoboothwithshan.com.au"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Melbourne, Australia"
+          },
+          "url": "https://www.photoboothwithshan.com.au/quickquote",
+          "description": "Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."
+        }
+        `}</script>
       </Helmet>
 
       <div className="quick-quote-container">

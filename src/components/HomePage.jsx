@@ -33,6 +33,16 @@ const HomePage = () => {
     return () => clearInterval(intervalId);
   }, [images.length]);
 
+  useEffect(() => {
+  if (!document.getElementById("sociablekit-google-reviews")) {
+    const script = document.createElement("script");
+    script.id = "sociablekit-google-reviews";
+    script.src = "https://widgets.sociablekit.com/google-reviews/widget.js";
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+}, []);
+
   // ✅ Structured Data
   const structuredData = {
     "@context": "https://schema.org",
@@ -539,6 +549,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </section>
+      
+      <section className="section-padding bg-light">
+        <div id="google-reviews-container" className="sk-ww-google-reviews" data-embed-id="25643287"></div>
       </section>
 
       {/* FAQ */}

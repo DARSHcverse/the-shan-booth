@@ -32,6 +32,8 @@ const BlogPost = () => {
 
   const canonical = `https://www.photoboothwithshan.com.au/blog/${post.slug}`;
 
+  const defaultImage = "https://www.photoboothwithshan.com.au/images/glam.png";
+
   return (
     <>
       <Helmet>
@@ -39,6 +41,19 @@ const BlogPost = () => {
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.keywords.join(", ")} />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.image || defaultImage} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="article" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={post.image || defaultImage} />
 
         {/* Schema */}
         <script type="application/ld+json">

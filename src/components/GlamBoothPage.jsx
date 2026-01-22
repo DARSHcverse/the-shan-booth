@@ -18,6 +18,19 @@ const GlamBoothPage = () => (
         content="Add luxury and style to your event with our Glam Booth. AI filter magic, pro lighting, and mirrorless camera clarity — perfect for weddings and red carpet events."
       />
       <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/glam.png" />
+      <meta property="og:url" content="https://www.photoboothwithshan.com.au/glam-booth" />
+      <meta property="og:type" content="website" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Glam Photo Booth Hire Melbourne" />
+      <meta
+        name="twitter:description"
+        content="Luxury Glam Photo Booth hire in Melbourne with AI beauty filters and professional lighting."
+      />
+      <meta
+        name="twitter:image"
+        content="https://www.photoboothwithshan.com.au/images/glam.png"
+      />
     </Helmet>
 
     <main className="booth-page section-padding">

@@ -41,14 +41,10 @@ const GraduationLanding = () => {
           {`
           {
             "@context": "https://schema.org",
-            "@type": "Event",
+            "@type": "Service",
             "name": "Graduation Photo Booth Hire Melbourne",
             "description": "Professional photobooth hire for graduations, school formals and university balls across Melbourne & Geelong.",
             "image": "https://www.photoboothwithshan.com.au/gradbooth.jpg",
-            "startDate": "2025-12-20T09:00:00+10:00",
-            "endDate": "2026-01-20T23:00:00+11:00",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
             "location": {
               "@type": "Place",
               "name": "Melbourne & Geelong",
@@ -88,10 +84,11 @@ const GraduationLanding = () => {
           <img src={gradStrip} alt="Graduation photobooth strip" />
         </div>
         
-        <h1>Graduation & School Formal Photobooth Hire in Melbourne & Geelong</h1>
+        <h1>Photo Booths for Graduations & School Formals</h1>
         <p>
-          Celebrate your <strong>graduation</strong>, <strong>school formal</strong>, or <strong>uni ball</strong> with
-          <strong> The Shan Booth</strong>. Classy backdrops, fun props, and instant prints your guests will love.
+          Graduation nights and school formals deserve something memorable. Our graduation-focused photo booth
+          experiences are designed for milestone celebrations, featuring elegant backdrops, formal-friendly props,
+          and keepsake photo strips that students and families treasure long after the night ends.
         </p>
 
         <div className="graduation-gallery">

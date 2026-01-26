@@ -10,7 +10,7 @@ const WeddingLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Helmet>
-        <title>Wedding Photo Booth Hire Melbourne 💍 | The Shan Booth</title>
+        <title>Wedding Photobooth Hire Melbourne 💍 | The Shan Booth</title>
 
         <meta
           name="description"

@@ -6,7 +6,7 @@ import openBoothVideo from '../images/enclosedVID.mp4';
 const EnclosedBoothPage = () => (
   <>
     <Helmet>
-      <title>Enclosed Photo Booth Hire Melbourne | Private & Fun Event Booth | The Shan Booth</title>
+      <title>Enclosed Photobooth Hire Melbourne | Private & Fun Event Booth | The Shan Booth</title>
       <meta
         name="description"
         content="Enclosed Photo Booth Hire in Melbourne with Canon R100 mirrorless camera and Surface Pro setup. Step into an enclosed, bouncy-castle-style booth and enjoy private fun shots."

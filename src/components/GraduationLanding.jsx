@@ -9,7 +9,7 @@ const GraduationLanding = () => {
     <>
       {/* SEO + Meta Tags */}
       <Helmet>
-        <title>Graduation Photo Booth Hire Melbourne 🎓 | The Shan Booth</title>
+        <title>Graduation Photobooth Hire Melbourne 🎓 | The Shan Booth</title>
         <meta
           name="description"
           content="Celebrate graduations, school formals, and uni balls with The Shan Booth. Classy backdrops, fun props, and instant prints. Serving Melbourne, Geelong & Grovedale."

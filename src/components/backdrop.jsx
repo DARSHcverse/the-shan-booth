@@ -81,13 +81,13 @@ const BackdropPage = () => {
         <meta property="og:description" content="Explore whimsical backdrop designs and playful props for photo booths at weddings, parties, school graduations, and corporate events." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/backdrops" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/flowerbackdrop.png" />
+        <meta property="og:image" content="/images/flowerbackdrop.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Backdrop Designs & Fun Props | The Shan Booth" />
         <meta name="twitter:description" content="Explore whimsical backdrop designs and playful props for photo booths at weddings, parties, school graduations, and corporate events." />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/gradbackdrop.png" />
+        <meta name="twitter:image" content="/images/gradbackdrop.png" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">

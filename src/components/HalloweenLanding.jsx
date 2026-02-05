@@ -27,7 +27,7 @@ const HalloweenLanding = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/halloween" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/halloween.webp" />
+        <meta property="og:image" content="/images/halloween.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Halloween Photo Booth Hire Melbourne 🎃 | The Shan Booth" />
@@ -35,7 +35,7 @@ const HalloweenLanding = () => {
           name="twitter:description"
           content="Book your spooky photobooth for Halloween! Serving Melbourne, Geelong & Grovedale with themed backdrops and instant prints."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/halloween.webp" />
+        <meta name="twitter:image" content="/images/halloween.webp" />
 
         <script type="application/ld+json">
           {`
@@ -62,7 +62,7 @@ const HalloweenLanding = () => {
               "name": "The Shan Booth",
               "url": "https://www.photoboothwithshan.com.au"
             },
-            "image": "https://www.photoboothwithshan.com.au/images/halloween.webp",
+            "image": "/images/halloween.webp",
             "description": "Photobooth hire for Halloween parties, costume events, and themed celebrations across Melbourne, Geelong & Grovedale."
           }
           `}

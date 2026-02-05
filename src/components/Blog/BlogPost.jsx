@@ -26,7 +26,7 @@ const BlogPost = ({ slug: slugProp }) => {
 
   const canonical = `https://www.photoboothwithshan.com.au/blog/${post.slug}`;
 
-  const defaultImage = "https://www.photoboothwithshan.com.au/images/glam.png";
+  const defaultImage = "/images/glam.png";
 
   return (
     <>

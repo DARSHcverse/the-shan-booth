@@ -38,7 +38,7 @@ const ChristmasLanding = () => {
         />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/images/christmas.webp"
+          content="/images/christmas.webp"
         />
 
         {/* Twitter */}
@@ -53,7 +53,7 @@ const ChristmasLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/images/christmas2.webp"
+          content="/images/christmas2.webp"
         />
 
         {/* Schema.org JSON-LD for seasonal landing page */}
@@ -64,7 +64,7 @@ const ChristmasLanding = () => {
             "@type": "Service",
             "name": "Christmas Photo Booth Hire Melbourne",
             "description": "Festive photobooth hire for Christmas parties, corporate end-of-year events and holiday celebrations across Melbourne & Geelong.",
-            "image": "https://www.photoboothwithshan.com.au/images/christmas.webp",
+            "image": "/images/christmas.webp",
             "location": {
               "@type": "Place",
               "name": "Melbourne & Geelong",

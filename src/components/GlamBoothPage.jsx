@@ -16,7 +16,7 @@ const GlamBoothPage = () => (
         property="og:description"
         content="Add luxury and style to your event with our Glam Booth. AI filter magic, pro lighting, and mirrorless camera clarity — perfect for weddings and red carpet events."
       />
-      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/glam.png" />
+      <meta property="og:image" content="/images/glam.png" />
       <meta property="og:url" content="https://www.photoboothwithshan.com.au/glam-booth" />
       <meta property="og:type" content="website" />
 
@@ -28,7 +28,7 @@ const GlamBoothPage = () => (
       />
       <meta
         name="twitter:image"
-        content="https://www.photoboothwithshan.com.au/images/glam.png"
+        content="/images/glam.png"
       />
     </Head>
 

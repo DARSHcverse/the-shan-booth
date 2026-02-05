@@ -31,7 +31,7 @@ const PhotoboothLanding = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/photoboothhiremelbourne" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg5.webp" />
+        <meta property="og:image" content="/images/boothimg5.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -40,7 +40,7 @@ const PhotoboothLanding = () => {
           name="twitter:description"
           content="Book the best photobooth hire Melbourne today! Unlimited prints, fun props & instant digital sharing."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/boothimg4.webp" />
+        <meta name="twitter:image" content="/images/boothimg4.webp" />
 
         {/* ✅ Schema Markup */}
         <script type="application/ld+json">
@@ -50,7 +50,7 @@ const PhotoboothLanding = () => {
             "@type": "LocalBusiness",
             "name": "The Shan Booth",
             "description": "Photobooth hire Melbourne for weddings, birthdays, and corporate events.",
-            "image": "https://www.photoboothwithshan.com.au/images/boothimg5.webp",
+            "image": "/images/boothimg5.webp",
             "url": "https://www.photoboothwithshan.com.au",
             "telephone": "+61 475 116 521",
             "address": {

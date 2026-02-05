@@ -38,7 +38,7 @@ const CorporateEventsLanding = () => {
         />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/images/coperateimg.webp"
+          content="/images/coperateimg.webp"
         />
 
         {/* Twitter */}
@@ -53,7 +53,7 @@ const CorporateEventsLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/images/photobooth.webp"
+          content="/images/photobooth.webp"
         />
 
         {/* Schema.org JSON-LD */}
@@ -79,7 +79,7 @@ const CorporateEventsLanding = () => {
               }
             ],
             "description": "Corporate photo booth hire for product launches, trade shows, and office celebrations in Melbourne & Geelong. Includes branding, instant prints, and digital sharing.",
-            "image": "https://www.photoboothwithshan.com.au/images/coperateimg.webp"
+            "image": "/images/coperateimg.webp"
           }
           `}
         </script>

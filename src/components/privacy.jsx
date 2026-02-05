@@ -28,7 +28,7 @@ const PrivacyPage = () => {
         />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/images/logo.png"
+          content="/images/logo.png"
         />
 
         {/* Twitter */}
@@ -40,7 +40,7 @@ const PrivacyPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/images/logo.png"
+          content="/images/logo.png"
         />
       </Head>
 

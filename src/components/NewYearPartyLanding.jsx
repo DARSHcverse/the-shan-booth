@@ -26,11 +26,11 @@ const NewYearPartyLanding = () => {
           property="og:description"
           content="Bring energy and fun to your New Year event! Unlimited prints, festive props & digital sharing for NYE & New Year celebrations."
         />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/newyear1.webp" />
+        <meta property="og:image" content="/images/newyear1.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/newyear2.webp" />
+        <meta name="twitter:image" content="/images/newyear2.webp" />
 
         {/* Schema */}
         <script type="application/ld+json">
@@ -40,7 +40,7 @@ const NewYearPartyLanding = () => {
             "@type": "Event",
             "name": "New Year Party Photo Booth Hire Melbourne",
             "description": "Celebrate New Year’s Eve and New Year parties with premium photobooth hire in Melbourne, Tarneit & Geelong.",
-            "image": "https://www.photoboothwithshan.com.au/images/newyear1.webp",
+            "image": "/images/newyear1.webp",
             "startDate": "2025-12-31T18:00:00+11:00",
             "endDate": "2026-02-01T02:00:00+11:00",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",

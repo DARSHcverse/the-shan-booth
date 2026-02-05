@@ -49,8 +49,8 @@ const HomePage = () => {
     "@id": "https://www.photoboothwithshan.com.au/#localbusiness",
     "name": "The Shan Booth",
     "url": "https://www.photoboothwithshan.com.au/",
-    "logo": "https://www.photoboothwithshan.com.au/images/logo.png",
-    "image": "https://www.photoboothwithshan.com.au/images/photobooth.webp",
+    "logo": "/images/logo.png",
+    "image": "/images/photobooth.webp",
     "description": "The Shan Booth provides premium photo booth hire in Melbourne with open booths, glam booths, enclosed booths, 360 video booths, and audio guest books. Perfect for weddings, graduations, corporate events, and Christmas parties.",
     "telephone": "+61 475 116 521",
     "email": "mailto:theshanbooth@gmail.com",
@@ -188,7 +188,7 @@ const HomePage = () => {
         />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/" />
         <meta property="og:site_name" content="The Shan Booth" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
+        <meta property="og:image" content="/images/photobooth.webp" />
         <meta property="og:image:alt" content="Photo booth hire Melbourne - The Shan Booth setup" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -197,7 +197,7 @@ const HomePage = () => {
           name="twitter:description"
           content="Book affordable photo booth hire Melbourne – weddings, school graduations, Christmas parties & corporate events. Choose open, glam, magic mirror & 360 booths."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
+        <meta name="twitter:image" content="/images/photobooth.webp" />
         <meta name="twitter:creator" content="@TheShanBooth" />
 
         <meta name="geo.region" content="AU-VIC" />

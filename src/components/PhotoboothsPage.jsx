@@ -26,7 +26,7 @@ const PhotoboothsPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/photobooths" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
+        <meta property="og:image" content="/images/boothimg6.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -35,7 +35,7 @@ const PhotoboothsPage = () => {
           name="twitter:description"
           content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
+        <meta name="twitter:image" content="/images/boothimg6.webp" />
       </Head>
 
       <main className="main-content section-padding">

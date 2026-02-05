@@ -35,7 +35,7 @@ const PBSeoPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/pbseopage" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
+        <meta property="og:image" content="/images/photobooth.webp" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -44,7 +44,7 @@ const PBSeoPage = () => {
           name="twitter:description"
           content="Hire the best photo booth in Melbourne – unlimited prints, props, custom backdrops & instant pendrive. Weddings, corporate & graduations."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
+        <meta name="twitter:image" content="/images/photobooth.webp" />
 
         {/* JSON-LD Schema */}
         <script type="application/ld+json">
@@ -53,7 +53,7 @@ const PBSeoPage = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "The Shan Booth",
-            "image": "https://www.photoboothwithshan.com.au/images/photobooth.webp",
+            "image": "/images/photobooth.webp",
             "url": "https://www.photoboothwithshan.com.au",
             "telephone": "",
             "address": {

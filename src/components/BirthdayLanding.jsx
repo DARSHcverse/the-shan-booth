@@ -25,7 +25,7 @@ const BirthdayLanding = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/birthday" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp" />
+        <meta property="og:image" content="/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -38,7 +38,7 @@ const BirthdayLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
+          content="/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
         />
 
         {/* Improved Event Schema */}
@@ -65,7 +65,7 @@ const BirthdayLanding = () => {
               }
             },
             "image": [
-              "https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
+              "/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
             ],
             "description": "Photo booth hire for birthday parties in Melbourne, Geelong & Grovedale. Fun props, unlimited prints, and vibrant backdrops for every age.",
             "organizer": {

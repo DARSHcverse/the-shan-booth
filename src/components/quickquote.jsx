@@ -82,7 +82,7 @@ const QuickQuote = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/quickquote" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/logo.png" />
+        <meta property="og:image" content="/images/logo.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -91,7 +91,7 @@ const QuickQuote = () => {
           name="twitter:description"
           content="Request an instant photobooth hire quote for your Melbourne event. Weddings, birthdays, school functions, and corporate events covered."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/logo.png" />
+        <meta name="twitter:image" content="/images/logo.png" />
 
         {/* JSON-LD */}
         <script type="application/ld+json">{`

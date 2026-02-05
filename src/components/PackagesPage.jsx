@@ -159,7 +159,7 @@ const PackagesPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/packages" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
+        <meta property="og:image" content="/images/photobooth.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -168,7 +168,7 @@ const PackagesPage = () => {
           name="twitter:description"
           content="Choose from Standard or Glam Booth packages with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
+        <meta name="twitter:image" content="/images/photobooth.webp" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">

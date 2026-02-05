@@ -36,7 +36,7 @@ const WeddingLanding = () => {
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/weddings" />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/images/wedding.webp"
+          content="/images/wedding.webp"
         />
 
         {/* Twitter */}
@@ -48,7 +48,7 @@ const WeddingLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/images/wedding2.webp"
+          content="/images/wedding2.webp"
         />
 
         {/* ✅ CORRECT Schema for Wedding Page (Service + LocalBusiness) */}

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu, X } from 'lucide-react';
-import logo from '/images/logo.png';
-import callIcon from '/images/callIcon.png';
+const logo = '/images/logo.png';
+const callIcon = '/images/callIcon.png';
 // import iconGradCap from '/images/prop.png'; // Floating icon (currently not in use)
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

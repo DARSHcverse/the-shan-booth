@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Head from "next/head";
 
-import offer from '/images/offer.webp';
+const offer = '/images/offer.webp';
 
 const PackagesPage = () => {
   const router = useRouter();

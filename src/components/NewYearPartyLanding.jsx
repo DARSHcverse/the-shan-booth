@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
-import newyearImg1 from "/images/newyear1.webp";
-import newyearImg2 from "/images/newyear2.webp";
+const newyearImg1 = '/images/newyear1.webp';
+const newyearImg2 = '/images/newyear2.webp';
 
 const NewYearPartyLanding = () => {
   return (

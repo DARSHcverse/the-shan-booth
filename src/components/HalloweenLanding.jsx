@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import halloweenBackdrop from "/images/halloween.webp"; 
-import halloweenStrip from "/images/halloweenstrip.webp"; 
-import ghostIcon from "/images/ghost.png"; 
+const halloweenBackdrop = '/images/halloween.webp';
+const halloweenStrip = '/images/halloweenstrip.webp';
+const ghostIcon = '/images/ghost.png';
 
 const HalloweenLanding = () => {
   return (

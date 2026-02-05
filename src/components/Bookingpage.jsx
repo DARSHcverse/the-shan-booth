@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import gradStrip from "/images/GradStrip.png";
-import corporateStrip from "/images/coporatestrip.png";
+const gradStrip = '/images/GradStrip.png';
+const corporateStrip = '/images/coporatestrip.png';
 import { useRouter } from "next/router";
 
 const BookingPage = () => {

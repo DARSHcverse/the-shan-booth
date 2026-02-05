@@ -26,7 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.9.1"
+    "@netlify/plugin-nextjs": "^5.9.1",
+    "eslint": "^9.18.0"
   },
   "scripts": {
     "dev": "next dev",

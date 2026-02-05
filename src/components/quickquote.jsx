@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useRouter } from 'next/router';
 import Head from "next/head";
-import birthdayStrip from "/images/birthdaystrip.png";
-import corporateStrip from "/images/coporatestrip.png";
+const birthdayStrip = '/images/birthdaystrip.png';
+const corporateStrip = '/images/coporatestrip.png';
 
 const QuickQuote = () => {
   const router = useRouter();

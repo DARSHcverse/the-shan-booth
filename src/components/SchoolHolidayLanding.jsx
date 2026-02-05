@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
-import schoolHoliday1 from "/images/schoolholiday1.webp";
-import schoolHoliday2 from "/images/schoolholiday2.webp";
+const schoolHoliday1 = '/images/schoolholiday1.webp';
+const schoolHoliday2 = '/images/schoolholiday2.webp';
 
 const SchoolHolidayLanding = () => {
   return (

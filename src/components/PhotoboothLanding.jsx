@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import boothImg from "/images/boothimg4.webp";
-import boothImg2 from "/images/boothimg5.webp";
-import birthdayStrip from "/images/birthdaystrip.png";
+const boothImg = '/images/boothimg4.webp';
+const boothImg2 = '/images/boothimg5.webp';
+const birthdayStrip = '/images/birthdaystrip.png';
 
 const PhotoboothLanding = () => {
   return (

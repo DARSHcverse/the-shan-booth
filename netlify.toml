@@ -10,6 +10,47 @@
   status = 301
   force = true
 
+# Blog redirects
+[[redirects]]
+  from = "/blog/book-us-for-christmas-2025"
+  to = "/blog/christmas-hire"
+  status = 301
+
+[[redirects]]
+  from = "/blog/blog-post-corporate"
+  to = "/blog/corporate-event-trends"
+  status = 301
+
+[[redirects]]
+  from = "/blog/blog-post-photoboothtrends"
+  to = "/blog/photo-booth-trends-melbourne-2025"
+  status = 301
+
+[[redirects]]
+  from = "/blog/blog-post-christmasprops"
+  to = "/blog/top-10-props"
+  status = 301
+
+[[redirects]]
+  from = "/blog/blog-post-weddingphotobooth"
+  to = "/blog/wedding-photo-booth-ideas"
+  status = 301
+
+[[redirects]]
+  from = "/blog/blog-post-photobooth-cost"
+  to = "/blog/photobooth-cost-australia"
+  status = 301
+
+[[redirects]]
+  from = "/blog/top-5-reasons-to-hire-photo-booth-melbourne"
+  to = "/blog/photobooth-benefits"
+  status = 301
+
+[[redirects]]
+  from = "/blog/top%2010%20props"
+  to = "/blog/top-10-props"
+  status = 301
+
 # Canonicalize URLs: remove trailing slashes
 [[redirects]]
   from = "/:splat/"

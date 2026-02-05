@@ -51,20 +51,6 @@
   to = "/blog/top-10-props"
   status = 301
 
-# Canonicalize URLs: remove trailing slashes
-[[redirects]]
-  from = "/:splat/"
-  to = "/:splat"
-  status = 301
-  force = true
-
-# Canonicalize blog URLs: remove trailing slashes
-[[redirects]]
-  from = "/blog/:slug/"
-  to = "/blog/:slug"
-  status = 301
-  force = true
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 

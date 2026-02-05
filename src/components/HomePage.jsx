@@ -15,10 +15,10 @@ const gifvideo2 = '/images/fun-vdo-2.webm';
 const gifvideo3 = '/images/fun-vdo-3.webm';
 
 // Floating Icons (currently not in use, can be enabled if needed later for christmas theme)
-// import iconCamera from '../images/prop2.png';
-// import iconChristmasTree from '../images/prop3.png';
-// import iconPartyPopper from '../images/prop4.png';
-// import iconPhotoStrip from '../images/prop5.png';
+// import iconCamera from '/images/prop2.png';
+// import iconChristmasTree from '/images/prop3.png';
+// import iconPartyPopper from '/images/prop4.png';
+// import iconPhotoStrip from '/images/prop5.png';
 
 const HomePage = () => {
   const router = useRouter();

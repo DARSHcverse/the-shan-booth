@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from "next/head";
-import photobooth from '../images/boothimg6.webp';
-import glam from '../images/glam.png';
-import enclosure from '../images/enclosed.jpeg';
+import photobooth from '/images/boothimg6.webp';
+import glam from '/images/glam.png';
+import enclosure from '/images/enclosed.jpeg';
 import { useRouter } from 'next/router';
 
 const PhotoboothsPage = () => {

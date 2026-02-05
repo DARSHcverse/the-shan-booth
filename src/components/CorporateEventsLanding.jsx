@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import corporateImg1 from "../images/coperateimg.webp";
-import corporateImg2 from "../images/photobooth.webp";
-import corporateStrip from "../images/coporatestrip.png";
+import corporateImg1 from "/images/coperateimg.webp";
+import corporateImg2 from "/images/photobooth.webp";
+import corporateStrip from "/images/coporatestrip.png";
 
 const CorporateEventsLanding = () => {
   return (

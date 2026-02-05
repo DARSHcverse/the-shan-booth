@@ -1,7 +1,7 @@
 import Head from "next/head";
-import birthdayBackdrop from "../images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp";
-import birthdayBackdrop2 from "../images/smiling-young-man-wearing-party-hat-surprised-young-girl-holds-hands-together-isolated-pink-wall.webp";
-import birthdayStrip from "../images/birthdaystrip.png";
+import birthdayBackdrop from "/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp";
+import birthdayBackdrop2 from "/images/smiling-young-man-wearing-party-hat-surprised-young-girl-holds-hands-together-isolated-pink-wall.webp";
+import birthdayStrip from "/images/birthdaystrip.png";
 
 const BirthdayLanding = () => {
   return (

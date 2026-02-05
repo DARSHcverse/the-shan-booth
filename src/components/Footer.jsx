@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import fb from '../images/3259376_facebook_media_social_icon.png';
-import ig from '../images/3259424_instagram_social media_social_icon.png';
-import tw from '../images/3259404_media_social_twitter_icon.png';
-import phone from '../images/3259417_media_social_viber_icon.png';
-import map from '../images/3259380_dreamstale_media_social_icon.png';
-import gm from '../images/3259428_google_media_plus_social_icon.png';
+import fb from '/images/3259376_facebook_media_social_icon.png';
+import ig from '/images/3259424_instagram_social media_social_icon.png';
+import tw from '/images/3259404_media_social_twitter_icon.png';
+import phone from '/images/3259417_media_social_viber_icon.png';
+import map from '/images/3259380_dreamstale_media_social_icon.png';
+import gm from '/images/3259428_google_media_plus_social_icon.png';
 
 const Footer = () => {
   const googleMapsApiKey =

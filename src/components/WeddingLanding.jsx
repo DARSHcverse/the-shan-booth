@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import weddingImg from "../images/wedding.webp";
-import weddingImg2 from "../images/wedding2.webp";
-import WeddingStrip from "../images/weddingstrip.webp";
+import weddingImg from "/images/wedding.webp";
+import weddingImg2 from "/images/wedding2.webp";
+import WeddingStrip from "/images/weddingstrip.webp";
 
 const WeddingLanding = () => {
   return (

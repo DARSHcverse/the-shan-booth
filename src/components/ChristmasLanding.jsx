@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import christmasImg from "../images/christmas.webp";
-import christmasImg2 from "../images/christmas2.webp";
+import christmasImg from "/images/christmas.webp";
+import christmasImg2 from "/images/christmas2.webp";
 
 const ChristmasLanding = () => {
   return (

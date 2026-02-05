@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import gradBackdrop from "../images/gradbooth.jpg";
-import gradStrip from "../images/GradStrip.png";
+import gradBackdrop from "/images/gradbooth.jpg";
+import gradStrip from "/images/GradStrip.png";
 
 const GraduationLanding = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from "next/head";
-import glam from '../images/glam.png';
+import glam from '/images/glam.png';
 
 const GlamBoothPage = () => (
   <>

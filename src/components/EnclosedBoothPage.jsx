@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from "next/head";
-import openBoothVideo from '../images/enclosedVID.mp4';
+import openBoothVideo from '/images/enclosedVID.mp4';
 
 const EnclosedBoothPage = () => (
   <>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import blackdrop from "../images/blackbackdrop.png";
-import graddrop from "../images/gradbackdrop.png";
-import whitedrop from "../images/whitebackdrop.png";
-import flowerkdrop from "../images/flowerbackdrop.png";
+import blackdrop from "/images/blackbackdrop.png";
+import graddrop from "/images/gradbackdrop.png";
+import whitedrop from "/images/whitebackdrop.png";
+import flowerkdrop from "/images/flowerbackdrop.png";
 
 const propIcons = [
   "🎩", "👑", "👓", "🎀", "🥳", "🌟", "🎈", "🎉", "🎤", "✨", "💖",

@@ -1,23 +1,9 @@
-# robots.txt for photoboothwithshan.com.au
-
+# *
 User-agent: *
 Allow: /
 
-# Prevent indexing of duplicate URLs with parameters (UTM tags etc)
-Disallow: /*?
-
-# AI scrapers (optional)
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-# Your sitemap
-Sitemap: https://www.photoboothwithshan.com.au/sitemap.xml
-
-# Canonical host
+# Host
 Host: https://www.photoboothwithshan.com.au
+
+# Sitemaps
+Sitemap: https://www.photoboothwithshan.com.au/sitemap.xml

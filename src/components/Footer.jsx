@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import '../App.css';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import fb from '../images/3259376_facebook_media_social_icon.png';
 import ig from '../images/3259424_instagram_social media_social_icon.png';
 import tw from '../images/3259404_media_social_twitter_icon.png';
@@ -9,9 +9,10 @@ import map from '../images/3259380_dreamstale_media_social_icon.png';
 import gm from '../images/3259428_google_media_plus_social_icon.png';
 
 const Footer = () => {
-  const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_KEY;
+  const googleMapsApiKey =
+    process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || process.env.REACT_APP_GOOGLE_MAPS_KEY;
 
-  const navigate = useNavigate();
+  const router = useRouter();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
 
@@ -32,7 +33,7 @@ const Footer = () => {
       });
 
       if (response.ok) {
-        navigate('/thankyou');
+        router.push('/thankyou');
         setFormData({ name: '', email: '', message: '' });
         setStatus('');
       } else {
@@ -163,9 +164,9 @@ const Footer = () => {
       <div className="copyright-text">
         © {new Date().getFullYear()} The Shan Booth. All rights reserved.
         <span style={{ margin: '0 0.5rem' }}>|</span>
-        <Link to="/terms" className="footer-link">Terms & Conditions</Link>
+        <Link href="/terms" className="footer-link">Terms & Conditions</Link>
         <span style={{ margin: '0 0.5rem' }}>|</span>
-        <Link to="/privacy" className="footer-link">Privacy Policy</Link>
+        <Link href="/privacy" className="footer-link">Privacy Policy</Link>
       </div>
     </footer>
   );

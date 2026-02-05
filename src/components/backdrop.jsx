@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
-import "../App.css";
+import Head from "next/head";
 import blackdrop from "../images/blackbackdrop.png";
 import graddrop from "../images/gradbackdrop.png";
 import whitedrop from "../images/whitebackdrop.png";
@@ -69,7 +68,7 @@ const BackdropPage = () => {
   return (
     <>
       {/* ✅ Helmet SEO for Backdrops Page */}
-      <Helmet>
+      <Head>
         <title>Backdrop Designs & Fun Props for Photo Booths | The Shan Booth</title>
         <meta
           name="description"
@@ -108,7 +107,7 @@ const BackdropPage = () => {
             }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       <main className="backdrop-page-main section-padding">
         <div className="container backdrop-container">

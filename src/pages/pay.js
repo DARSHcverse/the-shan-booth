@@ -1,0 +1,3 @@
+import PayPage from "../components/PayPage";
+
+export default PayPage;

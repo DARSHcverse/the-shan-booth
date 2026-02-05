@@ -1,11 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import '../App.css';
+import Head from "next/head";
 import openBoothVideo from '../images/openboothvideo.mp4';
 
 const OpenBoothPage = () => (
   <>
-    <Helmet>
+    <Head>
       <title>Open Photo Booth Hire Melbourne | Interactive & Modern Booths</title>
       <meta
         name="description"
@@ -17,8 +16,8 @@ const OpenBoothPage = () => (
         property="og:description"
         content="Experience interactive photo booth fun with our Open Booth. Surface Pro + Canon R100 + pro flash lighting. Perfect for events that love energy and crowd engagement!"
       />
-      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.jpg" />
-    </Helmet>
+      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
+    </Head>
 
     <main className="booth-page section-padding">
       <div className="container">

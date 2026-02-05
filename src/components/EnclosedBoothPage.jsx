@@ -1,11 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import '../App.css';
+import Head from "next/head";
 import openBoothVideo from '../images/enclosedVID.mp4';
 
 const EnclosedBoothPage = () => (
   <>
-    <Helmet>
+    <Head>
       <title>Enclosed Photobooth Hire Melbourne | Private & Fun Event Booth | The Shan Booth</title>
       <meta
         name="description"
@@ -31,7 +30,7 @@ const EnclosedBoothPage = () => (
         content="Step inside our Enclosed Booth in Melbourne — private, cozy, and full of fun energy for weddings, parties, and corporate events."
       />
       <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/enclosed.jpeg" />
-    </Helmet>
+    </Head>
 
 
     <main className="booth-page section-padding">

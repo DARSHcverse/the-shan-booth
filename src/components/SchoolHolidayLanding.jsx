@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import "../App.css";
+import Head from "next/head";
 
 import schoolHoliday1 from "../images/schoolholiday1.webp";
 import schoolHoliday2 from "../images/schoolholiday2.webp";
@@ -9,7 +8,7 @@ const SchoolHolidayLanding = () => {
   return (
     <>
       {/* ✅ SEO + Meta Tags */}
-      <Helmet>
+      <Head>
         <title>School Holiday Photo Booth Hire Melbourne 🎒 | Kids Parties, Programs & Events | The Shan Booth</title>
 
         <meta
@@ -40,7 +39,7 @@ const SchoolHolidayLanding = () => {
         />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/schoolholiday1.webp"
+          content="https://www.photoboothwithshan.com.au/images/schoolholiday1.webp"
         />
 
         {/* Twitter */}
@@ -52,7 +51,7 @@ const SchoolHolidayLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/schoolholiday2.webp"
+          content="https://www.photoboothwithshan.com.au/images/schoolholiday2.webp"
         />
 
         {/* Schema.org JSON-LD */}
@@ -81,12 +80,12 @@ const SchoolHolidayLanding = () => {
                 "name": "The Shan Booth",
                 "url": "https://www.photoboothwithshan.com.au"
               },
-              "image": "https://www.photoboothwithshan.com.au/schoolholiday1.webp",
+              "image": "https://www.photoboothwithshan.com.au/images/schoolholiday1.webp",
               "description": "Hire a fun and kid-friendly photo booth for school holidays, kids birthday parties, school programs and community events in Melbourne, Tarneit & Geelong."
             }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       {/* PAGE CONTENT */}
       <div className="season-landing">

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
-import { Helmet } from "react-helmet";
-import '../App.css';
+import { useRouter } from 'next/router';
+import Head from "next/head";
 import birthdayStrip from "../images/birthdaystrip.png";
 import corporateStrip from "../images/coporatestrip.png";
 
 const QuickQuote = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -44,7 +43,7 @@ const QuickQuote = () => {
       });
 
       if (response.ok) {
-        navigate('/thankyou');
+      router.push('/thankyou');
         setStatus('Thank you! Your quote request has been sent successfully.');
         setFormData({
           fullName: '',
@@ -67,7 +66,7 @@ const QuickQuote = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Get a Quick Quote for Photobooth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
@@ -113,7 +112,7 @@ const QuickQuote = () => {
           "description": "Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."
         }
         `}</script>
-      </Helmet>
+      </Head>
 
       <div className="quick-quote-container">
         {/* Floating Graduation Strip */}
@@ -223,7 +222,7 @@ const QuickQuote = () => {
 
           <div style={{ textAlign: 'center', marginTop: '1rem' }}>
             <button
-              onClick={() => navigate('/packages')}
+              onClick={() => router.push('/packages')}
               className="back-button"
             >
               Back to Packages

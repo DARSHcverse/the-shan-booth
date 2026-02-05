@@ -1,30 +1,24 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import { useParams } from "react-router-dom";
-import * as post1 from "./posts/photobooth-benefits";
-import * as post2 from "./posts/wedding-photo-booth-ideas";
-import * as post3 from "./posts/corporate-event-trends";
-import * as post4 from "./posts/photobooth-cost-australia";
-import * as post5 from "./posts/why-choose-photo-booth-with-shan";
-import * as post6 from "./posts/photo-booth-trends-melbourne-2025";
-import * as post7 from "./posts/open-vs-enclosed-photo-booth";
-import * as post8 from "./posts/top-10-props";
-import * as post9 from "./posts/christmas-hire";
-import "../../App.css";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { allPosts } from "./posts";
 
-const posts = [post1.post, post2.post, post3.post, post4.post, post5.post, post6.post, post7.post, post8.post, post9.post];
+const BlogPost = ({ slug: slugProp }) => {
+  const router = useRouter();
+  const slug = slugProp || router.query.slug;
 
-const BlogPost = () => {
-  const { slug } = useParams();
+  if (!slug) {
+    return null;
+  }
 
-  const post = posts.find((p) => p.slug === slug);
+  const post = allPosts.find((p) => p.slug === slug);
 
   if (!post) {
     return (
       <>
-        <Helmet>
+        <Head>
           <meta name="robots" content="noindex, nofollow" />
-        </Helmet>
+        </Head>
         <p>Post not found.</p>
       </>
     );
@@ -36,7 +30,7 @@ const BlogPost = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{post.title}</title>
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.keywords.join(", ")} />
@@ -73,7 +67,7 @@ const BlogPost = () => {
             },
           })}
         </script>
-      </Helmet>
+      </Head>
 
       <section className="blog-post-wrapper">
         <article className="blog-post">

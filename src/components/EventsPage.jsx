@@ -1,7 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router-dom';
-import '../App.css';
+import Head from "next/head";
+import { useRouter } from 'next/router';
 
 const eventsData = [
   {
@@ -62,10 +61,10 @@ const eventsData = [
 ];
 
 const EventsPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Event Photobooth Hire for Weddings, Parties & Corporate Events | The Shan Booth</title>
         <meta name="description" content="Hire photobooths for weddings, birthdays, school graduations, corporate events & university open days in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."/>
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/events"/>
@@ -104,7 +103,7 @@ const EventsPage = () => {
           }
         `}
       </script>
-    </Helmet>
+    </Head>
     
 
     <main className="main-content section-padding">
@@ -134,7 +133,7 @@ const EventsPage = () => {
             <article
               key={index}
               className="event-type-card"
-              onClick={() => navigate(`/${event.id}`)}
+              onClick={() => router.push(`/${event.id}`)}
             >
               <div className="event-type-body">
                 <h2 className="event-type-title">{event.title}</h2>

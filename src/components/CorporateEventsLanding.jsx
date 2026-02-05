@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import "../App.css";
+import Head from "next/head";
 import corporateImg1 from "../images/coperateimg.webp";
 import corporateImg2 from "../images/photobooth.webp";
 import corporateStrip from "../images/coporatestrip.png";
@@ -8,7 +7,7 @@ import corporateStrip from "../images/coporatestrip.png";
 const CorporateEventsLanding = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Corporate Photo Booth Hire Melbourne | Brand Activations & Events | The Shan Booth</title>
         <meta
           name="description"
@@ -39,7 +38,7 @@ const CorporateEventsLanding = () => {
         />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/coperateimg.webp"
+          content="https://www.photoboothwithshan.com.au/images/coperateimg.webp"
         />
 
         {/* Twitter */}
@@ -54,7 +53,7 @@ const CorporateEventsLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/photobooth.webp"
+          content="https://www.photoboothwithshan.com.au/images/photobooth.webp"
         />
 
         {/* Schema.org JSON-LD */}
@@ -80,11 +79,11 @@ const CorporateEventsLanding = () => {
               }
             ],
             "description": "Corporate photo booth hire for product launches, trade shows, and office celebrations in Melbourne & Geelong. Includes branding, instant prints, and digital sharing.",
-            "image": "https://www.photoboothwithshan.com.au/coperateimg.webp"
+            "image": "https://www.photoboothwithshan.com.au/images/coperateimg.webp"
           }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       <div className="corporate-landing">
         {/* Floating Corporate Strip */}

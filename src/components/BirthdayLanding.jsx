@@ -1,5 +1,4 @@
-import { Helmet } from "react-helmet";
-import "../App.css";
+import Head from "next/head";
 import birthdayBackdrop from "../images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp";
 import birthdayBackdrop2 from "../images/smiling-young-man-wearing-party-hat-surprised-young-girl-holds-hands-together-isolated-pink-wall.webp";
 import birthdayStrip from "../images/birthdaystrip.png";
@@ -7,7 +6,7 @@ import birthdayStrip from "../images/birthdaystrip.png";
 const BirthdayLanding = () => {
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Birthday Photobooth Hire Melbourne 🎉 | Fun Party Booths | The Shan Booth</title>
         <meta
           name="description"
@@ -26,7 +25,7 @@ const BirthdayLanding = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/birthday" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/birthdaybooth.jpg" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -39,7 +38,7 @@ const BirthdayLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/birthdaybooth.jpg"
+          content="https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
         />
 
         {/* Improved Event Schema */}
@@ -66,7 +65,7 @@ const BirthdayLanding = () => {
               }
             },
             "image": [
-              "https://www.photoboothwithshan.com.au/birthdaybooth.jpg"
+              "https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
             ],
             "description": "Photo booth hire for birthday parties in Melbourne, Geelong & Grovedale. Fun props, unlimited prints, and vibrant backdrops for every age.",
             "organizer": {
@@ -77,7 +76,7 @@ const BirthdayLanding = () => {
           }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       <div className="birthday-landing">
         <div className="floating-strip left-strip">

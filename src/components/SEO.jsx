@@ -1,13 +1,13 @@
 // src/components/SEO.js
 import React from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 const SEO = ({ title, description, pathname, image }) => {
   const baseUrl = "https://www.photoboothwithshan.com.au";
   const url = `${baseUrl}${pathname || ""}`;
 
   return (
-    <Helmet>
+    <Head>
       {/* Title & Description */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -27,7 +27,7 @@ const SEO = ({ title, description, pathname, image }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={`${baseUrl}${image}`} />}
-    </Helmet>
+    </Head>
   );
 };
 

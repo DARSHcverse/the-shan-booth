@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import "../App.css";
+import Head from "next/head";
 import christmasImg from "../images/christmas.webp";
 import christmasImg2 from "../images/christmas2.webp";
 
@@ -8,7 +7,7 @@ const ChristmasLanding = () => {
   return (
     <>
       {/* ✅ SEO + Meta Tags */}
-      <Helmet>
+      <Head>
         <title>Christmas Photobooth Hire Melbourne 🎄 | The Shan Booth</title>
         <meta
           name="description"
@@ -39,7 +38,7 @@ const ChristmasLanding = () => {
         />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/christmas.webp"
+          content="https://www.photoboothwithshan.com.au/images/christmas.webp"
         />
 
         {/* Twitter */}
@@ -54,7 +53,7 @@ const ChristmasLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/christmas2.webp"
+          content="https://www.photoboothwithshan.com.au/images/christmas2.webp"
         />
 
         {/* Schema.org JSON-LD for seasonal landing page */}
@@ -65,7 +64,7 @@ const ChristmasLanding = () => {
             "@type": "Service",
             "name": "Christmas Photo Booth Hire Melbourne",
             "description": "Festive photobooth hire for Christmas parties, corporate end-of-year events and holiday celebrations across Melbourne & Geelong.",
-            "image": "https://www.photoboothwithshan.com.au/christmas.webp",
+            "image": "https://www.photoboothwithshan.com.au/images/christmas.webp",
             "location": {
               "@type": "Place",
               "name": "Melbourne & Geelong",
@@ -96,7 +95,7 @@ const ChristmasLanding = () => {
           }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       {/* ✅ Landing Page Content */}
       <div className="christmas-landing">

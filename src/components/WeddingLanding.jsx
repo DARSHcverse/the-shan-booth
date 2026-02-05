@@ -1,6 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import "../App.css";
+import Head from "next/head";
 import weddingImg from "../images/wedding.webp";
 import weddingImg2 from "../images/wedding2.webp";
 import WeddingStrip from "../images/weddingstrip.webp";
@@ -9,7 +8,7 @@ const WeddingLanding = () => {
   return (
     <>
       {/* ✅ SEO + Meta Tags */}
-      <Helmet>
+      <Head>
         <title>Wedding Photobooth Hire Melbourne 💍 | The Shan Booth</title>
 
         <meta
@@ -37,7 +36,7 @@ const WeddingLanding = () => {
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/weddings" />
         <meta
           property="og:image"
-          content="https://www.photoboothwithshan.com.au/wedding.webp"
+          content="https://www.photoboothwithshan.com.au/images/wedding.webp"
         />
 
         {/* Twitter */}
@@ -49,7 +48,7 @@ const WeddingLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.photoboothwithshan.com.au/wedding2.webp"
+          content="https://www.photoboothwithshan.com.au/images/wedding2.webp"
         />
 
         {/* ✅ CORRECT Schema for Wedding Page (Service + LocalBusiness) */}
@@ -84,7 +83,7 @@ const WeddingLanding = () => {
           }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       {/* ✅ Landing Page Content */}
       <div className="wedding-landing">

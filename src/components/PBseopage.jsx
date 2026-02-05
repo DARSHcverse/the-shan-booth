@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { useRouter } from "next/router";
+import Head from "next/head";
 
 const PBSeoPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/");
+      router.replace("/");
     }, 1000); // 1 second delay before redirect
     return () => clearTimeout(timer);
-  }, [navigate]);
+  }, [router]);
 
   return (
     <>
       {/* SEO + Meta Tags */}
-      <Helmet>
+      <Head>
         <title>Photobooth Hire Melbourne | Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
@@ -35,7 +35,7 @@ const PBSeoPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/pbseopage" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth-melbourne.jpg" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -44,7 +44,7 @@ const PBSeoPage = () => {
           name="twitter:description"
           content="Hire the best photo booth in Melbourne – unlimited prints, props, custom backdrops & instant pendrive. Weddings, corporate & graduations."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth-melbourne.jpg" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
 
         {/* JSON-LD Schema */}
         <script type="application/ld+json">
@@ -53,7 +53,7 @@ const PBSeoPage = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "The Shan Booth",
-            "image": "https://www.photoboothwithshan.com.au/images/photobooth-melbourne.jpg",
+            "image": "https://www.photoboothwithshan.com.au/images/photobooth.webp",
             "url": "https://www.photoboothwithshan.com.au",
             "telephone": "",
             "address": {
@@ -70,7 +70,7 @@ const PBSeoPage = () => {
           }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       {/* Visible SEO Content (before redirect) */}
       <div className="seo-content">

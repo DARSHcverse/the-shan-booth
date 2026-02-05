@@ -1,10 +1,10 @@
 import React from "react";
-import { Helmet } from 'react-helmet';
+import Head from "next/head";
 
 const TermsPage = () => {
   return (
     <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
-      <Helmet>
+      <Head>
         <title>Terms & Conditions | The Shan Booth</title>
 
         <meta
@@ -18,7 +18,7 @@ const TermsPage = () => {
         />
 
         <meta name="robots" content="index, follow, noimageindex" />
-      </Helmet>
+      </Head>
 
       <h1>Terms and Conditions</h1>
       <p><strong>Last Updated:</strong> August 13, 2025</p>

@@ -1,12 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-import '../App.css';
+import { useRouter } from 'next/router';
+import Head from "next/head";
 
 import offer from '../images/offer.webp';
 
 const PackagesPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const standardPackages = [
     {
@@ -144,7 +143,7 @@ const PackagesPage = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Photo Booth Hire Packages Melbourne | Affordable Wedding & Party Booths</title>
         <meta
           name="description"
@@ -160,7 +159,7 @@ const PackagesPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/packages" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.jpg" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -169,7 +168,7 @@ const PackagesPage = () => {
           name="twitter:description"
           content="Choose from Standard or Glam Booth packages with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.jpg" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -189,7 +188,7 @@ const PackagesPage = () => {
             }
           `}
         </script>
-      </Helmet>
+      </Head>
 
       <main className="main-content section-padding">
         <div className="container">
@@ -215,7 +214,7 @@ const PackagesPage = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <button className="package-button" onClick={() => navigate('/quickquote')}>
+                  <button className="package-button" onClick={() => router.push('/quickquote')}>
                     Inquire
                   </button>
                 </div>
@@ -235,7 +234,7 @@ const PackagesPage = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <button className="package-button" onClick={() => navigate('/quickquote')}>
+                  <button className="package-button" onClick={() => router.push('/quickquote')}>
                     Inquire
                   </button>
                 </div>

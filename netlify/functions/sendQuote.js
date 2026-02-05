@@ -17,14 +17,14 @@ export async function handler(event, context) {
       to: process.env.EMAIL_USER, // send to yourself
       subject: `New Quote Request from ${data.fullName}`,
       text: `
-Name: ${data.fullName}
-Email: ${data.email}
-Phone: ${data.phoneNumber}
-Event Date: ${data.eventDate}
-Location: ${data.eventLocation}
-Package Duration: ${data.packageDuration}
-Service: ${data.service}
-Message: ${data.message}
+        Name: ${data.fullName}
+        Email: ${data.email}
+        Phone: ${data.phoneNumber}
+        Event Date: ${data.eventDate}
+        Location: ${data.eventLocation}
+        Package Duration: ${data.packageDuration}
+        Service: ${data.service}
+        Message: ${data.message}
       `,
     };
 

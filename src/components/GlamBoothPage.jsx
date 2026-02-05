@@ -1,11 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import '../App.css';
+import Head from "next/head";
 import glam from '../images/glam.png';
 
 const GlamBoothPage = () => (
   <>
-    <Helmet>
+    <Head>
       <title>Glam Photo Booth Hire Melbourne | Hollywood-Style AI Filter Booth</title>
       <meta
         name="description"
@@ -31,7 +30,7 @@ const GlamBoothPage = () => (
         name="twitter:image"
         content="https://www.photoboothwithshan.com.au/images/glam.png"
       />
-    </Helmet>
+    </Head>
 
     <main className="booth-page section-padding">
       <div className="container">

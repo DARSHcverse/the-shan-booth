@@ -1,27 +1,26 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import { useNavigate } from "react-router-dom";
-import '../App.css';
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 const ThankYou = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <div className="thankyou-container">
-      <Helmet>
+      <Head>
         <title>Thank You | The Shan Booth</title>
         <meta
           name="description"
           content="Thank you for submitting your request. The Shan Booth will contact you shortly."
         />
-      </Helmet>
+      </Head>
 
       <div className="thankyou-card">
         <h1>Thank You! 🎉</h1>
         <p>Your request has been received. We’ll get back to you shortly.</p>
         <button
           className="thankyou-button"
-          onClick={() => navigate("/")}
+          onClick={() => router.push("/")}
         >
           Back to Home
         </button>

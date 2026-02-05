@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Helmet } from 'react-helmet';
+import Head from "next/head";
 
 const PayPage = () => {
   // Dynamically load Stripe Buy Button script
@@ -17,7 +17,7 @@ const PayPage = () => {
   return (
     <>
       {/* SEO + Open Graph Meta Tags */}
-      <Helmet>
+      <Head>
         <title>Secure Payment | The Shan Booth</title>
 
         <meta
@@ -31,7 +31,7 @@ const PayPage = () => {
         />
 
         <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      </Head>
 
       <div className="flex items-center justify-center min-h-screen paypage-bg px-4">
         <div className="paypage-card max-w-md w-full text-center border border-gray-200">

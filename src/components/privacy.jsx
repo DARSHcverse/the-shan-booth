@@ -1,10 +1,10 @@
 import React from "react";
-import { Helmet } from 'react-helmet';
+import Head from "next/head";
 
 const PrivacyPage = () => {
   return (
     <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
-      <Helmet>
+      <Head>
         <title>Privacy Policy For Photobooth Hire Melbourne  | The Shan Booth</title>
         <meta
           name="description"
@@ -42,7 +42,7 @@ const PrivacyPage = () => {
           name="twitter:image"
           content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
-      </Helmet>
+      </Head>
 
       <h1>Privacy Policy</h1>
       <p><strong>Last Updated:</strong> August 13, 2025</p>

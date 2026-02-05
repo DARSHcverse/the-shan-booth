@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-import '../App.css';
+import { useRouter } from 'next/router';
+import Head from "next/head";
 
 // Main Image Imports
 import boothimg5 from '../images/hero-banner.webp';
@@ -22,7 +21,7 @@ import gifvideo3 from '../images/fun-vdo-3.webm';
 // import iconPhotoStrip from '../images/prop5.png';
 
 const HomePage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const images = [boothimg5, boothimg2, boothimg3, boothimg4];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -50,8 +49,8 @@ const HomePage = () => {
     "@id": "https://www.photoboothwithshan.com.au/#localbusiness",
     "name": "The Shan Booth",
     "url": "https://www.photoboothwithshan.com.au/",
-    "logo": "https://www.photoboothwithshan.com.au/logo.png",
-    "image": "https://www.photoboothwithshan.com.au/static/media/photobooth.7f8b9c0d.webp",
+    "logo": "https://www.photoboothwithshan.com.au/images/logo.png",
+    "image": "https://www.photoboothwithshan.com.au/images/photobooth.webp",
     "description": "The Shan Booth provides premium photo booth hire in Melbourne with open booths, glam booths, enclosed booths, 360 video booths, and audio guest books. Perfect for weddings, graduations, corporate events, and Christmas parties.",
     "telephone": "+61 475 116 521",
     "email": "mailto:theshanbooth@gmail.com",
@@ -166,7 +165,7 @@ const HomePage = () => {
 
   return (
     <main className="main-content">
-      <Helmet>
+      <Head>
         <title>Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
@@ -189,7 +188,7 @@ const HomePage = () => {
         />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/" />
         <meta property="og:site_name" content="The Shan Booth" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/static/media/photobooth.7f8b9c0d.webp" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
         <meta property="og:image:alt" content="Photo booth hire Melbourne - The Shan Booth setup" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -198,7 +197,7 @@ const HomePage = () => {
           name="twitter:description"
           content="Book affordable photo booth hire Melbourne – weddings, school graduations, Christmas parties & corporate events. Choose open, glam, magic mirror & 360 booths."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/static/media/photobooth.7f8b9c0d.webp" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
         <meta name="twitter:creator" content="@TheShanBooth" />
 
         <meta name="geo.region" content="AU-VIC" />
@@ -209,7 +208,7 @@ const HomePage = () => {
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-      </Helmet>
+      </Head>
 
       {/* --- Hero Section --- */}
       <section className="hero-section snow-effect" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -230,8 +229,8 @@ const HomePage = () => {
             <h1 className="hero-title">PHOTO BOOTH HIRE MELBOURNE</h1>
             <p className="hero-subtitle">Melbourne's favourite photo booth for unforgettable end-of-year celebrations.</p>
             <div className="hero-buttons">
-              <button onClick={() => navigate('/packages')} className="home-button">VIEW PACKAGES</button>
-              <button onClick={() => navigate('/quickquote')} className="home-button secondary">Quick Quote</button>
+              <button onClick={() => router.push('/packages')} className="home-button">VIEW PACKAGES</button>
+              <button onClick={() => router.push('/quickquote')} className="home-button secondary">Quick Quote</button>
             </div>
           </div>
         </div>
@@ -272,7 +271,7 @@ const HomePage = () => {
                   addition to EOY functions and festive celebrations.
                 </p>
                 <button
-                  onClick={() => navigate('/events')}
+                  onClick={() => router.push('/events')}
                   className="info-card-button"
                 >
                   Corporate Events
@@ -293,7 +292,7 @@ const HomePage = () => {
                   Year 12 graduations. Safe, fun, and unforgettable!
                 </p>
                 <button
-                  onClick={() => navigate('/events')}
+                  onClick={() => router.push('/events')}
                   className="info-card-button"
                 >
                   School Events
@@ -314,7 +313,7 @@ const HomePage = () => {
                   a professional attendant to run the show.
                 </p>
                 <button
-                  onClick={() => navigate('/packages')}
+                  onClick={() => router.push('/packages')}
                   className="info-card-button"
                 >
                   Explore Packages
@@ -347,7 +346,7 @@ const HomePage = () => {
               </p>
               <button
                 className="event-link-button"
-                onClick={() => navigate('/weddings')}
+                onClick={() => router.push('/weddings')}
               >
                 Explore Wedding Packages
               </button>
@@ -362,7 +361,7 @@ const HomePage = () => {
               </p>
               <button
                 className="event-link-button"
-                onClick={() => navigate('/birthday')}
+                onClick={() => router.push('/birthday')}
               >
                 See Birthday Booths
               </button>
@@ -377,7 +376,7 @@ const HomePage = () => {
               </p>
               <button
                 className="event-link-button"
-                onClick={() => navigate('/corporate-events')}
+                onClick={() => router.push('/corporate-events')}
               >
                 Corporate Event Options
               </button>
@@ -392,7 +391,7 @@ const HomePage = () => {
               </p>
               <button
                 className="event-link-button"
-                onClick={() => navigate('/graduation')}
+                onClick={() => router.push('/graduation')}
               >
                 View School Packages
               </button>
@@ -407,7 +406,7 @@ const HomePage = () => {
               </p>
               <button
                 className="event-link-button"
-                onClick={() => navigate('/christmas')}
+                onClick={() => router.push('/christmas')}
               >
                 Christmas Photo Booths
               </button>
@@ -601,7 +600,7 @@ const HomePage = () => {
         <div className="container">
           <h2>Ready to Lock in the Fun for Your End-of-Year Event?</h2>
           <p>Don't leave your party entertainment to the last minute. Secure The Shan Booth today! Explore our photo booth hire Melbourne options and discover why we're Melbourne's trusted choice for unforgettable event experiences.</p>
-          <button onClick={() => navigate('/quickquote')} className="home-button">Secure Your 2026 Date</button>
+          <button onClick={() => router.push('/quickquote')} className="home-button">Secure Your 2026 Date</button>
         </div>
       </section>
 

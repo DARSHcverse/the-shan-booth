@@ -1,17 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import '../App.css';
+import Head from "next/head";
 import photobooth from '../images/boothimg6.webp';
 import glam from '../images/glam.png';
 import enclosure from '../images/enclosed.jpeg';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 const PhotoboothsPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Event Photobooths | Unforgettable Event Experiences</title>
         <meta
           name="description"
@@ -27,7 +26,7 @@ const PhotoboothsPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/photobooths" />
-        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.jpg" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -36,8 +35,8 @@ const PhotoboothsPage = () => {
           name="twitter:description"
           content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events."
         />
-        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.jpg" />
-      </Helmet>
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
+      </Head>
 
       <main className="main-content section-padding">
         <div className="container">
@@ -46,7 +45,7 @@ const PhotoboothsPage = () => {
           </h1>
 
           <div className="photobooth-list event-card-grid">
-            <article className="event-card" onClick={() => navigate('/open-booth')}>
+            <article className="event-card" onClick={() => router.push('/open-booth')}>
               <img src={photobooth} alt="Open Booth" className="event-card-img" />
               <div className="event-card-body">
                 <h2 className="event-card-title">Open Booth</h2>
@@ -58,7 +57,7 @@ const PhotoboothsPage = () => {
               </div>
             </article>
 
-            <article className="event-card" onClick={() => navigate('/glam-booth')}>
+            <article className="event-card" onClick={() => router.push('/glam-booth')}>
               <img src={glam} alt="Glam Booth" className="event-card-img" />
               <div className="event-card-body">
                 <h2 className="event-card-title">Glam Booth</h2>
@@ -70,7 +69,7 @@ const PhotoboothsPage = () => {
               </div>
             </article>
 
-            <article className="event-card" onClick={() => navigate('/enclosed-booth')}>
+            <article className="event-card" onClick={() => router.push('/enclosed-booth')}>
               <img src={enclosure} alt="Enclosed Booth" className="event-card-img" />
               <div className="event-card-body">
                 <h2 className="event-card-title">Enclosed Booth</h2>

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Menu, X } from 'lucide-react';
-import '../App.css';
 import logo from '../images/logo.png';
 import callIcon from '../images/callIcon.png';
 // import iconGradCap from '../images/prop.png'; // Floating icon (currently not in use)
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
 
   const navItems = [
     { name: 'HOMEPAGE', path: '/' },
@@ -24,22 +23,19 @@ const Header = () => {
   const NavLinks = ({ onClick }) => (
     <ul className="nav-list">
       {navItems.map((item) => {
-        const isActive = location.pathname === item.path;
+        const isActive = router.pathname === item.path;
         return (
           <li
             key={item.path}
             className={`nav-item ${isActive ? 'active' : ''}`}
           >
-            <button
-              type="button"
-              onClick={() => {
-                navigate(item.path);
-                if (onClick) onClick();
-              }}
+            <Link
+              href={item.path}
               className="nav-link"
+              onClick={() => onClick && onClick()}
             >
               {item.name}
-            </button>
+            </Link>
           </li>
         );
       })}
@@ -58,15 +54,14 @@ const Header = () => {
       </div> */}
       <div className="container header-inner">
         {/* Logo */}
-        <button
-          onClick={() => navigate('/')}
+        <Link
+          href="/"
           className="logo-link"
           aria-label="Go to homepage"
-          type="button"
         >
           <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
           <h1 className="logo-text">THE SHAN BOOTH</h1>
-        </button>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="main-nav desktop-only">

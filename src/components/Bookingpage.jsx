@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
-import "../App.css";
+import Head from "next/head";
 import gradStrip from "../images/GradStrip.png";
 import corporateStrip from "../images/coporatestrip.png";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 const BookingPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -87,7 +86,7 @@ const BookingPage = () => {
 
       if (response.ok) {
         setStatus("Booking submitted! Booking confirmation sent.");
-        navigate('/thankyou');
+        router.push('/thankyou');
         setFormData({
           fullName: "",
           email: "",
@@ -113,14 +112,14 @@ const BookingPage = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Book Your Best Photobooth Hire Melbourne  | The Shan Booth</title>
         <meta
           name="description"
           content="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your booth type, package, confirm booking, and secure your date."
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/booking" />
-      </Helmet>
+      </Head>
 
       <div className="booking-container">
         {/* Floating Graduation Strip */}

@@ -20,7 +20,7 @@
 https://photoboothwithshan.com.au/*                 https://www.photoboothwithshan.com.au/:splat          301!
 
 # ---------------------------------------------------------
-# REACT SPA FALLBACK (KEEP LAST)
+# CANONICALIZE TRAILING SLASHES
 # ---------------------------------------------------------
 
-/*                                                  /index.html                                            200
+/:splat/                                            /:splat                                                301

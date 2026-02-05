@@ -3,16 +3,16 @@ import { useRouter } from 'next/router';
 import Head from "next/head";
 
 // Main Image Imports
-import boothimg5 from '../images/hero-banner.webp';
-import boothimg2 from '../images/hero-banner-2.webp';
-import boothimg3 from '../images/hero-banner-3.webp';
-import boothimg4 from '../images/hero-banner-4.webp';
-import photobooth from '../images/photobooth.webp';
-import events from '../images/boothimg7.webp';
-import packages from '../images/inclusivepack.webp';
-import gifvideo from '../images/fun-vdo.webm';
-import gifvideo2 from '../images/fun-vdo-2.webm';
-import gifvideo3 from '../images/fun-vdo-3.webm';
+const boothimg5 = '/images/hero-banner.webp';
+const boothimg2 = '/images/hero-banner-2.webp';
+const boothimg3 = '/images/hero-banner-3.webp';
+const boothimg4 = '/images/hero-banner-4.webp';
+const photobooth = '/images/photobooth.webp';
+const events = '/images/boothimg7.webp';
+const packages = '/images/inclusivepack.webp';
+const gifvideo = '/images/fun-vdo.webm';
+const gifvideo2 = '/images/fun-vdo-2.webm';
+const gifvideo3 = '/images/fun-vdo-3.webm';
 
 // Floating Icons (currently not in use, can be enabled if needed later for christmas theme)
 // import iconCamera from '../images/prop2.png';

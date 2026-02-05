@@ -9,8 +9,7 @@
 /blog/blog-post-photobooth-cost                     /blog/photobooth-cost-australia                         301
 /blog/top-5-reasons-to-hire-photo-booth-melbourne   /blog/photobooth-benefits                              301
 
-# Handle spaces and encoded versions of Top 10 Props (Google may have crawled these)
-/blog/top 10 props                                   /blog/top-10-props                                     301
+# Handle encoded versions of Top 10 Props (Google may have crawled these)
 /blog/top%2010%20props                               /blog/top-10-props                                     301
 
 # ---------------------------------------------------------

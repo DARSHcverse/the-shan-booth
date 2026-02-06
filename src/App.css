@@ -114,12 +114,25 @@ body {
   z-index: 1;
 }
 
-.info-items {
+.info-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.info-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 3rem;
+  will-change: transform;
+  animation: marquee 14s linear infinite;
+}
+
+.info-group {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: nowrap;
+  gap: 3rem;
+  padding-right: 3rem;
   white-space: nowrap;
 }
 
@@ -128,9 +141,20 @@ body {
   align-items: center;
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .top-info-bar::before {
     animation: none;
+  }
+
+  .info-track {
+    animation: none;
+    width: 100%;
+    justify-content: center;
   }
 }
 

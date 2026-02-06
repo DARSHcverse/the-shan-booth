@@ -9,6 +9,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
+  const infoItems = ['FUN GUARANTEED', 'SAFE & SECURE', 'AFFORDABLE PRICING'];
+
   const navItems = [
     { name: 'HOMEPAGE', path: '/' },
     { name: 'PHOTOBOOTHS', path: '/photobooths' },
@@ -51,14 +53,23 @@ const Header = () => {
     <header className="header">
       <div className="top-info-bar">
         <div className="container">
-          <div className="info-items">
-            <span className="info-item">FUN GUARANTEED</span>
-            <span className="info-item">SAFE & SECURE</span>
-            <span className="info-item">AFFORDABLE PRICING</span>
-            
-            <span className="info-item">FUN GUARANTEED</span>
-            <span className="info-item">SAFE & SECURE</span>
-            <span className="info-item">AFFORDABLE PRICING</span>
+          <div className="info-marquee" aria-label="Highlights">
+            <div className="info-track">
+              <div className="info-group">
+                {infoItems.map((text) => (
+                  <span key={`info-1-${text}`} className="info-item">
+                    {text}
+                  </span>
+                ))}
+              </div>
+              <div className="info-group" aria-hidden="true">
+                {infoItems.map((text) => (
+                  <span key={`info-2-${text}`} className="info-item">
+                    {text}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -74,7 +85,7 @@ const Header = () => {
         >
           <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
           <h1 className="logo-text">THE SHAN BOOTH</h1>
-        </Link>
+        </Link><br />
 
         {/* Desktop nav */}
         <nav className="main-nav desktop-only">

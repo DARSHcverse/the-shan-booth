@@ -507,7 +507,7 @@ const HomePage = () => {
               autoPlay
               loop
               muted
-              playsinline
+              playsInline
               preload="auto"
               className="testimonial-webm"
             >
@@ -517,7 +517,7 @@ const HomePage = () => {
               autoPlay
               loop
               muted
-              playsinline
+              playsInline
               preload="auto"
               className="testimonial-webm"
             >
@@ -527,7 +527,7 @@ const HomePage = () => {
               autoPlay
               loop
               muted
-              playsinline
+              playsInline
               preload="auto"
               className="testimonial-webm"
             >

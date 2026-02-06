@@ -85,7 +85,7 @@ const Header = () => {
         >
           <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
           <h1 className="logo-text">THE SHAN BOOTH</h1>
-        </Link><br />
+        </Link>
 
         {/* Desktop nav */}
         <nav className="main-nav desktop-only">

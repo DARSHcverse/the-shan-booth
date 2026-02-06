@@ -9,7 +9,40 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
-  const infoItems = ['FUN GUARANTEED', 'SAFE & SECURE', 'AFFORDABLE PRICING'];
+  const infoItems = ['FUN GUARANTEED', '$ SAFE & SECURE', '$$ AFFORDABLE PRICING', 'HIGH-QUALITY PRINTS', 'CUSTOMIZABLE BACKDROPS', 'PROFESSIONAL SERVICE'];
+
+  const renderInfoItem = (text) => {
+    const match = /^(\$+)\s*(.*)$/.exec(text);
+    if (!match) return text;
+    const [, dollars, rest] = match;
+    return (
+      <>
+        <span className="info-dollar" aria-hidden="true">
+          {dollars}
+        </span>{' '}
+        {rest}
+      </>
+    );
+  };
+
+  const renderInfoGroup = (keyPrefix) =>
+    infoItems.flatMap((text, index) => {
+      const elements = [
+        <span key={`${keyPrefix}-item-${text}`} className="info-item">
+          {renderInfoItem(text)}
+        </span>,
+      ];
+
+      if (index !== infoItems.length - 1) {
+        elements.push(
+          <span key={`${keyPrefix}-sep-${text}`} className="info-sep" aria-hidden="true">
+            |
+          </span>,
+        );
+      }
+
+      return elements;
+    });
 
   const navItems = [
     { name: 'HOMEPAGE', path: '/' },
@@ -56,18 +89,10 @@ const Header = () => {
           <div className="info-marquee" aria-label="Highlights">
             <div className="info-track">
               <div className="info-group">
-                {infoItems.map((text) => (
-                  <span key={`info-1-${text}`} className="info-item">
-                    {text}
-                  </span>
-                ))}
+                {renderInfoGroup('info-1')}
               </div>
               <div className="info-group" aria-hidden="true">
-                {infoItems.map((text) => (
-                  <span key={`info-2-${text}`} className="info-item">
-                    {text}
-                  </span>
-                ))}
+                {renderInfoGroup('info-2')}
               </div>
             </div>
           </div>

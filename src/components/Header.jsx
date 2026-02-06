@@ -49,6 +49,19 @@ const Header = () => {
 
   return (
     <header className="header">
+      <div className="top-info-bar">
+        <div className="container">
+          <div className="info-items">
+            <span className="info-item">FUN GUARANTEED</span>
+            <span className="info-item">SAFE & SECURE</span>
+            <span className="info-item">AFFORDABLE PRICING</span>
+            
+            <span className="info-item">FUN GUARANTEED</span>
+            <span className="info-item">SAFE & SECURE</span>
+            <span className="info-item">AFFORDABLE PRICING</span>
+          </div>
+        </div>
+      </div>
       {/* <div className="floating-items-container"> // Floating icon (currently not in use, can be enabled if needed later for christmas theme)
         <div className="floating-item item-1"><img src={iconGradCap} alt="Floating graduation cap icon" /></div>
       </div> */}

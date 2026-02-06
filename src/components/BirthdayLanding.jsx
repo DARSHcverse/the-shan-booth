@@ -7,7 +7,7 @@ const BirthdayLanding = () => {
   return (
     <>
       <Head>
-        <title>Birthday Photobooth Hire Melbourne 🎉 | Fun Party Booths | The Shan Booth</title>
+        <title>Birthday Photo booth Hire Melbourne 🎉 | Fun Party Booths | The Shan Booth</title>
         <meta
           name="description"
           content="Celebrate in style with The Shan Booth’s birthday photo booths! Unlimited prints, fun props & party energy for 18ths, 21sts, kids’ birthdays & milestone celebrations in Melbourne & Geelong."

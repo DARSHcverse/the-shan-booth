@@ -8,7 +8,7 @@ const ChristmasLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Head>
-        <title>Christmas Photobooth Hire Melbourne 🎄 | The Shan Booth</title>
+        <title>Christmas Photo booth Hire Melbourne 🎄 | The Shan Booth</title>
         <meta
           name="description"
           content="Celebrate Christmas & end-of-year parties in Melbourne with The Shan Booth! Fun festive photo booths with unlimited prints, props, and instant sharing. Serving Melbourne, Tarneit & Geelong."

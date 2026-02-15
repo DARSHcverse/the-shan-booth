@@ -72,6 +72,19 @@ const BirthdayLanding = () => {
               "@type": "Organization",
               "name": "The Shan Booth",
               "url": "https://www.photoboothwithshan.com.au"
+            },
+            "performer": {
+            "@type": "Organization",
+            "name": "The Shan Booth",
+            "url": "https://www.photoboothwithshan.com.au"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.photoboothwithshan.com.au/booking",
+              "priceCurrency": "AUD",
+              "price": "390",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2025-07-01T00:00:00+10:00"
             }
           }
           `}

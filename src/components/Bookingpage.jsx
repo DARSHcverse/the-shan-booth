@@ -76,7 +76,7 @@ const BookingPage = () => {
       const invoiceNumber = generateInvoiceNumber();
       const payload = { ...formData, invoiceNumber };
 
-      const response = await fetch("/.netlify/functions/booking", {
+      const response = await fetch("/api/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

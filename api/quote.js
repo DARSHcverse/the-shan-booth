@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
     await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL,
-      to: [process.env.RESEND_FROM_EMAIL], // send to yourself
+      to: ["shanbooth@gmail.com"], // send quote requests to your personal email
       replyTo: data.email,
       subject: `New Quote Request from ${data.fullName}`,
       html: emailContent,

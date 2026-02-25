@@ -10,7 +10,7 @@
           "value": "photoboothwithshan.com.au"
         }
       ],
-      "destination": "https://www.photoboothwithshan.com.au/:splat",
+      "destination": "https://www.photoboothwithshan.com.au/$1",
       "permanent": true
     },
     {

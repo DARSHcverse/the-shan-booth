@@ -4,8 +4,14 @@
   "framework": "nextjs",
   "redirects": [
     {
-      "source": "https://photoboothwithshan.com.au/:path*",
-      "destination": "https://www.photoboothwithshan.com.au/:path*",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "photoboothwithshan.com.au"
+        }
+      ],
+      "destination": "https://www.photoboothwithshan.com.au/:splat",
       "permanent": true
     },
     {

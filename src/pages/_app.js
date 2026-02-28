@@ -4,6 +4,7 @@ import Script from "next/script";
 import Layout from "../components/Layout";
 import { ConsentProvider, useConsent } from "../components/ConsentProvider";
 import CookieConsentBanner from "../components/CookieConsentBanner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
 function TrackingScripts() {
@@ -46,6 +47,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
       <CookieConsentBanner />
+      <SpeedInsights />
       <Analytics />
     </ConsentProvider>
   );

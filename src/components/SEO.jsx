@@ -10,7 +10,7 @@ const SEO = ({ title, description, pathname, image }) => {
     <Head>
       {/* Title & Description */}
       <title>{title}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={description} key="description" />
 
       {/* Canonical */}
       <link rel="canonical" href={url} />

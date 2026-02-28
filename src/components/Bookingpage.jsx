@@ -117,6 +117,7 @@ const BookingPage = () => {
         <meta
           name="description"
           content="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your booth type, package, confirm booking, and secure your date."
+          key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/booking" />
       </Head>

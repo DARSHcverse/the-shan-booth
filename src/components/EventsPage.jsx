@@ -66,7 +66,11 @@ const EventsPage = () => {
     <>
       <Head>
         <title>Event Photobooth Hire for Weddings, Parties & Corporate Events | The Shan Booth</title>
-        <meta name="description" content="Hire photobooths for weddings, birthdays, school graduations, corporate events & university open days in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."/>
+        <meta
+          name="description"
+          content="Hire photobooths for weddings, birthdays, school graduations, corporate events & university open days in Melbourne. The Shan Booth creates unforgettable memories with custom templates, themed props & instant prints."
+          key="description"
+        />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/events"/>
 
       {/* Open Graph */}

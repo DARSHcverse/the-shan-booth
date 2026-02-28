@@ -13,6 +13,7 @@ const NewYearPartyLanding = () => {
         <meta
           name="description"
           content="Kick off the New Year with style! Hire a photobooth for New Year’s Eve or New Year celebrations in Melbourne, Tarneit & Geelong. Unlimited prints, fun props, and instant sharing."
+          key="description"
         />
         <meta
           name="keywords"

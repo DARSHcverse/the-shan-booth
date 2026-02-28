@@ -14,6 +14,7 @@ const SchoolHolidayLanding = () => {
         <meta
           name="description"
           content="Make school holidays unforgettable with fun photo booth hire for kids parties, school programs, childcare centres, and community events across Melbourne, Tarneit & Geelong. Unlimited prints, digital sharing & kid-friendly props!"
+          key="description"
         />
 
         <meta

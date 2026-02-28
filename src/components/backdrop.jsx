@@ -73,6 +73,7 @@ const BackdropPage = () => {
         <meta
           name="description"
           content="Discover whimsical backdrop designs and fun props for photo booths in Melbourne. Perfect for weddings, parties, school graduations, and corporate events."
+          key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/backdrop" />
 

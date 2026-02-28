@@ -12,6 +12,7 @@ const ChristmasLanding = () => {
         <meta
           name="description"
           content="Celebrate Christmas & end-of-year parties in Melbourne with The Shan Booth! Fun festive photo booths with unlimited prints, props, and instant sharing. Serving Melbourne, Tarneit & Geelong."
+          key="description"
         />
         <meta
           name="keywords"

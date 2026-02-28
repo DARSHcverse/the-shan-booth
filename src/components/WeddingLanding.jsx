@@ -14,6 +14,7 @@ const WeddingLanding = () => {
         <meta
           name="description"
           content="Looking for wedding photo booth hire in Melbourne? The Shan Booth offers elegant photobooths with unlimited prints, classy props & instant sharing. Servicing Melbourne, Geelong & Tarneit."
+          key="description"
         />
 
         <meta

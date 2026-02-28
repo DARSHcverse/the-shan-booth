@@ -15,6 +15,7 @@ const PhotoboothsPage = () => {
         <meta
           name="description"
           content="Explore our photobooths designed to bring joy and unforgettable memories to weddings, parties, and corporate events. Open, Glam, and Enclosed Booth options available."
+          key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/photobooths" />
 

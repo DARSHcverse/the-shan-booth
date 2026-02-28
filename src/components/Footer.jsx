@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useConsent } from "./ConsentProvider";
 const fb = '/images/3259376_facebook_media_social_icon.png';
 const ig = '/images/3259424_instagram_social media_social_icon.png';
 const tw = '/images/3259404_media_social_twitter_icon.png';
@@ -13,6 +14,7 @@ const Footer = () => {
     process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || process.env.REACT_APP_GOOGLE_MAPS_KEY;
 
   const router = useRouter();
+  const { openDialog } = useConsent();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
 
@@ -84,14 +86,9 @@ const Footer = () => {
               <img src={fb} alt="Facebook" className="social-icon" />
             </a>
 
-            <button
-              type="button"
-              className="social-link no-style-button"
-              onClick={() => alert('Twitter link coming soon')}
-              aria-label="Twitter (coming soon)"
-            >
+            <span className="social-link social-link--disabled" aria-label="Twitter (coming soon)" title="Coming soon">
               <img src={tw} alt="Twitter" className="social-icon" />
-            </button>
+            </span>
 
             <a
               href="https://www.instagram.com/photobooth_withshan/"
@@ -123,7 +120,11 @@ const Footer = () => {
         <div>
           <h3 className="footer-heading">Contact Form</h3>
           <form className="contact-form" onSubmit={handleSubmit}>
+            <label className="sr-only" htmlFor="footer-contact-name">
+              Your name
+            </label>
             <input
+              id="footer-contact-name"
               type="text"
               name="name"
               placeholder="Your name..."
@@ -131,8 +132,13 @@ const Footer = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              autoComplete="name"
             />
+            <label className="sr-only" htmlFor="footer-contact-email">
+              Email
+            </label>
             <input
+              id="footer-contact-email"
               type="email"
               name="email"
               placeholder="Email..."
@@ -140,8 +146,13 @@ const Footer = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              autoComplete="email"
             />
+            <label className="sr-only" htmlFor="footer-contact-message">
+              Message
+            </label>
             <textarea
+              id="footer-contact-message"
               name="message"
               placeholder="Your message..."
               rows="4"
@@ -156,7 +167,11 @@ const Footer = () => {
               </button>
             </div>
           </form>
-          {status && <p className="form-status">{status}</p>}
+          {status && (
+            <p className="form-status" role="status" aria-live="polite">
+              {status}
+            </p>
+          )}
         </div>
       </div>
 
@@ -167,6 +182,10 @@ const Footer = () => {
         <Link href="/terms" className="footer-link">Terms & Conditions</Link>
         <span style={{ margin: '0 0.5rem' }}>|</span>
         <Link href="/privacy" className="footer-link">Privacy Policy</Link>
+        <span style={{ margin: '0 0.5rem' }}>|</span>
+        <button type="button" className="footer-link footer-link--button" onClick={openDialog}>
+          Cookie preferences
+        </button>
       </div>
     </footer>
   );

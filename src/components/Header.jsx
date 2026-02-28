@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu, X } from 'lucide-react';
@@ -8,8 +8,24 @@ const callIcon = '/images/callIcon.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const firstMobileLinkRef = useRef(null);
 
   const infoItems = ['FUN GUARANTEED', '$ SAFE & SECURE', '$$ AFFORDABLE PRICING', 'HIGH-QUALITY PRINTS', 'CUSTOMIZABLE BACKDROPS', 'PROFESSIONAL SERVICE'];
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const t = window.setTimeout(() => firstMobileLinkRef.current?.focus?.(), 0);
+    return () => window.clearTimeout(t);
+  }, [isMenuOpen]);
 
   const renderInfoItem = (text) => {
     const match = /^(\$+)\s*(.*)$/.exec(text);
@@ -55,10 +71,11 @@ const Header = () => {
     { name: 'PAY HERE', path: '/pay' },
   ];
 
-  const NavLinks = ({ onClick }) => (
+  const NavLinks = ({ onClick, firstLinkRef }) => (
     <ul className="nav-list">
       {navItems.map((item) => {
         const isActive = router.pathname === item.path;
+        const linkRef = item.path === "/" ? firstLinkRef : undefined;
         return (
           <li
             key={item.path}
@@ -68,6 +85,7 @@ const Header = () => {
               href={item.path}
               className="nav-link"
               onClick={() => onClick && onClick()}
+              ref={linkRef}
             >
               {item.name}
             </Link>
@@ -109,7 +127,7 @@ const Header = () => {
           aria-label="Go to homepage"
         >
           <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
-          <h1 className="logo-text">THE SHAN BOOTH</h1>
+          <span className="logo-text">THE SHAN BOOTH</span>
         </Link>
 
         {/* Desktop nav */}
@@ -136,12 +154,13 @@ const Header = () => {
 
       {/* Mobile menu overlay */}
       {isMenuOpen && (
-        <div
+        <nav
           id="mobile-menu"
           className="mobile-menu-overlay animate-slide-in"
+          aria-label="Mobile navigation"
         >
-          <NavLinks onClick={() => setIsMenuOpen(false)} />
-        </div>
+          <NavLinks onClick={() => setIsMenuOpen(false)} firstLinkRef={firstMobileLinkRef} />
+        </nav>
       )}
     </header>
   );

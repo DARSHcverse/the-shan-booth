@@ -9,6 +9,7 @@ const OpenBoothPage = () => (
       <meta
         name="description"
         content="Open Photo Booth Hire in Melbourne for weddings, parties, and corporate events. Capture stunning photos with Canon R100 mirrorless camera and Surface Pro setup."
+        key="description"
       />
       <link rel="canonical" href="https://www.photoboothwithshan.com.au/open-booth" />
       <meta property="og:title" content="Open Photo Booth Hire Melbourne | Modern Event Fun" />

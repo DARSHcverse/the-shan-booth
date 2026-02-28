@@ -23,6 +23,7 @@ const PayPage = () => {
         <meta
           name="description"
           content="Secure online payment portal for The Shan Booth bookings. Powered by Stripe with encrypted transactions."
+          key="description"
         />
 
         <link

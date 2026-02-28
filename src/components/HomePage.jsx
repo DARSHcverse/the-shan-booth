@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from "next/head";
+import Image from "next/image";
+import { useConsent } from "./ConsentProvider";
 
 // Main Image Imports
 const boothimg5 = '/images/hero-banner.webp';
@@ -22,8 +24,11 @@ const gifvideo3 = '/images/fun-vdo-3.webm';
 
 const HomePage = () => {
   const router = useRouter();
+  const { consent, openDialog } = useConsent();
   const images = [boothimg5, boothimg2, boothimg3, boothimg4];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const reviewsSectionRef = useRef(null);
+  const [shouldLoadReviews, setShouldLoadReviews] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -33,14 +38,37 @@ const HomePage = () => {
   }, [images.length]);
 
   useEffect(() => {
-  if (!document.getElementById("sociablekit-google-reviews")) {
-    const script = document.createElement("script");
-    script.id = "sociablekit-google-reviews";
-    script.src = "https://widgets.sociablekit.com/google-reviews/widget.js";
-    script.defer = true;
-    document.body.appendChild(script);
-  }
-}, []);
+    if (!consent.marketing) return;
+    const el = reviewsSectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setShouldLoadReviews(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [consent.marketing]);
+
+  useEffect(() => {
+    if (!consent.marketing) return;
+    if (!shouldLoadReviews) return;
+    if (typeof document === "undefined") return;
+
+    if (!document.getElementById("sociablekit-google-reviews")) {
+      const script = document.createElement("script");
+      script.id = "sociablekit-google-reviews";
+      script.src = "https://widgets.sociablekit.com/google-reviews/widget.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, [consent.marketing, shouldLoadReviews]);
 
   // ✅ Structured Data
   const structuredData = {
@@ -220,10 +248,13 @@ const HomePage = () => {
         </div> */}
 
         <div className="hero-overlay">
-          <img
+          <Image
             src={images[currentImageIndex]}
             alt="Students celebrating their graduation with a fun photobooth"
             className="main-img"
+            fill
+            priority={currentImageIndex === 0}
+            sizes="100vw"
           />
           <div className="hero-text">
             <h1 className="hero-title">PHOTO BOOTH HIRE MELBOURNE</h1>
@@ -508,7 +539,7 @@ const HomePage = () => {
               loop
               muted
               playsInline
-              preload="auto"
+              preload="none"
               className="testimonial-webm"
             >
             </video>
@@ -518,7 +549,7 @@ const HomePage = () => {
               loop
               muted
               playsInline
-              preload="auto"
+              preload="none"
               className="testimonial-webm"
             >
             </video>
@@ -528,7 +559,7 @@ const HomePage = () => {
               loop
               muted
               playsInline
-              preload="auto"
+              preload="none"
               className="testimonial-webm"
             >
             </video>
@@ -550,8 +581,23 @@ const HomePage = () => {
         </div>
       </section>
       
-      <section className="section-padding bg-light">
-        <div id="google-reviews-container" className="sk-ww-google-reviews" data-embed-id="25643287"></div>
+      <section className="section-padding bg-light" ref={reviewsSectionRef}>
+        {consent.marketing ? (
+          <div
+            id="google-reviews-container"
+            className="sk-ww-google-reviews"
+            data-embed-id="25643287"
+          />
+        ) : (
+          <div className="reviews-consent">
+            <p className="reviews-consent__text">
+              Google Reviews are disabled until you allow marketing cookies.
+            </p>
+            <button className="cookie-btn cookie-btn--primary" type="button" onClick={openDialog}>
+              Manage cookie preferences
+            </button>
+          </div>
+        )}
       </section>
 
       {/* FAQ */}

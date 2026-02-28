@@ -14,6 +14,7 @@ const PhotoboothLanding = () => {
         <meta
           name="description"
           content="Looking for professional photobooth hire Melbourne? The Shan Booth offers modern, stylish, and affordable photobooth rentals for weddings, birthdays, and corporate events with unlimited prints, props, and instant digital sharing."
+          key="description"
         />
 
         <meta

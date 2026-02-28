@@ -10,6 +10,7 @@ const TermsPage = () => {
         <meta
           name="description"
           content="Terms and Conditions for The Shan Booth photobooth hire services in Melbourne, including bookings, payments, cancellations, and responsibilities."
+          key="description"
         />
 
         <link

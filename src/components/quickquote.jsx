@@ -71,6 +71,7 @@ const QuickQuote = () => {
         <meta
           name="description"
           content="Request a quick quote for photobooth hire in Melbourne with The Shan Booth. Fast and easy – choose your package, add event details, and get your price instantly."
+          key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/quickquote" />
 
@@ -123,54 +124,76 @@ const QuickQuote = () => {
           <h2 className="page-heading">QUICK <span className="red-text">QUOTE</span></h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
+              <label className="sr-only" htmlFor="quickquote-fullName">Full name</label>
               <input
+                id="quickquote-fullName"
                 type="text"
                 name="fullName"
                 placeholder="Full Name"
                 className="form-input"
                 value={formData.fullName}
                 onChange={handleChange}
+                required
+                autoComplete="name"
               />
+              <label className="sr-only" htmlFor="quickquote-email">Email</label>
               <input
+                id="quickquote-email"
                 type="email"
                 name="email"
                 placeholder="Email"
                 className="form-input"
                 value={formData.email}
                 onChange={handleChange}
+                required
+                autoComplete="email"
               />
+              <label className="sr-only" htmlFor="quickquote-phoneNumber">Phone number</label>
               <input
+                id="quickquote-phoneNumber"
                 type="text"
                 name="phoneNumber"
                 placeholder="Phone Number"
                 className="form-input"
                 value={formData.phoneNumber}
                 onChange={handleChange}
+                required
+                autoComplete="tel"
               />
+              <label className="sr-only" htmlFor="quickquote-eventDate">Event date</label>
               <input
+                id="quickquote-eventDate"
                 type="date"
                 name="eventDate"
                 placeholder="Date"
                 className="form-input"
                 value={formData.eventDate}
                 onChange={handleChange}
+                required
               />
+              <label className="sr-only" htmlFor="quickquote-eventLocation">Event location</label>
               <input
+                id="quickquote-eventLocation"
                 type="text"
                 name="eventLocation"
                 placeholder="Event Location"
                 className="form-input"
                 value={formData.eventLocation}
                 onChange={handleChange}
+                required
+                autoComplete="street-address"
               />
             </div>
 
             <div className="form-group">
+              <label className="sr-only" htmlFor="quickquote-packageDuration">Package duration</label>
               <select
+                id="quickquote-packageDuration"
                 name="packageDuration"
                 className="form-select"
                 value={formData.packageDuration}
                 onChange={handleChange}
+                required
               >
                 <option value="" disabled>
                   Select Package Duration
@@ -184,39 +207,49 @@ const QuickQuote = () => {
               </select>
             </div>
 
-            <div className="radio-group-container">
-              <p className="radio-group-title">Select a Service:</p>
+            <fieldset className="radio-group-container">
+              <legend className="radio-group-title">Select a Service:</legend>
               <div className="radio-group">
-                {['Open Booth', 'Glam Booth', 'Enclosed Booth'].map((serviceType) => (
-                  <div className="radio-option" key={serviceType}>
-                    <input
-                      type="radio"
-                      name="service"
-                      value={serviceType}
-                      id={serviceType.toLowerCase().replace(' ', '')}
-                      className="custom-radio"
-                      checked={formData.service === serviceType}
-                      onChange={handleChange}
-                    />
-                    <label htmlFor={serviceType.toLowerCase().replace(' ', '')}>
-                      {serviceType}
-                    </label>
-                  </div>
-                ))}
+                {['Open Booth', 'Glam Booth', 'Enclosed Booth'].map((serviceType, index) => {
+                  const id = `quickquote-service-${serviceType.toLowerCase().replace(/\s+/g, '-')}`;
+                  return (
+                    <div className="radio-option" key={serviceType}>
+                      <input
+                        type="radio"
+                        name="service"
+                        value={serviceType}
+                        id={id}
+                        className="custom-radio"
+                        checked={formData.service === serviceType}
+                        onChange={handleChange}
+                        required={index === 0}
+                      />
+                      <label htmlFor={id}>{serviceType}</label>
+                    </div>
+                  );
+                })}
               </div>
-            </div>
+            </fieldset>
 
+            <label className="sr-only" htmlFor="quickquote-message">Message</label>
             <textarea
+              id="quickquote-message"
               name="message"
               placeholder="Your message..."
               className="form-textarea"
               value={formData.message}
               onChange={handleChange}
+              required
             />
             <button type="submit" className="submit-button">
               Get Quote
             </button>
           </form>
+          {status && (
+            <p className="form-status" role="status" aria-live="polite">
+              {status}
+            </p>
+          )}
 
           {status && <p className="form-status">{status}</p>}
 

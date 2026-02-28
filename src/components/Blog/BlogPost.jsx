@@ -32,7 +32,7 @@ const BlogPost = ({ slug: slugProp }) => {
     <>
       <Head>
         <title>{post.title}</title>
-        <meta name="description" content={post.excerpt} />
+        <meta name="description" content={post.excerpt} key="description" />
         <meta name="keywords" content={post.keywords.join(", ")} />
         <link rel="canonical" href={canonical} />
 

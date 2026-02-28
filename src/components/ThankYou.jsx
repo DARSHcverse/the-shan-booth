@@ -12,6 +12,7 @@ const ThankYou = () => {
         <meta
           name="description"
           content="Thank you for submitting your request. The Shan Booth will contact you shortly."
+          key="description"
         />
       </Head>
 

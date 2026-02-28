@@ -9,6 +9,7 @@ const GlamBoothPage = () => (
       <meta
         name="description"
         content="Glam Photo Booth Hire in Melbourne featuring AI glam filters, Canon R100 camera, and Surface Pro setup. Capture flawless, high-end portraits with luxury style."
+        key="description"
       />
       <link rel="canonical" href="https://www.photoboothwithshan.com.au/glam-booth" />
       <meta property="og:title" content="Glam Photo Booth Hire Melbourne | Hollywood Experience" />

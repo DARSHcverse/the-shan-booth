@@ -148,6 +148,7 @@ const PackagesPage = () => {
         <meta
           name="description"
           content="Explore affordable photo booth hire packages in Melbourne. Choose from Standard or Glam Booth options with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
+          key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/packages" />
 

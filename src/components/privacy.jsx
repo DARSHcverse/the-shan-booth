@@ -9,6 +9,7 @@ const PrivacyPage = () => {
         <meta
           name="description"
           content="Read The Shan Booth's Privacy Policy to learn how we collect, use, and protect your personal data when you book our photo booth hire services in Melbourne."
+          key="description"
         />
         <link
           rel="canonical"

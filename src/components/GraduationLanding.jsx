@@ -12,6 +12,7 @@ const GraduationLanding = () => {
         <meta
           name="description"
           content="Celebrate graduations, school formals, and uni balls with The Shan Booth. Classy backdrops, fun props, and instant prints. Serving Melbourne, Geelong & Grovedale."
+          key="description"
         />
         <meta
           name="keywords"

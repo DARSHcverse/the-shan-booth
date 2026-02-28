@@ -13,6 +13,7 @@ const HalloweenLanding = () => {
         <meta
           name="description"
           content="Capture the spooky fun at your Halloween party with The Shan Booth. Spooky backdrops, fun props, and instant prints. Serving Melbourne, Geelong & Grovedale."
+          key="description"
         />
         <meta
           name="keywords"

@@ -20,6 +20,7 @@ const PBSeoPage = () => {
         <meta
           name="description"
           content="Affordable photobooth hire Melbourne with unlimited prints, custom backdrops, fun props, instant pendrive copies & friendly attendants. Weddings, graduations, corporate events & more."
+          key="description"
         />
         <meta
           name="keywords"

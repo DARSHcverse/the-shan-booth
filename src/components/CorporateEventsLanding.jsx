@@ -12,6 +12,7 @@ const CorporateEventsLanding = () => {
         <meta
           name="description"
           content="Elevate your corporate events with The Shan Booth. Branded photo booths for business functions, product activations, conferences & award nights in Melbourne & Geelong."
+          key="description"
         />
         <meta
           name="keywords"

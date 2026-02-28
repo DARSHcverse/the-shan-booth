@@ -9,6 +9,7 @@ const EnclosedBoothPage = () => (
       <meta
         name="description"
         content="Enclosed Photo Booth Hire in Melbourne with Canon R100 mirrorless camera and Surface Pro setup. Step into an enclosed, bouncy-castle-style booth and enjoy private fun shots."
+        key="description"
       />
       <link rel="canonical" href="https://www.photoboothwithshan.com.au/enclosed-booth" />
 

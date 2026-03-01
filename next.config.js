@@ -60,6 +60,41 @@ const nextConfig = {
     return headers;
   },
   webpack(config) {
+    const hasSpeedInsights = (() => {
+      try {
+        require.resolve("@vercel/speed-insights/next");
+        return true;
+      } catch {
+        return false;
+      }
+    })();
+
+    const hasAnalytics = (() => {
+      try {
+        require.resolve("@vercel/analytics/next");
+        return true;
+      } catch {
+        return false;
+      }
+    })();
+
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      ...(hasSpeedInsights
+        ? {}
+        : {
+            "@vercel/speed-insights/next": path.join(
+              __dirname,
+              "src/stubs/vercel-speed-insights-next.js",
+            ),
+          }),
+      ...(hasAnalytics
+        ? {}
+        : {
+            "@vercel/analytics/next": path.join(__dirname, "src/stubs/vercel-analytics-next.js"),
+          }),
+    };
+
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|webp|svg|mp4|webm)$/i,
       type: "asset/resource",

@@ -17,6 +17,7 @@ import BookingPage from './components/Bookingpage';
 import ChristmasLanding from "./components/ChristmasLanding";
 import GraduationLanding from './components/GraduationLanding';
 import PhotoboothLanding from './components/PhotoboothLanding';
+import GeelongLanding from './components/GeelongLanding';
 import CorporateEventsLanding from './components/CorporateEventsLanding';
 import WeddingLanding from './components/WeddingLanding';
 import BirthdayLanding from './components/BirthdayLanding';
@@ -56,6 +57,7 @@ function App() {
         <Route path="/christmas" element={<ChristmasLanding />} />
         <Route path="/graduation" element={<GraduationLanding />} />
         <Route path="/photoboothhiremelbourne" element={<PhotoboothLanding />} />
+        <Route path="/photoboothhiregeelong" element={<GeelongLanding />} />
         <Route path="/corporate-events" element={<CorporateEventsLanding />} />
         <Route path="/weddings" element={<WeddingLanding />} />
         <Route path="/birthday" element={<BirthdayLanding />} />

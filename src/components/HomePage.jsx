@@ -466,6 +466,7 @@ const HomePage = () => {
           </p>
           <p>
             Our photo booth hire Melbourne service extends throughout the greater Melbourne area, including Tarneit, Geelong, Point Cook, and surrounding suburbs. We understand that every event is unique, which is why we offer flexible packages that can be customized to match your specific needs. From intimate gatherings to large-scale corporate functions, our professional team ensures seamless setup and operation throughout your entire event.
+            Looking specifically for <a href="/photoboothhiregeelong"><strong>photo booth hire Geelong</strong></a>? View our Geelong landing page for local service details.
           </p>
           <p>
             What sets our photo booth hire Melbourne apart is our dedication to using cutting-edge technology combined with exceptional customer service. Every booking includes a professional attendant who manages the booth, assists guests, and ensures everything runs smoothly. This hands-on approach means you can relax and enjoy your event while we handle all the technical details, from setup to breakdown.

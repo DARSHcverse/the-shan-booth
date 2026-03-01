@@ -2606,6 +2606,45 @@ body {
   min-height: 100vh;
 }
 
+/* Geelong Landing */
+.geelong-landing {
+  background: linear-gradient(to bottom right, #ecfeff, #e0f2fe);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.geelong-landing h1 {
+  text-shadow: 0 0 5px #fff, 0 0 10px #38bdf8, 0 0 15px #0284c7;
+  color: #0369a1; /* sky-700 */
+}
+
+.geelong-landing p {
+  color: #0f172a; /* slate-900 */
+}
+
+.geelong-landing .cta-btn {
+  display: inline-block;
+  background-color: #0284c7; /* sky-600 */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.geelong-landing .cta-btn:hover {
+  background-color: #0369a1; /* sky-700 */
+  transform: scale(1.05);
+}
+
+.geelong-landing .photobooth-section h2 {
+  color: #0284c7; /* sky-600 */
+}
+
 /* Headline with warm photobooth glow */
 .photobooth-landing h1 {
   text-shadow: 0 0 5px #fff, 0 0 10px #fbbf24, 0 0 15px #d97706;
@@ -2638,13 +2677,16 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .photobooth-landing h1 {
+  .photobooth-landing h1,
+  .geelong-landing h1 {
     font-size: 2rem;
   }
-  .photobooth-landing p {
+  .photobooth-landing p,
+  .geelong-landing p {
     font-size: 1rem;
   }
-  .photobooth-landing .cta-btn {
+  .photobooth-landing .cta-btn,
+  .geelong-landing .cta-btn {
     display: block;
     margin: 0.5rem auto;
     max-width: 250px;

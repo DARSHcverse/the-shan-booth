@@ -116,6 +116,20 @@ const CorporateEventsLanding = () => {
         </div>
 
         <div className="corporate-section">
+          <h2>✅ Corporate-Ready Experience From Start to Finish</h2>
+          <p>
+            We understand corporate timelines, venue constraints, and brand expectations. Our team
+            coordinates with your event manager to align bump-in times, power requirements, and on-site
+            traffic flow so the booth feels seamless within your run sheet.
+          </p>
+          <p>
+            Every booth is staffed by a professional attendant who manages guest queues, encourages
+            participation, and keeps the experience polished. Your guests get a fun interaction, while
+            your brand gets consistent visuals that look great both on prints and online.
+          </p>
+        </div>
+
+        <div className="corporate-section">
           <h2>💼 Event Types We Cover</h2>
           <ul className="areas-list">
             <li>Corporate parties & award nights</li>
@@ -123,6 +137,26 @@ const CorporateEventsLanding = () => {
             <li>Networking events</li>
             <li>Staff celebrations & end-of-year functions</li>
           </ul>
+          <p>
+            Whether your goal is team bonding or audience engagement, we tailor the booth flow to match
+            your objectives. We can place the booth near entry points for maximum visibility or close to
+            the bar and lounge areas to capture the most social moments.
+          </p>
+        </div>
+
+        <div className="corporate-section">
+          <h2>📈 Brand Activation Ideas That Work</h2>
+          <ul className="feature-list">
+            <li>Step-and-repeat backdrops for a red-carpet style experience</li>
+            <li>Hashtag and logo overlays for instant brand recall</li>
+            <li>Email capture to follow up after the event</li>
+            <li>Gifts or prizes for the best team photo</li>
+            <li>On-brand props that match your campaign theme</li>
+          </ul>
+          <p>
+            These small touches turn a fun photo booth into a measurable marketing moment. We can help
+            you choose the right combination based on your audience, venue, and campaign objectives.
+          </p>
         </div>
 
         <div className="corporate-section">
@@ -141,6 +175,30 @@ const CorporateEventsLanding = () => {
               <p>Full-day setup with unlimited prints, analytics & brand integration.</p>
             </div>
           </div>
+        </div>
+
+        <div className="corporate-section">
+          <h2>🧭 Planning Checklist for Corporate Booths</h2>
+          <ul className="feature-list">
+            <li>Confirm your booth location and access for bump-in/bump-out</li>
+            <li>Share brand guidelines so we can match colours and fonts</li>
+            <li>Decide on print size and whether you want a digital-only option</li>
+            <li>Choose a backdrop that complements your stage or media wall</li>
+            <li>Plan how you want to use the photos after the event</li>
+          </ul>
+          <p>
+            Need help? We’ll guide you through each step and recommend the best setup for your venue
+            and audience.
+          </p>
+        </div>
+
+        <div className="corporate-section">
+          <h2>📊 Post-Event Deliverables</h2>
+          <p>
+            After the event, you’ll receive a curated gallery of high-resolution images for internal
+            communications, social posts, and brand wrap-ups. If you choose digital sharing or email
+            capture, we can also provide a report so you can track engagement and measure outcomes.
+          </p>
         </div>
 
         <div className="corporate-section">

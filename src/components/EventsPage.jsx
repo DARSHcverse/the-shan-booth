@@ -131,6 +131,11 @@ const EventsPage = () => {
           a service refined through years of experience across diverse celebrations.
         </p>
 
+        <p className="events-intro" style={{ marginTop: '1rem' }}>
+          Hosting your celebration in Geelong or the Bellarine? Visit our
+          <a href="/photoboothhiregeelong"> photo booth hire Geelong</a> page for local details.
+        </p>
+
         {/* NEW Modern Cards */}
         <div className="event-type-grid">
           {eventsData.map((event, index) => (

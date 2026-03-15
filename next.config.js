@@ -59,6 +59,21 @@ const nextConfig = {
 
     return headers;
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "photoboothwithshan.com.au",
+          },
+        ],
+        destination: "https://www.photoboothwithshan.com.au/:path*",
+        permanent: true,
+      },
+    ];
+  },
   webpack(config) {
     const hasSpeedInsights = (() => {
       try {

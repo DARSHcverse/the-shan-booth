@@ -29,11 +29,33 @@ export const post = {
   <h2>🎁 Perfect for Corporate Christmas Events</h2>
   <p>Add your logo or custom branding to every photo strip. It's a fun, subtle way to promote your business while giving your staff a memorable Christmas keepsake they’ll love.</p>
 
+  <h2>🥂 A Built-In Icebreaker for Teams</h2>
+  <p>Christmas parties are often the one time of year where teams from different departments mix. A photo booth makes it effortless for people to connect, laugh, and share a moment without awkward small talk. By the time your guests line up for a few snaps, the atmosphere feels warmer and more relaxed.</p>
+
+  <h2>🎯 Match the Booth to Your Venue</h2>
+  <p>Whether you’re hosting a corporate dinner in the CBD or a casual end-of-year celebration in the suburbs, the booth should feel like part of the space. We can tailor the backdrop to suit modern venues, heritage rooms, or outdoor courtyards. If your venue already has beautiful Christmas styling, an open-air booth with a subtle template can let the decor shine.</p>
+
+  <h2>✅ Planning Checklist for Melbourne Christmas Parties</h2>
+  <ul>
+    <li>Choose a booth location with room for groups and easy guest flow.</li>
+    <li>Schedule your photo booth during peak social moments (after dinner or speeches).</li>
+    <li>Decide whether you want prints only, digital sharing, or both.</li>
+    <li>Provide brand assets early if you want a logo or event title on the template.</li>
+    <li>Book early for November and December dates to secure your preferred timeslot.</li>
+  </ul>
+
   <h2>✨ Fully Custom Christmas Designs</h2>
   <p>We create personalised templates that match your theme—snowflakes, sparkling gold, Santa motifs, or stylish corporate branding. Your booth becomes a Christmas attraction all on its own.</p>
 
   <h2>🎉 Great for Both Kids & Adults</h2>
   <p>Christmas photo booths work for everyone—kids love the props, adults love the fun, and everyone enjoys taking home festive printed memories.</p>
+
+  <h2>📷 High-Quality Photos Guests Actually Keep</h2>
+  <p>Christmas events fly by fast. A booth creates a tangible keepsake that guests can take home, pin to the fridge, or share online. We use professional lighting and cameras so the photos look sharp, even in dim venues.</p>
+
+  <h2>❓ Quick FAQs</h2>
+  <p><strong>How far ahead should we book?</strong> Christmas is our busiest season. If you have a preferred date in November or December, it’s best to lock it in early.</p>
+  <p><strong>Can you handle large corporate events?</strong> Yes. We can scale the setup with extra attendants or longer hire times to manage bigger guest numbers.</p>
 
   <h2>📍 Book Early for November & December Events</h2>
   <p>Christmas is our busiest time of the year. Dates fill quickly from early November onwards, so securing your booth early ensures you get your preferred time and setup.</p>

@@ -27,10 +27,16 @@ export const post = {
   <h2>💡 2. Custom Designs & Backdrops</h2>
   <p>Whether you want a sleek black-and-white glam look or a colourful party backdrop, our team can match your theme. Enjoy <strong>personalised templates</strong>, <strong>unique backdrops</strong>, and <strong>custom start screens</strong> that reflect your event style.</p>
 
-  <h2>🏆 3. Melbourne’s Trusted Photo Booth Experts</h2>
+  <h2>📸 3. Consistent Photo Quality</h2>
+  <p>Great memories deserve great photos. Our booths use professional lighting and camera setups to create crisp, flattering images in all kinds of venues — from dim reception rooms to bright daytime events. The result is a gallery you’ll actually want to share.</p>
+
+  <h2>🏆 4. Melbourne’s Trusted Photo Booth Experts</h2>
   <p>Our experienced team has worked across <strong>Melbourne, Geelong, and regional Victoria</strong>. Clients love our <strong>reliable setup</strong>, <strong>on-time delivery</strong>, and <strong>5-star service</strong>. We’re proud to be one of the most trusted names in <a href="/photoboothhiremelbourne">photo booth hire Melbourne</a>.</p>
 
-  <h2>🎈 4. Perfect for Every Event</h2>
+  <h2>🕒 5. Seamless Setup and Attentive Support</h2>
+  <p>We arrive early, coordinate with your venue, and handle setup and pack-down so you don’t have to. During the event, a friendly attendant keeps the booth running smoothly, helps guests, and ensures the experience stays fun and professional.</p>
+
+  <h2>🎈 6. Perfect for Every Event</h2>
   <p>Our booths are ideal for:</p>
   <ul>
     <li>Weddings</li>
@@ -41,13 +47,30 @@ export const post = {
   </ul>
   <p>Whatever your celebration, we bring the fun — you just enjoy the memories.</p>
 
-  <h2>💬 5. Why People Love Photo Booth With Shan</h2>
+  <h2>💬 7. Why People Love Photo Booth With Shan</h2>
   <ul>
     <li>No hidden travel fees in Melbourne metro</li>
     <li>Free online gallery access</li>
     <li>Friendly male or female attendants available</li>
     <li>Customisable props and guest books</li>
   </ul>
+
+  <h2>🌟 8. Local Knowledge That Saves You Time</h2>
+  <p>We work with a wide range of Melbourne and Geelong venues, so we understand bump-in access, power
+  locations, and the best booth placement for guest flow. That local experience helps your event run
+  smoother and ensures everyone gets their turn in the spotlight.</p>
+
+  <h2>📅 9. What Happens After You Book</h2>
+  <p>Once your date is locked in, we confirm your event details, template preferences, and venue notes.
+  You’ll know exactly when we arrive, how long setup takes, and what to expect on the day. If your
+  schedule changes, we’re flexible and communicate clearly so you always feel in control of the
+  booking process.</p>
+
+  <h2>❓ Quick FAQs</h2>
+  <p><strong>Do you offer custom branding for corporate events?</strong> Yes. We can add logos, colour palettes,
+  and event messaging to prints and screens for a cohesive brand experience.</p>
+  <p><strong>How far ahead should I book?</strong> Popular dates fill quickly. We recommend booking as soon as your
+  venue and event date are confirmed.</p>
 
   <h2>💥 Final Thoughts</h2>
   <p>When you choose <strong>Photo Booth With Shan</strong>, you’re choosing <strong>affordable prices, premium service, and unforgettable experiences</strong>. Let us make your next event shine with our <a href="/packages">photo booth hire packages</a> and <a href="/quickquote">instant quotes</a>.</p>

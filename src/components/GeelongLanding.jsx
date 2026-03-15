@@ -8,14 +8,11 @@ const GeelongLanding = () => {
   return (
     <>
       <Head>
-        <title>
-          Photo Booth Hire Geelong 📸 | Weddings, Birthdays & Corporate Events | The
-          Shan Booth
-        </title>
+        <title>Photo Booth Hire Geelong | The Shan Booth</title>
 
         <meta
           name="description"
-          content="Need photo booth hire in Geelong? The Shan Booth brings premium booths to weddings, birthdays and corporate events across Geelong, the Bellarine Peninsula and Surf Coast. Unlimited prints, props, custom templates and instant digital sharing."
+          content="Hire a photo booth in Geelong for weddings, birthdays and corporate events. Unlimited prints, custom templates, props and instant sharing across the region."
           key="description"
         />
 
@@ -29,7 +26,7 @@ const GeelongLanding = () => {
           href="https://www.photoboothwithshan.com.au/photoboothhiregeelong"
         />
 
-        <meta property="og:title" content="Photo Booth Hire Geelong 📸 | The Shan Booth" />
+        <meta property="og:title" content="Photo Booth Hire Geelong | The Shan Booth" />
         <meta
           property="og:description"
           content="Premium photo booth hire in Geelong with unlimited prints, fun props and instant digital sharing. Perfect for weddings, birthdays and corporate events."
@@ -42,7 +39,7 @@ const GeelongLanding = () => {
         <meta property="og:image" content="/images/hero-banner-2.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Photo Booth Hire Geelong 📸 | The Shan Booth" />
+        <meta name="twitter:title" content="Photo Booth Hire Geelong | The Shan Booth" />
         <meta
           name="twitter:description"
           content="Book a modern photo booth in Geelong with unlimited prints, custom templates and instant sharing."
@@ -176,6 +173,44 @@ const GeelongLanding = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="photobooth-section">
+          <h2>Why Geelong Events Choose Our Photo Booths</h2>
+          <p>
+            Geelong events have a unique blend of coastal atmosphere, heritage venues, and
+            modern function spaces. We tailor each setup to fit the vibe of your location — from
+            bright, airy waterfront rooms to intimate winery spaces across the Bellarine. Our
+            team arrives early, works with venue staff, and positions the booth for smooth guest
+            flow and flattering lighting, so your gallery looks consistent all night.
+          </p>
+          <p>
+            Many local celebrations include guests traveling from Melbourne, the Surf Coast, and
+            regional Victoria. That’s why we keep our process simple: clear bump-in times, a
+            dedicated attendant, and a photo booth experience that runs itself once guests get
+            started. We can match your styling with custom templates, branded overlays, and
+            curated props that feel intentional rather than generic.
+          </p>
+          <p>
+            For corporate events and community activations in Geelong, our open-air setup works
+            beautifully with sponsor branding and team photos. We can position the booth near
+            entry points or beside feature walls for maximum engagement, and deliver shareable
+            digital files that are perfect for social media and internal comms.
+          </p>
+
+          <h3>Local Planning Tips for Geelong Celebrations</h3>
+          <ul className="feature-list">
+            <li>Book early for summer weekends — Geelong dates fill quickly.</li>
+            <li>Ask your venue about bump-in access and power points near the booth space.</li>
+            <li>For outdoor events, plan a covered or shaded area to protect equipment.</li>
+            <li>Allow space for groups so guests can line up and jump into photos together.</li>
+            <li>Consider a guestbook station to keep prints and handwritten notes.</li>
+          </ul>
+          <p>
+            Want to compare options? You can explore our full range of <a href="/packages">packages</a>
+            or ask for tailored advice on the <a href="/quickquote">Quick Quote</a> page. We’re
+            happy to help you choose the right booth, timeline, and layout for your Geelong event.
+          </p>
         </div>
 
         <div className="photobooth-section faq-section">

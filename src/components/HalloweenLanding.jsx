@@ -123,6 +123,44 @@ const HalloweenLanding = () => {
         </div>
 
         <div className="halloween-section">
+          <h2>🧛 Build a Halloween Booth Theme</h2>
+          <p>
+            The best Halloween photos come from a strong theme. Whether you want classic horror, cute
+            family-friendly fun, or a stylish gothic vibe, we can tailor the booth to match. From
+            lighting and props to custom templates, your booth becomes a mini set that pulls guests in.
+          </p>
+          <ul className="feature-list">
+            <li>Classic horror: fog, bones, and vintage-style props</li>
+            <li>Glam spooky: black backdrops with gold accents and elegant props</li>
+            <li>Family-friendly: pumpkins, friendly ghosts, and bright colours</li>
+            <li>Brand or venue themes: logos, colour palettes, and custom overlays</li>
+          </ul>
+          <p>
+            If you have a costume contest or a themed party, we can align the booth with your decor so
+            the photos look cohesive and shareable.
+          </p>
+        </div>
+
+        <div className="halloween-section">
+          <h2>🕸️ Planning Tips for October Events</h2>
+          <p>
+            October is one of our busiest months, so early booking is the best way to secure your
+            preferred date and time. We can adapt to a wide range of venues, from lounges and function
+            spaces to outdoor marquees, as long as we have a stable surface and a nearby power outlet.
+          </p>
+          <ul className="areas-list">
+            <li>Choose a booth location with good lighting and easy guest flow</li>
+            <li>Allow space for groups and queueing during peak times</li>
+            <li>Provide a sheltered area if your event is outdoors</li>
+            <li>Add a guestbook station for printed memories and messages</li>
+          </ul>
+          <p>
+            Our team arrives early, sets up efficiently, and stays on-site to keep everything running
+            smoothly so you can enjoy the party.
+          </p>
+        </div>
+
+        <div className="halloween-section">
           <h2>📍 Areas We Haunt</h2>
           <ul className="areas-list">
             <li>Melbourne (CBD & suburbs)</li>

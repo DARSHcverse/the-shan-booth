@@ -258,6 +258,32 @@ const PackagesPage = () => {
           <p>
             Selecting your <a href="/">photo booth hire Melbourne</a> package from The Shan Booth means partnering with a team that understands the importance of your special occasion. We're dedicated to providing outstanding service that makes your event memorable, whether it's a wedding celebration, corporate gathering, birthday party, or school function. Reach out to our friendly team to explore package options tailored specifically to your needs.
           </p>
+          <h3 className="section-subtitle">What’s Included in Every Package</h3>
+          <ul className="feature-list">
+            <li>Professional delivery, setup, and pack-down</li>
+            <li>Friendly attendant to keep the booth running smoothly</li>
+            <li>Unlimited sessions during your hire window</li>
+            <li>Instant prints and digital copies for every guest</li>
+            <li>Custom templates that match your event style</li>
+            <li>Props and styling to enhance the experience</li>
+          </ul>
+          <p>
+            If you need a guestbook, extra hours, or a custom backdrop, we can tailor your package to
+            match the venue layout and timeline. Our team will walk you through the options so you book
+            the right package without paying for extras you don’t need.
+          </p>
+          <h3 className="section-subtitle">How to Choose the Right Package</h3>
+          <p>
+            Start with your guest count and event length. Smaller celebrations often fit a 2-hour option,
+            while weddings and corporate functions typically benefit from 3–4 hours to cover the peak
+            moments. If you’re planning speeches, dinner service, or multiple segments, a longer hire
+            ensures guests always have access to the booth.
+          </p>
+          <p>
+            For weekends and peak seasons, we recommend securing your package early so you can lock in
+            your preferred time slot. If you’re unsure, we’ll help you choose the most cost-effective
+            option based on your event schedule and venue layout.
+          </p>
         </div>
       </section>
     </>

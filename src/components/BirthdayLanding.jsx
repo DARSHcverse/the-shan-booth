@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 const birthdayBackdrop = '/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp';
 const birthdayBackdrop2 = '/images/smiling-young-man-wearing-party-hat-surprised-young-girl-holds-hands-together-isolated-pink-wall.webp';
 const birthdayStrip = '/images/birthdaystrip.png';
@@ -164,7 +165,7 @@ const BirthdayLanding = () => {
 
         <div className="cta-center">
           <a href="/booking" className="cta-btn">Book Birthday Booth</a>
-          <a href="/quickquote" className="cta-btn">Get a Party Quote</a>
+          <a href={QUICK_QUOTE_URL} className="cta-btn">Get a Party Quote</a>
         </div>
 
         <div className="seo-keywords" aria-hidden="true">

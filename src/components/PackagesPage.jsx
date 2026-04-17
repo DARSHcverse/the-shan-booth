@@ -1,12 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 
 const offer = '/images/offer.webp';
 
 const PackagesPage = () => {
-  const router = useRouter();
-
   const standardPackages = [
     {
       id: 'standard-1',
@@ -215,9 +213,7 @@ const PackagesPage = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <button className="package-button" onClick={() => router.push('/quickquote')}>
-                    Inquire
-                  </button>
+                  <a className="package-button" href={QUICK_QUOTE_URL}>Inquire</a>
                 </div>
               </div>
             ))}
@@ -235,9 +231,7 @@ const PackagesPage = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <button className="package-button" onClick={() => router.push('/quickquote')}>
-                    Inquire
-                  </button>
+                  <a className="package-button" href={QUICK_QUOTE_URL}>Inquire</a>
                 </div>
               </div>
             ))}

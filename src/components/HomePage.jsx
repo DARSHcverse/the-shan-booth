@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Head from "next/head";
 import Image from "next/image";
 import { useConsent } from "./ConsentProvider";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 
 // Main Image Imports
 const boothimg5 = '/images/hero-banner.webp';
@@ -261,7 +262,7 @@ const HomePage = () => {
             <p className="hero-subtitle">Melbourne's favourite photo booth for unforgettable end-of-year celebrations.</p>
             <div className="hero-buttons">
               <button onClick={() => router.push('/packages')} className="home-button">VIEW PACKAGES</button>
-              <button onClick={() => router.push('/quickquote')} className="home-button secondary">Quick Quote</button>
+              <button onClick={() => window.location.assign(QUICK_QUOTE_URL)} className="home-button secondary">Quick Quote</button>
             </div>
           </div>
         </div>
@@ -647,7 +648,7 @@ const HomePage = () => {
         <div className="container">
           <h2>Ready to Lock in the Fun for Your End-of-Year Event?</h2>
           <p>Don't leave your party entertainment to the last minute. Secure The Shan Booth today! Explore our photo booth hire Melbourne options and discover why we're Melbourne's trusted choice for unforgettable event experiences.</p>
-          <button onClick={() => router.push('/quickquote')} className="home-button">Secure Your 2026 Date</button>
+          <button onClick={() => window.location.assign(QUICK_QUOTE_URL)} className="home-button">Secure Your 2026 Date</button>
         </div>
       </section>
 

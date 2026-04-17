@@ -1,3 +1,5 @@
+import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
+
 export const post = {
   title: "Top 5 Reasons to Hire a Photo Booth in Melbourne (2025 Guide)",
   date: "2025-10-10",
@@ -31,6 +33,6 @@ export const post = {
 
   <p>Ready to add excitement to your next event? Explore our <a href="/">photo booth hire Melbourne</a> services and discover packages designed for every celebration. From intimate gatherings to large corporate functions, we bring the perfect booth setup to your venue.</p>
 
-  <p>Get started today by visiting our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page or <a href="/quickquote">requesting a personalized quote</a> for your event date.</p>
+  <p>Get started today by visiting our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page or <a href="${QUICK_QUOTE_URL}">requesting a personalized quote</a> for your event date.</p>
   `,
 };

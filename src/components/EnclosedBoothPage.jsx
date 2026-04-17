@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from '../lib/siteLinks';
 const openBoothVideo = '/images/enclosedVID.mp4';
 
 const EnclosedBoothPage = () => (
@@ -77,7 +78,7 @@ const EnclosedBoothPage = () => (
         <div className="cta-section">
           <h2>Make Your Event Extra Special</h2>
           <p>Book your <strong>Enclosed Photo Booth</strong> and create a cozy, laughter-filled photo space!</p>
-          <a href="/quickquote" className="cta-button">Quick Quote Now</a>
+          <a href={QUICK_QUOTE_URL} className="cta-button">Quick Quote Now</a>
         </div>
       </div>
     </main>

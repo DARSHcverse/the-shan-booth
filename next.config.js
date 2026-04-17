@@ -1,4 +1,5 @@
 const path = require("path");
+const quickQuoteUrl = "https://www.do-book.com/enquiry/theshanbooth";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -61,6 +62,11 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/quickquote",
+        destination: quickQuoteUrl,
+        permanent: true,
+      },
       {
         source: "/:path*",
         has: [

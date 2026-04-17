@@ -1,3 +1,5 @@
+import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
+
 export const post = {
   title: "Wedding Photo Booth Ideas in Melbourne 2025",
   date: "2025-10-14",
@@ -31,6 +33,6 @@ export const post = {
 
   <p>Transform your wedding celebration with a professional <a href="/">photo booth hire Melbourne</a> experience. Our team specializes in creating magical moments that your guests will treasure long after the celebration ends.</p>
 
-  <p>Start planning your perfect wedding photo booth today. Browse our <a href="/weddings">wedding-specific packages</a>, visit our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page, or <a href="/quickquote">request a custom quote</a> tailored to your special day.</p>
+  <p>Start planning your perfect wedding photo booth today. Browse our <a href="/weddings">wedding-specific packages</a>, visit our <a href="/photoboothhiremelbourne">Photo Booth Hire Melbourne</a> page, or <a href="${QUICK_QUOTE_URL}">request a custom quote</a> tailored to your special day.</p>
   `,
 };

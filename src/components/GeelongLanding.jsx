@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 
 const boothImg1 = "/images/hero-banner.webp";
 const boothImg2 = "/images/hero-banner-2.webp";
@@ -208,7 +209,7 @@ const GeelongLanding = () => {
           </ul>
           <p>
             Want to compare options? You can explore our full range of <a href="/packages">packages</a>
-            or ask for tailored advice on the <a href="/quickquote">Quick Quote</a> page. We’re
+            or ask for tailored advice on the <a href={QUICK_QUOTE_URL}>Quick Quote</a> page. We’re
             happy to help you choose the right booth, timeline, and layout for your Geelong event.
           </p>
         </div>
@@ -218,7 +219,7 @@ const GeelongLanding = () => {
           <h3>How much does a photo booth cost in Geelong?</h3>
           <p>
             Pricing depends on the booth type, duration and add-ons. The fastest way to get an
-            exact quote is via our <a href="/quickquote">Quick Quote</a> form.
+            exact quote is via our <a href={QUICK_QUOTE_URL}>Quick Quote</a> form.
           </p>
 
           <h3>Do you set up at venues (wineries, waterfront, function rooms)?</h3>
@@ -255,7 +256,7 @@ const GeelongLanding = () => {
         </div>
 
         <div className="cta-center">
-          <a href="/quickquote" className="cta-btn">
+          <a href={QUICK_QUOTE_URL} className="cta-btn">
             📩 Get a Geelong Quote
           </a>
           <a href="/booking" className="cta-btn">

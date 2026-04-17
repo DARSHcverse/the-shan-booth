@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu, X } from 'lucide-react';
+import { QUICK_QUOTE_URL } from '../lib/siteLinks';
 const logo = '/images/logo.png';
 const callIcon = '/images/callIcon.png';
 // import iconGradCap from '/images/prop.png'; // Floating icon (currently not in use)
@@ -67,28 +68,38 @@ const Header = () => {
     { name: 'PACKAGES', path: '/packages' },
     { name: 'BACKDROP', path: '/backdrop' },
     { name: 'BOOKING', path: '/booking' },
-    { name: 'QUICK QUOTE', path: '/quickquote' },
+    { name: 'QUICK QUOTE', path: QUICK_QUOTE_URL, external: true },
     { name: 'PAY HERE', path: '/pay' },
   ];
 
   const NavLinks = ({ onClick, firstLinkRef }) => (
     <ul className="nav-list">
       {navItems.map((item) => {
-        const isActive = router.pathname === item.path;
+        const isActive = !item.external && router.pathname === item.path;
         const linkRef = item.path === "/" ? firstLinkRef : undefined;
         return (
           <li
             key={item.path}
             className={`nav-item ${isActive ? 'active' : ''}`}
           >
-            <Link
-              href={item.path}
-              className="nav-link"
-              onClick={() => onClick && onClick()}
-              ref={linkRef}
-            >
-              {item.name}
-            </Link>
+            {item.external ? (
+              <a
+                href={item.path}
+                className="nav-link"
+                onClick={() => onClick && onClick()}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                href={item.path}
+                className="nav-link"
+                onClick={() => onClick && onClick()}
+                ref={linkRef}
+              >
+                {item.name}
+              </Link>
+            )}
           </li>
         );
       })}

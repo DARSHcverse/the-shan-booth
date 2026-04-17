@@ -1,3 +1,5 @@
+import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
+
 export const post = {
   title: "Top Photo Booth Trends in Melbourne 2025",
   date: "2025-10-20",
@@ -23,7 +25,7 @@ export const post = {
   <p>Mirror photo booths continue to impress with touch-screen interactivity, digital props, and personalized animations. Learn more about our <a href="/photoboothhiremelbourne">mirror booth hire</a>.</p>
 
   <h2>3. AI Photo Enhancement</h2>
-  <p>AI-powered photo booths automatically improve lighting and clarity, giving every guest a perfect photo instantly. Get an <a href="/quickquote">instant quote</a> for your event.</p>
+  <p>AI-powered photo booths automatically improve lighting and clarity, giving every guest a perfect photo instantly. Get an <a href="${QUICK_QUOTE_URL}">instant quote</a> for your event.</p>
 
   <h2>4. Custom Backdrops and Branding</h2>
   <p>Corporate clients and weddings alike now invest in branded or floral backdrops to match their themes — adding a personal touch to every photo. <a href="/booking">Book your custom booth setup today</a>.</p>
@@ -33,6 +35,6 @@ export const post = {
 
   <p>Stay ahead of the curve with Melbourne's most innovative <a href="/">photo booth hire Melbourne</a> solutions. Our team continuously updates our equipment and services to incorporate the latest trends, ensuring your event features cutting-edge technology and unforgettable experiences.</p>
 
-  <p>Ready to bring these exciting trends to your next event? <a href="/booking">Book your photo booth hire in Melbourne</a> today or <a href="/quickquote">request a quick quote</a> to see how we can make your celebration stand out with the latest photo booth innovations.</p>
+  <p>Ready to bring these exciting trends to your next event? <a href="/booking">Book your photo booth hire in Melbourne</a> today or <a href="${QUICK_QUOTE_URL}">request a quick quote</a> to see how we can make your celebration stand out with the latest photo booth innovations.</p>
   `,
 };

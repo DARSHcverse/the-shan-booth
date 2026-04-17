@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 const corporateImg1 = '/images/coperateimg.webp';
 const corporateImg2 = '/images/photobooth.webp';
 const corporateStrip = '/images/coporatestrip.png';
@@ -211,7 +212,7 @@ const CorporateEventsLanding = () => {
         </div>
 
         <div className="cta-center">
-          <a href="/quickquote" className="cta-btn">Get a Business Quote</a>
+          <a href={QUICK_QUOTE_URL} className="cta-btn">Get a Business Quote</a>
           <a href="/booking" className="cta-btn">Book a Corporate Booth</a>
         </div>
 

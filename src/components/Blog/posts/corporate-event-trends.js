@@ -1,3 +1,5 @@
+import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
+
 export const post = {
   title: "Corporate Event Photo Booth Trends in Melbourne (2025)",
   date: "2025-10-16",
@@ -67,6 +69,6 @@ export const post = {
 
   <p>Elevate your next corporate function with cutting-edge <strong>photo booth hire Melbourne</strong> solutions. Our corporate packages are designed to enhance brand visibility while creating memorable experiences for your team and clients.</p>
 
-  <p>Explore our <a href="/corporate-events">Corporate Photo Booth Packages</a> or visit our <a href="/">homepage</a> to see all available options. For personalized recommendations, <a href="/quickquote">request a quote</a> and let us tailor a solution that matches your event goals.</p>
+  <p>Explore our <a href="/corporate-events">Corporate Photo Booth Packages</a> or visit our <a href="/">homepage</a> to see all available options. For personalized recommendations, <a href="${QUICK_QUOTE_URL}">request a quote</a> and let us tailor a solution that matches your event goals.</p>
   `,
 };

@@ -4,6 +4,7 @@ const photobooth = '/images/boothimg6.webp';
 const glam = '/images/glam.png';
 const enclosure = '/images/enclosed.jpeg';
 import { useRouter } from 'next/router';
+import { QUICK_QUOTE_URL } from '../lib/siteLinks';
 
 const PhotoboothsPage = () => {
   const router = useRouter();
@@ -126,7 +127,7 @@ const PhotoboothsPage = () => {
             </ul>
             <p>
               If you’re not sure which style fits best, explore our <a href="/packages">packages</a> or reach
-              out through the <a href="/quickquote">Quick Quote</a> form for tailored advice.
+              out through the <a href={QUICK_QUOTE_URL}>Quick Quote</a> form for tailored advice.
             </p>
           </div>
 
@@ -162,7 +163,7 @@ const PhotoboothsPage = () => {
 
           <div className="cta-center">
             <a href="/packages" className="cta-btn">View Packages</a>
-            <a href="/quickquote" className="cta-btn">Get a Quick Quote</a>
+            <a href={QUICK_QUOTE_URL} className="cta-btn">Get a Quick Quote</a>
           </div>
         </div>
       </main>

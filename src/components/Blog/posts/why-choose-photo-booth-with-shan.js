@@ -1,3 +1,5 @@
+import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
+
 export const post = {
   title: "Why Choose Photo Booth With Shan — Melbourne’s Best Photo Booth Hire (2025)",
   date: "2025-10-19",
@@ -73,10 +75,10 @@ export const post = {
   venue and event date are confirmed.</p>
 
   <h2>💥 Final Thoughts</h2>
-  <p>When you choose <strong>Photo Booth With Shan</strong>, you’re choosing <strong>affordable prices, premium service, and unforgettable experiences</strong>. Let us make your next event shine with our <a href="/packages">photo booth hire packages</a> and <a href="/quickquote">instant quotes</a>.</p>
+  <p>When you choose <strong>Photo Booth With Shan</strong>, you’re choosing <strong>affordable prices, premium service, and unforgettable experiences</strong>. Let us make your next event shine with our <a href="/packages">photo booth hire packages</a> and <a href="${QUICK_QUOTE_URL}">instant quotes</a>.</p>
 
   <p>Join hundreds of satisfied clients who have made Photo Booth With Shan their trusted choice for <a href="/">photo booth hire Melbourne</a>. We're committed to delivering exceptional service that exceeds expectations, whether you're planning a wedding, corporate event, or private celebration.</p>
 
-  <p>Ready to experience the difference? Browse our <a href="/packages">complete package options</a> or <a href="/quickquote">get an instant quote</a> for your upcoming event. We proudly serve <strong>Melbourne, Geelong, and regional Victoria</strong> with reliable, professional photo booth services.</p>
+  <p>Ready to experience the difference? Browse our <a href="/packages">complete package options</a> or <a href="${QUICK_QUOTE_URL}">get an instant quote</a> for your upcoming event. We proudly serve <strong>Melbourne, Geelong, and regional Victoria</strong> with reliable, professional photo booth services.</p>
   `,
 };

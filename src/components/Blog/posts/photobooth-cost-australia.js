@@ -1,3 +1,5 @@
+import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
+
 export const post = {
   title: "How Much Does a Photo Booth Cost in Australia (2025 Update)",
   date: "2025-10-17",
@@ -32,10 +34,10 @@ export const post = {
   <h2>🕓 How to Get the Best Value</h2>
   <p>Book early and choose local providers — like <strong>Photo Booth With Shan</strong> — to save on travel fees and enjoy flexible options.</p>
 
-  <p>We also offer discounts for multi-hour bookings and packages. See our <a href="/packages">Photo Booth Packages</a> or <a href="/quickquote">get an instant quote</a>.</p>
+  <p>We also offer discounts for multi-hour bookings and packages. See our <a href="/packages">Photo Booth Packages</a> or <a href="${QUICK_QUOTE_URL}">get an instant quote</a>.</p>
 
   <p>Understanding photo booth costs helps you budget effectively for your event. At Photo Booth With Shan, we believe in transparent pricing with no hidden fees. All our <a href="/">photo booth hire Melbourne</a> packages include professional setup, an experienced attendant, and quality equipment.</p>
 
-  <p>Compare our competitive rates by viewing our <a href="/packages">detailed package options</a> or <a href="/quickquote">requesting a personalized quote</a>. Remember: always confirm that delivery, setup, and attendant services are included in your quote to avoid unexpected charges.</p>
+  <p>Compare our competitive rates by viewing our <a href="/packages">detailed package options</a> or <a href="${QUICK_QUOTE_URL}">requesting a personalized quote</a>. Remember: always confirm that delivery, setup, and attendant services are included in your quote to avoid unexpected charges.</p>
   `,
 };

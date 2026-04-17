@@ -3,7 +3,7 @@ module.exports = {
   siteUrl: "https://www.photoboothwithshan.com.au",
   generateRobotsTxt: true,
   sitemapSize: 5000,
-  exclude: ["/thankyou", "/pay"],
+  exclude: ["/thankyou", "/pay", "/quickquote"],
   changefreq: "weekly",
   priority: 0.7,
   transform: async (config, path) => {

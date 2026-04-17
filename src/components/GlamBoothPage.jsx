@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from '../lib/siteLinks';
 const glam = '/images/glam.png';
 
 const GlamBoothPage = () => (
@@ -80,7 +81,7 @@ const GlamBoothPage = () => (
         <div className="cta-section">
           <h2>Book the Glam Experience</h2>
           <p>Let our <strong>AI Glam Photo Booth</strong> make your next event shine brighter than ever.</p>
-          <a href="/quickquote" className="cta-button">Quick Quote Now</a>
+          <a href={QUICK_QUOTE_URL} className="cta-button">Quick Quote Now</a>
         </div>
       </div>
     </main>

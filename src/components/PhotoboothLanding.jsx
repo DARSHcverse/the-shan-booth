@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 const boothImg = '/images/boothimg4.webp';
 const boothImg2 = '/images/boothimg5.webp';
 const birthdayStrip = '/images/birthdaystrip.png';
@@ -277,7 +278,7 @@ const PhotoboothLanding = () => {
 
         {/* CTA */}
         <div className="cta-center">
-          <a href="/quickquote" className="cta-btn">📩 Get a Quick Quote</a>
+          <a href={QUICK_QUOTE_URL} className="cta-btn">📩 Get a Quick Quote</a>
           <a href="/booking" className="cta-btn">📅 Book Now</a>
         </div>
 

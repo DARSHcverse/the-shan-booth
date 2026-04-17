@@ -1,3 +1,5 @@
+import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
+
 export const post = {
   title: "Open-Air vs Enclosed Photo Booths — Which One Fits Your Event?",
   date: "2025-10-22",
@@ -39,7 +41,7 @@ export const post = {
   <p>The best option depends on your event type and vibe:</p>
   <ul>
     <li><strong>Weddings & Birthdays:</strong> Open-air booths let everyone join in on the fun.</li>
-    <li><strong>Corporate Events:</strong> Open-air setups are great for branded backdrops and logos — check our <a href="/quickquote">Quick Quote page</a> for tailored packages.</li>
+    <li><strong>Corporate Events:</strong> Open-air setups are great for branded backdrops and logos — check our <a href="${QUICK_QUOTE_URL}">Quick Quote page</a> for tailored packages.</li>
     <li><strong>Formal Events:</strong> Enclosed booths offer privacy and classic charm.</li>
   </ul>
 
@@ -48,7 +50,7 @@ export const post = {
 
   <p>Still unsure which booth style fits your event? Our team at Photo Booth With Shan is here to help you choose the perfect setup based on your venue, guest count, and event atmosphere. We offer both open-air and enclosed options with professional guidance every step of the way.</p>
 
-  <p>Take the next step by <a href="/booking">booking your preferred booth style</a> or <a href="/quickquote">requesting a free instant quote</a>. Explore our complete range of <a href="/">photo booth hire Melbourne</a> services on our homepage, where you'll find detailed information about all our packages and options.</p>
+  <p>Take the next step by <a href="/booking">booking your preferred booth style</a> or <a href="${QUICK_QUOTE_URL}">requesting a free instant quote</a>. Explore our complete range of <a href="/">photo booth hire Melbourne</a> services on our homepage, where you'll find detailed information about all our packages and options.</p>
 
   <p>We're proud to serve <strong>Melbourne, Geelong, and regional Victoria</strong> with reliable, professional photo booth experiences tailored to your needs.</p>
   `,

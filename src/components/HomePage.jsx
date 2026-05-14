@@ -81,7 +81,7 @@ const HomePage = () => {
     "logo": "/images/logo.png",
     "image": "/images/photobooth.webp",
     "description": "The Shan Booth provides premium photo booth hire in Melbourne with open booths, glam booths, enclosed booths, 360 video booths, and audio guest books. Perfect for weddings, graduations, corporate events, and Christmas parties.",
-    "telephone": "+61 475 116 521",
+    "telephone": "+61 414 521 425",
     "email": "mailto:theshanbooth@gmail.com",
     "priceRange": "$$",
 
@@ -134,7 +134,7 @@ const HomePage = () => {
 
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+61 475 116 521",
+      "telephone": "+61 414 521 425",
       "contactType": "customer service",
       "availableLanguage": "English"
     },

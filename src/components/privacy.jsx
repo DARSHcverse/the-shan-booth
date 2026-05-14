@@ -127,7 +127,7 @@ const PrivacyPage = () => {
       <ul>
         <li>Email: <a href="mailto:theshanbooth@gmail.com">theshanbooth@gmail.com</a></li>
         <li>Contact Page: <a href="https://www.photoboothwithshan.com.au" target="_blank" rel="noopener noreferrer">photoboothwithshan.com.au</a></li>
-        <li>Phone: +61 475 116 521</li>
+        <li>Phone: :+61 414 521 425</li>
       </ul>
     </div>
   );

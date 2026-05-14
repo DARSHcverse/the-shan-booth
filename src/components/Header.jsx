@@ -104,7 +104,7 @@ const Header = () => {
         );
       })}
       <li className="nav-item">
-        <a href="tel:+61475116521" aria-label="Call us">
+        <a href="tel:+61414521425" aria-label="Call us">
           <img src={callIcon} alt="Call button" className="call-icon" />
         </a>
       </li>

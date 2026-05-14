@@ -56,7 +56,7 @@ const GeelongLanding = () => {
             "description": "Photo booth hire Geelong for weddings, birthdays, and corporate events across Geelong, the Bellarine Peninsula and Surf Coast.",
             "image": "/images/hero-banner-2.webp",
             "url": "https://www.photoboothwithshan.com.au/photoboothhiregeelong",
-            "telephone": "+61 475 116 521",
+            "telephone": "+61 414 521 425",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Geelong",
@@ -240,7 +240,7 @@ const GeelongLanding = () => {
           <p>
             <strong>The Shan Booth</strong> – Photo Booth Hire Geelong
             <br />
-            📞 +61 475 116 521
+            📞 :+61 414 521 425
             <br />
             📍 Geelong, VIC, Australia
           </p>

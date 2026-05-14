@@ -54,7 +54,7 @@ const PhotoboothLanding = () => {
             "description": "Photobooth hire Melbourne for weddings, birthdays, and corporate events.",
             "image": "/images/boothimg5.webp",
             "url": "https://www.photoboothwithshan.com.au",
-            "telephone": "+61 475 116 521",
+            "telephone": "+61 414 521 425",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Melbourne",
@@ -259,7 +259,7 @@ const PhotoboothLanding = () => {
           <h2>📌 Contact & Location</h2>
           <p>
             <strong>The Shan Booth</strong> – Photobooth Hire Melbourne  
-            <br />📞 +61 475 116 521  
+            <br />📞 :+61 414 521 425  
             <br />📍 Melbourne, VIC, Australia
           </p>
           <p>

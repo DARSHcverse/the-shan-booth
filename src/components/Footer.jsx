@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             <div className="social-link no-style-button">
               <img src={phone} alt="Phone" className="social-icon" />
-              <span>+61 475 116 521</span>
+              <span>:+61 414 521 425</span>
             </div>
             <br />
             <div className="social-link no-style-button">

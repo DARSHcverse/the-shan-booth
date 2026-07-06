@@ -21,7 +21,7 @@ const ThankYou = () => {
         <meta name="robots" content="noindex, follow" />
       </Head>
 
-      <div className="thankyou-container">
+      <div className="rd rd-landing thankyou-container">
         <div className="thankyou-card">
           <h1>Thank You! 🎉</h1>
           <p>Your request has been received. We’ll get back to you shortly.</p>

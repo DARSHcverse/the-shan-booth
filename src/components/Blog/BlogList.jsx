@@ -15,7 +15,7 @@ const BlogList = () => {
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/blog" />
       </Head>
 
-      <section className="blog-list">
+      <section className="rd rd-landing blog-list">
         <div className="blog-container">
           <h1 className="blog-title">Photo Booth Blog</h1>
 

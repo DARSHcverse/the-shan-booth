@@ -27,7 +27,7 @@ const BirthdayLanding = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/birthday" />
-        <meta property="og:image" content="/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -40,12 +40,13 @@ const BirthdayLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
+          content="https://www.photoboothwithshan.com.au/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
         />
 
         {/* Improved Event Schema */}
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "Event",
@@ -89,11 +90,11 @@ const BirthdayLanding = () => {
               "validFrom": "2025-07-01T00:00:00+10:00"
             }
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
-      <div className="birthday-landing">
+      <div className="rd rd-landing birthday-landing">
         <div className="floating-strip left-strip">
           <img src={birthdayStrip} alt="Birthday photostrip design" />
         </div>

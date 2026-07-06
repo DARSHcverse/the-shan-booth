@@ -24,9 +24,12 @@ const BlogPost = ({ slug: slugProp }) => {
     );
   }
 
-  const canonical = `https://www.photoboothwithshan.com.au/blog/${post.slug}`;
+  const SITE_URL = "https://www.photoboothwithshan.com.au";
+  const canonical = `${SITE_URL}/blog/${post.slug}`;
 
-  const defaultImage = "/images/glam.png";
+  // Absolute URL required by Open Graph / Twitter for previews to render.
+  const rawImage = post.image || "/images/glam.png";
+  const ogImage = rawImage.startsWith("http") ? rawImage : `${SITE_URL}${rawImage}`;
 
   return (
     <>
@@ -39,7 +42,7 @@ const BlogPost = ({ slug: slugProp }) => {
         {/* Open Graph */}
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.image || defaultImage} />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="article" />
 
@@ -47,11 +50,15 @@ const BlogPost = ({ slug: slugProp }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={post.image || defaultImage} />
+        <meta name="twitter:image" content={ogImage} />
 
-        {/* Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
+      </Head>
+
+      {/* Schema (rendered outside next/head so Google reliably receives it) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
             headline: post.title,
@@ -65,11 +72,11 @@ const BlogPost = ({ slug: slugProp }) => {
               "@type": "WebPage",
               "@id": canonical,
             },
-          })}
-        </script>
-      </Head>
+          }),
+        }}
+      />
 
-      <section className="blog-post-wrapper">
+      <section className="rd rd-landing blog-post-wrapper">
         <article className="blog-post">
           <h1>{post.title}</h1>
           <p className="post-meta">{post.date}</p>

@@ -39,7 +39,7 @@ const ChristmasLanding = () => {
         />
         <meta
           property="og:image"
-          content="/images/christmas.webp"
+          content="https://www.photoboothwithshan.com.au/images/christmas.webp"
         />
 
         {/* Twitter */}
@@ -54,18 +54,19 @@ const ChristmasLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/christmas2.webp"
+          content="https://www.photoboothwithshan.com.au/images/christmas2.webp"
         />
 
         {/* Schema.org JSON-LD for seasonal landing page */}
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Christmas Photo Booth Hire Melbourne",
             "description": "Festive photobooth hire for Christmas parties, corporate end-of-year events and holiday celebrations across Melbourne & Geelong.",
-            "image": "/images/christmas.webp",
+            "image": "https://www.photoboothwithshan.com.au/images/christmas.webp",
             "location": {
               "@type": "Place",
               "name": "Melbourne & Geelong",
@@ -94,12 +95,12 @@ const ChristmasLanding = () => {
               "validFrom": "2025-09-01T00:00:00+10:00"
             }
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
       {/* ✅ Landing Page Content */}
-      <div className="christmas-landing">
+      <div className="rd rd-landing christmas-landing">
         <h1>Christmas Party Photo Booths for End-of-Year Events in Melbourne</h1>
         <p>
           Planning a Christmas or end-of-year party in Melbourne or Geelong? 

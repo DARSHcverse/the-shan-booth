@@ -37,7 +37,7 @@ const GeelongLanding = () => {
           property="og:url"
           content="https://www.photoboothwithshan.com.au/photoboothhiregeelong"
         />
-        <meta property="og:image" content="/images/hero-banner-2.webp" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/hero-banner-2.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Photo Booth Hire Geelong | The Shan Booth" />
@@ -45,16 +45,17 @@ const GeelongLanding = () => {
           name="twitter:description"
           content="Book a modern photo booth in Geelong with unlimited prints, custom templates and instant sharing."
         />
-        <meta name="twitter:image" content="/images/hero-banner.webp" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/hero-banner.webp" />
 
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "The Shan Booth",
             "description": "Photo booth hire Geelong for weddings, birthdays, and corporate events across Geelong, the Bellarine Peninsula and Surf Coast.",
-            "image": "/images/hero-banner-2.webp",
+            "image": "https://www.photoboothwithshan.com.au/images/hero-banner-2.webp",
             "url": "https://www.photoboothwithshan.com.au/photoboothhiregeelong",
             "telephone": "+61 414 521 425",
             "address": {
@@ -74,11 +75,12 @@ const GeelongLanding = () => {
             ],
             "priceRange": "$$"
           }
-          `}
-        </script>
+          ` }}
+      />
 
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -109,11 +111,11 @@ const GeelongLanding = () => {
               }
             ]
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
-      <div className="geelong-landing">
+      <div className="rd rd-landing geelong-landing">
         <div className="floating-strip left-strip">
           <img src={floatingStrip} alt="Photo booth strip design" />
         </div>

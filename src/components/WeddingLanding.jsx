@@ -37,7 +37,7 @@ const WeddingLanding = () => {
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/weddings" />
         <meta
           property="og:image"
-          content="/images/wedding.webp"
+          content="https://www.photoboothwithshan.com.au/images/wedding.webp"
         />
 
         {/* Twitter */}
@@ -49,12 +49,13 @@ const WeddingLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/wedding2.webp"
+          content="https://www.photoboothwithshan.com.au/images/wedding2.webp"
         />
 
         {/* ✅ CORRECT Schema for Wedding Page (Service + LocalBusiness) */}
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "Service",
@@ -82,12 +83,12 @@ const WeddingLanding = () => {
               "availability": "https://schema.org/InStock"
             }
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
       {/* ✅ Landing Page Content */}
-      <div className="wedding-landing">
+      <div className="rd rd-landing wedding-landing">
         {/* Floating Wedding Strips */}
         <div className="floating-strip left-strip">
           <img src={WeddingStrip} alt="Wedding photobooth strip Melbourne" />

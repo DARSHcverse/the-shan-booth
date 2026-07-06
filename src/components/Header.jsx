@@ -1,15 +1,41 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { QUICK_QUOTE_URL } from '../lib/siteLinks';
+import { useRedesignTheme } from '../lib/useRedesign';
 const logo = '/images/logo.png';
 const callIcon = '/images/callIcon.png';
 // import iconGradCap from '/images/prop.png'; // Floating icon (currently not in use)
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const router = useRouter();
   const firstMobileLinkRef = useRef(null);
+  const toggleTheme = useRedesignTheme();
+
+  useEffect(() => {
+    try {
+      setIsDark(document.documentElement.getAttribute('data-rd-theme') === 'dark');
+    } catch (_) {}
+  }, []);
+
+  const handleThemeToggle = () => {
+    toggleTheme();
+    setIsDark(document.documentElement.getAttribute('data-rd-theme') === 'dark');
+  };
+
+  const ThemeToggle = ({ className = '' }) => (
+    <button
+      type="button"
+      onClick={handleThemeToggle}
+      className={`rd-nav-theme ${className}`}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to navy mode'}
+      title={isDark ? 'Switch to light mode' : 'Switch to navy mode'}
+    >
+      {isDark ? <Sun size={18} /> : <Moon size={18} />}
+    </button>
+  );
 
   const infoItems = ['FUN GUARANTEED', '$ SAFE & SECURE', '$$ AFFORDABLE PRICING', 'HIGH-QUALITY PRINTS', 'CUSTOMIZABLE BACKDROPS', 'PROFESSIONAL SERVICE'];
 
@@ -146,21 +172,25 @@ const Header = () => {
           <NavLinks />
         </nav>
 
-        {/* Mobile menu toggle button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="mobile-menu-button"
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-menu"
-          type="button"
-        >
-          {isMenuOpen ? (
-            <X className="w-8 h-8 text-black" />
-          ) : (
-            <Menu className="w-8 h-8 text-black" />
-          )}
-        </button>
+        <div className="header-actions">
+          <ThemeToggle className="desktop-only" />
+
+          {/* Mobile menu toggle button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="mobile-menu-button"
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            type="button"
+          >
+            {isMenuOpen ? (
+              <X className="w-8 h-8 text-black" />
+            ) : (
+              <Menu className="w-8 h-8 text-black" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu overlay */}
@@ -171,6 +201,10 @@ const Header = () => {
           aria-label="Mobile navigation"
         >
           <NavLinks onClick={() => setIsMenuOpen(false)} firstLinkRef={firstMobileLinkRef} />
+          <div className="mobile-theme-row">
+            <ThemeToggle />
+            <span>{isDark ? 'Light mode' : 'Navy mode'}</span>
+          </div>
         </nav>
       )}
     </header>

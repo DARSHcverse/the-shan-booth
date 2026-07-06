@@ -36,7 +36,7 @@ const PBSeoPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/pbseopage" />
-        <meta property="og:image" content="/images/photobooth.webp" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -45,16 +45,17 @@ const PBSeoPage = () => {
           name="twitter:description"
           content="Hire the best photo booth in Melbourne – unlimited prints, props, custom backdrops & instant pendrive. Weddings, corporate & graduations."
         />
-        <meta name="twitter:image" content="/images/photobooth.webp" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/photobooth.webp" />
 
         {/* JSON-LD Schema */}
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "The Shan Booth",
-            "image": "/images/photobooth.webp",
+            "image": "https://www.photoboothwithshan.com.au/images/photobooth.webp",
             "url": "https://www.photoboothwithshan.com.au",
             "telephone": "",
             "address": {
@@ -69,12 +70,12 @@ const PBSeoPage = () => {
               "https://www.instagram.com/"
             ]
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
       {/* Visible SEO Content (before redirect) */}
-      <div className="seo-content">
+      <div className="rd rd-landing seo-content">
         <h1>Photobooth Hire Melbourne</h1>
         <p>
           Welcome to <strong>The Shan Booth</strong> – the trusted choice for 

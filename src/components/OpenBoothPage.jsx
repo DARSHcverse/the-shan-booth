@@ -18,10 +18,10 @@ const OpenBoothPage = () => (
         property="og:description"
         content="Experience interactive photo booth fun with our Open Booth. Surface Pro + Canon R100 + pro flash lighting. Perfect for events that love energy and crowd engagement!"
       />
-      <meta property="og:image" content="/images/boothimg6.webp" />
+      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
     </Head>
 
-    <main className="booth-page section-padding">
+    <main className="rd rd-landing booth-page section-padding">
       <div className="container">
         <h1 className="page-heading">OPEN PHOTO BOOTH HIRE MELBOURNE</h1>
         <p className="intro-text">

@@ -122,7 +122,7 @@ const BookingPage = () => {
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/booking" />
       </Head>
 
-      <div className="booking-container">
+      <div className="rd rd-landing booking-container">
         {/* Floating Graduation Strip */}
         <div className="floating-strip left-strip">
           <img src={corporateStrip} alt="Graduation photobooth strip" />

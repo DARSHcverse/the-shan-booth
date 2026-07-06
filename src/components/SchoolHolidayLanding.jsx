@@ -40,7 +40,7 @@ const SchoolHolidayLanding = () => {
         />
         <meta
           property="og:image"
-          content="/images/schoolholiday1.webp"
+          content="https://www.photoboothwithshan.com.au/images/schoolholiday1.webp"
         />
 
         {/* Twitter */}
@@ -52,12 +52,13 @@ const SchoolHolidayLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/schoolholiday2.webp"
+          content="https://www.photoboothwithshan.com.au/images/schoolholiday2.webp"
         />
 
         {/* Schema.org JSON-LD */}
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
             {
               "@context": "https://schema.org",
               "@type": "Event",
@@ -81,15 +82,15 @@ const SchoolHolidayLanding = () => {
                 "name": "The Shan Booth",
                 "url": "https://www.photoboothwithshan.com.au"
               },
-              "image": "/images/schoolholiday1.webp",
+              "image": "https://www.photoboothwithshan.com.au/images/schoolholiday1.webp",
               "description": "Hire a fun and kid-friendly photo booth for school holidays, kids birthday parties, school programs and community events in Melbourne, Tarneit & Geelong."
             }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
       {/* PAGE CONTENT */}
-      <div className="season-landing">
+      <div className="rd rd-landing season-landing">
         <h1>School Holiday Photo Booth Hire in Melbourne</h1>
         <p>
           Make your <strong>school holidays</strong> exciting, fun and unforgettable! Our kid-friendly photobooths are

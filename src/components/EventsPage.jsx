@@ -78,17 +78,18 @@ const EventsPage = () => {
       <meta property="og:description" content="Hire photobooths for weddings, birthdays, corporate events, school graduations & university open days in Melbourne. Custom templates, themed props & instant prints."/>
       <meta property="og:type" content="website"/>
       <meta property="og:url" content="https://www.photoboothwithshan.com.au/events"/>
-      <meta property="og:image" content="/images/events.png"/>
+      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/events.png"/>
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image"/>
       <meta name="twitter:title" content="Event Photobooth Hire in Melbourne | The Shan Booth"/>
       <meta name="twitter:description" content="Hire photobooths for weddings, birthdays, corporate events, school graduations & university open days in Melbourne."/>
-      <meta name="twitter:image" content="/images/glam.png"/>
+      <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/glam.png"/>
 
       {/* JSON-LD Structured Data */}
-      <script type="application/ld+json">
-        {`
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "Service",
@@ -105,12 +106,12 @@ const EventsPage = () => {
             },
             "serviceType": "Photobooth Hire"
           }
-        `}
-      </script>
+        ` }}
+      />
     </Head>
     
 
-    <main className="main-content section-padding">
+    <main className="rd rd-landing main-content section-padding">
       <div className="container">
         <h1 className="page-heading">PHOTOBOOTH HIRE <br /> EVENTS WE COVER</h1>
 

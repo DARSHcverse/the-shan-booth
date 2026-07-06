@@ -27,7 +27,7 @@ const GraduationLanding = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/graduation" />
-        <meta property="og:image" content="/images/gradbooth.jpg" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/gradbooth.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Graduation Photo Booth Hire Melbourne 🎓 | The Shan Booth" />
@@ -35,16 +35,17 @@ const GraduationLanding = () => {
           name="twitter:description"
           content="Book your graduation photobooth today! Serving Melbourne, Geelong & Grovedale with stylish backdrops and instant prints."
         />
-        <meta name="twitter:image" content="/images/gradbooth.jpg" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/gradbooth.jpg" />
 
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Graduation Photo Booth Hire Melbourne",
             "description": "Professional photobooth hire for graduations, school formals and university balls across Melbourne & Geelong.",
-            "image": "/images/gradbooth.jpg",
+            "image": "https://www.photoboothwithshan.com.au/images/gradbooth.jpg",
             "location": {
               "@type": "Place",
               "name": "Melbourne & Geelong",
@@ -73,12 +74,12 @@ const GraduationLanding = () => {
               "validFrom": "2025-07-01T00:00:00+10:00"
             }
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
       {/* Landing Content */}
-      <div className="graduation-landing">
+      <div className="rd rd-landing graduation-landing">
         {/* Floating Graduation Strip */}
         <div className="floating-strip left-strip">
           <img src={gradStrip} alt="Graduation photobooth strip" />

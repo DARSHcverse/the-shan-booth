@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const TermsPage = () => {
   return (
-    <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
+    <div className="rd rd-landing policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
       <Head>
         <title>Terms & Conditions | The Shan Booth</title>
 

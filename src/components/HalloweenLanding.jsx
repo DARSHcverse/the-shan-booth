@@ -28,7 +28,7 @@ const HalloweenLanding = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.photoboothwithshan.com.au/halloween" />
-        <meta property="og:image" content="/images/halloween.webp" />
+        <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/halloween.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Halloween Photo Booth Hire Melbourne 🎃 | The Shan Booth" />
@@ -36,10 +36,11 @@ const HalloweenLanding = () => {
           name="twitter:description"
           content="Book your spooky photobooth for Halloween! Serving Melbourne, Geelong & Grovedale with themed backdrops and instant prints."
         />
-        <meta name="twitter:image" content="/images/halloween.webp" />
+        <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/halloween.webp" />
 
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "Event",
@@ -63,15 +64,15 @@ const HalloweenLanding = () => {
               "name": "The Shan Booth",
               "url": "https://www.photoboothwithshan.com.au"
             },
-            "image": "/images/halloween.webp",
+            "image": "https://www.photoboothwithshan.com.au/images/halloween.webp",
             "description": "Photobooth hire for Halloween parties, costume events, and themed celebrations across Melbourne, Geelong & Grovedale."
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
       {/* Landing Content */}
-      <div className="halloween-landing">
+      <div className="rd rd-landing halloween-landing">
         {/* Floating Ghosts Animation */}
         <div className="floating-strip left-strip">
           <img src={halloweenStrip} alt="Halloween photobooth strip" />

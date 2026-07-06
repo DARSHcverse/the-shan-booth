@@ -1,4 +1,5 @@
 import "../App.css";
+import "../styles/redesign.css";
 import Head from "next/head";
 import Script from "next/script";
 import Layout from "../components/Layout";

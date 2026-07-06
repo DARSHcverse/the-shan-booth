@@ -40,7 +40,7 @@ const CorporateEventsLanding = () => {
         />
         <meta
           property="og:image"
-          content="/images/coperateimg.webp"
+          content="https://www.photoboothwithshan.com.au/images/coperateimg.webp"
         />
 
         {/* Twitter */}
@@ -55,12 +55,13 @@ const CorporateEventsLanding = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/photobooth.webp"
+          content="https://www.photoboothwithshan.com.au/images/photobooth.webp"
         />
 
         {/* Schema.org JSON-LD */}
-        <script type="application/ld+json">
-          {`
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: `
           {
             "@context": "https://schema.org",
             "@type": "Service",
@@ -81,13 +82,13 @@ const CorporateEventsLanding = () => {
               }
             ],
             "description": "Corporate photo booth hire for product launches, trade shows, and office celebrations in Melbourne & Geelong. Includes branding, instant prints, and digital sharing.",
-            "image": "/images/coperateimg.webp"
+            "image": "https://www.photoboothwithshan.com.au/images/coperateimg.webp"
           }
-          `}
-        </script>
+          ` }}
+      />
       </Head>
 
-      <div className="corporate-landing">
+      <div className="rd rd-landing corporate-landing">
         {/* Floating Corporate Strip */}
         <div className="floating-strip left-strip">
           <img src={corporateStrip} alt="Corporate event photostrip" />

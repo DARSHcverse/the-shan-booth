@@ -34,7 +34,7 @@ const PayPage = () => {
         <meta name="robots" content="noindex, follow" />
       </Head>
 
-      <div className="flex items-center justify-center min-h-screen paypage-bg px-4">
+      <div className="rd flex items-center justify-center min-h-screen paypage-bg px-4">
         <div className="paypage-card max-w-md w-full text-center border border-gray-200">
           {/* Page Title */}
           <h1 className="paypage-title mb-4">Secure Payment</h1>

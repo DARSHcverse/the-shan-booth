@@ -22,7 +22,7 @@ const EnclosedBoothPage = () => (
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.photoboothwithshan.com.au/enclosed-booth" />
-      <meta property="og:image" content="/images/enclosed.jpeg" />
+      <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/enclosed.jpeg" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -31,11 +31,11 @@ const EnclosedBoothPage = () => (
         name="twitter:description"
         content="Step inside our Enclosed Booth in Melbourne — private, cozy, and full of fun energy for weddings, parties, and corporate events."
       />
-      <meta name="twitter:image" content="/images/enclosed.jpeg" />
+      <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/enclosed.jpeg" />
     </Head>
 
 
-    <main className="booth-page section-padding">
+    <main className="rd rd-landing booth-page section-padding">
       <div className="container">
         <div className="booth-wrapper">
           <h1 className="page-heading">ENCLOSED PHOTO BOOTH HIRE MELBOURNE</h1>

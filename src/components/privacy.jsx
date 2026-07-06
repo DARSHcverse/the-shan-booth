@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const PrivacyPage = () => {
   return (
-    <div className="policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
+    <div className="rd rd-landing policy-container" style={{ padding: "2rem", lineHeight: "1.6" }}>
       <Head>
         <title>Privacy Policy For Photobooth Hire Melbourne  | The Shan Booth</title>
         <meta
@@ -29,7 +29,7 @@ const PrivacyPage = () => {
         />
         <meta
           property="og:image"
-          content="/images/logo.png"
+          content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
 
         {/* Twitter */}
@@ -41,7 +41,7 @@ const PrivacyPage = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/logo.png"
+          content="https://www.photoboothwithshan.com.au/images/logo.png"
         />
       </Head>
 

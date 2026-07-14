@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Head from "next/head";
-const gradStrip = '/images/GradStrip.png';
-const corporateStrip = '/images/coporatestrip.png';
 import { useRouter } from "next/router";
+import { useRedesignReveal } from "../lib/useRedesign";
+const boothHero = '/images/photobooth.webp';
 
 const BookingPage = () => {
   const router = useRouter();
+  useRedesignReveal();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -123,72 +124,137 @@ const BookingPage = () => {
       </Head>
 
       <div className="rd rd-landing booking-container">
-        {/* Floating Graduation Strip */}
-        <div className="floating-strip left-strip">
-          <img src={corporateStrip} alt="Graduation photobooth strip" />
+        <div className="rd-book-head rd-reveal">
+          <span className="rd-eyebrow">Secure your date · 2026 calendar</span>
+          <h1>Book your photo booth</h1>
+          <p>Pick your booth and duration and you’ll see clear, upfront pricing instantly — no hidden fees. We’ll confirm availability, usually the same day.</p>
         </div>
-        <div className="booking-card">
-          <h2 className="booking-title"><span className="red-text">BOOK</span> YOUR PHOTBOOTH</h2>
-          <form onSubmit={handleSubmit} className="booking-form">
-            <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" required />
-            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
-            <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number" required />
-            <input type="date" className="form-input" name="eventDate" value={formData.eventDate} onChange={handleChange} placeholder="Date" required />
-            <input type="text" name="eventLocation" value={formData.eventLocation} onChange={handleChange} placeholder="Event Location" required />
 
-            {/* ✅ New Booth Type Select */}
-            <select name="boothType" value={formData.boothType} onChange={handleChange} required>
-              <option value="">Select Booth Type</option>
-              <option value="Open Booth">Open Booth</option>
-              <option value="Glam Booth">Glam Booth</option>
-              <option value="Enclosed Booth">Enclosed Booth</option>
-            </select>
+        <div className="rd-book-grid">
+          {/* Left: reassurance / summary panel */}
+          <aside className="rd-book-aside rd-reveal">
+            <div className="rd-book-media">
+              <img src={boothHero} alt="The Shan Booth photo booth setup" />
+            </div>
+            <h3>Every booking includes</h3>
+            <ul className="rd-book-incl">
+              <li><span className="rd-ck">✓</span> Delivery, setup &amp; pack-down (free within 40km)</li>
+              <li><span className="rd-ck">✓</span> Unlimited instant prints for every guest</li>
+              <li><span className="rd-ck">✓</span> A friendly, professional attendant</li>
+              <li><span className="rd-ck">✓</span> Curated props &amp; custom photo-strip design</li>
+              <li><span className="rd-ck">✓</span> Online gallery after the event</li>
+            </ul>
 
-            {/* Package duration */}
-            <select name="packageDuration" value={formData.packageDuration} onChange={handleChange} required>
-              <option value="">Select Package Duration</option>
-              <option value="2 Hours">2 Hours</option>
-              <option value="3 Hours">3 Hours</option>
-              <option value="4 Hours">4 Hours</option>
-              <option value="5 Hours">5 Hours</option>
-            </select>
+            {/* Live price summary */}
+            <div className="rd-book-summary">
+              <div className="rd-book-summary-row">
+                <span>Booth</span>
+                <strong>{formData.boothType || "—"}</strong>
+              </div>
+              <div className="rd-book-summary-row">
+                <span>Duration</span>
+                <strong>{formData.packageDuration || "—"}</strong>
+              </div>
+              <div className="rd-book-summary-total">
+                <span>Estimated total</span>
+                <strong>{formData.price > 0 ? `$${formData.price}` : "$—"}</strong>
+              </div>
+            </div>
+            <p className="rd-book-help">Need a hand? Call <a href="tel:+61414521425">+61 414 521 425</a></p>
+          </aside>
 
-            <input type="number" name="price" value={formData.price} readOnly className="readonly-input" />
+          {/* Right: the form */}
+          <div className="rd-book-card rd-reveal">
+            <h2>Your details</h2>
+            <form onSubmit={handleSubmit} className="booking-form rd-book-form">
+              <div className="rd-field">
+                <label htmlFor="fullName">Full name</label>
+                <input id="fullName" type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Jane Smith" required />
+              </div>
 
-            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Start Time: __ | End Time: __ | Parking: __ | Notes: __" rows="3" />
+              <div className="rd-field-row">
+                <div className="rd-field">
+                  <label htmlFor="email">Email</label>
+                  <input id="email" type="email" name="email" value={formData.email} onChange={handleChange} placeholder="jane@email.com" required />
+                </div>
+                <div className="rd-field">
+                  <label htmlFor="phoneNumber">Phone number</label>
+                  <input id="phoneNumber" type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="04XX XXX XXX" required />
+                </div>
+              </div>
 
-            <button type="submit" className="submit-button">Confirm Booking</button>
-          </form>
-          {status && <p className="booking-status">{status}</p>}
-        </div>
-        
-        {/* Floating Graduation Strip */}
-        <div className="floating-strip right-strip">
-          <img src={gradStrip} alt="Graduation photobooth strip" />
+              <div className="rd-field-row">
+                <div className="rd-field">
+                  <label htmlFor="eventDate">Event date</label>
+                  <input id="eventDate" type="date" className="form-input" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
+                </div>
+                <div className="rd-field">
+                  <label htmlFor="eventLocation">Event location</label>
+                  <input id="eventLocation" type="text" name="eventLocation" value={formData.eventLocation} onChange={handleChange} placeholder="Suburb / venue" required />
+                </div>
+              </div>
+
+              <div className="rd-field-row">
+                <div className="rd-field">
+                  <label htmlFor="boothType">Booth type</label>
+                  <select id="boothType" name="boothType" value={formData.boothType} onChange={handleChange} required>
+                    <option value="">Select booth type</option>
+                    <option value="Open Booth">Open Booth</option>
+                    <option value="Glam Booth">Glam Booth</option>
+                    <option value="Enclosed Booth">Enclosed Booth</option>
+                  </select>
+                </div>
+                <div className="rd-field">
+                  <label htmlFor="packageDuration">Package duration</label>
+                  <select id="packageDuration" name="packageDuration" value={formData.packageDuration} onChange={handleChange} required>
+                    <option value="">Select duration</option>
+                    <option value="2 Hours">2 Hours</option>
+                    <option value="3 Hours">3 Hours</option>
+                    <option value="4 Hours">4 Hours</option>
+                    <option value="5 Hours">5 Hours</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="rd-field">
+                <label htmlFor="price">Price (auto-calculated)</label>
+                <input id="price" type="number" name="price" value={formData.price} readOnly className="readonly-input" />
+              </div>
+
+              <div className="rd-field">
+                <label htmlFor="message">Event details</label>
+                <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Start time · End time · Parking / venue access · Any notes" rows="3" />
+              </div>
+
+              <button type="submit" className="submit-button rd-book-submit">Confirm booking →</button>
+              {status && <p className="booking-status">{status}</p>}
+            </form>
+          </div>
         </div>
       </div>
-      <section className="section-padding seasonal-banner snow-effect">
-          <div className="container">
-            <h2 className="seasonal-title">How to Book Your Melbourne Photo Booth Experience 🎉</h2>
-            <p className="seasonal-text">
-              Booking your event with The Shan Booth is designed to be simple and transparent. 
-              To secure your date in our 2026 calendar, we require a few key details to ensure our team is fully prepared 
-              for your celebration. When filling out the form, please provide an accurate Event Location and your preferred Booth Type. 
-              Whether you choose the high-fashion Glam Booth or the versatile Open Booth, selecting your package duration will instantly 
-              provide you with clear, upfront pricing.
-            </p>
-            <p className="seasonal-text">
-              <strong>What We Need From You</strong> For a flawless setup, please use the message section to include your Start and End times, 
-              along with any specific Venue Access or Parking instructions. If your venue has stairs, loading dock requirements, 
-              or specific delivery windows in the Melbourne CBD, knowing these details early allows us to coordinate our arrival perfectly.
-            </p>
-            <p className="seasonal-text">
-              <strong>Confirmation and Next Steps</strong> Once you click "Confirm Booking," you will receive an automated confirmation and 
-              a unique invoice. This locks in your equipment and professional attendant for your specific date. Our team will then 
-              reach out to finalize your custom print designs and backdrop selection.
-            </p>
-          </div>
-        </section>
+
+      <section className="rd rd-landing rd-book-info-wrap">
+        <div className="rd-book-info">
+          <h2 className="section-title">How to Book Your Melbourne Photo Booth Experience 🎉</h2>
+          <p>
+            Booking your event with The Shan Booth is designed to be simple and transparent.
+            To secure your date in our 2026 calendar, we require a few key details to ensure our team is fully prepared
+            for your celebration. When filling out the form, please provide an accurate Event Location and your preferred Booth Type.
+            Whether you choose the high-fashion Glam Booth or the versatile Open Booth, selecting your package duration will instantly
+            provide you with clear, upfront pricing.
+          </p>
+          <p>
+            <strong>What We Need From You</strong> For a flawless setup, please use the message section to include your Start and End times,
+            along with any specific Venue Access or Parking instructions. If your venue has stairs, loading dock requirements,
+            or specific delivery windows in the Melbourne CBD, knowing these details early allows us to coordinate our arrival perfectly.
+          </p>
+          <p>
+            <strong>Confirmation and Next Steps</strong> Once you click "Confirm Booking," you will receive an automated confirmation and
+            a unique invoice. This locks in your equipment and professional attendant for your specific date. Our team will then
+            reach out to finalize your custom print designs and backdrop selection.
+          </p>
+        </div>
+      </section>
     </>
   );
 };

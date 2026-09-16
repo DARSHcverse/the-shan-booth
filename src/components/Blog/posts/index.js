@@ -7,6 +7,8 @@ import * as post6 from "./photo-booth-trends-melbourne-2025";
 import * as post7 from "./open-vs-enclosed-photo-booth";
 import * as post8 from "./top-10-props";
 import * as post9 from "./christmas-hire";
+import * as post10 from "./halloween-photo-booth-ideas";
+import * as post11 from "./end-of-year-party-planning";
 
 export const allPosts = [
   post1.post,
@@ -18,6 +20,8 @@ export const allPosts = [
   post7.post,
   post8.post,
   post9.post,
+  post10.post,
+  post11.post,
 ];
 
 export const postsBySlug = Object.fromEntries(

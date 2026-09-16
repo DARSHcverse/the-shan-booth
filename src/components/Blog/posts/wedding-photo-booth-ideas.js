@@ -1,12 +1,13 @@
 import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
 
 export const post = {
-  title: "Wedding Photo Booth Ideas in Melbourne 2025",
+  title: "Wedding Photo Booth Ideas in Melbourne 2026",
   date: "2025-10-14",
+  dateModified: "2026-08-24",
   author: "Photo Booth With Shan",
   slug: "wedding-photo-booth-ideas",
   excerpt:
-    "Planning a wedding in Melbourne? Discover creative and trending photo booth ideas that will make your big day unforgettable in 2025.",
+    "Planning a wedding in Melbourne? Discover creative and trending photo booth ideas that will make your big day unforgettable in 2026.",
   keywords: [
     "wedding photo booth melbourne",
     "photo booth hire melbourne",

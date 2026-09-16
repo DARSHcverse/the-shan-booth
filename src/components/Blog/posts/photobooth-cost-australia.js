@@ -1,12 +1,13 @@
 import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
 
 export const post = {
-  title: "How Much Does a Photo Booth Cost in Australia (2025 Update)",
+  title: "How Much Does a Photo Booth Cost in Australia (2026 Update)",
   date: "2025-10-17",
+  dateModified: "2026-09-10",
   author: "Photo Booth With Shan",
   slug: "photobooth-cost-australia",
   excerpt:
-    "Wondering how much it costs to hire a photo booth in Melbourne or across Australia? Here’s a detailed 2025 breakdown by booth type, duration, and event size.",
+    "Wondering how much it costs to hire a photo booth in Melbourne or across Australia? Here’s a detailed 2026 breakdown by booth type, duration, and event size.",
   keywords: [
     "photo booth hire cost",
     "photo booth price melbourne",
@@ -16,7 +17,7 @@ export const post = {
   content: `
   <p>If you’re planning an event, one of the first questions is — <strong>how much does a photo booth cost?</strong> The answer depends on the booth type, event duration, and package features.</p>
 
-  <h2>💰 Average Photo Booth Hire Prices in 2025</h2>
+  <h2>💰 Average Photo Booth Hire Prices in 2026</h2>
   <ul>
     <li><strong>Standard Booth:</strong> $400–$600 for 3 hours</li>
     <li><strong>Enclosed Booth:</strong> $400–$600 for 3 hours</li>

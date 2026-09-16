@@ -51,8 +51,8 @@ const BirthdayLanding = () => {
             "@context": "https://schema.org",
             "@type": "Event",
             "name": "Birthday Photo Booth Hire Melbourne",
-            "startDate": "2025-01-01",
-            "endDate": "2025-12-31",
+            "startDate": "2026-01-01",
+            "endDate": "2026-12-31",
             "eventStatus": "https://schema.org/EventScheduled",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "location": {
@@ -60,8 +60,7 @@ const BirthdayLanding = () => {
               "name": "Melbourne & Geelong",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Add street here",
-                "addressLocality": "Melbourne",
+                  "addressLocality": "Melbourne",
                 "addressRegion": "VIC",
                 "postalCode": "3000",
                 "addressCountry": "AU"
@@ -87,7 +86,7 @@ const BirthdayLanding = () => {
               "priceCurrency": "AUD",
               "price": "390",
               "availability": "https://schema.org/InStock",
-              "validFrom": "2025-07-01T00:00:00+10:00"
+              "validFrom": "2026-01-01T00:00:00+11:00"
             }
           }
           ` }}

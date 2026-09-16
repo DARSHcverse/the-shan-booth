@@ -45,8 +45,8 @@ const HalloweenLanding = () => {
             "@context": "https://schema.org",
             "@type": "Event",
             "name": "Halloween Photo Booth Hire Melbourne",
-            "startDate": "2025-10-01",
-            "endDate": "2025-10-31",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "location": {
@@ -158,6 +158,28 @@ const HalloweenLanding = () => {
           <p>
             Our team arrives early, sets up efficiently, and stays on-site to keep everything running
             smoothly so you can enjoy the party.
+          </p>
+        </div>
+
+        <div className="halloween-section">
+          <h2>📆 Halloween 2026 Falls on a Saturday</h2>
+          <p>
+            Halloween 2026 lands on <strong>Saturday 31 October</strong> — the busiest booth night of our
+            year. A weekend Halloween means guests commit to full costumes, arrive on time and stay
+            later, so booths see far more sessions than on a typical weeknight event. We recommend
+            adding an extra hour to your usual hire so the booth stays open through the late rush.
+          </p>
+          <ul className="feature-list">
+            <li>🎃 <strong>Sat 31 October</strong> – our first date to sell out every year</li>
+            <li>👻 <strong>Fri 30 October</strong> – popular for corporate and venue events</li>
+            <li>🕷️ <strong>Sat 24 October</strong> – ideal for early costume parties and school events</li>
+            <li>🦇 <strong>Weekday October dates</strong> – best availability and shorter lead times</li>
+          </ul>
+          <p>
+            Planning a Halloween function and an end-of-year party? Book them together and we will
+            carry your template styling across both events. See our{" "}
+            <a href="/christmas">Christmas packages</a> or read our{" "}
+            <a href="/blog/halloween-photo-booth-ideas">Halloween themes &amp; props guide</a>.
           </p>
         </div>
 

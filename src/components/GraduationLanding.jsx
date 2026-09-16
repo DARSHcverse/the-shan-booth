@@ -43,35 +43,39 @@ const GraduationLanding = () => {
           {
             "@context": "https://schema.org",
             "@type": "Service",
+            "serviceType": "Graduation Photo Booth Hire",
             "name": "Graduation Photo Booth Hire Melbourne",
             "description": "Professional photobooth hire for graduations, school formals and university balls across Melbourne & Geelong.",
             "image": "https://www.photoboothwithshan.com.au/images/gradbooth.jpg",
-            "location": {
-              "@type": "Place",
-              "name": "Melbourne & Geelong",
+            "url": "https://www.photoboothwithshan.com.au/graduation",
+            "provider": {
+              "@type": "LocalBusiness",
+              "@id": "https://www.photoboothwithshan.com.au/#localbusiness",
+              "name": "The Shan Booth",
+              "url": "https://www.photoboothwithshan.com.au",
+              "telephone": "+61 414 521 425",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
+                "addressLocality": "Tarneit",
                 "addressRegion": "VIC",
+                "postalCode": "3029",
                 "addressCountry": "AU"
               }
             },
-            "organizer": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
-            },
-            "performer": {
-            "@type": "Organization",
-            "name": "The Shan Booth",
-            "url": "https://www.photoboothwithshan.com.au"
-            },
+            "areaServed": [
+              { "@type": "City", "name": "Melbourne" },
+              { "@type": "City", "name": "Geelong" },
+              { "@type": "City", "name": "Tarneit" }
+            ],
             "offers": {
               "@type": "Offer",
               "url": "https://www.photoboothwithshan.com.au/booking",
               "priceCurrency": "AUD",
               "price": "390",
               "availability": "https://schema.org/InStock",
-              "validFrom": "2025-07-01T00:00:00+10:00"
+              "validFrom": "2026-09-01T00:00:00+10:00",
+              "validThrough": "2026-12-31T00:00:00+11:00"
             }
           }
           ` }}
@@ -126,6 +130,33 @@ const GraduationLanding = () => {
         </div>
 
         <div className="graduation-section">
+          <h2>📆 Graduation Season Peaks in November &amp; December</h2>
+          <p>
+            Victorian school formals, valedictory dinners and graduation nights cluster tightly into
+            <strong> late November and the first three weeks of December</strong> — the same weeks as the
+            corporate Christmas party rush. That overlap makes it the tightest availability window in
+            our entire calendar, so a graduation booking is not something to leave until term four.
+          </p>
+          <ul className="feature-list">
+            <li>🎓 <strong>Mid–late November</strong> – Year 12 formals and valedictory dinners peak</li>
+            <li>🎓 <strong>Fri 4 &amp; Sat 5 December</strong> – graduation nights collide with corporate parties</li>
+            <li>🎓 <strong>Fri 11 &amp; Sat 12 December</strong> – our busiest weekend of the year</li>
+            <li>🎓 <strong>Week of 14–18 December</strong> – primary and secondary school break-ups</li>
+          </ul>
+          <p>
+            Thursday nights are worth knowing about: many schools book valedictory dinners midweek,
+            and Thursday availability in December is consistently better than Friday or Saturday.
+            If your date is flexible, a Thursday is the easiest way to secure the season.
+          </p>
+          <p>
+            Schools that confirm in September almost always get their preferred date. Schools enquiring
+            in late November are usually choosing from what is left. If you are also planning a staff
+            end-of-year function, see our <a href="/christmas">Christmas packages</a> — booking both
+            together lets us carry your school branding across both events.
+          </p>
+        </div>
+
+        <div className="graduation-section">
           <h2>📍 Areas We Cover</h2>
           <ul className="areas-list">
             <li>Melbourne (CBD & suburbs)</li>
@@ -137,7 +168,8 @@ const GraduationLanding = () => {
         <div className="graduation-section">
           <h2>✅ Book Early for the 2026 Graduation Season</h2>
           <p>
-            Peak graduation dates fill fast. Secure your photobooth today to avoid missing out.
+            Peak November and December dates fill fast, and they compete directly with end-of-year
+            corporate bookings. Secure your photobooth now to lock in your preferred night.
           </p>
           <h3 className="available-title">📅 Popular for:</h3>
           <ul className="available-list">
@@ -145,6 +177,8 @@ const GraduationLanding = () => {
             <li>School formals</li>
             <li>University balls</li>
             <li>Awards nights</li>
+            <li>Valedictory dinners</li>
+            <li>School break-up celebrations</li>
           </ul>
         </div>
 

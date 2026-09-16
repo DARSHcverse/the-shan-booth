@@ -1,22 +1,23 @@
 import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
 
 export const post = {
-  title: "Top Photo Booth Trends in Melbourne 2025",
+  title: "Top Photo Booth Trends in Melbourne 2026",
   date: "2025-10-20",
+  dateModified: "2026-09-05",
   author: "Photo Booth With Shan",
   slug: "photo-booth-trends-melbourne-2025",
   excerpt:
-    "Stay ahead of the curve with Melbourne's hottest photo booth trends in 2025 — from 360 booths to AI-enhanced photos and eco-friendly printing options.",
+    "Stay ahead of the curve with Melbourne's hottest photo booth trends in 2026 — from 360 booths to AI-enhanced photos and eco-friendly printing options.",
   keywords: [
     "photo booth hire melbourne",
     "photo booth trends melbourne",
-    "modern photo booths 2025",
+    "modern photo booths 2026",
     "360 photo booth melbourne",
     "mirror photo booth hire",
     "AI photo booths melbourne"
   ],
   content: `
-  <p>Photo booth hire in Melbourne is evolving fast! Whether you’re planning a wedding, birthday, or corporate event, 2025 is bringing exciting new ways to capture memories. Check out our <a href="/photoboothhiremelbourne">photo booth hire Melbourne page</a> for more details.</p>
+  <p>Photo booth hire in Melbourne is evolving fast! Whether you’re planning a wedding, birthday, or corporate event, 2026 is bringing exciting new ways to capture memories. Check out our <a href="/photoboothhiremelbourne">photo booth hire Melbourne page</a> for more details.</p>
 
   <h2>1. 360 Video Booths Are Taking Over</h2>
   <p>Guests love the slow-motion effect and instant social sharing from 360 photo booths. It’s one of the most requested booth types across Melbourne events. <a href="/booking">Book a 360 booth now</a> to wow your guests!</p>

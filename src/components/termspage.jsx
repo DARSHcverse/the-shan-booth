@@ -22,7 +22,7 @@ const TermsPage = () => {
       </Head>
 
       <h1>Terms and Conditions</h1>
-      <p><strong>Last Updated:</strong> August 13, 2025</p>
+      <p><strong>Last Updated:</strong> 16 September 2026</p>
       <p>
         Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the 
         <a href="https://www.photoboothwithshan.com.au/" target="_blank" rel="noopener noreferrer"> www.photoboothwithshan.com.au</a> website 

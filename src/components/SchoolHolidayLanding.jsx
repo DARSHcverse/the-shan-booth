@@ -63,8 +63,8 @@ const SchoolHolidayLanding = () => {
               "@context": "https://schema.org",
               "@type": "Event",
               "name": "School Holiday Photo Booth Hire Melbourne",
-              "startDate": "2025-12-20",
-              "endDate": "2026-02-01",
+              "startDate": "2026-12-18",
+              "endDate": "2027-01-27",
               "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
               "eventStatus": "https://schema.org/EventScheduled",
               "location": {

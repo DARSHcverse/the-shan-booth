@@ -46,7 +46,7 @@ const PrivacyPage = () => {
       </Head>
 
       <h1>Privacy Policy</h1>
-      <p><strong>Last Updated:</strong> August 13, 2025</p>
+      <p><strong>Last Updated:</strong> 16 September 2026</p>
       <p>
         This Privacy Policy describes how The Shan Booth ("we", "us", or "our") collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from 
         <a href="https://www.photoboothwithshan.com.au/" target="_blank" rel="noopener noreferrer"> www.photoboothwithshan.com.au</a> (the "Site") or engage with our photo booth services at an event.

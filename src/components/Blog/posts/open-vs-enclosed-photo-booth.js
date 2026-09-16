@@ -3,6 +3,7 @@ import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
 export const post = {
   title: "Open-Air vs Enclosed Photo Booths — Which One Fits Your Event?",
   date: "2025-10-22",
+  dateModified: "2026-07-29",
   author: "Photo Booth With Shan",
   slug: "open-vs-enclosed-photo-booth",
   excerpt:

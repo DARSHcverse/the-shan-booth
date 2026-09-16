@@ -43,8 +43,8 @@ const NewYearPartyLanding = () => {
             "name": "New Year Party Photo Booth Hire Melbourne",
             "description": "Celebrate New Year’s Eve and New Year parties with premium photobooth hire in Melbourne, Tarneit & Geelong.",
             "image": "https://www.photoboothwithshan.com.au/images/newyear1.webp",
-            "startDate": "2025-12-31T18:00:00+11:00",
-            "endDate": "2026-02-01T02:00:00+11:00",
+            "startDate": "2026-12-31T18:00:00+11:00",
+            "endDate": "2027-01-01T02:00:00+11:00",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "location": {
@@ -72,7 +72,7 @@ const NewYearPartyLanding = () => {
               "priceCurrency": "AUD",
               "price": "390",
               "availability": "https://schema.org/InStock",
-              "validFrom": "2025-10-01T00:00:00+11:00"
+              "validFrom": "2026-09-01T00:00:00+10:00"
             }
           }
         ` }}

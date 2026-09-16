@@ -64,35 +64,39 @@ const ChristmasLanding = () => {
           {
             "@context": "https://schema.org",
             "@type": "Service",
+            "serviceType": "Christmas Photo Booth Hire",
             "name": "Christmas Photo Booth Hire Melbourne",
             "description": "Festive photobooth hire for Christmas parties, corporate end-of-year events and holiday celebrations across Melbourne & Geelong.",
             "image": "https://www.photoboothwithshan.com.au/images/christmas.webp",
-            "location": {
-              "@type": "Place",
-              "name": "Melbourne & Geelong",
+            "url": "https://www.photoboothwithshan.com.au/christmas",
+            "provider": {
+              "@type": "LocalBusiness",
+              "@id": "https://www.photoboothwithshan.com.au/#localbusiness",
+              "name": "The Shan Booth",
+              "url": "https://www.photoboothwithshan.com.au",
+              "telephone": "+61 414 521 425",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
+                "addressLocality": "Tarneit",
                 "addressRegion": "VIC",
+                "postalCode": "3029",
                 "addressCountry": "AU"
               }
             },
-            "organizer": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
-            },
-            "performer": {
-            "@type": "Organization",
-            "name": "The Shan Booth",
-            "url": "https://www.photoboothwithshan.com.au"
-            },
+            "areaServed": [
+              { "@type": "City", "name": "Melbourne" },
+              { "@type": "City", "name": "Geelong" },
+              { "@type": "City", "name": "Tarneit" }
+            ],
             "offers": {
               "@type": "Offer",
               "url": "https://www.photoboothwithshan.com.au/booking",
               "priceCurrency": "AUD",
               "price": "390",
               "availability": "https://schema.org/InStock",
-              "validFrom": "2025-09-01T00:00:00+10:00"
+              "validFrom": "2026-09-01T00:00:00+10:00",
+              "validThrough": "2027-01-15T00:00:00+11:00"
             }
           }
           ` }}
@@ -141,6 +145,33 @@ const ChristmasLanding = () => {
             </div>
           </div>
           <p className="hint-text">💡 Ask about our custom holiday props and backdrops for an extra festive touch!</p>
+        </div>
+
+        <div className="christmas-section">
+          <h2>📆 December 2026 — The Dates That Book Out First</h2>
+          <p>
+            Christmas Day 2026 falls on a <strong>Friday</strong>, which shortens the final working week
+            and pushes almost every corporate function into the first three weekends of December.
+            If your event needs one of these dates, book well ahead:
+          </p>
+          <ul className="feature-list">
+            <li>🎄 <strong>Fri 4 &amp; Sat 5 December</strong> – the most requested corporate weekend</li>
+            <li>🎄 <strong>Fri 11 &amp; Sat 12 December</strong> – peak demand, first to sell out</li>
+            <li>🎄 <strong>Fri 18 &amp; Sat 19 December</strong> – last weekend before Christmas</li>
+            <li>🎄 <strong>Fri 27 &amp; Sat 28 November</strong> – popular overflow for late bookings</li>
+          </ul>
+          <p>
+            Worth knowing: <strong>school formals and graduation nights</strong> run through these exact
+            same weekends, so corporate and school events compete for the same dates. It makes December
+            our tightest month — see our{" "}
+            <a href="/graduation">graduation packages</a> if you are booking both.
+          </p>
+          <p>
+            Also planning New Year? <strong>NYE 2026 falls on a Thursday</strong> heading into a long
+            weekend, which usually means strong turnout. See our{" "}
+            <a href="/new-year-party">New Year party packages</a> or read the full{" "}
+            <a href="/blog/end-of-year-party-planning">end-of-year planning guide</a>.
+          </p>
         </div>
 
         <div className="christmas-section">

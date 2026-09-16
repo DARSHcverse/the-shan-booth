@@ -1,6 +1,7 @@
 export const post = {
-  title: "Why You Should Book a Photo Booth for Your Melbourne Christmas Party (2025)",
+  title: "Why You Should Book a Photo Booth for Your Melbourne Christmas Party (2026)",
   date: "2025-11-17",
+  dateModified: "2026-09-15",
   author: "Photo Booth With Shan",
   slug: "christmas-hire",
   excerpt:

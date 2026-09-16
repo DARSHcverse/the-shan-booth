@@ -3,6 +3,13 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { allPosts } from "./posts";
 
+const formatDate = (value) =>
+  new Date(`${value}T00:00:00`).toLocaleDateString("en-AU", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
 const BlogPost = ({ slug: slugProp }) => {
   const router = useRouter();
   const slug = slugProp || router.query.slug;
@@ -64,9 +71,20 @@ const BlogPost = ({ slug: slugProp }) => {
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
+            dateModified: post.dateModified || post.date,
+            image: ogImage,
             author: {
               "@type": "Person",
               name: post.author,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "The Shan Booth",
+              url: SITE_URL,
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_URL}/images/logo.png`,
+              },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
@@ -79,7 +97,12 @@ const BlogPost = ({ slug: slugProp }) => {
       <section className="rd rd-landing blog-post-wrapper">
         <article className="blog-post">
           <h1>{post.title}</h1>
-          <p className="post-meta">{post.date}</p>
+          <p className="post-meta">
+            Published {formatDate(post.date)}
+            {post.dateModified && post.dateModified !== post.date && (
+              <> · Updated {formatDate(post.dateModified)}</>
+            )}
+          </p>
 
           <div
             className="blog-content"

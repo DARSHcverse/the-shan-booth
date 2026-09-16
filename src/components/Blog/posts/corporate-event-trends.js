@@ -1,12 +1,13 @@
 import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
 
 export const post = {
-  title: "Corporate Event Photo Booth Trends in Melbourne (2025)",
+  title: "Corporate Event Photo Booth Trends in Melbourne (2026)",
   date: "2025-10-16",
+  dateModified: "2026-09-08",
   author: "Photo Booth With Shan",
   slug: "corporate-event-trends",
   excerpt:
-    "Discover the top corporate photo booth hire trends in Melbourne for 2025 — from 360° experiences to branded overlays that boost engagement and brand presence.",
+    "Discover the top corporate photo booth hire trends in Melbourne for 2026 — from 360° experiences to branded overlays that boost engagement and brand presence.",
   keywords: [
     "corporate event photo booth",
     "photo booth hire melbourne",
@@ -15,7 +16,7 @@ export const post = {
     "corporate entertainment melbourne"
   ],
   content: `
-  <p>In 2025, corporate events in Melbourne are redefining how businesses connect with guests — and <strong>photo booth hire Melbourne</strong> has become one of the most engaging additions for modern functions. Whether it’s a gala dinner, product launch, or end-of-year celebration, the right <a href="/corporate-events">photo booth setup</a> can transform the atmosphere and amplify your brand.</p>
+  <p>In 2026, corporate events in Melbourne are redefining how businesses connect with guests — and <strong>photo booth hire Melbourne</strong> has become one of the most engaging additions for modern functions. Whether it’s a gala dinner, product launch, or end-of-year celebration, the right <a href="/corporate-events">photo booth setup</a> can transform the atmosphere and amplify your brand.</p>
 
   <h2>1. Branded Overlays for Corporate Identity</h2>
   <p>Companies are now using branded overlays to feature logos, taglines, and colours on every photo or print. This not only enhances brand visibility but also gives every guest a memorable, shareable keepsake.</p>

@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 
 const schoolHoliday1 = '/images/schoolholiday1.webp';
 const schoolHoliday2 = '/images/schoolholiday2.webp';
@@ -9,11 +10,11 @@ const SchoolHolidayLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Head>
-        <title>School Holiday Photo Booth Hire Melbourne 🎒 | Kids Parties, Programs & Events | The Shan Booth</title>
+        <title>School Holiday & Kids Photo Booth Hire Melbourne</title>
 
         <meta
           name="description"
-          content="Make school holidays unforgettable with fun photo booth hire for kids parties, school programs, childcare centres, and community events across Melbourne, Tarneit & Geelong. Unlimited prints, digital sharing & kid-friendly props!"
+          content="Kid-friendly photo booth hire for school holidays, kids parties, programs & community events across Melbourne, Tarneit & Geelong. Unlimited prints."
           key="description"
         />
 
@@ -56,37 +57,17 @@ const SchoolHolidayLanding = () => {
         />
 
         {/* Schema.org JSON-LD */}
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: `
-            {
-              "@context": "https://schema.org",
-              "@type": "Event",
-              "name": "School Holiday Photo Booth Hire Melbourne",
-              "startDate": "2026-12-18",
-              "endDate": "2027-01-27",
-              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-              "eventStatus": "https://schema.org/EventScheduled",
-              "location": {
-                "@type": "Place",
-                "name": "Melbourne, Tarneit & Geelong",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Melbourne",
-                  "addressRegion": "VIC",
-                  "addressCountry": "AU"
-                }
-              },
-              "organizer": {
-                "@type": "Organization",
-                "name": "The Shan Booth",
-                "url": "https://www.photoboothwithshan.com.au"
-              },
-              "image": "https://www.photoboothwithshan.com.au/images/schoolholiday1.webp",
-              "description": "Hire a fun and kid-friendly photo booth for school holidays, kids birthday parties, school programs and community events in Melbourne, Tarneit & Geelong."
-            }
-          ` }}
-      />
+        <JsonLd
+          data={serviceSchema({
+            name: "School Holiday Photo Booth Hire Melbourne",
+            serviceType: "Kids & School Holiday Photo Booth Hire",
+            description: "Hire a fun and kid-friendly photo booth for school holidays, kids birthday parties, school programs and community events in Melbourne, Tarneit & Geelong.",
+            path: "/school-holiday",
+            image: "/images/schoolholiday1.webp",
+            areas: ["Melbourne", "Tarneit", "Geelong"],
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       {/* PAGE CONTENT */}

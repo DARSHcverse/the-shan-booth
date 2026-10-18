@@ -1,12 +1,13 @@
 import React from 'react';
 import Head from "next/head";
 import { QUICK_QUOTE_URL } from '../lib/siteLinks';
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 const openBoothVideo = '/images/openboothvideo.mp4';
 
 const OpenBoothPage = () => (
   <>
     <Head>
-      <title>Open Photo Booth Hire Melbourne | Interactive & Modern Booths</title>
+      <title>Open Photo Booth Hire Melbourne | The Shan Booth</title>
       <meta
         name="description"
         content="Open Photo Booth Hire in Melbourne for weddings, parties, and corporate events. Capture stunning photos with Canon R100 mirrorless camera and Surface Pro setup."
@@ -19,6 +20,17 @@ const OpenBoothPage = () => (
         content="Experience interactive photo booth fun with our Open Booth. Surface Pro + Canon R100 + pro flash lighting. Perfect for events that love energy and crowd engagement!"
       />
       <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
+      <JsonLd
+        data={serviceSchema({
+          name: "Open Photo Booth Hire Melbourne",
+          serviceType: "Open-Air Photo Booth Hire",
+          description: "Open-air photo booth hire in Melbourne with a Canon R100 mirrorless camera, professional flash lighting, unlimited instant prints and an attendant. Ideal for weddings, birthdays and corporate events.",
+          path: "/open-booth",
+          image: "/images/boothimg6.webp",
+          lowPrice: 390,
+          highPrice: 800,
+        })}
+      />
     </Head>
 
     <main className="rd rd-landing booth-page section-padding">

@@ -1,5 +1,6 @@
 export const post = {
   title: "Melbourne End-of-Year Party Planning 2026 — Key Dates & Booking Timeline",
+  seoTitle: "Melbourne End-of-Year Party Dates & Booking Timeline 2026",
   date: "2026-09-16",
   dateModified: "2026-09-16",
   author: "Photo Booth With Shan",

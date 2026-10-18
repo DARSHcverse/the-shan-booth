@@ -1,15 +1,16 @@
 import React from "react";
 import Head from "next/head";
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 const halloweenBackdrop = '/images/halloween.webp';
 const halloweenStrip = '/images/halloweenstrip.webp';
-const ghostIcon = '/images/ghost.png';
+const ghostIcon = '/images/ghost.webp';
 
 const HalloweenLanding = () => {
   return (
     <>
       {/* SEO + Meta Tags */}
       <Head>
-        <title>Halloween Photo Booth Hire Melbourne 🎃 | The Shan Booth</title>
+        <title>Halloween Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
           content="Capture the spooky fun at your Halloween party with The Shan Booth. Spooky backdrops, fun props, and instant prints. Serving Melbourne, Geelong & Grovedale."
@@ -31,44 +32,24 @@ const HalloweenLanding = () => {
         <meta property="og:image" content="https://www.photoboothwithshan.com.au/images/halloween.webp" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Halloween Photo Booth Hire Melbourne 🎃 | The Shan Booth" />
+        <meta name="twitter:title" content="Halloween Photo Booth Hire Melbourne | The Shan Booth" />
         <meta
           name="twitter:description"
           content="Book your spooky photobooth for Halloween! Serving Melbourne, Geelong & Grovedale with themed backdrops and instant prints."
         />
         <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/halloween.webp" />
 
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "Halloween Photo Booth Hire Melbourne",
-            "startDate": "2026-10-01",
-            "endDate": "2026-10-31",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "location": {
-              "@type": "Place",
-              "name": "Melbourne & Geelong",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Melbourne",
-                "addressRegion": "VIC",
-                "addressCountry": "AU"
-              }
-            },
-            "organizer": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
-            },
-            "image": "https://www.photoboothwithshan.com.au/images/halloween.webp",
-            "description": "Photobooth hire for Halloween parties, costume events, and themed celebrations across Melbourne, Geelong & Grovedale."
-          }
-          ` }}
-      />
+        <JsonLd
+          data={serviceSchema({
+            name: "Halloween Photo Booth Hire Melbourne",
+            serviceType: "Halloween Photo Booth Hire",
+            description: "Photobooth hire for Halloween parties, costume events, and themed celebrations across Melbourne, Geelong & Grovedale.",
+            path: "/halloween",
+            image: "/images/halloween.webp",
+            areas: ["Melbourne", "Geelong", "Grovedale"],
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       {/* Landing Content */}
@@ -216,10 +197,10 @@ const HalloweenLanding = () => {
         
         {/* More Floating Ghosts */}
         <div className="floating-ghost ghost-3">
-          <img src={ghostIcon} alt="Floating ghost" />
+          <img loading="lazy" decoding="async" src={ghostIcon} alt="Floating ghost" />
         </div>
         <div className="floating-strip right-strip">
-          <img src={halloweenStrip} alt="Halloween photobooth strip" />
+          <img loading="lazy" decoding="async" src={halloweenStrip} alt="Halloween photobooth strip" />
         </div>
       </div>
     </>

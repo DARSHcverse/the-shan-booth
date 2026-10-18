@@ -1,17 +1,18 @@
 import Head from "next/head";
 import { QUICK_QUOTE_URL } from "../lib/siteLinks";
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 const birthdayBackdrop = '/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp';
 const birthdayBackdrop2 = '/images/smiling-young-man-wearing-party-hat-surprised-young-girl-holds-hands-together-isolated-pink-wall.webp';
-const birthdayStrip = '/images/birthdaystrip.png';
+const birthdayStrip = '/images/birthdaystrip.webp';
 
 const BirthdayLanding = () => {
   return (
     <>
       <Head>
-        <title>Birthday Photo booth Hire Melbourne 🎉 | Fun Party Booths | The Shan Booth</title>
+        <title>Birthday Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
-          content="Celebrate in style with The Shan Booth’s birthday photo booths! Unlimited prints, fun props & party energy for 18ths, 21sts, kids’ birthdays & milestone celebrations in Melbourne & Geelong."
+          content="Birthday photo booths for 18ths, 21sts, kids’ parties & milestones in Melbourne & Geelong. Unlimited prints, fun props & an attendant. From $390."
           key="description"
         />
         <meta
@@ -44,53 +45,17 @@ const BirthdayLanding = () => {
         />
 
         {/* Improved Event Schema */}
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "Birthday Photo Booth Hire Melbourne",
-            "startDate": "2026-01-01",
-            "endDate": "2026-12-31",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "location": {
-              "@type": "Place",
-              "name": "Melbourne & Geelong",
-              "address": {
-                "@type": "PostalAddress",
-                  "addressLocality": "Melbourne",
-                "addressRegion": "VIC",
-                "postalCode": "3000",
-                "addressCountry": "AU"
-              }
-            },
-            "image": [
-              "/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp"
-            ],
-            "description": "Photo booth hire for birthday parties in Melbourne, Geelong & Grovedale. Fun props, unlimited prints, and vibrant backdrops for every age.",
-            "organizer": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
-            },
-            "performer": {
-            "@type": "Organization",
-            "name": "The Shan Booth",
-            "url": "https://www.photoboothwithshan.com.au"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://www.photoboothwithshan.com.au/booking",
-              "priceCurrency": "AUD",
-              "price": "390",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2026-01-01T00:00:00+11:00"
-            }
-          }
-          ` }}
-      />
+        <JsonLd
+          data={serviceSchema({
+            name: "Birthday Photo Booth Hire Melbourne",
+            serviceType: "Birthday Party Photo Booth Hire",
+            description: "Photo booth hire for birthday parties in Melbourne, Geelong & Grovedale. Fun props, unlimited prints, and vibrant backdrops for every age.",
+            path: "/birthday",
+            image: "/images/joyful-young-man-wearing-party-hat-gestures-call-me-sign-standing-with-smiling-young-girl-wearing-party-hat-holding-birthday-cake-gesturing-call-me-sign-isolated-pink-wall.webp",
+            areas: ["Melbourne", "Geelong", "Grovedale"],
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       <div className="rd rd-landing birthday-landing">
@@ -173,7 +138,7 @@ const BirthdayLanding = () => {
         </div>
 
         <div className="floating-strip right-strip">
-          <img src={birthdayStrip} alt="Birthday photostrip graphic" />
+          <img loading="lazy" decoding="async" src={birthdayStrip} alt="Birthday photostrip graphic" />
         </div>
       </div>
     </>

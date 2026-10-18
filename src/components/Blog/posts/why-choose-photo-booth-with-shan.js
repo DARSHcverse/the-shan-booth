@@ -2,6 +2,7 @@ import { QUICK_QUOTE_URL } from "../../../lib/siteLinks";
 
 export const post = {
   title: "Why Choose Photo Booth With Shan — Melbourne’s Best Photo Booth Hire (2026)",
+  seoTitle: "Why Choose Photo Booth With Shan | Melbourne (2026)",
   date: "2025-10-19",
   dateModified: "2026-08-18",
   author: "Photo Booth With Shan",

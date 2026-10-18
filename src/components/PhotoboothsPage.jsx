@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from "next/head";
 const photobooth = '/images/boothimg6.webp';
-const glam = '/images/glam.png';
+const glam = '/images/glam.webp';
 const enclosure = '/images/enclosed.jpeg';
 import { useRouter } from 'next/router';
 import { QUICK_QUOTE_URL } from '../lib/siteLinks';
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 
 const PhotoboothsPage = () => {
   const router = useRouter();
@@ -38,6 +39,17 @@ const PhotoboothsPage = () => {
           content="Compare open-air, glam, and enclosed photo booths from The Shan Booth. Find the perfect fit for your event."
         />
         <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/boothimg6.webp" />
+        <JsonLd
+          data={serviceSchema({
+            name: "Photo Booth Hire Melbourne — Open, Glam & Enclosed",
+            serviceType: "Photo Booth Hire",
+            description: "Compare open-air, glam and enclosed photo booths from The Shan Booth for weddings, birthdays and corporate events across Melbourne and Geelong.",
+            path: "/photobooths",
+            image: "/images/boothimg6.webp",
+            lowPrice: 390,
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       <main className="rd rd-landing main-content section-padding">
@@ -48,7 +60,7 @@ const PhotoboothsPage = () => {
 
           <div className="photobooth-list event-card-grid">
             <article className="event-card" onClick={() => router.push('/open-booth')}>
-              <img src={photobooth} alt="Open Booth" className="event-card-img" />
+              <img loading="lazy" decoding="async" src={photobooth} alt="Open Booth" className="event-card-img" />
               <div className="event-card-body">
                 <h2 className="event-card-title">Open Booth</h2>
                 <p className="event-card-text">
@@ -60,7 +72,7 @@ const PhotoboothsPage = () => {
             </article>
 
             <article className="event-card" onClick={() => router.push('/glam-booth')}>
-              <img src={glam} alt="Glam Booth" className="event-card-img" />
+              <img loading="lazy" decoding="async" src={glam} alt="Glam Booth" className="event-card-img" />
               <div className="event-card-body">
                 <h2 className="event-card-title">Glam Booth</h2>
                 <p className="event-card-text">
@@ -72,7 +84,7 @@ const PhotoboothsPage = () => {
             </article>
 
             <article className="event-card" onClick={() => router.push('/enclosed-booth')}>
-              <img src={enclosure} alt="Enclosed Booth" className="event-card-img" />
+              <img loading="lazy" decoding="async" src={enclosure} alt="Enclosed Booth" className="event-card-img" />
               <div className="event-card-body">
                 <h2 className="event-card-title">Enclosed Booth</h2>
                 <p className="event-card-text">

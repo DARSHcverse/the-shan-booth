@@ -3,16 +3,16 @@ import Head from "next/head";
 import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 const corporateImg1 = '/images/coperateimg.webp';
 const corporateImg2 = '/images/photobooth.webp';
-const corporateStrip = '/images/coporatestrip.png';
+const corporateStrip = '/images/coporatestrip.webp';
 
 const CorporateEventsLanding = () => {
   return (
     <>
       <Head>
-        <title>Corporate Photo Booth Hire Melbourne | Brand Activations & Events | The Shan Booth</title>
+        <title>Corporate Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
-          content="Elevate your corporate events with The Shan Booth. Branded photo booths for business functions, product activations, conferences & award nights in Melbourne & Geelong."
+          content="Branded photo booths for business functions, product activations, conferences & award nights in Melbourne & Geelong. Custom overlays & instant prints."
           key="description"
         />
         <meta
@@ -223,7 +223,7 @@ const CorporateEventsLanding = () => {
 
         {/* Floating Corporate Strip */}
         <div className="floating-strip right-strip">
-          <img src={corporateStrip} alt="Corporate photobooth design" />
+          <img loading="lazy" decoding="async" src={corporateStrip} alt="Corporate photobooth design" />
         </div>
       </div>
     </>

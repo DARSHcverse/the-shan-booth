@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { QUICK_QUOTE_URL } from '../lib/siteLinks';
 import { useRedesignTheme } from '../lib/useRedesign';
-const logo = '/images/logo.png';
-const callIcon = '/images/callIcon.png';
+const logo = '/images/logo-160.webp';
+const callIcon = '/images/callIcon.webp';
 // import iconGradCap from '/images/prop.png'; // Floating icon (currently not in use)
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -163,7 +163,7 @@ const Header = () => {
           className="logo-link"
           aria-label="Go to homepage"
         >
-          <img src={logo} alt="The Shan Booth Logo" className="logo-img" />
+          <img src={logo} alt="The Shan Booth Logo" className="logo-img" width="160" height="160" fetchPriority="high" />
           <span className="logo-text">THE SHAN BOOTH</span>
         </Link>
 

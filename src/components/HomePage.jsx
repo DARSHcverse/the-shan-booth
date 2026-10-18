@@ -11,7 +11,7 @@ const heroShot1 = '/images/hero-banner.webp';
 const heroShot2 = '/images/hero-banner-2.webp';
 const heroShot3 = '/images/photobooth.webp';
 const boothOpen = '/images/boothimg5.webp';
-const boothGlam = '/images/glam.png';
+const boothGlam = '/images/glam.webp';
 const boothEnclosed = '/images/enclosed.jpeg';
 const booth360 = '/images/boothimg7.webp';
 const qualityImg = '/images/photobooth.webp';
@@ -271,22 +271,22 @@ const HomePage = () => {
           <div className="rd-grid4">
             <article className="rd-card rd-reveal" onClick={() => router.push('/open-booth')} role="link" tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && router.push('/open-booth')} style={{ cursor: 'pointer' }}>
-              <div className="rd-pic"><img src={boothOpen} alt="Open photo booth for group shots" /><span className="rd-badge">Popular</span></div>
+              <div className="rd-pic"><img loading="lazy" decoding="async" src={boothOpen} alt="Open photo booth for group shots" /><span className="rd-badge">Popular</span></div>
               <div className="rd-cb"><h3>Open Booth</h3><p>Big backdrops, big group shots. The all-rounder.</p><span className="rd-go">Explore <span className="rd-ar">→</span></span></div>
             </article>
             <article className="rd-card rd-reveal" onClick={() => router.push('/glam-booth')} role="link" tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && router.push('/glam-booth')} style={{ cursor: 'pointer' }}>
-              <div className="rd-pic"><img src={boothGlam} alt="Glam black and white photo booth" /><span className="rd-badge">Premium</span></div>
+              <div className="rd-pic"><img loading="lazy" decoding="async" src={boothGlam} alt="Glam black and white photo booth" /><span className="rd-badge">Premium</span></div>
               <div className="rd-cb"><h3>Glam Booth</h3><p>Black-and-white, red-carpet glam filter.</p><span className="rd-go">Explore <span className="rd-ar">→</span></span></div>
             </article>
             <article className="rd-card rd-reveal" onClick={() => router.push('/enclosed-booth')} role="link" tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && router.push('/enclosed-booth')} style={{ cursor: 'pointer' }}>
-              <div className="rd-pic"><img src={boothEnclosed} alt="Enclosed photo booth" /><span className="rd-badge">Classic</span></div>
+              <div className="rd-pic"><img loading="lazy" decoding="async" src={boothEnclosed} alt="Enclosed photo booth" /><span className="rd-badge">Classic</span></div>
               <div className="rd-cb"><h3>Enclosed Booth</h3><p>Private, classic &amp; a little cheeky.</p><span className="rd-go">Explore <span className="rd-ar">→</span></span></div>
             </article>
             <article className="rd-card rd-reveal" onClick={() => router.push('/photobooths')} role="link" tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && router.push('/photobooths')} style={{ cursor: 'pointer' }}>
-              <div className="rd-pic"><img src={booth360} alt="360 spinner video booth" /><span className="rd-badge">Viral</span></div>
+              <div className="rd-pic"><img loading="lazy" decoding="async" src={booth360} alt="360 spinner video booth" /><span className="rd-badge">Viral</span></div>
               <div className="rd-cb"><h3>360 Spinner</h3><p>Slow-motion video made for socials.</p><span className="rd-go">Explore <span className="rd-ar">→</span></span></div>
             </article>
           </div>
@@ -308,7 +308,7 @@ const HomePage = () => {
       {/* --- Quality difference --- */}
       <section className="rd-sec">
         <div className="rd-wrap rd-split">
-          <div className="rd-vis rd-reveal"><img src={qualityImg} alt="High-quality photo booth prints from The Shan Booth" /></div>
+          <div className="rd-vis rd-reveal"><img loading="lazy" decoding="async" src={qualityImg} alt="High-quality photo booth prints from The Shan Booth" /></div>
           <div className="rd-reveal">
             <span className="rd-eyebrow">The quality difference</span>
             <h2 style={{ fontSize: 'var(--rd-s-3)', marginTop: 12 }}>Real cameras. Real prints. Real fun.</h2>

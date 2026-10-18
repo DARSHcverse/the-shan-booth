@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 const blackdrop = '/images/blackbackdrop.png';
-const graddrop = '/images/gradbackdrop.png';
-const whitedrop = '/images/whitebackdrop.png';
-const flowerkdrop = '/images/flowerbackdrop.png';
+const graddrop = '/images/gradbackdrop.webp';
+const whitedrop = '/images/whitebackdrop.webp';
+const flowerkdrop = '/images/flowerbackdrop.webp';
 
 const propIcons = [
   "🎩", "👑", "👓", "🎀", "🥳", "🌟", "🎈", "🎉", "🎤", "✨", "💖",
@@ -69,7 +69,7 @@ const BackdropPage = () => {
     <>
       {/* ✅ Helmet SEO for Backdrops Page */}
       <Head>
-        <title>Backdrop Designs & Fun Props for Photo Booths | The Shan Booth</title>
+        <title>Backdrop Designs & Props for Photo Booths | The Shan Booth</title>
         <meta
           name="description"
           content="Discover whimsical backdrop designs and fun props for photo booths in Melbourne. Perfect for weddings, parties, school graduations, and corporate events."
@@ -127,7 +127,7 @@ const BackdropPage = () => {
                 className="backdrop-card"
                 onClick={() => handleBackdropClick(backdrop)}
               >
-                <img
+                <img loading="lazy" decoding="async"
                   src={backdrop.src}
                   alt={backdrop.title}
                   className="backdrop-item"

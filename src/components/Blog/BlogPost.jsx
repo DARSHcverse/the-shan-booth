@@ -35,19 +35,19 @@ const BlogPost = ({ slug: slugProp }) => {
   const canonical = `${SITE_URL}/blog/${post.slug}`;
 
   // Absolute URL required by Open Graph / Twitter for previews to render.
-  const rawImage = post.image || "/images/glam.png";
+  const rawImage = post.image || "/images/glam.webp";
   const ogImage = rawImage.startsWith("http") ? rawImage : `${SITE_URL}${rawImage}`;
 
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>{post.seoTitle || post.title}</title>
         <meta name="description" content={post.excerpt} key="description" />
         <meta name="keywords" content={post.keywords.join(", ")} />
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph */}
-        <meta property="og:title" content={post.title} />
+        <meta property="og:title" content={post.seoTitle || post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={canonical} />
@@ -55,7 +55,7 @@ const BlogPost = ({ slug: slugProp }) => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:title" content={post.seoTitle || post.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={ogImage} />
 

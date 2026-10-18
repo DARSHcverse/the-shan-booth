@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useConsent } from "./ConsentProvider";
-const fb = '/images/3259376_facebook_media_social_icon.png';
-const ig = '/images/3259424_instagram_social media_social_icon.png';
-const tw = '/images/3259404_media_social_twitter_icon.png';
-const phone = '/images/3259417_media_social_viber_icon.png';
-const map = '/images/3259380_dreamstale_media_social_icon.png';
-const gm = '/images/3259428_google_media_plus_social_icon.png';
+const fb = '/images/icon-facebook.webp';
+const ig = '/images/icon-instagram.webp';
+const tw = '/images/icon-twitter.webp';
+const phone = '/images/icon-phone.webp';
+const map = '/images/icon-map.webp';
+const gm = '/images/icon-email.webp';
 
 const Footer = () => {
   const googleMapsApiKey =
@@ -57,16 +57,16 @@ const Footer = () => {
           <h3 className="footer-heading">Contact Info</h3>
           <address className="contact-info-list">
             <div className="social-link no-style-button">
-              <img src={map} alt="Address" className="social-icon" />
+              <img loading="lazy" decoding="async" src={map} alt="Address" className="social-icon" />
               <span>51 Celestial Circuit, Tarneit, VIC 3029</span>
             </div>
             <div className="social-link no-style-button">
-              <img src={phone} alt="Phone" className="social-icon" />
+              <img loading="lazy" decoding="async" src={phone} alt="Phone" className="social-icon" />
               <span>:+61 414 521 425</span>
             </div>
             <br />
             <div className="social-link no-style-button">
-              <img src={gm} alt="Email" className="social-icon" />
+              <img loading="lazy" decoding="async" src={gm} alt="Email" className="social-icon" />
               <span>theshanbooth@gmail.com</span>
             </div>
           </address>
@@ -83,11 +83,11 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <img src={fb} alt="Facebook" className="social-icon" />
+              <img loading="lazy" decoding="async" src={fb} alt="Facebook" className="social-icon" />
             </a>
 
             <span className="social-link social-link--disabled" aria-label="Twitter (coming soon)" title="Coming soon">
-              <img src={tw} alt="Twitter" className="social-icon" />
+              <img loading="lazy" decoding="async" src={tw} alt="Twitter" className="social-icon" />
             </span>
 
             <a
@@ -97,7 +97,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <img src={ig} alt="Instagram" className="social-icon" />
+              <img loading="lazy" decoding="async" src={ig} alt="Instagram" className="social-icon" />
             </a>
           </div>
 

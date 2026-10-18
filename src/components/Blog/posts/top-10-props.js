@@ -1,5 +1,6 @@
 export const post = {
   title: "Top 10 Fun Props and Photo Booth Ideas for Melbourne Christmas Parties (2026)",
+  seoTitle: "Top 10 Christmas Photo Booth Props & Ideas Melbourne 2026",
   date: "2025-10-29",
   dateModified: "2026-09-14",
   author: "Photo Booth With Shan",

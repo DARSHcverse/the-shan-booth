@@ -1,17 +1,17 @@
 import React from "react";
 import Head from "next/head";
-const gradBackdrop = '/images/gradbooth.jpg';
-const gradStrip = '/images/GradStrip.png';
+const gradBackdrop = '/images/gradbooth.webp';
+const gradStrip = '/images/GradStrip.webp';
 
 const GraduationLanding = () => {
   return (
     <>
       {/* SEO + Meta Tags */}
       <Head>
-        <title>Graduation Photo booth Hire Melbourne 🎓 | The Shan Booth</title>
+        <title>Graduation Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
-          content="Celebrate graduations, school formals, and uni balls with The Shan Booth. Classy backdrops, fun props, and instant prints. Serving Melbourne, Geelong & Grovedale."
+          content="Photo booths for graduations, school formals & uni balls. Classy backdrops, fun props & instant prints. Serving Melbourne, Geelong & Grovedale."
           key="description"
         />
         <meta
@@ -192,7 +192,7 @@ const GraduationLanding = () => {
         
         {/* Floating Graduation Strip */}
         <div className="floating-strip right-strip">
-          <img src={gradStrip} alt="Graduation photobooth strip" />
+          <img loading="lazy" decoding="async" src={gradStrip} alt="Graduation photobooth strip" />
         </div>
       </div>
     </>

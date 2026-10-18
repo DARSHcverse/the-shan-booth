@@ -162,10 +162,10 @@ const PackagesPage = () => {
   return (
     <main className="rd">
       <Head>
-        <title>Photo Booth Hire Packages Melbourne | Affordable Wedding &amp; Party Booths</title>
+        <title>Photo Booth Hire Packages Melbourne | From $390</title>
         <meta
           name="description"
-          content="Explore affordable photo booth hire packages in Melbourne. Choose from Standard or Glam Booth options with unlimited prints, props, guest books & more. Perfect for weddings, parties & corporate events."
+          content="Affordable photo booth hire packages in Melbourne from $390. Standard or Glam booths with unlimited prints, props & guest books for weddings & parties."
           key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/packages" />

@@ -1,12 +1,13 @@
 import React from 'react';
 import Head from "next/head";
 import { QUICK_QUOTE_URL } from '../lib/siteLinks';
-const glam = '/images/glam.png';
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
+const glam = '/images/glam.webp';
 
 const GlamBoothPage = () => (
   <>
     <Head>
-      <title>Glam Photo Booth Hire Melbourne | Hollywood-Style AI Filter Booth</title>
+      <title>Glam Photo Booth Hire Melbourne | AI Glam Filter Booth</title>
       <meta
         name="description"
         content="Glam Photo Booth Hire in Melbourne featuring AI glam filters, Canon R100 camera, and Surface Pro setup. Capture flawless, high-end portraits with luxury style."
@@ -31,6 +32,17 @@ const GlamBoothPage = () => (
       <meta
         name="twitter:image"
         content="https://www.photoboothwithshan.com.au/images/glam.png"
+      />
+      <JsonLd
+        data={serviceSchema({
+          name: "Glam Photo Booth Hire Melbourne",
+          serviceType: "Glam Photo Booth Hire",
+          description: "Glam photo booth hire in Melbourne with soft-glow AI glam filters, a Canon R100 camera, unlimited instant prints and an attendant.",
+          path: "/glam-booth",
+          image: "/images/glam.png",
+          lowPrice: 490,
+          highPrice: 860,
+        })}
       />
     </Head>
 

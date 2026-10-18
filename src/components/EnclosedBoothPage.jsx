@@ -1,15 +1,16 @@
 import React from 'react';
 import Head from "next/head";
 import { QUICK_QUOTE_URL } from '../lib/siteLinks';
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 const openBoothVideo = '/images/enclosedVID.mp4';
 
 const EnclosedBoothPage = () => (
   <>
     <Head>
-      <title>Enclosed Photo booth Hire Melbourne | Private & Fun Event Booth | The Shan Booth</title>
+      <title>Enclosed Photo Booth Hire Melbourne | The Shan Booth</title>
       <meta
         name="description"
-        content="Enclosed Photo Booth Hire in Melbourne with Canon R100 mirrorless camera and Surface Pro setup. Step into an enclosed, bouncy-castle-style booth and enjoy private fun shots."
+        content="Private enclosed photo booth hire in Melbourne with a Canon R100 mirrorless camera, unlimited prints & a friendly attendant. From $390 for 2 hours."
         key="description"
       />
       <link rel="canonical" href="https://www.photoboothwithshan.com.au/enclosed-booth" />
@@ -32,6 +33,17 @@ const EnclosedBoothPage = () => (
         content="Step inside our Enclosed Booth in Melbourne — private, cozy, and full of fun energy for weddings, parties, and corporate events."
       />
       <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/enclosed.jpeg" />
+      <JsonLd
+        data={serviceSchema({
+          name: "Enclosed Photo Booth Hire Melbourne",
+          serviceType: "Enclosed Photo Booth Hire",
+          description: "Private enclosed photo booth hire in Melbourne with a Canon R100 mirrorless camera, Surface Pro setup, unlimited instant prints and an attendant.",
+          path: "/enclosed-booth",
+          image: "/images/enclosed.jpeg",
+          lowPrice: 390,
+          highPrice: 800,
+        })}
+      />
     </Head>
 
 

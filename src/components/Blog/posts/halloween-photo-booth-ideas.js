@@ -1,5 +1,6 @@
 export const post = {
   title: "Halloween Photo Booth Hire Melbourne — 2026 Themes, Props & Booking Guide",
+  seoTitle: "Halloween Photo Booth Ideas Melbourne 2026: Themes & Props",
   date: "2026-09-12",
   dateModified: "2026-09-16",
   author: "Photo Booth With Shan",

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useRedesignReveal } from "../lib/useRedesign";
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 
 // Keep in sync with Bookingpage.jsx / PackagesPage.jsx
 const BOOTHS = [
@@ -67,6 +68,17 @@ const QuickQuote = () => {
           key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/quickquote" />
+        <JsonLd
+          data={serviceSchema({
+            name: "Photo Booth Hire Quick Quote",
+            serviceType: "Photo Booth Hire",
+            description: "Instant photo booth hire pricing for Melbourne and Geelong: choose your booth and hours to see your price.",
+            path: "/quickquote",
+            image: "/images/photobooth.webp",
+            lowPrice: 390,
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       <div className="rd rd-landing booking-container">

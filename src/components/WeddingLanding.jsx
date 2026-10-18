@@ -9,11 +9,11 @@ const WeddingLanding = () => {
     <>
       {/* ✅ SEO + Meta Tags */}
       <Head>
-        <title>Wedding Photo booth Hire Melbourne 💍 | The Shan Booth</title>
+        <title>Wedding Photo Booth Hire Melbourne | The Shan Booth</title>
 
         <meta
           name="description"
-          content="Looking for wedding photo booth hire in Melbourne? The Shan Booth offers elegant photobooths with unlimited prints, classy props & instant sharing. Servicing Melbourne, Geelong & Tarneit."
+          content="Elegant wedding photo booth hire in Melbourne with unlimited prints, classy props & instant sharing. Servicing Melbourne, Geelong & Tarneit."
           key="description"
         />
 
@@ -214,7 +214,7 @@ const WeddingLanding = () => {
         </div>
 
         <div className="floating-strip right-strip">
-          <img src={WeddingStrip} alt="Wedding photobooth strip hire Melbourne" />
+          <img loading="lazy" decoding="async" src={WeddingStrip} alt="Wedding photobooth strip hire Melbourne" />
         </div>
       </div>
     </>

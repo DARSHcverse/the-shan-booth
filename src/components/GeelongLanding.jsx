@@ -3,7 +3,7 @@ import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 
 const boothImg1 = "/images/hero-banner.webp";
 const boothImg2 = "/images/hero-banner-2.webp";
-const floatingStrip = "/images/birthdaystrip.png";
+const floatingStrip = "/images/birthdaystrip.webp";
 
 const GeelongLanding = () => {
   return (
@@ -273,7 +273,7 @@ const GeelongLanding = () => {
         </div>
 
         <div className="floating-strip right-strip">
-          <img src={floatingStrip} alt="Photo booth strip design" />
+          <img loading="lazy" decoding="async" src={floatingStrip} alt="Photo booth strip design" />
         </div>
       </div>
     </>

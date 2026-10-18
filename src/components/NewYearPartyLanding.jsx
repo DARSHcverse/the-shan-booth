@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 
 const newyearImg1 = '/images/newyear1.webp';
 const newyearImg2 = '/images/newyear2.webp';
@@ -9,10 +10,10 @@ const NewYearPartyLanding = () => {
     <>
       {/* SEO Meta Tags */}
       <Head>
-        <title>New Year Party Photo Booth Hire Melbourne 🎉 | The Shan Booth</title>
+        <title>New Year’s Eve Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
-          content="Kick off the New Year with style! Hire a photobooth for New Year’s Eve or New Year celebrations in Melbourne, Tarneit & Geelong. Unlimited prints, fun props, and instant sharing."
+          content="Photo booth hire for New Year’s Eve & New Year parties in Melbourne, Tarneit & Geelong. Unlimited prints, fun props & instant sharing. From $390."
           key="description"
         />
         <meta
@@ -22,7 +23,7 @@ const NewYearPartyLanding = () => {
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/new-year-party" />
 
         {/* OG */}
-        <meta property="og:title" content="New Year Party Photo Booth Hire Melbourne 🎉 | The Shan Booth" />
+        <meta property="og:title" content="New Year’s Eve Photo Booth Hire Melbourne | The Shan Booth" />
         <meta
           property="og:description"
           content="Bring energy and fun to your New Year event! Unlimited prints, festive props & digital sharing for NYE & New Year celebrations."
@@ -34,49 +35,17 @@ const NewYearPartyLanding = () => {
         <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/newyear2.webp" />
 
         {/* Schema */}
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "New Year Party Photo Booth Hire Melbourne",
-            "description": "Celebrate New Year’s Eve and New Year parties with premium photobooth hire in Melbourne, Tarneit & Geelong.",
-            "image": "https://www.photoboothwithshan.com.au/images/newyear1.webp",
-            "startDate": "2026-12-31T18:00:00+11:00",
-            "endDate": "2027-01-01T02:00:00+11:00",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "location": {
-              "@type": "Place",
-              "name": "Melbourne & Geelong",
-              "address": {
-                "@type": "PostalAddress",
-                "addressRegion": "VIC",
-                "addressCountry": "AU"
-              }
-            },
-            "organizer": {
-              "@type": "Organization",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au"
-            },
-            "performer": {
-            "@type": "Organization",
-            "name": "The Shan Booth",
-            "url": "https://www.photoboothwithshan.com.au"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://www.photoboothwithshan.com.au/booking",
-              "priceCurrency": "AUD",
-              "price": "390",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2026-09-01T00:00:00+10:00"
-            }
-          }
-        ` }}
-      />
+        <JsonLd
+          data={serviceSchema({
+            name: "New Year Party Photo Booth Hire Melbourne",
+            serviceType: "New Year’s Eve Photo Booth Hire",
+            description: "Celebrate New Year’s Eve and New Year parties with premium photobooth hire in Melbourne, Tarneit & Geelong.",
+            path: "/new-year-party",
+            image: "/images/newyear1.webp",
+            areas: ["Melbourne", "Tarneit", "Geelong"],
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       {/* PAGE CONTENT */}

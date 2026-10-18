@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useRedesignReveal } from "../lib/useRedesign";
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
 const boothHero = '/images/photobooth.webp';
 
 const BookingPage = () => {
@@ -114,13 +115,24 @@ const BookingPage = () => {
   return (
     <>
       <Head>
-        <title>Book Your Best Photobooth Hire Melbourne  | The Shan Booth</title>
+        <title>Book Photo Booth Hire Melbourne | The Shan Booth</title>
         <meta
           name="description"
           content="Reserve your photobooth hire in Melbourne with The Shan Booth. Choose your booth type, package, confirm booking, and secure your date."
           key="description"
         />
         <link rel="canonical" href="https://www.photoboothwithshan.com.au/booking" />
+        <JsonLd
+          data={serviceSchema({
+            name: "Book Photo Booth Hire Melbourne",
+            serviceType: "Photo Booth Hire",
+            description: "Book open, glam or enclosed photo booth hire in Melbourne with upfront pricing, delivery, setup, attendant and unlimited prints included.",
+            path: "/booking",
+            image: "/images/photobooth.webp",
+            lowPrice: 390,
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       <div className="rd rd-landing booking-container">

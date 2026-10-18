@@ -64,6 +64,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // Thin duplicate of /photoboothhiremelbourne — consolidate ranking signals
+        source: "/pbseopage",
+        destination: "/photoboothhiremelbourne",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [
           {

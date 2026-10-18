@@ -3,18 +3,18 @@ import Head from "next/head";
 import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 const boothImg = '/images/boothimg4.webp';
 const boothImg2 = '/images/boothimg5.webp';
-const birthdayStrip = '/images/birthdaystrip.png';
+const birthdayStrip = '/images/birthdaystrip.webp';
 
 const PhotoboothLanding = () => {
   return (
     <>
       {/* ✅ SEO + Meta Tags */}
       <Head>
-        <title>Photobooth Hire Melbourne 📸 | Christmas, Weddings, Birthdays & Corporate Events | The Shan Booth</title>
+        <title>Photobooth Hire Melbourne | Weddings, Parties & Corporate</title>
 
         <meta
           name="description"
-          content="Looking for professional photobooth hire Melbourne? The Shan Booth offers modern, stylish, and affordable photobooth rentals for weddings, birthdays, and corporate events with unlimited prints, props, and instant digital sharing."
+          content="Professional photobooth hire in Melbourne for weddings, birthdays, Christmas & corporate events. Unlimited prints, props & instant sharing. From $390."
           key="description"
         />
 
@@ -290,7 +290,7 @@ const PhotoboothLanding = () => {
         </div>
 
         <div className="floating-strip right-strip">
-          <img src={birthdayStrip} alt="Birthday photobooth strip" />
+          <img loading="lazy" decoding="async" src={birthdayStrip} alt="Birthday photobooth strip" />
         </div>
       </div>
     </>

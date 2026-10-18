@@ -17,13 +17,15 @@ const nextConfig = {
       "object-src 'none'",
       "frame-ancestors 'none'",
       "img-src 'self' data: blob: https:",
-      "style-src 'self' 'unsafe-inline'",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://widgets.sociablekit.com",
       "font-src 'self' data: https:",
       "manifest-src 'self'",
       "worker-src 'self' blob:",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://widgets.sociablekit.com https://js.stripe.com",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net",
-      "frame-src https://www.google.com https://js.stripe.com",
+      // Google tag (Ads + GA4) — https://developers.google.com/tag-platform/security/guides/csp
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.com https://widgets.sociablekit.com https://js.stripe.com",
+      // SociableKit Google Reviews widget loads its feed from accentapi.com and its CSS via fetch
+      "connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://*.g.doubleclick.net https://ad.doubleclick.net https://data.accentapi.com https://api.accentapi.com https://*.sociablekit.com",
+      "frame-src https://www.google.com https://td.doubleclick.net https://www.googletagmanager.com https://js.stripe.com",
       "upgrade-insecure-requests",
     ]
       .join("; ")

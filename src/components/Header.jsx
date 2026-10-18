@@ -94,7 +94,7 @@ const Header = () => {
     { name: 'PACKAGES', path: '/packages' },
     { name: 'BACKDROP', path: '/backdrop' },
     { name: 'BOOKING', path: '/booking' },
-    { name: 'QUICK QUOTE', path: QUICK_QUOTE_URL, external: true },
+    { name: 'QUICK QUOTE', path: QUICK_QUOTE_URL },
     { name: 'PAY HERE', path: '/pay' },
   ];
 

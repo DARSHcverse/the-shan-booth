@@ -1125,3 +1125,30 @@ main.rd-landing,
 .rd-book-info .section-title { text-align: center; font-family: var(--rd-f-head); color: var(--rd-text); font-size: var(--rd-s-2); margin: 0 0 20px; }
 .rd-book-info p { color: var(--rd-muted); margin: 0 0 16px; }
 .rd-book-info strong { color: var(--rd-text); }
+
+/* ---- quick quote (4-field) ---- */
+.rd-qq { max-width: 640px; margin: 0 auto; gap: 22px; }
+.rd-qq-group { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; gap: 10px; }
+.rd-qq-group legend { font-family: var(--rd-f-head); font-weight: 600; font-size: .95rem; color: var(--rd-text); padding: 0; margin-bottom: 10px; }
+.rd-qq-booths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.rd-qq-hours { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 520px) { .rd-qq-booths { grid-template-columns: 1fr; } }
+.rd-qq-chip {
+  font-family: var(--rd-f-head); font-weight: 600; font-size: .95rem;
+  padding: 12px 10px; border-radius: 12px; cursor: pointer;
+  border: 1px solid var(--rd-line); background: var(--rd-surface); color: var(--rd-text);
+  transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
+}
+.rd-qq-chip:hover { border-color: var(--rd-orange); transform: translateY(-1px); }
+.rd-qq-chip:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--rd-orange) 30%, transparent); }
+.rd-qq-chip.is-on { border-color: var(--rd-orange); background: color-mix(in srgb, var(--rd-orange) 10%, var(--rd-surface)); box-shadow: 0 0 0 1px var(--rd-orange) inset; }
+.rd-qq-booth { display: grid; gap: 2px; text-align: left; padding: 14px; }
+.rd-qq-booth span { font-family: var(--rd-f-body); font-weight: 400; font-size: .8rem; color: var(--rd-muted); }
+.rd-qq-price {
+  display: grid; justify-items: center; gap: 2px; text-align: center;
+  padding: 18px; border-radius: 14px; background: var(--rd-soft); border: 1px solid var(--rd-line);
+}
+.rd-qq-price span { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--rd-muted); }
+.rd-qq-price strong { font-family: var(--rd-f-head); font-size: var(--rd-s-3); color: var(--rd-orange); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.rd-qq-price small { color: var(--rd-muted); font-size: .82rem; }
+.rd-book-submit:disabled { opacity: .7; cursor: wait; transform: none; }

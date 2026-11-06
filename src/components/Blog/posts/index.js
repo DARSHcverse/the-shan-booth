@@ -9,6 +9,8 @@ import * as post8 from "./top-10-props";
 import * as post9 from "./christmas-hire";
 import * as post10 from "./halloween-photo-booth-ideas";
 import * as post11 from "./end-of-year-party-planning";
+import * as post12 from "./graduation-photo-booth-guide";
+import * as post13 from "./birthday-photo-booth-ideas";
 
 export const allPosts = [
   post1.post,
@@ -22,6 +24,8 @@ export const allPosts = [
   post9.post,
   post10.post,
   post11.post,
+  post12.post,
+  post13.post,
 ];
 
 export const postsBySlug = Object.fromEntries(

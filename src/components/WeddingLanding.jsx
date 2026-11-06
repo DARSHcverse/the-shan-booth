@@ -199,6 +199,8 @@ const WeddingLanding = () => {
           </p>
         </div>
 
+        <p className="hint-text">📚 Helpful guides: <a href="/blog/wedding-photo-booth-ideas">wedding photo booth ideas</a> · <a href="/blog/open-vs-enclosed-photo-booth">open vs enclosed booths</a> · <a href="/blog/photobooth-cost-australia">2026 price guide</a></p>
+
         {/* CTA */}
         <div className="cta-center">
           <a href="/booking" className="cta-btn">

@@ -1,5 +1,21 @@
 const path = require("path");
 
+// Old URLs (renamed blog slugs / old routes) that Google still has on file.
+const legacyRedirects = {
+  "/photobooth-hire-melbourne": "/photoboothhiremelbourne",
+  "/blog/blog-post-christmasprops": "/blog/top-10-props",
+  "/blog/christmas-photo-booth-ideas-melbourne-2025": "/blog/top-10-props",
+  "/blog/blog-post-corporate": "/blog/corporate-event-trends",
+  "/blog/corporate-event-photo-booth-trends-melbourne": "/blog/corporate-event-trends",
+  "/blog/blog-post-photobooth-cost": "/blog/photobooth-cost-australia",
+  "/blog/photo-booth-cost-australia-2025": "/blog/photobooth-cost-australia",
+  "/blog/blog-post-photoboothtrends": "/blog/photo-booth-trends-melbourne-2025",
+  "/blog/blog-post-weddingphotobooth": "/blog/wedding-photo-booth-ideas",
+  "/blog/wedding-photo-booth-ideas-melbourne": "/blog/wedding-photo-booth-ideas",
+  "/blog/book-us-for-christmas-2025": "/blog/christmas-hire",
+  "/blog/top-5-reasons-to-hire-photo-booth-melbourne": "/blog/photobooth-benefits",
+};
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -63,6 +79,11 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      ...Object.entries(legacyRedirects).map(([source, destination]) => ({
+        source,
+        destination,
+        permanent: true,
+      })),
       {
         // Thin duplicate of /photoboothhiremelbourne — consolidate ranking signals
         source: "/pbseopage",

@@ -1152,3 +1152,12 @@ main.rd-landing,
 .rd-qq-price strong { font-family: var(--rd-f-head); font-size: var(--rd-s-3); color: var(--rd-orange); font-variant-numeric: tabular-nums; line-height: 1.1; }
 .rd-qq-price small { color: var(--rd-muted); font-size: .82rem; }
 .rd-book-submit:disabled { opacity: .7; cursor: wait; transform: none; }
+
+/* ---- blog tables (price / date tables in posts) ---- */
+.rd-landing .blog-content .rd-table-wrap { overflow-x: auto; margin: 0 0 22px; border: 1px solid var(--rd-line); border-radius: 12px; }
+.rd-landing .blog-content table { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 420px; }
+.rd-landing .blog-content th,
+.rd-landing .blog-content td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--rd-line); color: var(--rd-muted); vertical-align: top; }
+.rd-landing .blog-content th { background: var(--rd-soft); color: var(--rd-text); font-family: var(--rd-f-head); font-weight: 600; }
+.rd-landing .blog-content tr:last-child td { border-bottom: 0; }
+.rd-landing .blog-content td strong { color: var(--rd-text); }

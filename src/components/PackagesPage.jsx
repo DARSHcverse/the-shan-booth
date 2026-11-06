@@ -253,7 +253,7 @@ const PackagesPage = () => {
           <div className="rd-head rd-reveal">
             <span className="rd-eyebrow">Always included</span>
             <h2>Every package, no upsells</h2>
-            <p>The price you see covers the whole experience — from delivery to pack-down.</p>
+            <p>The price you see covers the whole experience — from delivery to pack-down. See how it compares in our <a href="/blog/photobooth-cost-australia">2026 photo booth price guide</a>.</p>
           </div>
           <div className="rd-incl rd-reveal">
             <div><span className="rd-ic" aria-hidden="true">🚚</span><div><b>Delivery &amp; setup</b><small>Free within 40km</small></div></div>

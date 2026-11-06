@@ -257,6 +257,8 @@ const GeelongLanding = () => {
           ></iframe>
         </div>
 
+        <p className="hint-text">📚 Helpful guides: <a href="/blog/photobooth-cost-australia">photo booth hire cost 2026</a> · <a href="/blog/graduation-photo-booth-guide">graduation dates &amp; ideas</a> · <a href="/blog/birthday-photo-booth-ideas">birthday party ideas</a></p>
+
         <div className="cta-center">
           <a href={QUICK_QUOTE_URL} className="cta-btn">
             📩 Get a Geelong Quote

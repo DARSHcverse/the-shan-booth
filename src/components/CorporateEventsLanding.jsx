@@ -204,6 +204,29 @@ const CorporateEventsLanding = () => {
         </div>
 
         <div className="corporate-section">
+          <h2>🎄 End-of-Year 2026: The Corporate Party Calendar</h2>
+          <p>
+            Christmas Day 2026 falls on a <strong>Friday</strong>, and the Boxing Day public holiday moves to
+            <strong> Monday 28 December</strong>. With most workplaces winding down by Wednesday 23 December,
+            nearly every work Christmas party lands in the first three weeks of December:
+          </p>
+          <ul className="feature-list">
+            <li>🗓️ <strong>Thu 3 &amp; Fri 4 December</strong> – early-season parties and client functions</li>
+            <li>🗓️ <strong>Thu 10 &amp; Fri 11 December</strong> – the peak corporate week, first to book out</li>
+            <li>🗓️ <strong>Thu 17 &amp; Fri 18 December</strong> – the last practical party dates before Christmas</li>
+            <li>🗓️ <strong>Fri 27 November</strong> – a popular overflow date for teams booking late</li>
+          </ul>
+          <p>
+            Long lunches and midweek afternoon events are much easier to book than Friday nights. If your team
+            is flexible, a Tuesday or Wednesday lunch in December usually gets your first choice of booth.
+            For the full timeline see our{" "}
+            <a href="/blog/end-of-year-party-planning">end-of-year party planning guide</a>, our{" "}
+            <a href="/christmas">Christmas photo booth packages</a>, and the latest{" "}
+            <a href="/blog/corporate-event-trends">corporate photo booth trends</a>.
+          </p>
+        </div>
+
+        <div className="corporate-section">
           <h2>📍 Service Locations</h2>
           <ul className="areas-list">
             <li>Melbourne CBD & inner suburbs</li>

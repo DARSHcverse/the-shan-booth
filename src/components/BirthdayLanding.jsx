@@ -104,6 +104,27 @@ const BirthdayLanding = () => {
         </div>
 
         <div className="birthday-section">
+          <h2>☀️ Summer 2026 Birthday Party Season</h2>
+          <p>
+            November to February is peak birthday party season in Melbourne. With longer evenings, backyard
+            parties and school holidays starting after <strong>Friday 18 December</strong>, December weekends
+            fill quickly because they overlap with Christmas parties and graduations. January and February
+            weekends usually have more availability.
+          </p>
+          <ul className="feature-list">
+            <li>🧒 <strong>Kids' parties</strong> – 2-hour open booth, big props, a photo strip as the party favour</li>
+            <li>🥂 <strong>18ths</strong> – Glam or open booth for 3 hours, from arrivals to the cake</li>
+            <li>🔑 <strong>21sts</strong> – Glam Booth plus a guest book (included with 4- and 5-hour packages)</li>
+            <li>🎂 <strong>30th, 40th, 50th+</strong> – the enclosed booth gets even shy guests involved</li>
+          </ul>
+          <p>
+            More ideas by age are in our{" "}
+            <a href="/blog/birthday-photo-booth-ideas">birthday photo booth ideas guide</a>. Prices start at
+            <strong> $390 for 2 hours</strong>. See your exact price with our <a href={QUICK_QUOTE_URL}>quick quote</a>.
+          </p>
+        </div>
+
+        <div className="birthday-section">
           <h2>📍 Service Areas</h2>
           <ul className="areas-list">
             <li>Melbourne Metro & Suburbs</li>

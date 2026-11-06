@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 const christmasImg = '/images/christmas.webp';
 const christmasImg2 = '/images/christmas2.webp';
 
@@ -171,6 +172,25 @@ const ChristmasLanding = () => {
             weekend, which usually means strong turnout. See our{" "}
             <a href="/new-year-party">New Year party packages</a> or read the full{" "}
             <a href="/blog/end-of-year-party-planning">end-of-year planning guide</a>.
+          </p>
+        </div>
+
+        <div className="christmas-section">
+          <h2>⏰ Booking Late? Your Best Christmas 2026 Options</h2>
+          <p>
+            If the December Fridays and Saturdays have gone for your venue, these dates still work well:
+          </p>
+          <ul className="feature-list">
+            <li>🎁 <strong>Midweek evenings (Mon–Thu)</strong> in December, which have much better availability than weekends</li>
+            <li>🎁 <strong>Long lunches</strong>: many teams now hold their party as a daytime event</li>
+            <li>🎁 <strong>Christmas Eve (Thu 24 December)</strong> for family and street parties</li>
+            <li>🎁 <strong>Mon 28 December</strong>, the Boxing Day public holiday, for relaxed family get-togethers</li>
+          </ul>
+          <p>
+            Planning ideas: <a href="/blog/top-10-props">top 10 Christmas photo booth props</a>,{" "}
+            <a href="/blog/christmas-hire">why a booth works for Christmas parties</a>, and our{" "}
+            <a href="/blog/photobooth-cost-australia">2026 photo booth price guide</a>. Prices start at
+            <strong> $390 for 2 hours</strong>. Get your exact price with our <a href={QUICK_QUOTE_URL}>quick quote</a>.
           </p>
         </div>
 

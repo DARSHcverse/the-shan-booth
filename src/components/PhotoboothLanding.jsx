@@ -278,6 +278,8 @@ const PhotoboothLanding = () => {
           ></iframe>
         </div>
 
+        <p className="hint-text">📚 Helpful guides: <a href="/blog/photobooth-cost-australia">photo booth hire cost 2026</a> · <a href="/blog/graduation-photo-booth-guide">graduation guide</a> · <a href="/blog/end-of-year-party-planning">end-of-year party planning</a> · <a href="/blog/birthday-photo-booth-ideas">birthday ideas</a></p>
+
         {/* CTA */}
         <div className="cta-center">
           <a href={QUICK_QUOTE_URL} className="cta-btn">📩 Get a Quick Quote</a>

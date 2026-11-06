@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import { serviceSchema, JsonLd } from "../lib/serviceSchema";
+import { QUICK_QUOTE_URL } from "../lib/siteLinks";
 const gradBackdrop = '/images/gradbooth.webp';
 const gradStrip = '/images/GradStrip.webp';
 
@@ -37,49 +39,16 @@ const GraduationLanding = () => {
         />
         <meta name="twitter:image" content="https://www.photoboothwithshan.com.au/images/gradbooth.jpg" />
 
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Graduation Photo Booth Hire",
-            "name": "Graduation Photo Booth Hire Melbourne",
-            "description": "Professional photobooth hire for graduations, school formals and university balls across Melbourne & Geelong.",
-            "image": "https://www.photoboothwithshan.com.au/images/gradbooth.jpg",
-            "url": "https://www.photoboothwithshan.com.au/graduation",
-            "provider": {
-              "@type": "LocalBusiness",
-              "@id": "https://www.photoboothwithshan.com.au/#localbusiness",
-              "name": "The Shan Booth",
-              "url": "https://www.photoboothwithshan.com.au",
-              "telephone": "+61 414 521 425",
-              "priceRange": "$$",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Tarneit",
-                "addressRegion": "VIC",
-                "postalCode": "3029",
-                "addressCountry": "AU"
-              }
-            },
-            "areaServed": [
-              { "@type": "City", "name": "Melbourne" },
-              { "@type": "City", "name": "Geelong" },
-              { "@type": "City", "name": "Tarneit" }
-            ],
-            "offers": {
-              "@type": "Offer",
-              "url": "https://www.photoboothwithshan.com.au/booking",
-              "priceCurrency": "AUD",
-              "price": "390",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2026-09-01T00:00:00+10:00",
-              "validThrough": "2026-12-31T00:00:00+11:00"
-            }
-          }
-          ` }}
-      />
+        <JsonLd
+          data={serviceSchema({
+            name: "Graduation Photo Booth Hire Melbourne",
+            serviceType: "Graduation Photo Booth Hire",
+            description: "Professional photobooth hire for kinder, Grade 6, Year 12 and university graduations, school formals and valedictory dinners across Melbourne & Geelong.",
+            path: "/graduation",
+            image: "/images/gradbooth.jpg",
+            highPrice: 860,
+          })}
+        />
       </Head>
 
       {/* Landing Content */}
@@ -153,6 +122,27 @@ const GraduationLanding = () => {
             in late November are usually choosing from what is left. If you are also planning a staff
             end-of-year function, see our <a href="/christmas">Christmas packages</a> — booking both
             together lets us carry your school branding across both events.
+          </p>
+        </div>
+
+        <div className="graduation-section">
+          <h2>🗓️ 2026 Graduation Calendar — Kinder to University</h2>
+          <p>
+            Every school level graduates at a different time, and Victorian government schools finish
+            Term 4 on <strong>Friday 18 December 2026</strong>, so almost every school graduation has to
+            land before then. Here is when each one usually falls:
+          </p>
+          <ul className="feature-list">
+            <li>🧸 <strong>Kinder graduations</strong> – early to mid December, usually daytime. A 2-hour open booth suits big family groups.</li>
+            <li>🎒 <strong>Grade 6 graduations</strong> – late November to 18 December, often midweek evenings in the school hall.</li>
+            <li>🎓 <strong>Year 12 valedictory dinners &amp; formals</strong> – many held after VCE exams finish on <strong>Wed 18 November</strong>.</li>
+            <li>🏛️ <strong>University &amp; TAFE</strong> – VU graduates 14–15 December and RMIT on 16 December, with family parties the same week.</li>
+          </ul>
+          <p>
+            Dates, booth ideas and tips for each level are in our{" "}
+            <a href="/blog/graduation-photo-booth-guide">2026 graduation photo booth guide</a>.
+            Prices start at <strong>$390 for 2 hours</strong>, with delivery, setup, an attendant and unlimited prints included.
+            See your exact price with our <a href={QUICK_QUOTE_URL}>quick quote</a>.
           </p>
         </div>
 
